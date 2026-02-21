@@ -357,6 +357,7 @@ const DashboardCharts = (() => {
     function updateDAWChart(data) {
         if (!dawChart || !data) return;
         const { d1, d7, d30 } = dawLatestData(data);
+        dawChart.data.labels = ['1D', '7D', '30D'];
         dawChart.data.datasets[0].data = [d1, d7, d30];
         dawChart.update('none');
     }
