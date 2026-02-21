@@ -106,6 +106,38 @@ const DashboardCharts = (() => {
         }
     };
 
+    function dawDatasets(data) {
+        // Only include datasets that have real data (any value > 0)
+        const sets = [];
+        const has1D = data.some(d => (d.day1 || d.count || 0) > 0);
+        const has7D = data.some(d => (d.day7 || 0) > 0);
+        const has30D = data.some(d => (d.day30 || 0) > 0);
+
+        if (has1D) sets.push({
+            label: '1D',
+            data: data.map(d => d.day1 || d.count || 0),
+            backgroundColor: COLORS.cyanAlpha,
+            borderColor: COLORS.cyan,
+            borderWidth: 1, borderRadius: 3, borderSkipped: false
+        });
+        if (has7D) sets.push({
+            label: '7D',
+            data: data.map(d => d.day7 || 0),
+            backgroundColor: COLORS.purpleAlpha,
+            borderColor: COLORS.purple,
+            borderWidth: 1, borderRadius: 3, borderSkipped: false
+        });
+        if (has30D) sets.push({
+            label: '30D',
+            data: data.map(d => d.day30 || 0),
+            backgroundColor: COLORS.greenAlpha,
+            borderColor: COLORS.green,
+            borderWidth: 1, borderRadius: 3, borderSkipped: false
+        });
+
+        return sets;
+    }
+
     function createDAWChart(data) {
         const ctx = document.getElementById('chart-daw');
         if (!ctx) return;
@@ -114,35 +146,7 @@ const DashboardCharts = (() => {
             type: 'bar',
             data: {
                 labels: data.map(d => d.date),
-                datasets: [
-                    {
-                        label: '1D',
-                        data: data.map(d => d.day1 || d.count || 0),
-                        backgroundColor: COLORS.cyanAlpha,
-                        borderColor: COLORS.cyan,
-                        borderWidth: 1,
-                        borderRadius: 3,
-                        borderSkipped: false
-                    },
-                    {
-                        label: '7D',
-                        data: data.map(d => d.day7 || 0),
-                        backgroundColor: COLORS.purpleAlpha,
-                        borderColor: COLORS.purple,
-                        borderWidth: 1,
-                        borderRadius: 3,
-                        borderSkipped: false
-                    },
-                    {
-                        label: '30D',
-                        data: data.map(d => d.day30 || 0),
-                        backgroundColor: COLORS.greenAlpha,
-                        borderColor: COLORS.green,
-                        borderWidth: 1,
-                        borderRadius: 3,
-                        borderSkipped: false
-                    }
-                ]
+                datasets: dawDatasets(data)
             },
             plugins: [noDataPlugin],
             options: {
@@ -175,17 +179,20 @@ const DashboardCharts = (() => {
         if (!ctx) return;
 
         txVolChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'line',
             data: {
                 labels: data.map(d => formatDateLabel(d.date)),
                 datasets: [{
                     label: 'Transactions',
                     data: data.map(d => d.count),
-                    backgroundColor: COLORS.purpleAlpha,
                     borderColor: COLORS.purple,
-                    borderWidth: 1,
-                    borderRadius: 3,
-                    borderSkipped: false
+                    backgroundColor: COLORS.purpleAlpha,
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 3,
+                    pointBackgroundColor: COLORS.purple,
+                    pointHoverRadius: 5
                 }]
             },
             plugins: [noDataPlugin],
@@ -348,9 +355,7 @@ const DashboardCharts = (() => {
     function updateDAWChart(data) {
         if (!dawChart || !data) return;
         dawChart.data.labels = data.map(d => d.date);
-        dawChart.data.datasets[0].data = data.map(d => d.day1 || d.count || 0);
-        dawChart.data.datasets[1].data = data.map(d => d.day7 || 0);
-        dawChart.data.datasets[2].data = data.map(d => d.day30 || 0);
+        dawChart.data.datasets = dawDatasets(data);
         dawChart.update('none');
     }
 
