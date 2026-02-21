@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-02-21T22:55:43.183Z",
+  "lastUpdated": "2026-02-21T23:47:34.321Z",
   "days": {
     "2026-02-21": {
-      "txCount": 56,
-      "activeWallets": 26,
-      "tps": 0.09,
+      "txCount": 67,
+      "activeWallets": 25,
+      "tps": 0.12,
       "avgFee": "0.00001000",
       "nodeCount": 27,
       "validatorCount": 25
