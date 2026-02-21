@@ -342,7 +342,7 @@ const DashboardCharts = (() => {
     }
 
     function updateTxVolChart(data) {
-        if (!txVolChart || !data || data.length < 2) return;
+        if (!txVolChart || !data || data.length === 0) return;
         txVolChart.data.labels = data.map(d => dateToWeekday(d.date));
         txVolChart.data.datasets[0].data = data.map(d => d.count);
         txVolChart.update('none');

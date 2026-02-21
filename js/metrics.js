@@ -6,7 +6,9 @@
 
 const MetricsEngine = (() => {
     const CACHE_KEY = 'pftperry_metrics_cache';
+    const DAILY_STATS_KEY = 'pftperry_daily_stats';
     const MAX_LEDGERS = 5000;
+    const MAX_DAILY_DAYS = 90;
     const DAY_MS = 86400000;
 
     // In-memory data store
@@ -15,9 +17,11 @@ const MetricsEngine = (() => {
     let explorerMetrics = null; // From explorer API (txn_sec, ledger_interval, etc.)
     let recentTxnTimes = [];    // For TPS calculation (last 10 ledger intervals)
     let lastLedgerTime = null;
+    let dailyStats = {};        // { "2026-02-21": { txCount: N, activeWallets: N } }
 
     function init() {
         loadCache();
+        loadDailyStats();
     }
 
     function loadCache() {
@@ -33,6 +37,65 @@ const MetricsEngine = (() => {
         }
     }
 
+    function loadDailyStats() {
+        try {
+            const stored = localStorage.getItem(DAILY_STATS_KEY);
+            if (stored) {
+                dailyStats = JSON.parse(stored);
+                const dayCount = Object.keys(dailyStats).length;
+                console.log(`[Metrics] Loaded ${dayCount} days of historical stats`);
+            }
+        } catch (e) {
+            console.warn('[Metrics] Daily stats load failed:', e);
+        }
+    }
+
+    function saveDailyStats() {
+        try {
+            // Compute today's stats from current ledgers and merge into dailyStats
+            const liveDays = computeLiveDailyRollups();
+            for (const [date, data] of Object.entries(liveDays)) {
+                const existing = dailyStats[date];
+                if (!existing || data.txCount > existing.txCount) {
+                    dailyStats[date] = data;
+                }
+            }
+
+            // Trim to MAX_DAILY_DAYS most recent
+            const sortedDates = Object.keys(dailyStats).sort();
+            if (sortedDates.length > MAX_DAILY_DAYS) {
+                const toRemove = sortedDates.slice(0, sortedDates.length - MAX_DAILY_DAYS);
+                toRemove.forEach(d => delete dailyStats[d]);
+            }
+
+            localStorage.setItem(DAILY_STATS_KEY, JSON.stringify(dailyStats));
+        } catch (e) {
+            console.warn('[Metrics] Daily stats save failed:', e);
+        }
+    }
+
+    function computeLiveDailyRollups() {
+        const dayBuckets = {};
+        const dayWallets = {};
+        ledgers.forEach(l => {
+            const day = new Date(l.close_time).toISOString().slice(0, 10);
+            dayBuckets[day] = (dayBuckets[day] || 0) + l.txn_count;
+            if (!dayWallets[day]) dayWallets[day] = new Set();
+            l.transactions.forEach(tx => {
+                if (tx.account) dayWallets[day].add(tx.account);
+            });
+        });
+
+        const result = {};
+        for (const date of Object.keys(dayBuckets)) {
+            result[date] = {
+                txCount: dayBuckets[date],
+                activeWallets: dayWallets[date] ? dayWallets[date].size : 0
+            };
+        }
+        return result;
+    }
+
     function saveCache() {
         try {
             // Keep only last MAX_LEDGERS
@@ -41,6 +104,9 @@ const MetricsEngine = (() => {
         } catch (e) {
             console.warn('[Metrics] Cache save failed:', e);
         }
+
+        // Also persist daily rollups
+        saveDailyStats();
     }
 
     function processServerInfo(info) {
@@ -238,7 +304,13 @@ const MetricsEngine = (() => {
     }
 
     function getDailyActiveWalletsHistory() {
-        // Group ledgers by day, count unique accounts per day
+        // Start with persistent historical data
+        const merged = {};
+        for (const [date, data] of Object.entries(dailyStats)) {
+            merged[date] = data.activeWallets || 0;
+        }
+
+        // Overlay live session data (use max of stored vs live)
         const dayBuckets = {};
         ledgers.forEach(l => {
             const day = new Date(l.close_time).toISOString().slice(0, 10);
@@ -247,15 +319,24 @@ const MetricsEngine = (() => {
                 if (tx.account) dayBuckets[day].add(tx.account);
             });
         });
+        for (const [date, accounts] of Object.entries(dayBuckets)) {
+            merged[date] = Math.max(merged[date] || 0, accounts.size);
+        }
 
-        return Object.entries(dayBuckets)
-            .map(([date, accounts]) => ({ date, count: accounts.size }))
+        return Object.entries(merged)
+            .map(([date, count]) => ({ date, count }))
             .sort((a, b) => a.date.localeCompare(b.date))
             .slice(-30);
     }
 
     function getDailyActiveWalletsMulti() {
-        // Get per-day unique accounts first
+        // Merge persistent + live wallet counts per day
+        const dayCounts = {};
+        for (const [date, data] of Object.entries(dailyStats)) {
+            dayCounts[date] = data.activeWallets || 0;
+        }
+
+        // Overlay live session data
         const dayBuckets = {};
         ledgers.forEach(l => {
             const day = new Date(l.close_time).toISOString().slice(0, 10);
@@ -264,27 +345,35 @@ const MetricsEngine = (() => {
                 if (tx.account) dayBuckets[day].add(tx.account);
             });
         });
+        for (const [date, accounts] of Object.entries(dayBuckets)) {
+            dayCounts[date] = Math.max(dayCounts[date] || 0, accounts.size);
+        }
 
-        const sortedDays = Object.keys(dayBuckets).sort();
+        const sortedDays = Object.keys(dayCounts).sort();
         const result = [];
 
         for (let i = 0; i < sortedDays.length; i++) {
             const date = sortedDays[i];
-            const day1 = dayBuckets[date].size;
+            const day1 = dayCounts[date];
 
-            // Rolling 7-day unique accounts
-            const set7 = new Set();
+            // Rolling 7-day sum (approximate — uses stored counts, not unique sets)
+            let day7 = 0;
             for (let j = Math.max(0, i - 6); j <= i; j++) {
-                dayBuckets[sortedDays[j]].forEach(a => set7.add(a));
+                day7 = Math.max(day7, dayCounts[sortedDays[j]]);
             }
-            const day7 = set7.size;
+            // Sum is a better approximation for rolling unique
+            let day7sum = 0;
+            for (let j = Math.max(0, i - 6); j <= i; j++) {
+                day7sum += dayCounts[sortedDays[j]];
+            }
+            day7 = Math.max(day1, Math.min(day7sum, day7sum)); // use sum as upper estimate
 
-            // Rolling 30-day unique accounts
-            const set30 = new Set();
+            // Rolling 30-day
+            let day30sum = 0;
             for (let j = Math.max(0, i - 29); j <= i; j++) {
-                dayBuckets[sortedDays[j]].forEach(a => set30.add(a));
+                day30sum += dayCounts[sortedDays[j]];
             }
-            const day30 = set30.size;
+            const day30 = Math.max(day7, day30sum);
 
             result.push({ date, day1, day7, day30 });
         }
@@ -293,13 +382,25 @@ const MetricsEngine = (() => {
     }
 
     function getTxVolumeHistory() {
-        const dayBuckets = {};
+        // Start with persistent historical data
+        const merged = {};
+        for (const [date, data] of Object.entries(dailyStats)) {
+            merged[date] = data.txCount || 0;
+        }
+
+        // Compute live session totals per day
+        const liveDayTotals = {};
         ledgers.forEach(l => {
             const day = new Date(l.close_time).toISOString().slice(0, 10);
-            dayBuckets[day] = (dayBuckets[day] || 0) + l.txn_count;
+            liveDayTotals[day] = (liveDayTotals[day] || 0) + l.txn_count;
         });
 
-        return Object.entries(dayBuckets)
+        // Use max of stored vs live for each day
+        for (const [date, count] of Object.entries(liveDayTotals)) {
+            merged[date] = Math.max(merged[date] || 0, count);
+        }
+
+        return Object.entries(merged)
             .map(([date, count]) => ({ date, count }))
             .sort((a, b) => a.date.localeCompare(b.date))
             .slice(-7);
