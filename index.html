@@ -3,32 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Fiat Network - Validator Node</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html, body {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        body {
-            background: #0a0e17;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+    <title>PFT Perry // Network Operations Center</title>
+    <meta name="description" content="Post Fiat Testnet Dashboard - Real-time network statistics and monitoring">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-    <img src="splash.png" alt="Post Fiat Network - Validator Node Active">
+    <!-- Splash fallback (hidden once dashboard loads) -->
+    <div id="splash-fallback">
+        <img src="splash.png" alt="Post Fiat Network">
+    </div>
+
+    <!-- Particle canvas background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Scan lines overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard" class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1 class="glitch-text" data-text="PFT PERRY // NETWORK OPERATIONS CENTER">PFT PERRY // NETWORK OPERATIONS CENTER</h1>
+            </div>
+            <div class="header-right">
+                <span class="live-clock" id="live-clock">00:00:00 UTC</span>
+                <span class="connection-status" id="connection-status">
+                    <span class="status-dot disconnected" id="status-dot"></span>
+                    <span class="status-text" id="status-text">CONNECTING</span>
+                </span>
+            </div>
+        </header>
+
+        <!-- Row 1: Key Metric Cards -->
+        <section class="row row-metrics">
+            <div class="metric-card" id="card-daw">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="metric-label">DAILY ACTIVE WALLETS</div>
+                <div class="metric-value" id="metric-daw" data-target="0">--</div>
+                <div class="metric-change" id="metric-daw-change"></div>
+            </div>
+            <div class="metric-card" id="card-tps">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="metric-label">TXN / SEC</div>
+                <div class="metric-value" id="metric-tps" data-target="0">--</div>
+                <div class="metric-change" id="metric-tps-change"></div>
+            </div>
+            <div class="metric-card" id="card-accounts">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="metric-label">TOTAL ACCOUNTS</div>
+                <div class="metric-value" id="metric-accounts" data-target="0">--</div>
+                <div class="metric-change" id="metric-accounts-change"></div>
+            </div>
+            <div class="metric-card" id="card-nodes">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="metric-label">NETWORK NODES</div>
+                <div class="metric-value" id="metric-nodes" data-target="0">--</div>
+                <div class="metric-change" id="metric-nodes-change"></div>
+            </div>
+        </section>
+
+        <!-- Row 2: Main Charts -->
+        <section class="row row-charts">
+            <div class="chart-panel">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="panel-header">
+                    <span class="panel-title">DAILY ACTIVE WALLETS</span>
+                    <span class="panel-badge">30D</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chart-daw"></canvas>
+                </div>
+            </div>
+            <div class="chart-panel">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="panel-header">
+                    <span class="panel-title">TRANSACTION VOLUME</span>
+                    <span class="panel-badge">30D</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chart-txvol"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Row 3: Engagement + Live Feed -->
+        <section class="row row-engagement">
+            <div class="chart-panel">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="panel-header">
+                    <span class="panel-title">USER RETENTION</span>
+                    <span class="panel-badge">1D / 7D / 30D</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chart-retention"></canvas>
+                </div>
+            </div>
+            <div class="chart-panel live-feed-panel">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="panel-header">
+                    <span class="panel-title">LIVE TRANSACTION FEED</span>
+                    <span class="panel-badge pulse">LIVE</span>
+                </div>
+                <div class="live-feed" id="live-feed">
+                    <div class="feed-placeholder">Awaiting transactions...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Row 4: Distribution + Network -->
+        <section class="row row-distribution">
+            <div class="chart-panel">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="panel-header">
+                    <span class="panel-title">TRANSACTION TYPE DISTRIBUTION</span>
+                </div>
+                <div class="chart-container chart-container-doughnut">
+                    <canvas id="chart-txtype"></canvas>
+                </div>
+            </div>
+            <div class="chart-panel">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="panel-header">
+                    <span class="panel-title">NETWORK TOPOLOGY</span>
+                </div>
+                <div class="node-grid" id="node-grid">
+                    <div class="node-placeholder">Loading node data...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Row 5: Secondary Stats -->
+        <section class="row row-secondary">
+            <div class="metric-card small">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="metric-label">AVG FEE</div>
+                <div class="metric-value small" id="metric-fee">--</div>
+            </div>
+            <div class="metric-card small">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="metric-label">LEDGER INTERVAL</div>
+                <div class="metric-value small" id="metric-interval">--</div>
+            </div>
+            <div class="metric-card small">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="metric-label">LEDGER HEIGHT</div>
+                <div class="metric-value small" id="metric-height">--</div>
+            </div>
+            <div class="metric-card small">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="metric-label">AVG TXN/USER</div>
+                <div class="metric-value small" id="metric-txnuser">--</div>
+            </div>
+            <div class="metric-card small">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="metric-label">PEAK HOUR</div>
+                <div class="metric-value small" id="metric-peakhour">--</div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <span class="footer-source">Data sourced from PFT Devnet</span>
+            <span class="footer-updated">Last updated: <span id="last-updated">--</span></span>
+        </footer>
+    </div>
+
+    <!-- API status badge overlay -->
+    <div class="api-badge hidden" id="api-badge">API CONNECTING...</div>
+
+    <!-- Scripts -->
+    <script src="js/effects.js"></script>
+    <script src="js/websocket.js"></script>
+    <script src="js/metrics.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

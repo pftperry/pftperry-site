@@ -1,0 +1,420 @@
+/* ============================================
+   App Orchestrator
+   Init sequence, VHS fetch, mock data, DOM updates
+   ============================================ */
+
+const App = (() => {
+    const VHS_BASE = 'https://vhs.devnet.postfiat.org:3000';
+    const UPDATE_INTERVAL = 5000;
+    let updateTimer = null;
+    let usingMockData = false;
+    let nodesData = null;
+    let mockFeedInterval = null;
+
+    // ---- Mock Data ----
+    function getMockStats() {
+        const today = new Date().toISOString().slice(0, 10);
+        const history = [];
+        for (let i = 29; i >= 0; i--) {
+            const d = new Date(Date.now() - i * 86400000);
+            history.push({
+                date: d.toISOString().slice(0, 10),
+                count: Math.floor(Math.random() * 40 + 15 + (30 - i) * 1.5)
+            });
+        }
+        const txHistory = [];
+        for (let i = 29; i >= 0; i--) {
+            const d = new Date(Date.now() - i * 86400000);
+            txHistory.push({
+                date: d.toISOString().slice(0, 10),
+                count: Math.floor(Math.random() * 300 + 100 + (30 - i) * 5)
+            });
+        }
+
+        return {
+            dailyActiveWallets: Math.floor(Math.random() * 30 + 25),
+            tps: (Math.random() * 2 + 0.5).toFixed(2),
+            totalAccounts: Math.floor(Math.random() * 200 + 150),
+            avgFee: Math.floor(Math.random() * 50 + 10),
+            ledgerInterval: (Math.random() * 2 + 3).toFixed(1),
+            ledgerHeight: Math.floor(Math.random() * 100000 + 500000),
+            avgTxnPerUser: (Math.random() * 5 + 2).toFixed(1),
+            peakHour: `${String(Math.floor(Math.random() * 24)).padStart(2, '0')}:00 UTC`,
+            txTypeDistribution: {
+                'Payment': Math.floor(Math.random() * 200 + 100),
+                'TrustSet': Math.floor(Math.random() * 80 + 20),
+                'OfferCreate': Math.floor(Math.random() * 40 + 10),
+                'AccountSet': Math.floor(Math.random() * 30 + 5),
+                'Memo': Math.floor(Math.random() * 60 + 15)
+            },
+            dawHistory: history,
+            txVolHistory: txHistory,
+            retention: {
+                day1: Math.floor(Math.random() * 30 + 20),
+                day7: Math.floor(Math.random() * 60 + 40),
+                day30: Math.floor(Math.random() * 100 + 80)
+            },
+            recentTxns: generateMockTxns(20)
+        };
+    }
+
+    function generateMockTxns(count) {
+        const types = ['Payment', 'TrustSet', 'OfferCreate', 'AccountSet', 'Payment', 'Payment'];
+        const txns = [];
+        for (let i = 0; i < count; i++) {
+            txns.push({
+                type: types[Math.floor(Math.random() * types.length)],
+                account: 'r' + randomHex(24),
+                hash: randomHex(64),
+                fee: Math.floor(Math.random() * 100 + 10),
+                amount: Math.random() > 0.5 ? String(Math.floor(Math.random() * 1000000)) : undefined,
+                time: Date.now() - Math.floor(Math.random() * 300000)
+            });
+        }
+        return txns.sort((a, b) => b.time - a.time);
+    }
+
+    function randomHex(len) {
+        const chars = '0123456789abcdef';
+        let s = '';
+        for (let i = 0; i < len; i++) s += chars[Math.floor(Math.random() * 16)];
+        return s;
+    }
+
+    // ---- DOM Updates ----
+    function updateMetricEl(id, value, format) {
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        let displayValue = value;
+        if (format === 'number') displayValue = formatNumber(value);
+        else if (format === 'tps') displayValue = Number(value).toFixed(2);
+        else if (format === 'fee') displayValue = formatFee(value);
+        else if (format === 'interval') displayValue = Number(value).toFixed(1) + 's';
+
+        if (el.textContent !== String(displayValue)) {
+            el.textContent = displayValue;
+            // Trigger glow animation on parent card
+            const card = el.closest('.metric-card');
+            if (card) {
+                card.classList.remove('updated');
+                void card.offsetWidth; // force reflow
+                card.classList.add('updated');
+            }
+        }
+    }
+
+    function formatNumber(n) {
+        if (n === undefined || n === null || n === '--') return '--';
+        n = Number(n);
+        if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+        if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+        return n.toLocaleString();
+    }
+
+    function formatFee(drops) {
+        if (!drops || drops === '--') return '--';
+        drops = Number(drops);
+        if (drops >= 1000000) return (drops / 1000000).toFixed(4) + ' XRP';
+        return drops.toLocaleString() + ' drops';
+    }
+
+    function updateDashboard(stats) {
+        updateMetricEl('metric-daw', stats.dailyActiveWallets, 'number');
+        updateMetricEl('metric-tps', stats.tps, 'tps');
+        updateMetricEl('metric-accounts', stats.totalAccounts, 'number');
+        updateMetricEl('metric-fee', stats.avgFee, 'fee');
+        updateMetricEl('metric-interval', stats.ledgerInterval, 'interval');
+        updateMetricEl('metric-height', stats.ledgerHeight, 'number');
+        updateMetricEl('metric-txnuser', stats.avgTxnPerUser, 'tps');
+        updateMetricEl('metric-peakhour', stats.peakHour);
+
+        // Update charts
+        DashboardCharts.update(stats);
+
+        // Update live feed
+        updateLiveFeed(stats.recentTxns);
+
+        // Update last updated
+        const lastUpdated = document.getElementById('last-updated');
+        if (lastUpdated) {
+            lastUpdated.textContent = new Date().toLocaleTimeString('en-US', {
+                hour12: false, timeZone: 'UTC'
+            }) + ' UTC';
+        }
+    }
+
+    function updateLiveFeed(txns) {
+        const feed = document.getElementById('live-feed');
+        if (!feed || !txns || txns.length === 0) return;
+
+        const existingItems = feed.querySelectorAll('.feed-item');
+        const existingHashes = new Set();
+        existingItems.forEach(el => existingHashes.add(el.dataset.hash));
+
+        // Only add new transactions
+        const newTxns = txns.filter(tx => !existingHashes.has(tx.hash));
+
+        if (newTxns.length === 0 && existingItems.length > 0) return;
+
+        // Clear placeholder
+        const placeholder = feed.querySelector('.feed-placeholder');
+        if (placeholder) placeholder.remove();
+
+        newTxns.forEach(tx => {
+            const item = document.createElement('div');
+            item.className = 'feed-item';
+            item.dataset.hash = tx.hash;
+
+            const typeClass = getTypeClass(tx.type);
+            const shortAccount = tx.account ? tx.account.slice(0, 8) + '...' + tx.account.slice(-4) : '???';
+            const amount = tx.amount ? formatFeedAmount(tx.amount) : '';
+            const timeStr = tx.time ? new Date(tx.time).toLocaleTimeString('en-US', {
+                hour12: false, timeZone: 'UTC', hour: '2-digit', minute: '2-digit', second: '2-digit'
+            }) : '';
+
+            item.innerHTML = `
+                <span class="feed-type ${typeClass}">${tx.type}</span>
+                <span class="feed-account">${shortAccount}</span>
+                ${amount ? `<span class="feed-amount">${amount}</span>` : ''}
+                <span class="feed-time">${timeStr}</span>
+            `;
+
+            feed.insertBefore(item, feed.firstChild);
+        });
+
+        // Limit feed items
+        while (feed.children.length > 100) {
+            feed.removeChild(feed.lastChild);
+        }
+    }
+
+    function getTypeClass(type) {
+        if (!type) return 'other';
+        const t = type.toLowerCase();
+        if (t.includes('payment')) return 'payment';
+        if (t.includes('trust')) return 'trustset';
+        if (t.includes('offer')) return 'offer';
+        return 'other';
+    }
+
+    function formatFeedAmount(amount) {
+        if (typeof amount === 'object') {
+            return `${Number(amount.value).toFixed(2)} ${amount.currency}`;
+        }
+        const xrp = Number(amount) / 1000000;
+        if (xrp > 0) return xrp.toFixed(2) + ' XRP';
+        return '';
+    }
+
+    // ---- Node Grid ----
+    function updateNodeGrid(nodes) {
+        const grid = document.getElementById('node-grid');
+        if (!grid) return;
+
+        if (!nodes || nodes.length === 0) {
+            grid.innerHTML = '<div class="node-placeholder">No node data available</div>';
+            return;
+        }
+
+        grid.innerHTML = '';
+        nodes.forEach(node => {
+            const card = document.createElement('div');
+            card.className = 'node-card';
+            const statusClass = node.uptime ? 'online' : 'offline';
+            card.innerHTML = `
+                <div class="node-name"><span class="node-status ${statusClass}"></span>${node.host || node.node_public_key?.slice(0, 12) || 'Node'}</div>
+                <div class="node-detail">${node.version || 'Unknown version'}</div>
+                <div class="node-detail">${node.uptime ? 'Uptime: ' + formatUptime(node.uptime) : ''}</div>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    function formatUptime(seconds) {
+        if (!seconds) return '--';
+        const h = Math.floor(seconds / 3600);
+        const m = Math.floor((seconds % 3600) / 60);
+        if (h > 24) return Math.floor(h / 24) + 'd ' + (h % 24) + 'h';
+        return h + 'h ' + m + 'm';
+    }
+
+    function updateNodeCount(count) {
+        updateMetricEl('metric-nodes', count, 'number');
+    }
+
+    // ---- VHS API ----
+    async function fetchVHS() {
+        const corsProxies = [
+            '',  // Direct
+            'https://corsproxy.io/?',
+            'https://api.allorigins.win/raw?url='
+        ];
+
+        for (const proxy of corsProxies) {
+            try {
+                const url = proxy + encodeURIComponent(VHS_BASE + '/v1/network/topology');
+                const directUrl = proxy ? url : VHS_BASE + '/v1/network/topology';
+                const resp = await fetch(directUrl, { signal: AbortSignal.timeout(8000) });
+                if (resp.ok) {
+                    const data = await resp.json();
+                    if (data) {
+                        nodesData = data.nodes || data;
+                        const nodeCount = data.node_count || (Array.isArray(nodesData) ? nodesData.length : 0);
+                        updateNodeCount(nodeCount);
+                        updateNodeGrid(Array.isArray(nodesData) ? nodesData.slice(0, 12) : []);
+                        return;
+                    }
+                }
+            } catch (e) {
+                console.log('[VHS] Topology fetch failed via proxy:', e.message);
+            }
+        }
+
+        // Fallback: mock nodes
+        updateNodeCount(3);
+        updateNodeGrid([
+            { host: 'devnet-node-1', version: 'rippled 2.x', uptime: 86400 },
+            { host: 'devnet-node-2', version: 'rippled 2.x', uptime: 72000 },
+            { host: 'devnet-node-3', version: 'rippled 2.x', uptime: 45000 }
+        ]);
+    }
+
+    // ---- Clock ----
+    function startClock() {
+        function tick() {
+            const el = document.getElementById('live-clock');
+            if (el) {
+                el.textContent = new Date().toLocaleTimeString('en-US', {
+                    hour12: false, timeZone: 'UTC', hour: '2-digit', minute: '2-digit', second: '2-digit'
+                }) + ' UTC';
+            }
+        }
+        tick();
+        setInterval(tick, 1000);
+    }
+
+    // ---- Connection Status ----
+    function setConnectionStatus(status) {
+        const dot = document.getElementById('status-dot');
+        const text = document.getElementById('status-text');
+        const badge = document.getElementById('api-badge');
+
+        if (dot) {
+            dot.className = 'status-dot ' + status;
+        }
+        if (text) {
+            const labels = {
+                connected: 'CONNECTED',
+                connecting: 'CONNECTING',
+                disconnected: 'DISCONNECTED',
+                mock: 'DEMO MODE'
+            };
+            text.textContent = labels[status] || 'UNKNOWN';
+        }
+        if (badge) {
+            if (status === 'connected') {
+                badge.classList.add('hidden');
+                usingMockData = false;
+                if (mockFeedInterval) {
+                    clearInterval(mockFeedInterval);
+                    mockFeedInterval = null;
+                }
+            } else if (status === 'mock') {
+                badge.textContent = 'DEMO MODE — LIVE DATA UNAVAILABLE';
+                badge.classList.remove('hidden');
+            } else if (status === 'connecting') {
+                badge.textContent = 'API CONNECTING...';
+                badge.classList.remove('hidden');
+            }
+        }
+    }
+
+    // ---- Mock data feed simulation ----
+    function startMockFeed() {
+        if (mockFeedInterval) return;
+        mockFeedInterval = setInterval(() => {
+            const txns = generateMockTxns(Math.floor(Math.random() * 3) + 1);
+            updateLiveFeed(txns);
+        }, 4000);
+    }
+
+    // ---- Init ----
+    async function init() {
+        console.log('[App] Initializing PFT Perry Dashboard...');
+
+        // Start visual effects
+        ParticleBackground.init();
+        startClock();
+
+        // Init metrics & charts
+        MetricsEngine.init();
+        DashboardCharts.init();
+
+        // Show dashboard, hide splash
+        setTimeout(() => {
+            const splash = document.getElementById('splash-fallback');
+            const dashboard = document.getElementById('dashboard');
+            if (splash) splash.classList.add('hidden');
+            if (dashboard) dashboard.classList.add('visible');
+        }, 500);
+
+        // Connect WebSocket
+        WebSocketManager.onConnection(setConnectionStatus);
+
+        WebSocketManager.onLedger((type, data) => {
+            if (type === 'server_info') {
+                MetricsEngine.processServerInfo(data);
+            } else if (type === 'ledger') {
+                MetricsEngine.processLedger(data);
+            } else if (type === 'ledgerClosed') {
+                MetricsEngine.processLedgerClosed(data);
+            }
+
+            // Update dashboard with real data
+            const stats = MetricsEngine.getAllStats();
+            updateDashboard(stats);
+        });
+
+        WebSocketManager.connect();
+
+        // Fetch VHS data
+        fetchVHS();
+
+        // Fallback to mock data after 10 seconds if no WS connection
+        setTimeout(() => {
+            if (!WebSocketManager.isConnected() && !MetricsEngine.hasData()) {
+                console.log('[App] No live data, switching to demo mode');
+                usingMockData = true;
+                setConnectionStatus('mock');
+                const mockStats = getMockStats();
+                updateDashboard(mockStats);
+                startMockFeed();
+            }
+        }, 10000);
+
+        // Periodic refresh
+        updateTimer = setInterval(() => {
+            if (usingMockData) {
+                // Slightly mutate mock data for realism
+                const stats = getMockStats();
+                updateDashboard(stats);
+            } else if (MetricsEngine.hasData()) {
+                const stats = MetricsEngine.getAllStats();
+                updateDashboard(stats);
+            }
+        }, UPDATE_INTERVAL);
+
+        // Re-fetch VHS every 5 minutes
+        setInterval(fetchVHS, 300000);
+    }
+
+    // Boot
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+
+    return { init };
+})();
