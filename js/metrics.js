@@ -17,7 +17,8 @@ const MetricsEngine = (() => {
     let explorerMetrics = null; // From explorer API (txn_sec, ledger_interval, etc.)
     let recentTxnTimes = [];    // For TPS calculation (last 10 ledger intervals)
     let lastLedgerTime = null;
-    let dailyStats = {};        // { "2026-02-21": { txCount: N, activeWallets: N } }
+    let dailyStats = {};        // { "2026-02-21": { txCount: N, activeWallets: N, walletAddresses: [...] } }
+    let firstSeen = {};         // { "rWallet1": "2026-02-21", ... }
 
     function init() {
         loadCache();
@@ -90,7 +91,8 @@ const MetricsEngine = (() => {
         for (const date of Object.keys(dayBuckets)) {
             result[date] = {
                 txCount: dayBuckets[date],
-                activeWallets: dayWallets[date] ? dayWallets[date].size : 0
+                activeWallets: dayWallets[date] ? dayWallets[date].size : 0,
+                walletAddresses: dayWallets[date] ? [...dayWallets[date]] : []
             };
         }
         return result;
@@ -156,6 +158,14 @@ const MetricsEngine = (() => {
             txn_count: processed.length,
             transactions: processed
         });
+
+        // Update firstSeen for wallets seen this session
+        const ledgerDay = new Date(closeTime).toISOString().slice(0, 10);
+        for (const tx of processed) {
+            if (tx.account && !firstSeen[tx.account]) {
+                firstSeen[tx.account] = ledgerDay;
+            }
+        }
 
         // Sort and trim
         ledgers.sort((a, b) => a.seq - b.seq);
@@ -413,31 +423,128 @@ const MetricsEngine = (() => {
         return result;
     }
 
-    function getRetentionData() {
-        // 1-day: use live session data (most accurate for today)
-        const day1 = getActiveWallets(1);
-
-        // 7-day and 30-day: computed from dailyStats history
-        // Without historical data these can't be accurately computed
-        const sortedDates = Object.keys(dailyStats).sort();
-        let day7 = 0;
-        let day30 = 0;
-
-        if (sortedDates.length >= 2) {
-            const last7 = sortedDates.slice(-7);
-            const last30 = sortedDates.slice(-30);
-            day7 = last7.reduce((s, d) => s + (dailyStats[d].activeWallets || 0), 0);
-            day30 = last30.reduce((s, d) => s + (dailyStats[d].activeWallets || 0), 0);
-            // Ensure monotonic: day30 >= day7 >= day1
-            day7 = Math.max(day1, day7);
-            day30 = Math.max(day7, day30);
-        } else {
-            // Only have today's data — just show 1D, leave others at 0
-            day7 = 0;
-            day30 = 0;
+    function getCohortRetention() {
+        // Build per-day wallet Sets from dailyStats (populated from remote JSON)
+        const dayWalletSets = {};
+        for (const [date, data] of Object.entries(dailyStats)) {
+            if (data.walletAddresses && data.walletAddresses.length > 0) {
+                dayWalletSets[date] = new Set(data.walletAddresses);
+            }
         }
 
-        return { day1, day7, day30 };
+        // Also include live session wallet data for today
+        const liveBuckets = {};
+        ledgers.forEach(l => {
+            const day = new Date(l.close_time).toISOString().slice(0, 10);
+            if (!liveBuckets[day]) liveBuckets[day] = new Set();
+            l.transactions.forEach(tx => {
+                if (tx.account) liveBuckets[day].add(tx.account);
+            });
+        });
+        for (const [date, accounts] of Object.entries(liveBuckets)) {
+            if (dayWalletSets[date]) {
+                for (const w of accounts) dayWalletSets[date].add(w);
+            } else {
+                dayWalletSets[date] = new Set(accounts);
+            }
+        }
+
+        // Group wallets by first-seen date (cohorts)
+        const cohorts = {};
+        for (const [wallet, date] of Object.entries(firstSeen)) {
+            if (!cohorts[date]) cohorts[date] = new Set();
+            cohorts[date].add(wallet);
+        }
+
+        const today = new Date().toISOString().slice(0, 10);
+        const todayMs = new Date(today + 'T00:00:00Z').getTime();
+
+        const matured7 = [];
+        const matured30 = [];
+
+        for (const [cohortDate, cohortWallets] of Object.entries(cohorts)) {
+            if (cohortWallets.size === 0) continue;
+            const cohortMs = new Date(cohortDate + 'T00:00:00Z').getTime();
+
+            // 7D: cohort date must be at least 7 days before today
+            const days7Ms = 7 * 86400000;
+            const days30Ms = 30 * 86400000;
+
+            if (todayMs - cohortMs < days7Ms) continue; // not yet matured
+
+            let returned7 = 0;
+            for (const wallet of cohortWallets) {
+                for (let i = 1; i <= 7; i++) {
+                    const checkDate = new Date(cohortMs + i * 86400000).toISOString().slice(0, 10);
+                    if (dayWalletSets[checkDate] && dayWalletSets[checkDate].has(wallet)) {
+                        returned7++;
+                        break;
+                    }
+                }
+            }
+            matured7.push(returned7 / cohortWallets.size * 100);
+
+            // 30D cohorts need 30 more days
+            if (todayMs - cohortMs >= days30Ms) {
+                let returned30 = 0;
+                for (const wallet of cohortWallets) {
+                    for (let i = 1; i <= 30; i++) {
+                        const checkDate = new Date(cohortMs + i * 86400000).toISOString().slice(0, 10);
+                        if (dayWalletSets[checkDate] && dayWalletSets[checkDate].has(wallet)) {
+                            returned30++;
+                            break;
+                        }
+                    }
+                }
+                matured30.push(returned30 / cohortWallets.size * 100);
+            }
+        }
+
+        const avg7 = matured7.length > 0
+            ? matured7.reduce((s, v) => s + v, 0) / matured7.length
+            : null;
+        const avg30 = matured30.length > 0
+            ? matured30.reduce((s, v) => s + v, 0) / matured30.length
+            : null;
+
+        return {
+            day7: avg7 !== null ? avg7.toFixed(1) + '%' : '--',
+            day7numeric: avg7 !== null ? parseFloat(avg7.toFixed(1)) : 0,
+            day30: avg30 !== null ? avg30.toFixed(1) + '%' : '--',
+            day30numeric: avg30 !== null ? parseFloat(avg30.toFixed(1)) : 0
+        };
+    }
+
+    function getDailyActiveWalletsByDay() {
+        // Merge persistent + live wallet counts per day
+        const merged = {};
+        for (const [date, data] of Object.entries(dailyStats)) {
+            merged[date] = data.activeWallets || 0;
+        }
+
+        // Overlay live session data (use max of stored vs live)
+        const liveDayTotals = {};
+        ledgers.forEach(l => {
+            const day = new Date(l.close_time).toISOString().slice(0, 10);
+            if (!liveDayTotals[day]) liveDayTotals[day] = new Set();
+            l.transactions.forEach(tx => {
+                if (tx.account) liveDayTotals[day].add(tx.account);
+            });
+        });
+        for (const [date, accounts] of Object.entries(liveDayTotals)) {
+            merged[date] = Math.max(merged[date] || 0, accounts.size);
+        }
+
+        // Return exactly 7 days: today minus 6 through today
+        const result = [];
+        const now = new Date();
+        for (let i = 6; i >= 0; i--) {
+            const d = new Date(now);
+            d.setUTCDate(d.getUTCDate() - i);
+            const date = d.toISOString().slice(0, 10);
+            result.push({ date, count: merged[date] || 0 });
+        }
+        return result;
     }
 
     function getRecentTransactions(count) {
@@ -467,8 +574,9 @@ const MetricsEngine = (() => {
             txTypeDistribution: getTxTypeDistribution(),
             dawHistory: getDailyActiveWalletsHistory(),
             dawHistoryMulti: getDailyActiveWalletsMulti(),
+            dawByDay: getDailyActiveWalletsByDay(),
             txVolHistory: getTxVolumeHistory(),
-            retention: getRetentionData(),
+            retention: getCohortRetention(),
             recentTxns: getRecentTransactions(50)
         };
     }
@@ -485,6 +593,16 @@ const MetricsEngine = (() => {
 
             const remoteCount = Object.keys(remote.days).length;
             console.log(`[Metrics] Loaded ${remoteCount} days from remote stats`);
+
+            // Merge remote firstSeen (local session data takes precedence)
+            if (remote.firstSeen && typeof remote.firstSeen === 'object') {
+                for (const [wallet, date] of Object.entries(remote.firstSeen)) {
+                    if (!firstSeen[wallet]) {
+                        firstSeen[wallet] = date;
+                    }
+                }
+                console.log(`[Metrics] Loaded ${Object.keys(remote.firstSeen).length} firstSeen entries`);
+            }
 
             const today = new Date().toISOString().slice(0, 10);
             for (const [date, data] of Object.entries(remote.days)) {

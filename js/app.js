@@ -34,7 +34,17 @@ const App = (() => {
             });
         }
 
-        // Build multi-line DAW history
+        // Build 7-day DAW by-day data for new chart format
+        const dawByDay = [];
+        for (let i = 6; i >= 0; i--) {
+            const d = new Date(Date.now() - i * 86400000);
+            dawByDay.push({
+                date: d.toISOString().slice(0, 10),
+                count: Math.floor(Math.random() * 30 + 15)
+            });
+        }
+
+        // Build multi-line DAW history (kept for backwards compat)
         const dawHistoryMulti = history.map((h, i) => {
             const day1 = h.count;
             const set7 = history.slice(Math.max(0, i - 6), i + 1);
@@ -69,11 +79,13 @@ const App = (() => {
             },
             dawHistory: history,
             dawHistoryMulti: dawHistoryMulti,
+            dawByDay: dawByDay,
             txVolHistory: txHistory.slice(-7),
             retention: {
-                day1: Math.floor(Math.random() * 30 + 20),
-                day7: Math.floor(Math.random() * 60 + 40),
-                day30: Math.floor(Math.random() * 100 + 80)
+                day7: '--',
+                day7numeric: 0,
+                day30: '--',
+                day30numeric: 0
             },
             recentTxns: generateMockTxns(20)
         };

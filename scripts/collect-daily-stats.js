@@ -137,7 +137,7 @@ async function collectFromWebSocket() {
     console.log(`[WS] Today (${today}): ${txCount} txns, ${accounts.size} unique accounts`);
 
     ws.close();
-    return { txCount, activeWallets: accounts.size };
+    return { txCount, activeWallets: accounts.size, walletAddresses: [...accounts] };
 }
 
 async function collectExplorerMetrics() {
@@ -188,7 +188,7 @@ function loadExisting() {
     } catch (e) {
         console.warn(`[Data] Could not read existing file: ${e.message}`);
     }
-    return { lastUpdated: null, days: {} };
+    return { lastUpdated: null, firstSeen: {}, days: {} };
 }
 
 async function main() {
@@ -207,9 +207,23 @@ async function main() {
     // Merge into existing data
     const existing = loadExisting();
     existing.lastUpdated = new Date().toISOString();
+
+    // Ensure firstSeen map exists
+    if (!existing.firstSeen || typeof existing.firstSeen !== 'object') {
+        existing.firstSeen = {};
+    }
+
+    // Update firstSeen — never overwrite existing entries (preserves true first-seen date)
+    for (const wallet of (wsData.walletAddresses || [])) {
+        if (!existing.firstSeen[wallet]) {
+            existing.firstSeen[wallet] = today;
+        }
+    }
+
     existing.days[today] = {
         txCount: wsData.txCount,
         activeWallets: wsData.activeWallets,
+        walletAddresses: wsData.walletAddresses || [],
         tps: explorerData.tps,
         avgFee: explorerData.avgFee,
         nodeCount: vhsData.nodeCount,

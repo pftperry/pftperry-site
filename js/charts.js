@@ -8,6 +8,7 @@ const DashboardCharts = (() => {
     let txVolChart = null;
     let retentionChart = null;
     let txTypeChart = null;
+    let _retentionData = { day7: '--', day7numeric: 0, day30: '--', day30numeric: 0 };
 
     // Cyberpunk color palette
     const COLORS = {
@@ -83,7 +84,7 @@ const DashboardCharts = (() => {
     function init() {
         createDAWChart([]);
         createTxVolChart([]);
-        createRetentionChart({ day1: 0, day7: 0, day30: 0 });
+        createRetentionChart({ day7: '--', day7numeric: 0, day30: '--', day30numeric: 0 });
         createTxTypeChart({});
     }
 
@@ -106,33 +107,21 @@ const DashboardCharts = (() => {
         }
     };
 
-    function dawLatestData(data) {
-        // Get the latest entry's trailing counts
-        if (!data || data.length === 0) return { d1: 0, d7: 0, d30: 0 };
-        const latest = data[data.length - 1];
-        return {
-            d1: latest.day1 || latest.count || 0,
-            d7: latest.day7 || 0,
-            d30: latest.day30 || 0
-        };
-    }
-
     function createDAWChart(data) {
         const ctx = document.getElementById('chart-daw');
         if (!ctx) return;
 
-        const { d1, d7, d30 } = dawLatestData(data);
-        const barColors = [COLORS.cyanAlpha, COLORS.purpleAlpha, COLORS.greenAlpha];
-        const borderColors = [COLORS.cyan, COLORS.purple, COLORS.green];
+        const labels = (data || []).map(d => formatDateLabel(d.date));
+        const values = (data || []).map(d => d.count);
 
         dawChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['1D', '7D', '30D'],
+                labels,
                 datasets: [{
-                    data: [d1, d7, d30],
-                    backgroundColor: barColors,
-                    borderColor: borderColors,
+                    data: values,
+                    backgroundColor: COLORS.cyanAlpha,
+                    borderColor: COLORS.cyan,
                     borderWidth: 1,
                     borderRadius: 4,
                     borderSkipped: false
@@ -206,20 +195,17 @@ const DashboardCharts = (() => {
         const ctx = document.getElementById('chart-retention');
         if (!ctx) return;
 
-        const barColors = [COLORS.cyan, COLORS.purple, COLORS.green];
+        _retentionData = retention || { day7: '--', day7numeric: 0, day30: '--', day30numeric: 0 };
+        const barColors = [COLORS.cyan, COLORS.purple];
 
         retentionChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['1 Day', '7 Days', '30 Days'],
+                labels: ['7D Retention', '30D Retention'],
                 datasets: [{
-                    label: 'Active Users',
-                    data: [retention.day1, retention.day7, retention.day30],
-                    backgroundColor: [
-                        COLORS.cyanAlpha,
-                        COLORS.purpleAlpha,
-                        COLORS.greenAlpha
-                    ],
+                    label: 'Retention %',
+                    data: [_retentionData.day7numeric || 0, _retentionData.day30numeric || 0],
+                    backgroundColor: [COLORS.cyanAlpha, COLORS.purpleAlpha],
                     borderColor: barColors,
                     borderWidth: 1,
                     borderRadius: 4,
@@ -246,8 +232,11 @@ const DashboardCharts = (() => {
                             weight: '600'
                         },
                         formatter: function(value, context) {
-                            if (value === 0 && context.dataIndex > 0) return 'Waiting on data\u2026';
-                            return value + ' wallets';
+                            const label = context.dataIndex === 0
+                                ? _retentionData.day7
+                                : _retentionData.day30;
+                            if (label === '--') return 'Waiting on data\u2026';
+                            return label;
                         }
                     }
                 }
@@ -348,9 +337,7 @@ const DashboardCharts = (() => {
     }
 
     function update(stats) {
-        const dawData = stats.dawHistoryMulti && stats.dawHistoryMulti.length > 0
-            ? stats.dawHistoryMulti : stats.dawHistory;
-        updateDAWChart(dawData);
+        updateDAWChart(stats.dawByDay || []);
         updateTxVolChart(stats.txVolHistory);
         updateRetentionChart(stats.retention);
         updateTxTypeChart(stats.txTypeDistribution);
@@ -358,9 +345,8 @@ const DashboardCharts = (() => {
 
     function updateDAWChart(data) {
         if (!dawChart || !data) return;
-        const { d1, d7, d30 } = dawLatestData(data);
-        dawChart.data.labels = ['1D', '7D', '30D'];
-        dawChart.data.datasets[0].data = [d1, d7, d30];
+        dawChart.data.labels = data.map(d => formatDateLabel(d.date));
+        dawChart.data.datasets[0].data = data.map(d => d.count);
         dawChart.update('none');
     }
 
@@ -373,7 +359,8 @@ const DashboardCharts = (() => {
 
     function updateRetentionChart(retention) {
         if (!retentionChart || !retention) return;
-        retentionChart.data.datasets[0].data = [retention.day1, retention.day7, retention.day30];
+        _retentionData = retention;
+        retentionChart.data.datasets[0].data = [retention.day7numeric || 0, retention.day30numeric || 0];
         retentionChart.update('none');
     }
 
