@@ -164,10 +164,10 @@ const DashboardCharts = (() => {
         });
     }
 
-    function dateToWeekday(dateStr) {
-        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    function formatDateLabel(dateStr) {
         const d = new Date(dateStr + 'T00:00:00Z');
-        return days[d.getUTCDay()];
+        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return months[d.getUTCMonth()] + ' ' + d.getUTCDate();
     }
 
     function createTxVolChart(data) {
@@ -177,7 +177,7 @@ const DashboardCharts = (() => {
         txVolChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: data.map(d => dateToWeekday(d.date)),
+                labels: data.map(d => formatDateLabel(d.date)),
                 datasets: [{
                     label: 'Transactions',
                     data: data.map(d => d.count),
@@ -236,7 +236,8 @@ const DashboardCharts = (() => {
                             size: 11,
                             weight: '600'
                         },
-                        formatter: function(value) {
+                        formatter: function(value, context) {
+                            if (value === 0 && context.dataIndex > 0) return 'Waiting on data\u2026';
                             return value + ' wallets';
                         }
                     }
@@ -355,7 +356,7 @@ const DashboardCharts = (() => {
 
     function updateTxVolChart(data) {
         if (!txVolChart || !data) return;
-        txVolChart.data.labels = data.map(d => dateToWeekday(d.date));
+        txVolChart.data.labels = data.map(d => formatDateLabel(d.date));
         txVolChart.data.datasets[0].data = data.map(d => d.count);
         txVolChart.update('none');
     }

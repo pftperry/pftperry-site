@@ -407,23 +407,27 @@ const MetricsEngine = (() => {
     }
 
     function getRetentionData() {
-        const today = new Date().toISOString().slice(0, 10);
-
         // 1-day: use live session data (most accurate for today)
         const day1 = getActiveWallets(1);
 
-        // 7-day and 30-day: sum unique wallets from dailyStats history
+        // 7-day and 30-day: computed from dailyStats history
+        // Without historical data these can't be accurately computed
         const sortedDates = Object.keys(dailyStats).sort();
-        let day7 = day1;
-        let day30 = day1;
+        let day7 = 0;
+        let day30 = 0;
 
-        if (sortedDates.length > 0) {
+        if (sortedDates.length >= 2) {
             const last7 = sortedDates.slice(-7);
             const last30 = sortedDates.slice(-30);
-            const sum7 = last7.reduce((s, d) => s + (dailyStats[d].activeWallets || 0), 0);
-            const sum30 = last30.reduce((s, d) => s + (dailyStats[d].activeWallets || 0), 0);
-            day7 = Math.max(day1, sum7);
-            day30 = Math.max(day7, sum30);
+            day7 = last7.reduce((s, d) => s + (dailyStats[d].activeWallets || 0), 0);
+            day30 = last30.reduce((s, d) => s + (dailyStats[d].activeWallets || 0), 0);
+            // Ensure monotonic: day30 >= day7 >= day1
+            day7 = Math.max(day1, day7);
+            day30 = Math.max(day7, day30);
+        } else {
+            // Only have today's data — just show 1D, leave others at 0
+            day7 = 0;
+            day30 = 0;
         }
 
         return { day1, day7, day30 };
