@@ -660,6 +660,17 @@ body::before {
     gap: 8px;
 }
 
+.footer-note {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
 /* --- API Badge --- */
 .api-badge {
     position: fixed;
