@@ -144,7 +144,21 @@ const DashboardCharts = (() => {
                 plugins: {
                     ...baseOptions(false).plugins,
                     legend: { display: false },
-                    datalabels: { display: false }
+                    datalabels: {
+                        display: true,
+                        anchor: 'end',
+                        align: 'top',
+                        color: COLORS.cyan,
+                        font: {
+                            family: 'JetBrains Mono',
+                            size: 11,
+                            weight: '600'
+                        },
+                        formatter: function(value) {
+                            if (!value) return '';
+                            return value.toLocaleString();
+                        }
+                    }
                 }
             }
         });
