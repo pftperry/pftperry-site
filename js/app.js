@@ -320,12 +320,12 @@ const App = (() => {
 
     function updateValidatorCards(v) {
         if (!v) return;
-        // Agreement 24H as percentage
-        const score = v.agreement_24h ? (parseFloat(v.agreement_24h.score) * 100).toFixed(2) + '%' : '--';
-        updateMetricEl('metric-agreement', score);
-        // Current ledger index
-        const idx = v.current_index != null ? Number(v.current_index).toLocaleString() : '--';
-        updateMetricEl('metric-ledger-index', idx);
+        // Agreement 24H — number first, then label
+        const score24 = v.agreement_24h ? (parseFloat(v.agreement_24h.score) * 100).toFixed(2) + '%' : '--';
+        updateMetricEl('metric-agreement', score24);
+        // Agreement 30D — number first, then label
+        const score30 = v.agreement_30day ? (parseFloat(v.agreement_30day.score) * 100).toFixed(2) + '%' : '--';
+        updateMetricEl('metric-agreement-30d', score30);
         // Missed validations (30D)
         const missed = v.agreement_30day ? Number(v.agreement_30day.missed).toLocaleString() : '--';
         updateMetricEl('metric-missed', missed);
