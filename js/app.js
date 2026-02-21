@@ -10,6 +10,7 @@ const App = (() => {
     let updateTimer = null;
     let usingMockData = false;
     let nodesData = null;
+    let validatorsData = [];   // Array of validator objects from VHS
     let validatorLookup = {};  // signing_key -> { domain, ... }
     let mockFeedInterval = null;
 
@@ -271,6 +272,40 @@ const App = (() => {
         });
     }
 
+    function updateValidatorGrid(validators) {
+        const grid = document.getElementById('node-grid');
+        if (!grid) return;
+
+        if (!validators || validators.length === 0) {
+            grid.innerHTML = '<div class="node-placeholder">No validator data available</div>';
+            return;
+        }
+
+        grid.innerHTML = '';
+        validators.forEach(v => {
+            const card = document.createElement('div');
+            card.className = 'node-card';
+
+            // Use agreement_24h score to determine online status
+            const score24h = v.agreement_24h ? parseFloat(v.agreement_24h.score) : 0;
+            const statusClass = score24h > 0.5 ? 'online' : 'offline';
+
+            // Display domain if available, otherwise truncated validation_public_key
+            const name = v.domain || (v.validation_public_key ? v.validation_public_key.slice(0, 12) + '...' : 'Validator');
+
+            const version = v.server_version ? 'v' + v.server_version : '';
+            const agreement = score24h > 0 ? (score24h * 100).toFixed(1) + '% (24h)' : '';
+            const unl = v.unl === 'rpc' ? ' [UNL]' : '';
+
+            card.innerHTML = `
+                <div class="node-name"><span class="node-status ${statusClass}"></span>${name}${unl}</div>
+                ${version ? `<div class="node-detail">${version}</div>` : ''}
+                ${agreement ? `<div class="node-detail">Agreement: ${agreement}</div>` : ''}
+            `;
+            grid.appendChild(card);
+        });
+    }
+
     function formatUptime(seconds) {
         if (!seconds) return '--';
         const h = Math.floor(seconds / 3600);
@@ -285,13 +320,14 @@ const App = (() => {
 
     // ---- VHS API ----
     async function fetchVHS() {
-        // Fetch validators first to build lookup
+        // Fetch validators first to build lookup and populate grid
         await fetchWithFallback(
             VHS_BASE + '/v1/network/validators/test',
             (data) => {
                 const validators = data.validators || data;
                 if (Array.isArray(validators)) {
                     console.log(`[VHS] Loaded ${validators.length} validators`);
+                    validatorsData = validators;
                     validatorLookup = {};
                     validators.forEach(v => {
                         if (v.signing_key) {
@@ -301,23 +337,19 @@ const App = (() => {
                             };
                         }
                     });
-                    // If no topology data, use validator count
-                    if (!nodesData || nodesData.length === 0) {
-                        updateNodeCount(validators.length);
-                    }
+                    updateNodeCount(validators.length);
+                    updateValidatorGrid(validators);
                 }
             }
         );
 
-        // Fetch topology nodes
+        // Fetch topology nodes (for supplementary data)
         await fetchWithFallback(
             VHS_BASE + '/v1/network/topology/nodes/test',
             (data) => {
                 const nodes = data.nodes || data;
                 if (Array.isArray(nodes) && nodes.length > 0) {
                     nodesData = nodes;
-                    updateNodeCount(nodes.length);
-                    updateNodeGrid(nodes.slice(0, 12));
                     console.log(`[VHS] Loaded ${nodes.length} topology nodes`);
                 }
             }
@@ -428,6 +460,7 @@ const App = (() => {
 
         // Init metrics & charts
         MetricsEngine.init();
+        await MetricsEngine.loadRemoteStats();
         DashboardCharts.init();
 
         // Show dashboard, hide splash

@@ -407,11 +407,26 @@ const MetricsEngine = (() => {
     }
 
     function getRetentionData() {
-        return {
-            day1: getActiveWallets(1),
-            day7: getActiveWallets(7),
-            day30: getActiveWallets(30)
-        };
+        const today = new Date().toISOString().slice(0, 10);
+
+        // 1-day: use live session data (most accurate for today)
+        const day1 = getActiveWallets(1);
+
+        // 7-day and 30-day: sum unique wallets from dailyStats history
+        const sortedDates = Object.keys(dailyStats).sort();
+        let day7 = day1;
+        let day30 = day1;
+
+        if (sortedDates.length > 0) {
+            const last7 = sortedDates.slice(-7);
+            const last30 = sortedDates.slice(-30);
+            const sum7 = last7.reduce((s, d) => s + (dailyStats[d].activeWallets || 0), 0);
+            const sum30 = last30.reduce((s, d) => s + (dailyStats[d].activeWallets || 0), 0);
+            day7 = Math.max(day1, sum7);
+            day30 = Math.max(day7, sum30);
+        }
+
+        return { day1, day7, day30 };
     }
 
     function getRecentTransactions(count) {
@@ -447,6 +462,37 @@ const MetricsEngine = (() => {
         };
     }
 
+    async function loadRemoteStats() {
+        try {
+            const resp = await fetch('data/daily-stats.json', { cache: 'no-cache' });
+            if (!resp.ok) {
+                console.log('[Metrics] No remote daily-stats.json available');
+                return;
+            }
+            const remote = await resp.json();
+            if (!remote || !remote.days) return;
+
+            const remoteCount = Object.keys(remote.days).length;
+            console.log(`[Metrics] Loaded ${remoteCount} days from remote stats`);
+
+            const today = new Date().toISOString().slice(0, 10);
+            for (const [date, data] of Object.entries(remote.days)) {
+                // Local session data takes priority for today (more accurate/real-time)
+                if (date === today && dailyStats[date]) continue;
+                // For past days, remote fills in gaps; keep whichever has higher txCount
+                const existing = dailyStats[date];
+                if (!existing || data.txCount > existing.txCount) {
+                    dailyStats[date] = data;
+                }
+            }
+
+            // Persist the merged data locally
+            saveDailyStats();
+        } catch (e) {
+            console.warn('[Metrics] Remote stats load failed:', e);
+        }
+    }
+
     function hasData() {
         return ledgers.length > 0 || explorerMetrics !== null;
     }
@@ -460,6 +506,7 @@ const MetricsEngine = (() => {
         saveCache,
         getAllStats,
         hasData,
+        loadRemoteStats,
         getRecentTransactions,
         getDailyActiveWalletsHistory,
         getDailyActiveWalletsMulti,

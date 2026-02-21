@@ -87,53 +87,64 @@ const DashboardCharts = (() => {
         createTxTypeChart({});
     }
 
+    // Plugin to show "Waiting on data..." when chart has no data
+    const noDataPlugin = {
+        id: 'noDataMessage',
+        afterDraw(chart) {
+            const datasets = chart.data.datasets;
+            const hasData = datasets.some(ds => ds.data && ds.data.some(v => v > 0));
+            if (!hasData) {
+                const { ctx, width, height } = chart;
+                ctx.save();
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.font = '12px "JetBrains Mono", monospace';
+                ctx.fillStyle = COLORS.tickColor;
+                ctx.fillText('Waiting on data\u2026', width / 2, height / 2);
+                ctx.restore();
+            }
+        }
+    };
+
     function createDAWChart(data) {
         const ctx = document.getElementById('chart-daw');
         if (!ctx) return;
 
         dawChart = new Chart(ctx, {
-            type: 'line',
+            type: 'bar',
             data: {
                 labels: data.map(d => d.date),
                 datasets: [
                     {
                         label: '1D',
                         data: data.map(d => d.day1 || d.count || 0),
+                        backgroundColor: COLORS.cyanAlpha,
                         borderColor: COLORS.cyan,
-                        backgroundColor: 'transparent',
-                        borderWidth: 2,
-                        fill: false,
-                        tension: 0.4,
-                        pointRadius: 0,
-                        pointHoverRadius: 5,
-                        pointHoverBackgroundColor: COLORS.cyan
+                        borderWidth: 1,
+                        borderRadius: 3,
+                        borderSkipped: false
                     },
                     {
                         label: '7D',
                         data: data.map(d => d.day7 || 0),
+                        backgroundColor: COLORS.purpleAlpha,
                         borderColor: COLORS.purple,
-                        backgroundColor: 'transparent',
-                        borderWidth: 2,
-                        fill: false,
-                        tension: 0.4,
-                        pointRadius: 0,
-                        pointHoverRadius: 5,
-                        pointHoverBackgroundColor: COLORS.purple
+                        borderWidth: 1,
+                        borderRadius: 3,
+                        borderSkipped: false
                     },
                     {
                         label: '30D',
                         data: data.map(d => d.day30 || 0),
+                        backgroundColor: COLORS.greenAlpha,
                         borderColor: COLORS.green,
-                        backgroundColor: 'transparent',
-                        borderWidth: 2,
-                        fill: false,
-                        tension: 0.4,
-                        pointRadius: 0,
-                        pointHoverRadius: 5,
-                        pointHoverBackgroundColor: COLORS.green
+                        borderWidth: 1,
+                        borderRadius: 3,
+                        borderSkipped: false
                     }
                 ]
             },
+            plugins: [noDataPlugin],
             options: {
                 ...baseOptions(false),
                 plugins: {
@@ -177,6 +188,7 @@ const DashboardCharts = (() => {
                     borderSkipped: false
                 }]
             },
+            plugins: [noDataPlugin],
             options: baseOptions(false)
         });
     }
@@ -342,7 +354,7 @@ const DashboardCharts = (() => {
     }
 
     function updateTxVolChart(data) {
-        if (!txVolChart || !data || data.length === 0) return;
+        if (!txVolChart || !data) return;
         txVolChart.data.labels = data.map(d => dateToWeekday(d.date));
         txVolChart.data.datasets[0].data = data.map(d => d.count);
         txVolChart.update('none');

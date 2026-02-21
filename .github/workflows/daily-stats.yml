@@ -1,0 +1,39 @@
+name: Collect Daily Stats
+
+on:
+  schedule:
+    - cron: '0 23 * * *'  # 11 PM UTC daily
+  workflow_dispatch:       # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  collect-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install ws
+
+      - name: Collect daily stats
+        run: node scripts/collect-daily-stats.js
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/daily-stats.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update daily stats for $(date -u +%Y-%m-%d)"
+            git push
+          fi
