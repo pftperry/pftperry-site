@@ -80,10 +80,7 @@ const DashboardCharts = (() => {
         };
     }
 
-    // Unregister datalabels plugin globally so it doesn't apply to all charts
     function init() {
-        Chart.defaults.set('plugins.datalabels', { display: false });
-
         createDAWChart([]);
         createTxVolChart([]);
         createRetentionChart({ day1: 0, day7: 0, day30: 0 });
@@ -345,7 +342,7 @@ const DashboardCharts = (() => {
     }
 
     function updateTxVolChart(data) {
-        if (!txVolChart || !data) return;
+        if (!txVolChart || !data || data.length < 2) return;
         txVolChart.data.labels = data.map(d => dateToWeekday(d.date));
         txVolChart.data.datasets[0].data = data.map(d => d.count);
         txVolChart.update('none');
