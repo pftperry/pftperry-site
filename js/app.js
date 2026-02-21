@@ -4,7 +4,8 @@
    ============================================ */
 
 const App = (() => {
-    const VHS_BASE = 'https://vhs.devnet.postfiat.org:3000';
+    const VHS_BASE = 'https://vhs.testnet.postfiat.org';
+    const EXPLORER_API = 'https://explorer.testnet.postfiat.org/api/v1';
     const UPDATE_INTERVAL = 5000;
     let updateTimer = null;
     let usingMockData = false;
@@ -245,39 +246,69 @@ const App = (() => {
 
     // ---- VHS API ----
     async function fetchVHS() {
+        // Fetch topology nodes
+        await fetchWithFallback(
+            VHS_BASE + '/v1/network/topology/nodes/test',
+            (data) => {
+                const nodes = data.nodes || data;
+                if (Array.isArray(nodes) && nodes.length > 0) {
+                    nodesData = nodes;
+                    updateNodeCount(nodes.length);
+                    updateNodeGrid(nodes.slice(0, 12));
+                    console.log(`[VHS] Loaded ${nodes.length} topology nodes`);
+                }
+            }
+        );
+
+        // Fetch validators for additional node count info
+        await fetchWithFallback(
+            VHS_BASE + '/v1/network/validators/test',
+            (data) => {
+                const validators = data.validators || data;
+                if (Array.isArray(validators)) {
+                    console.log(`[VHS] Loaded ${validators.length} validators`);
+                    // If no topology data, use validator count
+                    if (!nodesData || nodesData.length === 0) {
+                        updateNodeCount(validators.length);
+                    }
+                }
+            }
+        );
+
+        // Fetch explorer metrics for TPS data
+        await fetchWithFallback(
+            EXPLORER_API + '/metrics',
+            (data) => {
+                if (data.txn_sec) {
+                    MetricsEngine.setExplorerMetrics(data);
+                    console.log(`[Explorer] Metrics loaded: TPS=${data.txn_sec}, interval=${data.ledger_interval}`);
+                }
+            }
+        );
+    }
+
+    async function fetchWithFallback(url, onSuccess) {
         const corsProxies = [
-            '',  // Direct
-            'https://corsproxy.io/?',
-            'https://api.allorigins.win/raw?url='
+            '',  // Direct first
+            'https://corsproxy.io/?'
         ];
 
         for (const proxy of corsProxies) {
             try {
-                const url = proxy + encodeURIComponent(VHS_BASE + '/v1/network/topology');
-                const directUrl = proxy ? url : VHS_BASE + '/v1/network/topology';
-                const resp = await fetch(directUrl, { signal: AbortSignal.timeout(8000) });
+                const fetchUrl = proxy ? proxy + encodeURIComponent(url) : url;
+                const resp = await fetch(fetchUrl, { signal: AbortSignal.timeout(10000) });
                 if (resp.ok) {
                     const data = await resp.json();
                     if (data) {
-                        nodesData = data.nodes || data;
-                        const nodeCount = data.node_count || (Array.isArray(nodesData) ? nodesData.length : 0);
-                        updateNodeCount(nodeCount);
-                        updateNodeGrid(Array.isArray(nodesData) ? nodesData.slice(0, 12) : []);
-                        return;
+                        onSuccess(data);
+                        return true;
                     }
                 }
             } catch (e) {
-                console.log('[VHS] Topology fetch failed via proxy:', e.message);
+                console.log(`[Fetch] ${url} failed (proxy: ${proxy || 'direct'}):`, e.message);
             }
         }
-
-        // Fallback: mock nodes
-        updateNodeCount(3);
-        updateNodeGrid([
-            { host: 'devnet-node-1', version: 'rippled 2.x', uptime: 86400 },
-            { host: 'devnet-node-2', version: 'rippled 2.x', uptime: 72000 },
-            { host: 'devnet-node-3', version: 'rippled 2.x', uptime: 45000 }
-        ]);
+        return false;
     }
 
     // ---- Clock ----
@@ -405,8 +436,8 @@ const App = (() => {
             }
         }, UPDATE_INTERVAL);
 
-        // Re-fetch VHS every 5 minutes
-        setInterval(fetchVHS, 300000);
+        // Re-fetch VHS/explorer data every 2 minutes
+        setInterval(fetchVHS, 120000);
     }
 
     // Boot

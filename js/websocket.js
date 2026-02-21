@@ -5,9 +5,8 @@
 
 const WebSocketManager = (() => {
     const ENDPOINTS = [
-        'wss://ws.devnet.postfiat.org',
-        'wss://ws.devnet.postfiat.org:6006',
-        'wss://ws.devnet.postfiat.org:2559'
+        'wss://ws.testnet.postfiat.org',
+        'wss://ws-archive.testnet.postfiat.org'
     ];
 
     let ws = null;
@@ -46,24 +45,19 @@ const WebSocketManager = (() => {
             // Subscribe to ledger stream
             send({ command: 'subscribe', streams: ['ledger'] });
 
-            // Get server info
+            // Get server info, then fetch historical ledgers
             sendRequest({ command: 'server_info' }).then(resp => {
                 if (resp && resp.result && resp.result.info) {
                     if (onLedgerCallback) {
                         onLedgerCallback('server_info', resp.result.info);
                     }
+                    // Fetch last ~50 ledgers to build initial data
+                    const latestSeq = resp.result.info.validated_ledger?.seq;
+                    if (latestSeq) {
+                        fetchHistoricalLedgers(latestSeq, 50);
+                    }
                 }
             }).catch(() => {});
-
-            // Get latest validated ledger with transactions
-            sendRequest({ command: 'ledger', ledger_index: 'validated', transactions: true, expand: true })
-                .then(resp => {
-                    if (resp && resp.result && resp.result.ledger) {
-                        if (onLedgerCallback) {
-                            onLedgerCallback('ledger', resp.result.ledger);
-                        }
-                    }
-                }).catch(() => {});
         };
 
         ws.onmessage = (event) => {
@@ -176,6 +170,33 @@ const WebSocketManager = (() => {
         const req = { command: 'ledger_data', ledger_index: 'validated', limit: 256 };
         if (marker) req.marker = marker;
         return sendRequest(req);
+    }
+
+    async function fetchHistoricalLedgers(latestSeq, count) {
+        console.log(`[WS] Fetching ${count} historical ledgers from ${latestSeq}...`);
+        // Fetch in batches to avoid overwhelming the connection
+        for (let i = 0; i < count; i += 5) {
+            const batch = [];
+            for (let j = 0; j < 5 && (i + j) < count; j++) {
+                const seq = latestSeq - i - j;
+                batch.push(
+                    sendRequest({
+                        command: 'ledger',
+                        ledger_index: seq,
+                        transactions: true,
+                        expand: true
+                    }).then(resp => {
+                        if (resp && resp.result && resp.result.ledger) {
+                            if (onLedgerCallback) {
+                                onLedgerCallback('ledger', resp.result.ledger);
+                            }
+                        }
+                    }).catch(() => {})
+                );
+            }
+            await Promise.all(batch);
+        }
+        console.log(`[WS] Historical ledger fetch complete`);
     }
 
     function getIsConnected() {

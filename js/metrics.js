@@ -12,6 +12,7 @@ const MetricsEngine = (() => {
     // In-memory data store
     let ledgers = [];           // Array of { seq, close_time, txn_count, transactions: [...] }
     let serverInfo = null;
+    let explorerMetrics = null; // From explorer API (txn_sec, ledger_interval, etc.)
     let recentTxnTimes = [];    // For TPS calculation (last 10 ledger intervals)
     let lastLedgerTime = null;
 
@@ -44,6 +45,10 @@ const MetricsEngine = (() => {
 
     function processServerInfo(info) {
         serverInfo = info;
+    }
+
+    function setExplorerMetrics(data) {
+        explorerMetrics = data;
     }
 
     function processLedger(ledger) {
@@ -128,6 +133,10 @@ const MetricsEngine = (() => {
     }
 
     function getTPS() {
+        // Prefer explorer API data
+        if (explorerMetrics && explorerMetrics.txn_sec) {
+            return parseFloat(explorerMetrics.txn_sec);
+        }
         if (recentTxnTimes.length < 2) return 0;
         const totalTxns = recentTxnTimes.reduce((s, r) => s + r.txnCount, 0);
         const totalTime = recentTxnTimes.reduce((s, r) => s + r.interval, 0);
@@ -151,6 +160,11 @@ const MetricsEngine = (() => {
     }
 
     function getAvgFee() {
+        // Prefer explorer API data (returns in XRP like "0.00001000")
+        if (explorerMetrics && explorerMetrics.avg_fee) {
+            const feeXrp = parseFloat(explorerMetrics.avg_fee);
+            return feeXrp * 1000000; // Convert to drops for display
+        }
         const txns = getAllTransactions(DAY_MS);
         if (txns.length === 0) return 0;
         const totalFee = txns.reduce((s, tx) => s + (tx.fee || 0), 0);
@@ -158,6 +172,10 @@ const MetricsEngine = (() => {
     }
 
     function getLedgerInterval() {
+        // Prefer explorer API data
+        if (explorerMetrics && explorerMetrics.ledger_interval) {
+            return parseFloat(explorerMetrics.ledger_interval);
+        }
         if (recentTxnTimes.length === 0) return 0;
         const avg = recentTxnTimes.reduce((s, r) => s + r.interval, 0) / recentTxnTimes.length;
         return avg;
@@ -287,7 +305,7 @@ const MetricsEngine = (() => {
     }
 
     function hasData() {
-        return ledgers.length > 0;
+        return ledgers.length > 0 || explorerMetrics !== null;
     }
 
     return {
@@ -295,6 +313,7 @@ const MetricsEngine = (() => {
         processServerInfo,
         processLedger,
         processLedgerClosed,
+        setExplorerMetrics,
         saveCache,
         getAllStats,
         hasData,
