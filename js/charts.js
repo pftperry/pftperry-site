@@ -327,7 +327,9 @@ const DashboardCharts = (() => {
     }
 
     function update(stats) {
-        updateDAWChart(stats.dawHistoryMulti || stats.dawHistory);
+        const dawData = stats.dawHistoryMulti && stats.dawHistoryMulti.length > 0
+            ? stats.dawHistoryMulti : stats.dawHistory;
+        updateDAWChart(dawData);
         updateTxVolChart(stats.txVolHistory);
         updateRetentionChart(stats.retention);
         updateTxTypeChart(stats.txTypeDistribution);

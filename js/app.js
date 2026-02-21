@@ -139,17 +139,8 @@ const App = (() => {
         return drops.toLocaleString() + ' drops';
     }
 
-    function updateDAWMulti(stats) {
-        const el1d = document.getElementById('metric-daw-1d');
-        const el7d = document.getElementById('metric-daw-7d');
-        const el30d = document.getElementById('metric-daw-30d');
-        if (el1d) el1d.textContent = formatNumber(stats.activeWallets1d);
-        if (el7d) el7d.textContent = formatNumber(stats.activeWallets7d);
-        if (el30d) el30d.textContent = formatNumber(stats.activeWallets30d);
-    }
-
     function updateDashboard(stats) {
-        updateDAWMulti(stats);
+        updateMetricEl('metric-daw', stats.dailyActiveWallets, 'number');
         updateMetricEl('metric-tps', stats.tps, 'tps');
         updateMetricEl('metric-accounts', stats.totalAccounts, 'number');
         updateMetricEl('metric-fee', stats.avgFee, 'fee');
