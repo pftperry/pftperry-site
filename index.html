@@ -14,6 +14,7 @@
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 
     <!-- Dashboard CSS -->
     <link rel="stylesheet" href="css/dashboard.css">
@@ -52,7 +53,11 @@
                 <div class="card-corner tl"></div><div class="card-corner tr"></div>
                 <div class="card-corner bl"></div><div class="card-corner br"></div>
                 <div class="metric-label">DAILY ACTIVE WALLETS</div>
-                <div class="metric-value" id="metric-daw" data-target="0">--</div>
+                <div class="metric-multi" id="metric-daw-multi">
+                    <div class="metric-sub"><span class="metric-sub-label">1D</span><span class="metric-sub-value" id="metric-daw-1d">--</span></div>
+                    <div class="metric-sub"><span class="metric-sub-label">7D</span><span class="metric-sub-value" id="metric-daw-7d">--</span></div>
+                    <div class="metric-sub"><span class="metric-sub-label">30D</span><span class="metric-sub-value" id="metric-daw-30d">--</span></div>
+                </div>
                 <div class="metric-change" id="metric-daw-change"></div>
             </div>
             <div class="metric-card" id="card-tps">
@@ -85,7 +90,7 @@
                 <div class="card-corner bl"></div><div class="card-corner br"></div>
                 <div class="panel-header">
                     <span class="panel-title">DAILY ACTIVE WALLETS</span>
-                    <span class="panel-badge">30D</span>
+                    <span class="panel-badge">1D / 7D / 30D</span>
                 </div>
                 <div class="chart-container">
                     <canvas id="chart-daw"></canvas>
@@ -96,7 +101,7 @@
                 <div class="card-corner bl"></div><div class="card-corner br"></div>
                 <div class="panel-header">
                     <span class="panel-title">TRANSACTION VOLUME</span>
-                    <span class="panel-badge">30D</span>
+                    <span class="panel-badge">7D</span>
                 </div>
                 <div class="chart-container">
                     <canvas id="chart-txvol"></canvas>
@@ -137,6 +142,7 @@
                 <div class="card-corner bl"></div><div class="card-corner br"></div>
                 <div class="panel-header">
                     <span class="panel-title">TRANSACTION TYPE DISTRIBUTION</span>
+                    <span class="panel-badge">24H</span>
                 </div>
                 <div class="chart-container chart-container-doughnut">
                     <canvas id="chart-txtype"></canvas>

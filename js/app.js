@@ -10,6 +10,7 @@ const App = (() => {
     let updateTimer = null;
     let usingMockData = false;
     let nodesData = null;
+    let validatorLookup = {};  // signing_key -> { domain, ... }
     let mockFeedInterval = null;
 
     // ---- Mock Data ----
@@ -32,8 +33,25 @@ const App = (() => {
             });
         }
 
+        // Build multi-line DAW history
+        const dawHistoryMulti = history.map((h, i) => {
+            const day1 = h.count;
+            const set7 = history.slice(Math.max(0, i - 6), i + 1);
+            const day7 = Math.min(day1 + Math.floor(Math.random() * 30 + 20), set7.reduce((s, x) => s + x.count, 0));
+            const set30 = history.slice(Math.max(0, i - 29), i + 1);
+            const day30 = Math.min(day7 + Math.floor(Math.random() * 50 + 30), set30.reduce((s, x) => s + x.count, 0));
+            return { date: h.date, day1, day7, day30 };
+        });
+
+        const aw1d = Math.floor(Math.random() * 30 + 25);
+        const aw7d = aw1d + Math.floor(Math.random() * 30 + 20);
+        const aw30d = aw7d + Math.floor(Math.random() * 50 + 30);
+
         return {
-            dailyActiveWallets: Math.floor(Math.random() * 30 + 25),
+            dailyActiveWallets: aw1d,
+            activeWallets1d: aw1d,
+            activeWallets7d: aw7d,
+            activeWallets30d: aw30d,
             tps: (Math.random() * 2 + 0.5).toFixed(2),
             totalAccounts: Math.floor(Math.random() * 200 + 150),
             avgFee: Math.floor(Math.random() * 50 + 10),
@@ -49,7 +67,8 @@ const App = (() => {
                 'Memo': Math.floor(Math.random() * 60 + 15)
             },
             dawHistory: history,
-            txVolHistory: txHistory,
+            dawHistoryMulti: dawHistoryMulti,
+            txVolHistory: txHistory.slice(-7),
             retention: {
                 day1: Math.floor(Math.random() * 30 + 20),
                 day7: Math.floor(Math.random() * 60 + 40),
@@ -120,8 +139,17 @@ const App = (() => {
         return drops.toLocaleString() + ' drops';
     }
 
+    function updateDAWMulti(stats) {
+        const el1d = document.getElementById('metric-daw-1d');
+        const el7d = document.getElementById('metric-daw-7d');
+        const el30d = document.getElementById('metric-daw-30d');
+        if (el1d) el1d.textContent = formatNumber(stats.activeWallets1d);
+        if (el7d) el7d.textContent = formatNumber(stats.activeWallets7d);
+        if (el30d) el30d.textContent = formatNumber(stats.activeWallets30d);
+    }
+
     function updateDashboard(stats) {
-        updateMetricEl('metric-daw', stats.dailyActiveWallets, 'number');
+        updateDAWMulti(stats);
         updateMetricEl('metric-tps', stats.tps, 'tps');
         updateMetricEl('metric-accounts', stats.totalAccounts, 'number');
         updateMetricEl('metric-fee', stats.avgFee, 'fee');
@@ -209,6 +237,23 @@ const App = (() => {
     }
 
     // ---- Node Grid ----
+    function resolveNodeName(node) {
+        // Check if this node's public key matches a validator's signing_key
+        const pubKey = node.node_public_key || '';
+        const validator = validatorLookup[pubKey];
+        if (validator && validator.domain) {
+            return validator.domain;
+        }
+        // Fallback: city, country_code
+        if (node.city && node.country_code) {
+            return node.city + ', ' + node.country_code;
+        }
+        if (node.city) return node.city;
+        if (node.country_code) return node.country_code;
+        // Last resort
+        return pubKey ? pubKey.slice(0, 12) + '...' : 'Node';
+    }
+
     function updateNodeGrid(nodes) {
         const grid = document.getElementById('node-grid');
         if (!grid) return;
@@ -223,9 +268,12 @@ const App = (() => {
             const card = document.createElement('div');
             card.className = 'node-card';
             const statusClass = node.uptime ? 'online' : 'offline';
+            const nodeName = resolveNodeName(node);
+            const serverState = node.server_state ? 'State: ' + node.server_state : '';
             card.innerHTML = `
-                <div class="node-name"><span class="node-status ${statusClass}"></span>${node.host || node.node_public_key?.slice(0, 12) || 'Node'}</div>
+                <div class="node-name"><span class="node-status ${statusClass}"></span>${nodeName}</div>
                 <div class="node-detail">${node.version || 'Unknown version'}</div>
+                ${serverState ? `<div class="node-detail">${serverState}</div>` : ''}
                 <div class="node-detail">${node.uptime ? 'Uptime: ' + formatUptime(node.uptime) : ''}</div>
             `;
             grid.appendChild(card);
@@ -246,6 +294,30 @@ const App = (() => {
 
     // ---- VHS API ----
     async function fetchVHS() {
+        // Fetch validators first to build lookup
+        await fetchWithFallback(
+            VHS_BASE + '/v1/network/validators/test',
+            (data) => {
+                const validators = data.validators || data;
+                if (Array.isArray(validators)) {
+                    console.log(`[VHS] Loaded ${validators.length} validators`);
+                    validatorLookup = {};
+                    validators.forEach(v => {
+                        if (v.signing_key) {
+                            validatorLookup[v.signing_key] = {
+                                domain: v.domain || '',
+                                server_version: v.server_version || ''
+                            };
+                        }
+                    });
+                    // If no topology data, use validator count
+                    if (!nodesData || nodesData.length === 0) {
+                        updateNodeCount(validators.length);
+                    }
+                }
+            }
+        );
+
         // Fetch topology nodes
         await fetchWithFallback(
             VHS_BASE + '/v1/network/topology/nodes/test',
@@ -256,21 +328,6 @@ const App = (() => {
                     updateNodeCount(nodes.length);
                     updateNodeGrid(nodes.slice(0, 12));
                     console.log(`[VHS] Loaded ${nodes.length} topology nodes`);
-                }
-            }
-        );
-
-        // Fetch validators for additional node count info
-        await fetchWithFallback(
-            VHS_BASE + '/v1/network/validators/test',
-            (data) => {
-                const validators = data.validators || data;
-                if (Array.isArray(validators)) {
-                    console.log(`[VHS] Loaded ${validators.length} validators`);
-                    // If no topology data, use validator count
-                    if (!nodesData || nodesData.length === 0) {
-                        updateNodeCount(validators.length);
-                    }
                 }
             }
         );

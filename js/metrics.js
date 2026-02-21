@@ -254,6 +254,44 @@ const MetricsEngine = (() => {
             .slice(-30);
     }
 
+    function getDailyActiveWalletsMulti() {
+        // Get per-day unique accounts first
+        const dayBuckets = {};
+        ledgers.forEach(l => {
+            const day = new Date(l.close_time).toISOString().slice(0, 10);
+            if (!dayBuckets[day]) dayBuckets[day] = new Set();
+            l.transactions.forEach(tx => {
+                if (tx.account) dayBuckets[day].add(tx.account);
+            });
+        });
+
+        const sortedDays = Object.keys(dayBuckets).sort();
+        const result = [];
+
+        for (let i = 0; i < sortedDays.length; i++) {
+            const date = sortedDays[i];
+            const day1 = dayBuckets[date].size;
+
+            // Rolling 7-day unique accounts
+            const set7 = new Set();
+            for (let j = Math.max(0, i - 6); j <= i; j++) {
+                dayBuckets[sortedDays[j]].forEach(a => set7.add(a));
+            }
+            const day7 = set7.size;
+
+            // Rolling 30-day unique accounts
+            const set30 = new Set();
+            for (let j = Math.max(0, i - 29); j <= i; j++) {
+                dayBuckets[sortedDays[j]].forEach(a => set30.add(a));
+            }
+            const day30 = set30.size;
+
+            result.push({ date, day1, day7, day30 });
+        }
+
+        return result.slice(-30);
+    }
+
     function getTxVolumeHistory() {
         const dayBuckets = {};
         ledgers.forEach(l => {
@@ -264,7 +302,7 @@ const MetricsEngine = (() => {
         return Object.entries(dayBuckets)
             .map(([date, count]) => ({ date, count }))
             .sort((a, b) => a.date.localeCompare(b.date))
-            .slice(-30);
+            .slice(-7);
     }
 
     function getRetentionData() {
@@ -289,6 +327,9 @@ const MetricsEngine = (() => {
     function getAllStats() {
         return {
             dailyActiveWallets: getDailyActiveWallets(),
+            activeWallets1d: getActiveWallets(1),
+            activeWallets7d: getActiveWallets(7),
+            activeWallets30d: getActiveWallets(30),
             tps: getTPS(),
             totalAccounts: getTotalAccounts(),
             avgFee: getAvgFee(),
@@ -298,6 +339,7 @@ const MetricsEngine = (() => {
             peakHour: getPeakHour(),
             txTypeDistribution: getTxTypeDistribution(),
             dawHistory: getDailyActiveWalletsHistory(),
+            dawHistoryMulti: getDailyActiveWalletsMulti(),
             txVolHistory: getTxVolumeHistory(),
             retention: getRetentionData(),
             recentTxns: getRecentTransactions(50)
@@ -319,6 +361,7 @@ const MetricsEngine = (() => {
         hasData,
         getRecentTransactions,
         getDailyActiveWalletsHistory,
+        getDailyActiveWalletsMulti,
         getTxVolumeHistory
     };
 })();

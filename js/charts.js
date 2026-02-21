@@ -80,7 +80,10 @@ const DashboardCharts = (() => {
         };
     }
 
+    // Unregister datalabels plugin globally so it doesn't apply to all charts
     function init() {
+        Chart.defaults.set('plugins.datalabels', { display: false });
+
         createDAWChart([]);
         createTxVolChart([]);
         createRetentionChart({ day1: 0, day7: 0, day30: 0 });
@@ -95,23 +98,68 @@ const DashboardCharts = (() => {
             type: 'line',
             data: {
                 labels: data.map(d => d.date),
-                datasets: [{
-                    label: 'Active Wallets',
-                    data: data.map(d => d.count),
-                    borderColor: COLORS.cyan,
-                    backgroundColor: createGradient(ctx, COLORS.cyan, COLORS.cyanAlpha),
-                    borderWidth: 2,
-                    fill: true,
-                    tension: 0.4,
-                    pointRadius: 0,
-                    pointHoverRadius: 5,
-                    pointHoverBackgroundColor: COLORS.cyan,
-                    pointHoverBorderColor: '#fff',
-                    pointHoverBorderWidth: 2
-                }]
+                datasets: [
+                    {
+                        label: '1D',
+                        data: data.map(d => d.day1 || d.count || 0),
+                        borderColor: COLORS.cyan,
+                        backgroundColor: 'transparent',
+                        borderWidth: 2,
+                        fill: false,
+                        tension: 0.4,
+                        pointRadius: 0,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: COLORS.cyan
+                    },
+                    {
+                        label: '7D',
+                        data: data.map(d => d.day7 || 0),
+                        borderColor: COLORS.purple,
+                        backgroundColor: 'transparent',
+                        borderWidth: 2,
+                        fill: false,
+                        tension: 0.4,
+                        pointRadius: 0,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: COLORS.purple
+                    },
+                    {
+                        label: '30D',
+                        data: data.map(d => d.day30 || 0),
+                        borderColor: COLORS.green,
+                        backgroundColor: 'transparent',
+                        borderWidth: 2,
+                        fill: false,
+                        tension: 0.4,
+                        pointRadius: 0,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: COLORS.green
+                    }
+                ]
             },
-            options: baseOptions(false)
+            options: {
+                ...baseOptions(false),
+                plugins: {
+                    ...baseOptions(false).plugins,
+                    legend: {
+                        display: true,
+                        labels: {
+                            color: COLORS.tickColor,
+                            font: { family: 'JetBrains Mono', size: 10 },
+                            usePointStyle: true,
+                            pointStyleWidth: 8,
+                            padding: 16
+                        }
+                    }
+                }
+            }
         });
+    }
+
+    function dateToWeekday(dateStr) {
+        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const d = new Date(dateStr + 'T00:00:00Z');
+        return days[d.getUTCDay()];
     }
 
     function createTxVolChart(data) {
@@ -121,7 +169,7 @@ const DashboardCharts = (() => {
         txVolChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: data.map(d => d.date),
+                labels: data.map(d => dateToWeekday(d.date)),
                 datasets: [{
                     label: 'Transactions',
                     data: data.map(d => d.count),
@@ -140,6 +188,8 @@ const DashboardCharts = (() => {
         const ctx = document.getElementById('chart-retention');
         if (!ctx) return;
 
+        const barColors = [COLORS.cyan, COLORS.purple, COLORS.green];
+
         retentionChart = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -152,22 +202,35 @@ const DashboardCharts = (() => {
                         COLORS.purpleAlpha,
                         COLORS.greenAlpha
                     ],
-                    borderColor: [
-                        COLORS.cyan,
-                        COLORS.purple,
-                        COLORS.green
-                    ],
+                    borderColor: barColors,
                     borderWidth: 1,
                     borderRadius: 4,
                     borderSkipped: false
                 }]
             },
+            plugins: [ChartDataLabels],
             options: {
                 ...baseOptions(false),
                 indexAxis: 'y',
                 plugins: {
                     ...baseOptions(false).plugins,
-                    legend: { display: false }
+                    legend: { display: false },
+                    datalabels: {
+                        display: true,
+                        anchor: 'end',
+                        align: 'right',
+                        color: function(context) {
+                            return barColors[context.dataIndex] || COLORS.cyan;
+                        },
+                        font: {
+                            family: 'JetBrains Mono',
+                            size: 11,
+                            weight: '600'
+                        },
+                        formatter: function(value) {
+                            return value + ' wallets';
+                        }
+                    }
                 }
             }
         });
@@ -196,6 +259,7 @@ const DashboardCharts = (() => {
                     hoverOffset: 8
                 }]
             },
+            plugins: [ChartDataLabels],
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
@@ -222,6 +286,25 @@ const DashboardCharts = (() => {
                         cornerRadius: 4,
                         titleColor: COLORS.cyan,
                         bodyColor: '#e0e8ff'
+                    },
+                    datalabels: {
+                        display: function(context) {
+                            return context.dataset.data.length > 0 && context.dataset.data[0] !== 1;
+                        },
+                        color: '#ffffff',
+                        font: {
+                            family: 'JetBrains Mono',
+                            size: 11,
+                            weight: '600'
+                        },
+                        anchor: 'center',
+                        align: 'center',
+                        formatter: function(value, context) {
+                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            if (total === 0) return '';
+                            const pct = Math.round((value / total) * 100);
+                            return pct + '%';
+                        }
                     }
                 }
             }
@@ -244,7 +327,7 @@ const DashboardCharts = (() => {
     }
 
     function update(stats) {
-        updateDAWChart(stats.dawHistory);
+        updateDAWChart(stats.dawHistoryMulti || stats.dawHistory);
         updateTxVolChart(stats.txVolHistory);
         updateRetentionChart(stats.retention);
         updateTxTypeChart(stats.txTypeDistribution);
@@ -253,13 +336,15 @@ const DashboardCharts = (() => {
     function updateDAWChart(data) {
         if (!dawChart || !data) return;
         dawChart.data.labels = data.map(d => d.date);
-        dawChart.data.datasets[0].data = data.map(d => d.count);
+        dawChart.data.datasets[0].data = data.map(d => d.day1 || d.count || 0);
+        dawChart.data.datasets[1].data = data.map(d => d.day7 || 0);
+        dawChart.data.datasets[2].data = data.map(d => d.day30 || 0);
         dawChart.update('none');
     }
 
     function updateTxVolChart(data) {
         if (!txVolChart || !data) return;
-        txVolChart.data.labels = data.map(d => d.date);
+        txVolChart.data.labels = data.map(d => dateToWeekday(d.date));
         txVolChart.data.datasets[0].data = data.map(d => d.count);
         txVolChart.update('none');
     }
