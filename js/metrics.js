@@ -299,10 +299,14 @@ const MetricsEngine = (() => {
             dayBuckets[day] = (dayBuckets[day] || 0) + l.txn_count;
         });
 
-        return Object.entries(dayBuckets)
-            .map(([date, count]) => ({ date, count }))
-            .sort((a, b) => a.date.localeCompare(b.date))
-            .slice(-7);
+        // Always return 7 days, backfilling zeros for missing days
+        const result = [];
+        for (let i = 6; i >= 0; i--) {
+            const d = new Date(Date.now() - i * DAY_MS);
+            const dateStr = d.toISOString().slice(0, 10);
+            result.push({ date: dateStr, count: dayBuckets[dateStr] || 0 });
+        }
+        return result;
     }
 
     function getRetentionData() {
