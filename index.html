@@ -85,19 +85,8 @@
             </div>
         </section>
 
-        <!-- Row 2: Main Charts -->
+        <!-- Row 2: TX Volume + Live Feed -->
         <section class="row row-charts">
-            <div class="chart-panel">
-                <div class="card-corner tl"></div><div class="card-corner tr"></div>
-                <div class="card-corner bl"></div><div class="card-corner br"></div>
-                <div class="panel-header">
-                    <span class="panel-title">DAILY ACTIVE WALLETS</span>
-                    <span class="panel-badge">1D / 7D / 30D</span>
-                </div>
-                <div class="chart-container">
-                    <canvas id="chart-daw"></canvas>
-                </div>
-            </div>
             <div class="chart-panel">
                 <div class="card-corner tl"></div><div class="card-corner tr"></div>
                 <div class="card-corner bl"></div><div class="card-corner br"></div>
@@ -107,21 +96,6 @@
                 </div>
                 <div class="chart-container">
                     <canvas id="chart-txvol"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <!-- Row 3: Engagement + Live Feed -->
-        <section class="row row-engagement">
-            <div class="chart-panel">
-                <div class="card-corner tl"></div><div class="card-corner tr"></div>
-                <div class="card-corner bl"></div><div class="card-corner br"></div>
-                <div class="panel-header">
-                    <span class="panel-title">USER RETENTION</span>
-                    <span class="panel-badge">1D / 7D / 30D</span>
-                </div>
-                <div class="chart-container">
-                    <canvas id="chart-retention"></canvas>
                 </div>
             </div>
             <div class="chart-panel live-feed-panel">
@@ -137,7 +111,33 @@
             </div>
         </section>
 
-        <!-- Row 4: Distribution + Network -->
+        <!-- Row 3: DAW + User Retention -->
+        <section class="row row-engagement">
+            <div class="chart-panel">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="panel-header">
+                    <span class="panel-title">DAILY ACTIVE WALLETS</span>
+                    <span class="panel-badge">1D / 7D / 30D</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chart-daw"></canvas>
+                </div>
+            </div>
+            <div class="chart-panel">
+                <div class="card-corner tl"></div><div class="card-corner tr"></div>
+                <div class="card-corner bl"></div><div class="card-corner br"></div>
+                <div class="panel-header">
+                    <span class="panel-title">USER RETENTION</span>
+                    <span class="panel-badge">1D / 7D / 30D</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chart-retention"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Row 4: TX Type + Network Topology -->
         <section class="row row-distribution">
             <div class="chart-panel">
                 <div class="card-corner tl"></div><div class="card-corner tr"></div>
