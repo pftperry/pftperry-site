@@ -153,16 +153,7 @@ const DashboardCharts = (() => {
                 ...baseOptions(false),
                 plugins: {
                     ...baseOptions(false).plugins,
-                    legend: {
-                        display: true,
-                        labels: {
-                            color: COLORS.tickColor,
-                            font: { family: 'JetBrains Mono', size: 10 },
-                            usePointStyle: true,
-                            pointStyleWidth: 8,
-                            padding: 16
-                        }
-                    },
+                    legend: { display: false },
                     datalabels: {
                         display: false
                     }
