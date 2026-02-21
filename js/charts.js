@@ -285,7 +285,16 @@ const DashboardCharts = (() => {
                 cutout: '65%',
                 animation: { duration: 800, easing: 'easeOutQuart' },
                 plugins: {
-                    legend: { display: false },
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            color: COLORS.tickColor,
+                            font: { family: 'JetBrains Mono', size: 10 },
+                            padding: 12,
+                            usePointStyle: true,
+                            pointStyleWidth: 8
+                        }
+                    },
                     tooltip: {
                         backgroundColor: 'rgba(10, 14, 23, 0.95)',
                         titleFont: { family: 'Orbitron', size: 10 },
@@ -299,27 +308,23 @@ const DashboardCharts = (() => {
                     },
                     datalabels: {
                         display: function(context) {
-                            if (context.dataset.data.length === 0 || context.dataset.data[0] === 1) return false;
-                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
-                            return total > 0 && (context.dataset.data[context.dataIndex] / total) >= 0.03;
+                            return context.dataset.data.length > 0 && context.dataset.data[0] !== 1;
                         },
                         color: '#ffffff',
-                        textShadowColor: 'rgba(0, 0, 0, 0.8)',
-                        textShadowBlur: 6,
+                        textShadowColor: 'rgba(0, 0, 0, 0.9)',
+                        textShadowBlur: 8,
                         font: {
                             family: 'JetBrains Mono',
                             size: 13,
                             weight: '700'
                         },
-                        anchor: 'end',
-                        align: 'end',
-                        offset: 8,
+                        anchor: 'center',
+                        align: 'center',
                         formatter: function(value, context) {
                             const total = context.dataset.data.reduce((a, b) => a + b, 0);
                             if (total === 0) return '';
-                            const label = context.chart.data.labels[context.dataIndex];
                             const pct = Math.round((value / total) * 100);
-                            return label + ' ' + pct + '%';
+                            return pct + '%';
                         }
                     }
                 }
