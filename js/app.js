@@ -279,11 +279,15 @@ const App = (() => {
         }
 
         grid.innerHTML = '';
-        // Sort so our validator appears first
+        // Sort by 24h agreement score descending, with our validator pinned first
         const sorted = [...validators].sort((a, b) => {
-            const aIsMine = a.domain === 'validator.pftperry.com' ? -1 : 0;
-            const bIsMine = b.domain === 'validator.pftperry.com' ? -1 : 0;
-            return aIsMine - bIsMine;
+            const aIsMine = a.domain === 'validator.pftperry.com';
+            const bIsMine = b.domain === 'validator.pftperry.com';
+            if (aIsMine) return -1;
+            if (bIsMine) return 1;
+            const aScore = a.agreement_24h ? parseFloat(a.agreement_24h.score) : 0;
+            const bScore = b.agreement_24h ? parseFloat(b.agreement_24h.score) : 0;
+            return bScore - aScore;
         });
         sorted.forEach(v => {
             const card = document.createElement('div');
