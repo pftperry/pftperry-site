@@ -106,47 +106,37 @@ const DashboardCharts = (() => {
         }
     };
 
-    function dawDatasets(data) {
-        // Only include datasets that have real data (any value > 0)
-        const sets = [];
-        const has1D = data.some(d => (d.day1 || d.count || 0) > 0);
-        const has7D = data.some(d => (d.day7 || 0) > 0);
-        const has30D = data.some(d => (d.day30 || 0) > 0);
-
-        if (has1D) sets.push({
-            label: '1D',
-            data: data.map(d => d.day1 || d.count || 0),
-            backgroundColor: COLORS.cyanAlpha,
-            borderColor: COLORS.cyan,
-            borderWidth: 1, borderRadius: 3, borderSkipped: false
-        });
-        if (has7D) sets.push({
-            label: '7D',
-            data: data.map(d => d.day7 || 0),
-            backgroundColor: COLORS.purpleAlpha,
-            borderColor: COLORS.purple,
-            borderWidth: 1, borderRadius: 3, borderSkipped: false
-        });
-        if (has30D) sets.push({
-            label: '30D',
-            data: data.map(d => d.day30 || 0),
-            backgroundColor: COLORS.greenAlpha,
-            borderColor: COLORS.green,
-            borderWidth: 1, borderRadius: 3, borderSkipped: false
-        });
-
-        return sets;
+    function dawLatestData(data) {
+        // Get the latest entry's trailing counts
+        if (!data || data.length === 0) return { d1: 0, d7: 0, d30: 0 };
+        const latest = data[data.length - 1];
+        return {
+            d1: latest.day1 || latest.count || 0,
+            d7: latest.day7 || 0,
+            d30: latest.day30 || 0
+        };
     }
 
     function createDAWChart(data) {
         const ctx = document.getElementById('chart-daw');
         if (!ctx) return;
 
+        const { d1, d7, d30 } = dawLatestData(data);
+        const barColors = [COLORS.cyanAlpha, COLORS.purpleAlpha, COLORS.greenAlpha];
+        const borderColors = [COLORS.cyan, COLORS.purple, COLORS.green];
+
         dawChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: data.map(d => d.date),
-                datasets: dawDatasets(data)
+                labels: ['1D', '7D', '30D'],
+                datasets: [{
+                    data: [d1, d7, d30],
+                    backgroundColor: barColors,
+                    borderColor: borderColors,
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    borderSkipped: false
+                }]
             },
             plugins: [noDataPlugin],
             options: {
@@ -154,9 +144,7 @@ const DashboardCharts = (() => {
                 plugins: {
                     ...baseOptions(false).plugins,
                     legend: { display: false },
-                    datalabels: {
-                        display: false
-                    }
+                    datalabels: { display: false }
                 }
             }
         });
@@ -354,8 +342,8 @@ const DashboardCharts = (() => {
 
     function updateDAWChart(data) {
         if (!dawChart || !data) return;
-        dawChart.data.labels = data.map(d => d.date);
-        dawChart.data.datasets = dawDatasets(data);
+        const { d1, d7, d30 } = dawLatestData(data);
+        dawChart.data.datasets[0].data = [d1, d7, d30];
         dawChart.update('none');
     }
 
