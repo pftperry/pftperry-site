@@ -85,7 +85,7 @@
             </div>
         </section>
 
-        <!-- Row 2: TX Volume + Live Feed -->
+        <!-- Row 2: TX Volume + TX Type -->
         <section class="row row-charts">
             <div class="chart-panel">
                 <div class="card-corner tl"></div><div class="card-corner tr"></div>
@@ -98,15 +98,15 @@
                     <canvas id="chart-txvol"></canvas>
                 </div>
             </div>
-            <div class="chart-panel live-feed-panel">
+            <div class="chart-panel">
                 <div class="card-corner tl"></div><div class="card-corner tr"></div>
                 <div class="card-corner bl"></div><div class="card-corner br"></div>
                 <div class="panel-header">
-                    <span class="panel-title">LIVE TRANSACTION FEED</span>
-                    <span class="panel-badge pulse">LIVE</span>
+                    <span class="panel-title">TRANSACTION TYPE DISTRIBUTION</span>
+                    <span class="panel-badge">24H</span>
                 </div>
-                <div class="live-feed" id="live-feed">
-                    <div class="feed-placeholder">Awaiting transactions...</div>
+                <div class="chart-container chart-container-doughnut">
+                    <canvas id="chart-txtype"></canvas>
                 </div>
             </div>
         </section>
@@ -137,17 +137,17 @@
             </div>
         </section>
 
-        <!-- Row 4: TX Type + Network Topology -->
+        <!-- Row 4: Live Feed + Network Topology -->
         <section class="row row-distribution">
-            <div class="chart-panel">
+            <div class="chart-panel live-feed-panel">
                 <div class="card-corner tl"></div><div class="card-corner tr"></div>
                 <div class="card-corner bl"></div><div class="card-corner br"></div>
                 <div class="panel-header">
-                    <span class="panel-title">TRANSACTION TYPE DISTRIBUTION</span>
-                    <span class="panel-badge">24H</span>
+                    <span class="panel-title">LIVE TRANSACTION FEED</span>
+                    <span class="panel-badge pulse">LIVE</span>
                 </div>
-                <div class="chart-container chart-container-doughnut">
-                    <canvas id="chart-txtype"></canvas>
+                <div class="live-feed" id="live-feed">
+                    <div class="feed-placeholder">Awaiting transactions...</div>
                 </div>
             </div>
             <div class="chart-panel">
