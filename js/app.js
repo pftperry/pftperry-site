@@ -141,9 +141,6 @@ const App = (() => {
     }
 
     function updateDashboard(stats) {
-        updateMetricEl('metric-daw', stats.dailyActiveWallets, 'number');
-        updateMetricEl('metric-tps', stats.tps, 'tps');
-        updateMetricEl('metric-accounts', stats.totalAccounts, 'number');
         updateMetricEl('metric-fee', stats.avgFee, 'fee');
         updateMetricEl('metric-interval', stats.ledgerInterval, 'interval');
         updateMetricEl('metric-height', stats.ledgerHeight, 'number');
@@ -314,8 +311,20 @@ const App = (() => {
         return h + 'h ' + m + 'm';
     }
 
-    function updateNodeCount(count) {
-        updateMetricEl('metric-nodes', count, 'number');
+    function updateValidatorCards(v) {
+        if (!v) return;
+        // Agreement 24H as percentage
+        const score = v.agreement_24h ? (parseFloat(v.agreement_24h.score) * 100).toFixed(2) + '%' : '--';
+        updateMetricEl('metric-agreement', score);
+        // Current ledger index
+        const idx = v.current_index != null ? Number(v.current_index).toLocaleString() : '--';
+        updateMetricEl('metric-ledger-index', idx);
+        // Missed validations (30D)
+        const missed = v.agreement_30day ? Number(v.agreement_30day.missed).toLocaleString() : '--';
+        updateMetricEl('metric-missed', missed);
+        // Total validations (30D)
+        const total = v.agreement_30day ? Number(v.agreement_30day.total).toLocaleString() : '--';
+        updateMetricEl('metric-total', total);
     }
 
     // ---- VHS API ----
@@ -337,8 +346,10 @@ const App = (() => {
                             };
                         }
                     });
-                    updateNodeCount(validators.length);
                     updateValidatorGrid(validators);
+                    // Find our validator and update top cards
+                    const myValidator = validators.find(v => v.domain === 'validator.pftperry.com');
+                    updateValidatorCards(myValidator);
                 }
             }
         );
