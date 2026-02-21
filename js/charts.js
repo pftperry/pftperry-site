@@ -162,6 +162,9 @@ const DashboardCharts = (() => {
                             pointStyleWidth: 8,
                             padding: 16
                         }
+                    },
+                    datalabels: {
+                        display: false
                     }
                 }
             }
@@ -196,7 +199,13 @@ const DashboardCharts = (() => {
                 }]
             },
             plugins: [noDataPlugin],
-            options: baseOptions(false)
+            options: {
+                ...baseOptions(false),
+                plugins: {
+                    ...baseOptions(false).plugins,
+                    datalabels: { display: false }
+                }
+            }
         });
     }
 

@@ -279,9 +279,16 @@ const App = (() => {
         }
 
         grid.innerHTML = '';
-        validators.forEach(v => {
+        // Sort so our validator appears first
+        const sorted = [...validators].sort((a, b) => {
+            const aIsMine = a.domain === 'validator.pftperry.com' ? -1 : 0;
+            const bIsMine = b.domain === 'validator.pftperry.com' ? -1 : 0;
+            return aIsMine - bIsMine;
+        });
+        sorted.forEach(v => {
             const card = document.createElement('div');
-            card.className = 'node-card';
+            const isMine = v.domain === 'validator.pftperry.com';
+            card.className = 'node-card' + (isMine ? ' my-validator' : '');
 
             // Use agreement_24h score to determine online status
             const score24h = v.agreement_24h ? parseFloat(v.agreement_24h.score) : 0;

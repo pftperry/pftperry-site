@@ -312,6 +312,24 @@ body::before {
     border-right: 2px solid var(--cyan);
 }
 
+/* --- Section Title --- */
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--cyan);
+    text-align: center;
+    margin-bottom: 12px;
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.5), 0 0 30px rgba(0, 240, 255, 0.2);
+}
+
+.section-title-icon {
+    color: var(--cyan);
+    margin: 0 8px;
+    opacity: 0.6;
+}
+
 /* --- Metric Cards --- */
 .metric-card {
     position: relative;
@@ -613,6 +631,18 @@ body::before {
 .node-card .node-detail {
     color: var(--text-secondary);
     font-size: 0.6rem;
+}
+
+.node-card.my-validator {
+    border: 1px solid var(--cyan);
+    background: rgba(0, 240, 255, 0.08);
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.2), inset 0 0 12px rgba(0, 240, 255, 0.05);
+    order: -1;
+}
+
+.node-card.my-validator .node-name {
+    color: var(--cyan);
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
 }
 
 /* --- Footer --- */
