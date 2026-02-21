@@ -382,28 +382,35 @@ const MetricsEngine = (() => {
     }
 
     function getTxVolumeHistory() {
-        // Start with persistent historical data
+        // Build lookup from persistent + live data
         const merged = {};
         for (const [date, data] of Object.entries(dailyStats)) {
             merged[date] = data.txCount || 0;
         }
-
-        // Compute live session totals per day
+        ledgers.forEach(l => {
+            const day = new Date(l.close_time).toISOString().slice(0, 10);
+            merged[day] = Math.max(merged[day] || 0, (merged[day] || 0), l.txn_count);
+        });
+        // Recompute live totals properly
         const liveDayTotals = {};
         ledgers.forEach(l => {
             const day = new Date(l.close_time).toISOString().slice(0, 10);
             liveDayTotals[day] = (liveDayTotals[day] || 0) + l.txn_count;
         });
-
-        // Use max of stored vs live for each day
         for (const [date, count] of Object.entries(liveDayTotals)) {
             merged[date] = Math.max(merged[date] || 0, count);
         }
 
-        return Object.entries(merged)
-            .map(([date, count]) => ({ date, count }))
-            .sort((a, b) => a.date.localeCompare(b.date))
-            .slice(-7);
+        // Always return exactly 7 days: today minus 6 through today
+        const result = [];
+        const now = new Date();
+        for (let i = 6; i >= 0; i--) {
+            const d = new Date(now);
+            d.setUTCDate(d.getUTCDate() - i);
+            const date = d.toISOString().slice(0, 10);
+            result.push({ date, count: merged[date] || 0 });
+        }
+        return result;
     }
 
     function getRetentionData() {
