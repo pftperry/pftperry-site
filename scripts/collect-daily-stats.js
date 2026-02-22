@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
  * collect-daily-stats.js
- * Connects via WebSocket to the Post Fiat testnet, fetches recent ledgers,
- * counts today's transactions and unique accounts, fetches explorer/VHS
- * metrics, and writes data/daily-stats.json.
+ * Incrementally collects transactions since the last run and accumulates
+ * a running daily total in data/daily-stats.json. Designed to run every
+ * 30 minutes via GitHub Actions.
  *
  * Usage: node scripts/collect-daily-stats.js
  */
@@ -18,14 +18,15 @@ const WS_URL = 'wss://ws.testnet.postfiat.org';
 const EXPLORER_API = 'https://explorer.testnet.postfiat.org/api/v1';
 const VHS_BASE = 'https://vhs.testnet.postfiat.org';
 const DATA_FILE = path.join(__dirname, '..', 'data', 'daily-stats.json');
-const TIMEOUT_MS = 60000;
-const LEDGERS_TO_FETCH = 200;
+const TIMEOUT_MS = 120000;       // 2 min — handles large catch-up runs
+const BATCH_SIZE = 20;
+const FIRST_RUN_LOOKBACK = 700;  // ~35 min at 3s/ledger, covers schedule gaps on first run
 
 const today = new Date().toISOString().slice(0, 10);
 
 // Safety timeout
 const safetyTimer = setTimeout(() => {
-    console.error('[Timeout] Script exceeded 60s, exiting');
+    console.error('[Timeout] Script exceeded timeout, exiting');
     process.exit(1);
 }, TIMEOUT_MS);
 
@@ -70,7 +71,8 @@ function wsSend(ws, msg) {
     });
 }
 
-async function collectFromWebSocket() {
+// fromSeq: first ledger to fetch (inclusive). null = first run of day.
+async function collectFromWebSocket(fromSeq) {
     console.log(`[WS] Connecting to ${WS_URL}...`);
 
     const ws = new WebSocket(WS_URL);
@@ -81,23 +83,23 @@ async function collectFromWebSocket() {
     });
     console.log('[WS] Connected');
 
-    // Get server_info for current ledger height
     const infoResp = await wsSend(ws, { command: 'server_info' });
     const info = infoResp.result?.info;
     if (!info) throw new Error('No server_info result');
     const currentSeq = info.validated_ledger?.seq;
     console.log(`[WS] Current ledger: ${currentSeq}`);
 
-    // Fetch recent ledgers with transactions
+    // Determine range: resume from last run, or look back ~35 min on first run
+    const startSeq = (fromSeq != null) ? fromSeq : currentSeq - FIRST_RUN_LOOKBACK;
+    const numToFetch = Math.max(currentSeq - startSeq + 1, 0);
+    console.log(`[WS] Fetching ${numToFetch} ledgers (seq ${startSeq}–${currentSeq})`);
+
     let txCount = 0;
     const accounts = new Set();
-    const startSeq = currentSeq - LEDGERS_TO_FETCH + 1;
 
-    // Fetch in batches of 20 for efficiency
-    const batchSize = 20;
-    for (let i = 0; i < LEDGERS_TO_FETCH; i += batchSize) {
+    for (let i = 0; i < numToFetch; i += BATCH_SIZE) {
         const promises = [];
-        for (let j = 0; j < batchSize && (i + j) < LEDGERS_TO_FETCH; j++) {
+        for (let j = 0; j < BATCH_SIZE && (i + j) < numToFetch; j++) {
             const seq = startSeq + i + j;
             promises.push(
                 wsSend(ws, {
@@ -115,15 +117,11 @@ async function collectFromWebSocket() {
         for (const resp of results) {
             if (!resp || !resp.result?.ledger) continue;
             const ledger = resp.result.ledger;
-
-            // Convert ripple epoch close_time to JS Date
             const closeTime = ledger.close_time
                 ? new Date((ledger.close_time + 946684800) * 1000)
                 : null;
-
             // Only count transactions from today
             if (closeTime && closeTime.toISOString().slice(0, 10) !== today) continue;
-
             const txns = ledger.transactions || [];
             txCount += txns.length;
             for (const tx of txns) {
@@ -131,13 +129,13 @@ async function collectFromWebSocket() {
                 if (inner.Account) accounts.add(inner.Account);
             }
         }
-        process.stdout.write(`\r[WS] Fetched ${Math.min(i + batchSize, LEDGERS_TO_FETCH)}/${LEDGERS_TO_FETCH} ledgers`);
+        process.stdout.write(`\r[WS] Fetched ${Math.min(i + BATCH_SIZE, numToFetch)}/${numToFetch} ledgers`);
     }
     console.log('');
-    console.log(`[WS] Today (${today}): ${txCount} txns, ${accounts.size} unique accounts`);
+    console.log(`[WS] New txns this run: ${txCount}, new accounts: ${accounts.size}`);
 
     ws.close();
-    return { txCount, activeWallets: accounts.size, walletAddresses: [...accounts] };
+    return { txCount, walletAddresses: [...accounts], lastSeq: currentSeq };
 }
 
 async function collectExplorerMetrics() {
@@ -194,40 +192,51 @@ function loadExisting() {
 async function main() {
     console.log(`[Stats] Collecting daily stats for ${today}`);
 
-    // Run all collectors in parallel
+    // Load existing data first so we know where to resume from
+    const existing = loadExisting();
+    const existingDay = existing.days[today] || {};
+    const fromSeq = existingDay.lastSeq != null ? existingDay.lastSeq + 1 : null;
+
+    if (fromSeq != null) {
+        console.log(`[Stats] Resuming from ledger ${fromSeq} (running total: ${existingDay.txCount || 0} txns)`);
+    } else {
+        console.log(`[Stats] First run today — lookback ${FIRST_RUN_LOOKBACK} ledgers`);
+    }
+
     const [wsData, explorerData, vhsData] = await Promise.all([
-        collectFromWebSocket().catch(err => {
+        collectFromWebSocket(fromSeq).catch(err => {
             console.error(`[WS] Collection failed: ${err.message}`);
-            return { txCount: 0, activeWallets: 0 };
+            return { txCount: 0, walletAddresses: [], lastSeq: null };
         }),
         collectExplorerMetrics(),
         collectVHSData()
     ]);
 
-    // Merge into existing data
-    const existing = loadExisting();
     existing.lastUpdated = new Date().toISOString();
 
-    // Ensure firstSeen map exists
     if (!existing.firstSeen || typeof existing.firstSeen !== 'object') {
         existing.firstSeen = {};
     }
 
-    // Update firstSeen — never overwrite existing entries (preserves true first-seen date)
-    for (const wallet of (wsData.walletAddresses || [])) {
+    // Merge wallet addresses with the existing set for today
+    const existingWallets = new Set(existingDay.walletAddresses || []);
+    for (const wallet of wsData.walletAddresses) {
+        existingWallets.add(wallet);
+        // firstSeen: never overwrite (preserves true first-seen date)
         if (!existing.firstSeen[wallet]) {
             existing.firstSeen[wallet] = today;
         }
     }
 
     existing.days[today] = {
-        txCount: wsData.txCount,
-        activeWallets: wsData.activeWallets,
-        walletAddresses: wsData.walletAddresses || [],
+        txCount: (existingDay.txCount || 0) + wsData.txCount,  // accumulate
+        activeWallets: existingWallets.size,
+        walletAddresses: [...existingWallets],
         tps: explorerData.tps,
         avgFee: explorerData.avgFee,
         nodeCount: vhsData.nodeCount,
-        validatorCount: vhsData.validatorCount
+        validatorCount: vhsData.validatorCount,
+        lastSeq: wsData.lastSeq ?? existingDay.lastSeq  // keep existing if WS failed
     };
 
     // Trim to 90 days
@@ -240,7 +249,10 @@ async function main() {
     const dataDir = path.dirname(DATA_FILE);
     if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
     fs.writeFileSync(DATA_FILE, JSON.stringify(existing, null, 2) + '\n');
-    console.log(`[Stats] Written to ${DATA_FILE}`);
+
+    const day = existing.days[today];
+    console.log(`[Stats] Today's cumulative total: ${day.txCount} txns, ${day.activeWallets} wallets`);
+    console.log(`[Stats] Last processed ledger: ${day.lastSeq}`);
     console.log(`[Stats] Total days tracked: ${Object.keys(existing.days).length}`);
 
     clearTimeout(safetyTimer);
