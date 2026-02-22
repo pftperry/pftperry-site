@@ -39,5 +39,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: backfill historical stats (${{ github.event.inputs.days || 90 }} days)"
+            git pull --rebase origin main
             git push
           fi
