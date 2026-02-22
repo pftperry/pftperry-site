@@ -42,19 +42,28 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
 
-          # Merge: backfill supplies historical days; remote wins for today's live data
+          # Merge: backfill wins for past days; remote wins for today (live accumulated data)
           node -e "
             const fs = require('fs');
             const backfill = JSON.parse(fs.readFileSync('/tmp/backfill-result.json', 'utf8'));
             const remote   = JSON.parse(fs.readFileSync('data/daily-stats.json', 'utf8'));
-            // remote days overwrite backfill days (keeps today's accumulated live data)
+            const today = new Date().toISOString().slice(0, 10);
+            // Start with backfill as base
             const merged = Object.assign({}, backfill);
-            merged.days = Object.assign({}, backfill.days, remote.days);
-            // backfill firstSeen wins (processed oldest-first, so dates are most accurate)
+            // For each day: backfill wins for past days, remote wins for today
+            merged.days = Object.assign({}, backfill.days);
+            for (const [date, data] of Object.entries(remote.days)) {
+              if (date === today) {
+                merged.days[date] = data; // today: keep live accumulated data from remote
+              }
+              // past days: backfill already set above, ignore remote's partial data
+            }
+            // backfill firstSeen wins (processed oldest-first, most accurate)
             merged.firstSeen = Object.assign({}, remote.firstSeen, backfill.firstSeen);
             merged.lastUpdated = new Date().toISOString();
             fs.writeFileSync('data/daily-stats.json', JSON.stringify(merged, null, 2) + '\n');
-            console.log('Merged days:', Object.keys(merged.days).length);
+            const days = Object.keys(merged.days).sort();
+            console.log('Merged days:', days.length, '| range:', days[0], '-', days[days.length-1]);
           "
 
           git add data/daily-stats.json
