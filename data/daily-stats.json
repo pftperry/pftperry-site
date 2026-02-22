@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-22T09:51:34.328Z",
+  "lastUpdated": "2026-02-22T10:55:33.553Z",
   "days": {
     "2026-02-21": {
       "txCount": 67,
@@ -10,37 +10,38 @@
       "validatorCount": 25
     },
     "2026-02-22": {
-      "txCount": 66,
-      "activeWallets": 26,
+      "txCount": 76,
+      "activeWallets": 27,
       "walletAddresses": [
-        "raFHXEbk57bM1BiZjzcXNfcj6qg4BUPPsM",
-        "rGMoavc5pAd68rwXnZiaFFyt5U3rV94rsT",
-        "rEV9dhU2xZ3jZj4zARxLrCNmPcWTqLQuwK",
-        "rw3BXw12ageecaQkY2sZj8GNmPqKAiimut",
-        "rfy4Zkz9GzF6RTKXho39KQCNiDJfEdcPeT",
-        "rJXkHpddLHnVWF9oK6GTdbv2WwLHbh4H1o",
-        "rwaCUkUjtEkWA9h7z5ixwMZazzJ1yLRfvb",
-        "rfkoqYWA1ReSPdnz7xpv3R3HQVdbFFbMeN",
-        "rDWRj4BeswFUsU7wkvYY1NzmF5XoP1Jg5B",
-        "rHPffdamEpuuV8v7aKTLHH7m5VBQr7J37h",
-        "rfRtJf9Byv2k59gwteph8TCmp8NFXL4udS",
+        "rUhrFzNvjktTszwHT4cstoiqNPifPxsYG8",
+        "rfWDm17BfLux7NxRRPdCWG1VLAipKAo7m",
+        "rM5C2tL1jrEvqyV22tZuh9bmkLuCb7bwfE",
         "rfpzV4CovPWGLG7ge2buMYZ82ZYY7xTALd",
+        "rsDQQp6L7Tk1ASykdUSQSPGjBqs5HAMHEy",
+        "rfy4Zkz9GzF6RTKXho39KQCNiDJfEdcPeT",
+        "rEPo9tj7Cbz8uf6kwSzmQvEjxJMpfPx3sC",
+        "rLvtzGqaLTPrzaQGPyCFBe9wHNUz8XwPYh",
+        "r4MNLkUTZsqCessYeKuBpuqrn4tDNEjYBz",
+        "rGMoavc5pAd68rwXnZiaFFyt5U3rV94rsT",
+        "rfkoqYWA1ReSPdnz7xpv3R3HQVdbFFbMeN",
+        "rwaCUkUjtEkWA9h7z5ixwMZazzJ1yLRfvb",
+        "rh1ehRpT7o2JfuPXpxriLRKcpUb11azNMZ",
         "rH4rjLTAirKbybJZQT3bzX3dZm2LoMohw8",
+        "rHmVLdnZ9n9Gfx9qSJvqW1eNt5EXkLRDqD",
+        "rEZCt73uJ525QtcwM8BpTc2sNwRnsKePGN",
+        "rsDsnr89EaKyTqYeumuK7wKJyF3eYJAwbF",
+        "rPF6AqxbdozMnNZUoYBPFywJVFTwx7b87p",
+        "rw3BXw12ageecaQkY2sZj8GNmPqKAiimut",
+        "rasMzmEVQB4nrQCyEtPXAq4Hhh2uS2YiMu",
+        "rDWRj4BeswFUsU7wkvYY1NzmF5XoP1Jg5B",
+        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
+        "raFHXEbk57bM1BiZjzcXNfcj6qg4BUPPsM",
+        "rMPQxctN6M4KafkeFqZVabNexwDapzBxDP",
         "rNKiZbyXpHXke9axzfkxr8n5cmtP2a5Xsi",
         "ra4AmVQpiSzM9QwyxA66fxNhovMYEGkuHY",
-        "rEZCt73uJ525QtcwM8BpTc2sNwRnsKePGN",
-        "rPF6AqxbdozMnNZUoYBPFywJVFTwx7b87p",
-        "rsDQQp6L7Tk1ASykdUSQSPGjBqs5HAMHEy",
-        "rsDsnr89EaKyTqYeumuK7wKJyF3eYJAwbF",
-        "rBwZ8actkTsc2XHA52ymKXJQCMkP1XyVRE",
-        "rLvtzGqaLTPrzaQGPyCFBe9wHNUz8XwPYh",
-        "rfWDm17BfLux7NxRRPdCWG1VLAipKAo7m",
-        "rUhrFzNvjktTszwHT4cstoiqNPifPxsYG8",
-        "rasMzmEVQB4nrQCyEtPXAq4Hhh2uS2YiMu",
-        "rNujSmNcheGibZUUVJcyCkTzEEhWmMgmm7",
-        "rEjCaYVoo7zonVDVPHMSsaMsuMnhhjK6rK"
+        "rfRtJf9Byv2k59gwteph8TCmp8NFXL4udS"
       ],
-      "tps": 0.11,
+      "tps": 0.16,
       "avgFee": "0.00001000",
       "nodeCount": 26,
       "validatorCount": 25
@@ -80,6 +81,9 @@
     "rw3BXw12ageecaQkY2sZj8GNmPqKAiimut": "2026-02-22",
     "rGMoavc5pAd68rwXnZiaFFyt5U3rV94rsT": "2026-02-22",
     "rfy4Zkz9GzF6RTKXho39KQCNiDJfEdcPeT": "2026-02-22",
-    "rNKiZbyXpHXke9axzfkxr8n5cmtP2a5Xsi": "2026-02-22"
+    "rNKiZbyXpHXke9axzfkxr8n5cmtP2a5Xsi": "2026-02-22",
+    "r4MNLkUTZsqCessYeKuBpuqrn4tDNEjYBz": "2026-02-22",
+    "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR": "2026-02-22",
+    "rMPQxctN6M4KafkeFqZVabNexwDapzBxDP": "2026-02-22"
   }
 }
