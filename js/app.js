@@ -82,6 +82,8 @@ const App = (() => {
             dawByDay: dawByDay,
             txVolHistory: txHistory.slice(-7),
             retention: {
+                day3: '--',
+                day3numeric: 0,
                 day7: '--',
                 day7numeric: 0,
                 day30: '--',

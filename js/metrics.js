@@ -459,6 +459,7 @@ const MetricsEngine = (() => {
         const today = new Date().toISOString().slice(0, 10);
         const todayMs = new Date(today + 'T00:00:00Z').getTime();
 
+        const matured3 = [];
         const matured7 = [];
         const matured30 = [];
 
@@ -466,25 +467,41 @@ const MetricsEngine = (() => {
             if (cohortWallets.size === 0) continue;
             const cohortMs = new Date(cohortDate + 'T00:00:00Z').getTime();
 
-            // 7D: cohort date must be at least 7 days before today
+            const days3Ms = 3 * 86400000;
             const days7Ms = 7 * 86400000;
             const days30Ms = 30 * 86400000;
 
-            if (todayMs - cohortMs < days7Ms) continue; // not yet matured
+            if (todayMs - cohortMs < days3Ms) continue; // not yet matured for 3D
 
-            let returned7 = 0;
+            // 3D retention
+            let returned3 = 0;
             for (const wallet of cohortWallets) {
-                for (let i = 1; i <= 7; i++) {
+                for (let i = 1; i <= 3; i++) {
                     const checkDate = new Date(cohortMs + i * 86400000).toISOString().slice(0, 10);
                     if (dayWalletSets[checkDate] && dayWalletSets[checkDate].has(wallet)) {
-                        returned7++;
+                        returned3++;
                         break;
                     }
                 }
             }
-            matured7.push(returned7 / cohortWallets.size * 100);
+            matured3.push(returned3 / cohortWallets.size * 100);
 
-            // 30D cohorts need 30 more days
+            // 7D retention
+            if (todayMs - cohortMs >= days7Ms) {
+                let returned7 = 0;
+                for (const wallet of cohortWallets) {
+                    for (let i = 1; i <= 7; i++) {
+                        const checkDate = new Date(cohortMs + i * 86400000).toISOString().slice(0, 10);
+                        if (dayWalletSets[checkDate] && dayWalletSets[checkDate].has(wallet)) {
+                            returned7++;
+                            break;
+                        }
+                    }
+                }
+                matured7.push(returned7 / cohortWallets.size * 100);
+            }
+
+            // 30D retention
             if (todayMs - cohortMs >= days30Ms) {
                 let returned30 = 0;
                 for (const wallet of cohortWallets) {
@@ -500,6 +517,9 @@ const MetricsEngine = (() => {
             }
         }
 
+        const avg3 = matured3.length > 0
+            ? matured3.reduce((s, v) => s + v, 0) / matured3.length
+            : null;
         const avg7 = matured7.length > 0
             ? matured7.reduce((s, v) => s + v, 0) / matured7.length
             : null;
@@ -508,6 +528,8 @@ const MetricsEngine = (() => {
             : null;
 
         return {
+            day3: avg3 !== null ? avg3.toFixed(1) + '%' : '--',
+            day3numeric: avg3 !== null ? parseFloat(avg3.toFixed(1)) : 0,
             day7: avg7 !== null ? avg7.toFixed(1) + '%' : '--',
             day7numeric: avg7 !== null ? parseFloat(avg7.toFixed(1)) : 0,
             day30: avg30 !== null ? avg30.toFixed(1) + '%' : '--',
