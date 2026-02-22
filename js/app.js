@@ -555,6 +555,16 @@ const App = (() => {
 
         // Re-fetch VHS/explorer data every 2 minutes
         setInterval(fetchVHS, 120000);
+
+        // Re-fetch daily stats JSON every 5 minutes so long-running sessions
+        // always display server-collected data, not stale browser state
+        setInterval(async () => {
+            await MetricsEngine.loadRemoteStats();
+            if (!usingMockData) {
+                const stats = MetricsEngine.getAllStats();
+                updateDashboard(stats);
+            }
+        }, 5 * 60 * 1000);
     }
 
     // Boot

@@ -268,29 +268,21 @@ const MetricsEngine = (() => {
     }
 
     function getAvgTxnPerUser() {
-        const txns = getAllTransactions(DAY_MS);
-        const accounts = new Set();
-        txns.forEach(tx => { if (tx.account) accounts.add(tx.account); });
-        if (accounts.size === 0) return 0;
-        return txns.length / accounts.size;
+        const today = new Date().toISOString().slice(0, 10);
+        const day = dailyStats[today];
+        if (day && day.txCount && day.activeWallets) {
+            return day.txCount / day.activeWallets;
+        }
+        return 0;
     }
 
     function getPeakHour() {
-        const txns = getAllTransactions(DAY_MS);
-        const hourCounts = new Array(24).fill(0);
-        txns.forEach(tx => {
-            // Use the ledger the tx was in
-        });
-        // Use ledger close times
-        ledgers.forEach(l => {
-            if (l.close_time >= Date.now() - DAY_MS) {
-                const hour = new Date(l.close_time).getUTCHours();
-                hourCounts[hour] += l.txn_count;
-            }
-        });
+        const today = new Date().toISOString().slice(0, 10);
+        const hourly = dailyStats[today] && dailyStats[today].hourlyTxCounts;
+        if (!hourly || hourly.length !== 24) return '--';
         let maxHour = 0;
         let maxCount = 0;
-        hourCounts.forEach((c, h) => {
+        hourly.forEach((c, h) => {
             if (c > maxCount) { maxCount = c; maxHour = h; }
         });
         return maxCount > 0 ? `${String(maxHour).padStart(2, '0')}:00 UTC` : '--';
@@ -304,13 +296,11 @@ const MetricsEngine = (() => {
     }
 
     function getTxTypeDistribution() {
-        const txns = getAllTransactions(DAY_MS);
-        const dist = {};
-        txns.forEach(tx => {
-            const type = tx.type || 'Unknown';
-            dist[type] = (dist[type] || 0) + 1;
-        });
-        return dist;
+        const today = new Date().toISOString().slice(0, 10);
+        if (dailyStats[today] && dailyStats[today].txTypeDistribution) {
+            return dailyStats[today].txTypeDistribution;
+        }
+        return {};
     }
 
     function getDailyActiveWalletsHistory() {
@@ -392,33 +382,14 @@ const MetricsEngine = (() => {
     }
 
     function getTxVolumeHistory() {
-        // Build lookup from persistent + live data
-        const merged = {};
-        for (const [date, data] of Object.entries(dailyStats)) {
-            merged[date] = data.txCount || 0;
-        }
-        ledgers.forEach(l => {
-            const day = new Date(l.close_time).toISOString().slice(0, 10);
-            merged[day] = Math.max(merged[day] || 0, (merged[day] || 0), l.txn_count);
-        });
-        // Recompute live totals properly
-        const liveDayTotals = {};
-        ledgers.forEach(l => {
-            const day = new Date(l.close_time).toISOString().slice(0, 10);
-            liveDayTotals[day] = (liveDayTotals[day] || 0) + l.txn_count;
-        });
-        for (const [date, count] of Object.entries(liveDayTotals)) {
-            merged[date] = Math.max(merged[date] || 0, count);
-        }
-
-        // Always return exactly 7 days: today minus 6 through today
+        // Pure JSON — always 7 days ending today
         const result = [];
         const now = new Date();
         for (let i = 6; i >= 0; i--) {
             const d = new Date(now);
             d.setUTCDate(d.getUTCDate() - i);
             const date = d.toISOString().slice(0, 10);
-            result.push({ date, count: merged[date] || 0 });
+            result.push({ date, count: (dailyStats[date] && dailyStats[date].txCount) || 0 });
         }
         return result;
     }
@@ -429,23 +400,6 @@ const MetricsEngine = (() => {
         for (const [date, data] of Object.entries(dailyStats)) {
             if (data.walletAddresses && data.walletAddresses.length > 0) {
                 dayWalletSets[date] = new Set(data.walletAddresses);
-            }
-        }
-
-        // Also include live session wallet data for today
-        const liveBuckets = {};
-        ledgers.forEach(l => {
-            const day = new Date(l.close_time).toISOString().slice(0, 10);
-            if (!liveBuckets[day]) liveBuckets[day] = new Set();
-            l.transactions.forEach(tx => {
-                if (tx.account) liveBuckets[day].add(tx.account);
-            });
-        });
-        for (const [date, accounts] of Object.entries(liveBuckets)) {
-            if (dayWalletSets[date]) {
-                for (const w of accounts) dayWalletSets[date].add(w);
-            } else {
-                dayWalletSets[date] = new Set(accounts);
             }
         }
 
@@ -538,33 +492,14 @@ const MetricsEngine = (() => {
     }
 
     function getDailyActiveWalletsByDay() {
-        // Merge persistent + live wallet counts per day
-        const merged = {};
-        for (const [date, data] of Object.entries(dailyStats)) {
-            merged[date] = data.activeWallets || 0;
-        }
-
-        // Overlay live session data (use max of stored vs live)
-        const liveDayTotals = {};
-        ledgers.forEach(l => {
-            const day = new Date(l.close_time).toISOString().slice(0, 10);
-            if (!liveDayTotals[day]) liveDayTotals[day] = new Set();
-            l.transactions.forEach(tx => {
-                if (tx.account) liveDayTotals[day].add(tx.account);
-            });
-        });
-        for (const [date, accounts] of Object.entries(liveDayTotals)) {
-            merged[date] = Math.max(merged[date] || 0, accounts.size);
-        }
-
-        // Return exactly 7 days: today minus 6 through today
+        // Pure JSON — always 7 days ending today
         const result = [];
         const now = new Date();
         for (let i = 6; i >= 0; i--) {
             const d = new Date(now);
             d.setUTCDate(d.getUTCDate() - i);
             const date = d.toISOString().slice(0, 10);
-            result.push({ date, count: merged[date] || 0 });
+            result.push({ date, count: (dailyStats[date] && dailyStats[date].activeWallets) || 0 });
         }
         return result;
     }
@@ -645,7 +580,7 @@ const MetricsEngine = (() => {
     }
 
     function hasData() {
-        return ledgers.length > 0 || explorerMetrics !== null;
+        return Object.keys(dailyStats).length > 0 || explorerMetrics !== null;
     }
 
     return {

@@ -96,6 +96,8 @@ async function collectFromWebSocket(fromSeq) {
 
     let txCount = 0;
     const accounts = new Set();
+    const txTypes = {};
+    const hourlyTxCounts = new Array(24).fill(0);
 
     for (let i = 0; i < numToFetch; i += BATCH_SIZE) {
         const promises = [];
@@ -122,11 +124,15 @@ async function collectFromWebSocket(fromSeq) {
                 : null;
             // Only count transactions from today
             if (closeTime && closeTime.toISOString().slice(0, 10) !== today) continue;
+            const hour = closeTime ? closeTime.getUTCHours() : null;
             const txns = ledger.transactions || [];
             txCount += txns.length;
+            if (hour !== null) hourlyTxCounts[hour] += txns.length;
             for (const tx of txns) {
                 const inner = tx.tx || tx.tx_json || tx;
                 if (inner.Account) accounts.add(inner.Account);
+                const txType = inner.TransactionType || 'Unknown';
+                txTypes[txType] = (txTypes[txType] || 0) + 1;
             }
         }
         process.stdout.write(`\r[WS] Fetched ${Math.min(i + BATCH_SIZE, numToFetch)}/${numToFetch} ledgers`);
@@ -135,7 +141,7 @@ async function collectFromWebSocket(fromSeq) {
     console.log(`[WS] New txns this run: ${txCount}, new accounts: ${accounts.size}`);
 
     ws.close();
-    return { txCount, walletAddresses: [...accounts], lastSeq: currentSeq };
+    return { txCount, walletAddresses: [...accounts], txTypes, hourlyTxCounts, lastSeq: currentSeq };
 }
 
 async function collectExplorerMetrics() {
@@ -206,7 +212,7 @@ async function main() {
     const [wsData, explorerData, vhsData] = await Promise.all([
         collectFromWebSocket(fromSeq).catch(err => {
             console.error(`[WS] Collection failed: ${err.message}`);
-            return { txCount: 0, walletAddresses: [], lastSeq: null };
+            return { txCount: 0, walletAddresses: [], txTypes: {}, hourlyTxCounts: new Array(24).fill(0), lastSeq: null };
         }),
         collectExplorerMetrics(),
         collectVHSData()
@@ -228,10 +234,22 @@ async function main() {
         }
     }
 
+    // Merge tx type distribution
+    const existingTxTypes = existingDay.txTypeDistribution || {};
+    for (const [type, count] of Object.entries(wsData.txTypes)) {
+        existingTxTypes[type] = (existingTxTypes[type] || 0) + count;
+    }
+
+    // Merge hourly tx counts (element-wise addition)
+    const existingHourly = existingDay.hourlyTxCounts || new Array(24).fill(0);
+    const mergedHourly = existingHourly.map((v, i) => v + (wsData.hourlyTxCounts[i] || 0));
+
     existing.days[today] = {
         txCount: (existingDay.txCount || 0) + wsData.txCount,  // accumulate
         activeWallets: existingWallets.size,
         walletAddresses: [...existingWallets],
+        txTypeDistribution: existingTxTypes,
+        hourlyTxCounts: mergedHourly,
         tps: explorerData.tps,
         avgFee: explorerData.avgFee,
         nodeCount: vhsData.nodeCount,
