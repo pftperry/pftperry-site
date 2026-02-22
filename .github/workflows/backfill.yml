@@ -34,11 +34,33 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Save our backfill result before touching git state
+          cp data/daily-stats.json /tmp/backfill-result.json
+
+          # Reset to latest remote (picks up any daily-stats commits made during the run)
+          git fetch origin main
+          git reset --hard origin/main
+
+          # Merge: backfill supplies historical days; remote wins for today's live data
+          node -e "
+            const fs = require('fs');
+            const backfill = JSON.parse(fs.readFileSync('/tmp/backfill-result.json', 'utf8'));
+            const remote   = JSON.parse(fs.readFileSync('data/daily-stats.json', 'utf8'));
+            // remote days overwrite backfill days (keeps today's accumulated live data)
+            const merged = Object.assign({}, backfill);
+            merged.days = Object.assign({}, backfill.days, remote.days);
+            // backfill firstSeen wins (processed oldest-first, so dates are most accurate)
+            merged.firstSeen = Object.assign({}, remote.firstSeen, backfill.firstSeen);
+            merged.lastUpdated = new Date().toISOString();
+            fs.writeFileSync('data/daily-stats.json', JSON.stringify(merged, null, 2) + '\n');
+            console.log('Merged days:', Object.keys(merged.days).length);
+          "
+
           git add data/daily-stats.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
             git commit -m "chore: backfill historical stats (${{ github.event.inputs.days || 90 }} days)"
-            git pull --rebase origin main
             git push
           fi
