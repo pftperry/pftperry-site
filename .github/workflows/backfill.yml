@@ -4,12 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       days:
-        description: 'Max days back to backfill (default: 90)'
+        description: 'Max days back to backfill (default: 30)'
         required: false
-        default: '90'
+        default: '30'
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   backfill:
@@ -27,49 +28,28 @@ jobs:
       - name: Install dependencies
         run: npm install ws
 
+      - name: Pause daily-stats collector
+        run: gh workflow disable daily-stats.yml
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - name: Run backfill
-        run: node scripts/backfill-stats.js --days=${{ github.event.inputs.days || 90 }}
+        run: node scripts/backfill-stats.js --days=${{ github.event.inputs.days || 30 }}
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          # Save our backfill result before touching git state
-          cp data/daily-stats.json /tmp/backfill-result.json
-
-          # Reset to latest remote (picks up any daily-stats commits made during the run)
-          git fetch origin main
-          git reset --hard origin/main
-
-          # Merge: backfill wins for past days; remote wins for today (live accumulated data)
-          node -e "
-            const fs = require('fs');
-            const backfill = JSON.parse(fs.readFileSync('/tmp/backfill-result.json', 'utf8'));
-            const remote   = JSON.parse(fs.readFileSync('data/daily-stats.json', 'utf8'));
-            const today = new Date().toISOString().slice(0, 10);
-            // Start with backfill as base
-            const merged = Object.assign({}, backfill);
-            // For each day: backfill wins for past days, remote wins for today
-            merged.days = Object.assign({}, backfill.days);
-            for (const [date, data] of Object.entries(remote.days)) {
-              if (date === today) {
-                merged.days[date] = data; // today: keep live accumulated data from remote
-              }
-              // past days: backfill already set above, ignore remote's partial data
-            }
-            // backfill firstSeen wins (processed oldest-first, most accurate)
-            merged.firstSeen = Object.assign({}, remote.firstSeen, backfill.firstSeen);
-            merged.lastUpdated = new Date().toISOString();
-            fs.writeFileSync('data/daily-stats.json', JSON.stringify(merged, null, 2) + '\n');
-            const days = Object.keys(merged.days).sort();
-            console.log('Merged days:', days.length, '| range:', days[0], '-', days[days.length-1]);
-          "
-
           git add data/daily-stats.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: backfill historical stats (${{ github.event.inputs.days || 90 }} days)"
+            git commit -m "chore: backfill historical stats (${{ github.event.inputs.days || 30 }} days)"
             git push
           fi
+
+      - name: Resume daily-stats collector
+        if: always()
+        run: gh workflow enable daily-stats.yml
+        env:
+          GH_TOKEN: ${{ github.token }}
