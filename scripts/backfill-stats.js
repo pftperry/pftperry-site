@@ -200,9 +200,10 @@ async function main() {
     const info = infoResp.result?.info;
     if (!info) throw new Error('No server_info');
     const currentSeq = info.validated_ledger?.seq;
-    const currentCloseTime = info.validated_ledger?.close_time; // Ripple epoch seconds
-    const currentUnixSec = currentCloseTime + 946684800;
-    console.log(`[Backfill] Current ledger: seq=${currentSeq}, time=${new Date(currentUnixSec * 1000).toISOString()}`);
+    // server_info doesn't include close_time; use Date.now() — the latest
+    // validated ledger closed within the last few seconds so it's equivalent.
+    const currentUnixSec = Math.floor(Date.now() / 1000);
+    console.log(`[Backfill] Current ledger: seq=${currentSeq}, ref_time=${new Date(currentUnixSec * 1000).toISOString()}`);
 
     let avgCloseTime = 3.0;
     try {
