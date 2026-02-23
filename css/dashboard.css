@@ -661,14 +661,10 @@ body::before {
 }
 
 .footer-note {
-    display: block;
     width: 100%;
-    margin-top: 12px;
-    font-size: 0.75rem;
-    color: #e0e8ff;
-    line-height: 1.6;
+    margin-top: 4px;
+    font-size: 0.65rem;
     text-align: center;
-    letter-spacing: 0.5px;
 }
 
 /* --- API Badge --- */
