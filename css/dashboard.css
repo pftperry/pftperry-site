@@ -665,6 +665,7 @@ body::before {
     margin-top: 4px;
     font-size: 0.65rem;
     text-align: center;
+    opacity: 0.45;
 }
 
 /* --- API Badge --- */

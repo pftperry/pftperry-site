@@ -201,7 +201,18 @@ async function main() {
     // Load existing data first so we know where to resume from
     const existing = loadExisting();
     const existingDay = existing.days[today] || {};
-    const fromSeq = existingDay.lastSeq != null ? existingDay.lastSeq + 1 : null;
+    let fromSeq = existingDay.lastSeq != null ? existingDay.lastSeq + 1 : null;
+
+    if (fromSeq === null) {
+        // First run of a new UTC day — use yesterday's lastSeq to avoid re-fetching
+        // yesterday's ledgers and writing an empty entry for today.
+        const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+        const yDay = existing.days[yesterday];
+        if (yDay && yDay.lastSeq != null) {
+            fromSeq = yDay.lastSeq + 1;
+            console.log(`[Stats] First run today — resuming from yesterday lastSeq ${yDay.lastSeq + 1}`);
+        }
+    }
 
     if (fromSeq != null) {
         console.log(`[Stats] Resuming from ledger ${fromSeq} (running total: ${existingDay.txCount || 0} txns)`);
