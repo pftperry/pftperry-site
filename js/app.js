@@ -183,11 +183,7 @@ const App = (() => {
             txTypeBadge.textContent = months[d.getUTCMonth()] + ' ' + d.getUTCDate();
         }
 
-        // Hide the data-accumulation disclaimer once 7+ days of history exist
-        const footerNote = document.querySelector('.footer-note');
-        if (footerNote) {
-            footerNote.style.display = (stats.dataDayCount >= 7) ? 'none' : 'block';
-        }
+
     }
 
     function updateLiveFeed(txns) {
