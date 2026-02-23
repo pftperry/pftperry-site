@@ -303,7 +303,8 @@ const MetricsEngine = (() => {
     function getTxTypeDistribution() {
         const sorted = Object.keys(dailyStats).sort().reverse();
         for (const day of sorted) {
-            if (dailyStats[day].txTypeDistribution) return dailyStats[day].txTypeDistribution;
+            const dist = dailyStats[day].txTypeDistribution;
+            if (dist && Object.keys(dist).length > 0) return dist;
         }
         return {};
     }
@@ -541,7 +542,8 @@ const MetricsEngine = (() => {
             retention: getCohortRetention(),
             recentTxns: getRecentTransactions(50),
             dataDayCount: Object.keys(dailyStats).length,
-            mostRecentDay: Object.keys(dailyStats).sort().reverse().find(d => dailyStats[d].txTypeDistribution) || null
+            mostRecentDay: Object.keys(dailyStats).sort().reverse()
+                .find(d => { const dist = dailyStats[d].txTypeDistribution; return dist && Object.keys(dist).length > 0; }) || null
         };
     }
 
