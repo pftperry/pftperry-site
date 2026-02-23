@@ -178,8 +178,9 @@ const App = (() => {
         // Update tx type chart date badge
         const txTypeBadge = document.getElementById('txtype-badge');
         if (txTypeBadge && stats.mostRecentDay) {
-            const [, m, d] = stats.mostRecentDay.split('-');
-            txTypeBadge.textContent = `${parseInt(m)}/${parseInt(d)}`;
+            const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            const d = new Date(stats.mostRecentDay + 'T00:00:00Z');
+            txTypeBadge.textContent = months[d.getUTCMonth()] + ' ' + d.getUTCDate();
         }
 
         // Hide the data-accumulation disclaimer once 7+ days of history exist
