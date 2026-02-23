@@ -275,22 +275,29 @@ const MetricsEngine = (() => {
     }
 
     function getAvgTxnPerUser() {
-        const day = dailyStats[getMostRecentDay()];
-        if (day && day.txCount && day.activeWallets) {
-            return day.txCount / day.activeWallets;
+        const sorted = Object.keys(dailyStats).sort().reverse();
+        for (const day of sorted) {
+            const d = dailyStats[day];
+            if (d && d.txCount > 0 && d.activeWallets > 0) {
+                return d.txCount / d.activeWallets;
+            }
         }
         return 0;
     }
 
     function getPeakHour() {
-        const hourly = dailyStats[getMostRecentDay()] && dailyStats[getMostRecentDay()].hourlyTxCounts;
-        if (!hourly || hourly.length !== 24) return '--';
-        let maxHour = 0;
-        let maxCount = 0;
-        hourly.forEach((c, h) => {
-            if (c > maxCount) { maxCount = c; maxHour = h; }
-        });
-        return maxCount > 0 ? `${String(maxHour).padStart(2, '0')}:00 UTC` : '--';
+        const sorted = Object.keys(dailyStats).sort().reverse();
+        for (const day of sorted) {
+            const hourly = dailyStats[day].hourlyTxCounts;
+            if (!hourly || hourly.length !== 24) continue;
+            let maxHour = 0;
+            let maxCount = 0;
+            hourly.forEach((c, h) => {
+                if (c > maxCount) { maxCount = c; maxHour = h; }
+            });
+            if (maxCount > 0) return `${String(maxHour).padStart(2, '0')}:00 UTC`;
+        }
+        return '--';
     }
 
     function getActiveWallets(days) {
