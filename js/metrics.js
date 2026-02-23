@@ -301,8 +301,11 @@ const MetricsEngine = (() => {
     }
 
     function getTxTypeDistribution() {
-        const day = getMostRecentDay();
-        return (day && dailyStats[day].txTypeDistribution) || {};
+        const sorted = Object.keys(dailyStats).sort().reverse();
+        for (const day of sorted) {
+            if (dailyStats[day].txTypeDistribution) return dailyStats[day].txTypeDistribution;
+        }
+        return {};
     }
 
     function getDailyActiveWalletsHistory() {
@@ -538,7 +541,7 @@ const MetricsEngine = (() => {
             retention: getCohortRetention(),
             recentTxns: getRecentTransactions(50),
             dataDayCount: Object.keys(dailyStats).length,
-            mostRecentDay: getMostRecentDay()
+            mostRecentDay: Object.keys(dailyStats).sort().reverse().find(d => dailyStats[d].txTypeDistribution) || null
         };
     }
 
