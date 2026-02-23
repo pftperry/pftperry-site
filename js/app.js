@@ -504,6 +504,7 @@ const App = (() => {
         MetricsEngine.init();
         await MetricsEngine.loadRemoteStats();
         DashboardCharts.init();
+        if (MetricsEngine.hasData()) updateDashboard(MetricsEngine.getAllStats());
 
         // Show dashboard, hide splash
         setTimeout(() => {
