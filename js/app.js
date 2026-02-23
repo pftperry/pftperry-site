@@ -175,6 +175,13 @@ const App = (() => {
             }) + ' UTC';
         }
 
+        // Update tx type chart date badge
+        const txTypeBadge = document.getElementById('txtype-badge');
+        if (txTypeBadge && stats.mostRecentDay) {
+            const [, m, d] = stats.mostRecentDay.split('-');
+            txTypeBadge.textContent = `${parseInt(m)}/${parseInt(d)}`;
+        }
+
         // Hide the data-accumulation disclaimer once 7+ days of history exist
         const footerNote = document.querySelector('.footer-note');
         if (footerNote) {

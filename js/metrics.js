@@ -537,7 +537,8 @@ const MetricsEngine = (() => {
             txVolHistory: getTxVolumeHistory(),
             retention: getCohortRetention(),
             recentTxns: getRecentTransactions(50),
-            dataDayCount: Object.keys(dailyStats).length
+            dataDayCount: Object.keys(dailyStats).length,
+            mostRecentDay: getMostRecentDay()
         };
     }
 
