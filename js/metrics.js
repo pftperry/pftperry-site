@@ -541,7 +541,8 @@ const MetricsEngine = (() => {
             dawByDay: getDailyActiveWalletsByDay(),
             txVolHistory: getTxVolumeHistory(),
             retention: getCohortRetention(),
-            recentTxns: getRecentTransactions(50)
+            recentTxns: getRecentTransactions(50),
+            dataDayCount: Object.keys(dailyStats).length
         };
     }
 

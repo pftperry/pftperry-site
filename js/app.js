@@ -174,6 +174,12 @@ const App = (() => {
                 hour12: false, timeZone: 'UTC'
             }) + ' UTC';
         }
+
+        // Hide the data-accumulation disclaimer once 7+ days of history exist
+        const footerNote = document.querySelector('.footer-note');
+        if (footerNote) {
+            footerNote.style.display = (stats.dataDayCount >= 7) ? 'none' : '';
+        }
     }
 
     function updateLiveFeed(txns) {
