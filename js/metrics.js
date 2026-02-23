@@ -267,9 +267,15 @@ const MetricsEngine = (() => {
         return 0;
     }
 
-    function getAvgTxnPerUser() {
+    function getMostRecentDay() {
         const today = new Date().toISOString().slice(0, 10);
-        const day = dailyStats[today];
+        if (dailyStats[today]) return today;
+        const sorted = Object.keys(dailyStats).sort();
+        return sorted.length ? sorted[sorted.length - 1] : null;
+    }
+
+    function getAvgTxnPerUser() {
+        const day = dailyStats[getMostRecentDay()];
         if (day && day.txCount && day.activeWallets) {
             return day.txCount / day.activeWallets;
         }
@@ -277,8 +283,7 @@ const MetricsEngine = (() => {
     }
 
     function getPeakHour() {
-        const today = new Date().toISOString().slice(0, 10);
-        const hourly = dailyStats[today] && dailyStats[today].hourlyTxCounts;
+        const hourly = dailyStats[getMostRecentDay()] && dailyStats[getMostRecentDay()].hourlyTxCounts;
         if (!hourly || hourly.length !== 24) return '--';
         let maxHour = 0;
         let maxCount = 0;
@@ -296,18 +301,8 @@ const MetricsEngine = (() => {
     }
 
     function getTxTypeDistribution() {
-        const today = new Date().toISOString().slice(0, 10);
-        if (dailyStats[today] && dailyStats[today].txTypeDistribution) {
-            return dailyStats[today].txTypeDistribution;
-        }
-        // Fall back to the most recent day with data
-        const sorted = Object.keys(dailyStats).sort().reverse();
-        for (const day of sorted) {
-            if (dailyStats[day].txTypeDistribution) {
-                return dailyStats[day].txTypeDistribution;
-            }
-        }
-        return {};
+        const day = getMostRecentDay();
+        return (day && dailyStats[day].txTypeDistribution) || {};
     }
 
     function getDailyActiveWalletsHistory() {
