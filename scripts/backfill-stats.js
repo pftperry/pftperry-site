@@ -19,7 +19,7 @@ const WS_URL = 'wss://ws.testnet.postfiat.org';
 const EXPLORER_API = 'https://explorer.testnet.postfiat.org/api/v1';
 const DATA_FILE = path.join(__dirname, '..', 'data', 'daily-stats.json');
 const BATCH_SIZE = 20;
-const SEQ_BUFFER = 600; // ~30 min of ledgers, covers arithmetic estimation error
+const SEQ_BUFFER = 1200; // ~60 min of ledgers, extra margin for close-time variance
 
 const daysArg = process.argv.find(a => a.startsWith('--days='));
 const MAX_DAYS = daysArg ? parseInt(daysArg.split('=')[1]) : 90;
@@ -205,12 +205,25 @@ async function main() {
     const currentUnixSec = Math.floor(Date.now() / 1000);
     console.log(`[Backfill] Current ledger: seq=${currentSeq}, ref_time=${new Date(currentUnixSec * 1000).toISOString()}`);
 
+    // Compute true historical avg close time from genesis ledger.
+    // The explorer's current ledger_interval only reflects recent close times and
+    // can be significantly wrong for estimating ranges far back in history.
     let avgCloseTime = 3.0;
     try {
-        const metrics = await httpGet(EXPLORER_API + '/metrics');
-        if (metrics.ledger_interval) avgCloseTime = parseFloat(metrics.ledger_interval);
-    } catch {}
-    console.log(`[Backfill] Avg ledger close time: ${avgCloseTime}s`);
+        const genesisResp = await wsSend(ws, { command: 'ledger', ledger_index: 1, transactions: false });
+        const genesisCT = genesisResp.result?.ledger?.close_time;
+        if (genesisCT) {
+            const genesisUnix = genesisCT + 946684800;
+            avgCloseTime = (currentUnixSec - genesisUnix) / (currentSeq - 1);
+            console.log(`[Backfill] Genesis: ${new Date(genesisUnix * 1000).toISOString()}, chain age: ${((currentUnixSec - genesisUnix) / 86400).toFixed(1)} days`);
+        } else {
+            const metrics = await httpGet(EXPLORER_API + '/metrics');
+            if (metrics.ledger_interval) avgCloseTime = parseFloat(metrics.ledger_interval);
+        }
+    } catch (e) {
+        console.warn(`[Backfill] Could not compute avg from genesis: ${e.message}, using 3.0s`);
+    }
+    console.log(`[Backfill] Avg ledger close time: ${avgCloseTime.toFixed(3)}s`);
 
     // Process oldest day first so firstSeen dates are assigned correctly
     const sortedDates = [...targetDates].sort();
