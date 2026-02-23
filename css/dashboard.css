@@ -661,11 +661,11 @@ body::before {
 }
 
 .footer-note {
+    display: block;
     width: 100%;
-    margin-top: 8px;
-    font-size: 0.72rem;
-    color: var(--text-primary);
-    opacity: 0.7;
+    margin-top: 12px;
+    font-size: 0.75rem;
+    color: #e0e8ff;
     line-height: 1.6;
     text-align: center;
     letter-spacing: 0.5px;
