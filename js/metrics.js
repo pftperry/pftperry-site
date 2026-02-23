@@ -300,6 +300,13 @@ const MetricsEngine = (() => {
         if (dailyStats[today] && dailyStats[today].txTypeDistribution) {
             return dailyStats[today].txTypeDistribution;
         }
+        // Fall back to the most recent day with data
+        const sorted = Object.keys(dailyStats).sort().reverse();
+        for (const day of sorted) {
+            if (dailyStats[day].txTypeDistribution) {
+                return dailyStats[day].txTypeDistribution;
+            }
+        }
         return {};
     }
 
