@@ -78,21 +78,36 @@ const MetricsEngine = (() => {
     function computeLiveDailyRollups() {
         const dayBuckets = {};
         const dayWallets = {};
+        const dayTypes   = {};
+        const dayHourly  = {};
+
         ledgers.forEach(l => {
-            const day = new Date(l.close_time).toISOString().slice(0, 10);
+            const day  = new Date(l.close_time).toISOString().slice(0, 10);
+            const hour = new Date(l.close_time).getUTCHours();
+
             dayBuckets[day] = (dayBuckets[day] || 0) + l.txn_count;
             if (!dayWallets[day]) dayWallets[day] = new Set();
+            if (!dayTypes[day])   dayTypes[day]   = {};
+            if (!dayHourly[day])  dayHourly[day]  = new Array(24).fill(0);
+
+            dayHourly[day][hour] += l.txn_count;
+
             l.transactions.forEach(tx => {
                 if (tx.account) dayWallets[day].add(tx.account);
+                if (tx.type) {
+                    dayTypes[day][tx.type] = (dayTypes[day][tx.type] || 0) + 1;
+                }
             });
         });
 
         const result = {};
         for (const date of Object.keys(dayBuckets)) {
             result[date] = {
-                txCount: dayBuckets[date],
-                activeWallets: dayWallets[date] ? dayWallets[date].size : 0,
-                walletAddresses: dayWallets[date] ? [...dayWallets[date]] : []
+                txCount:            dayBuckets[date],
+                activeWallets:      dayWallets[date] ? dayWallets[date].size : 0,
+                walletAddresses:    dayWallets[date] ? [...dayWallets[date]] : [],
+                txTypeDistribution: dayTypes[date]   || {},
+                hourlyTxCounts:     dayHourly[date]  || new Array(24).fill(0)
             };
         }
         return result;
@@ -275,29 +290,20 @@ const MetricsEngine = (() => {
     }
 
     function getAvgTxnPerUser() {
-        const sorted = Object.keys(dailyStats).sort().reverse();
-        for (const day of sorted) {
-            const d = dailyStats[day];
-            if (d && d.txCount > 0 && d.activeWallets > 0) {
-                return d.txCount / d.activeWallets;
-            }
+        const day = dailyStats[getMostRecentDay()];
+        if (day && day.txCount && day.activeWallets) {
+            return day.txCount / day.activeWallets;
         }
         return 0;
     }
 
     function getPeakHour() {
-        const sorted = Object.keys(dailyStats).sort().reverse();
-        for (const day of sorted) {
-            const hourly = dailyStats[day].hourlyTxCounts;
-            if (!hourly || hourly.length !== 24) continue;
-            let maxHour = 0;
-            let maxCount = 0;
-            hourly.forEach((c, h) => {
-                if (c > maxCount) { maxCount = c; maxHour = h; }
-            });
-            if (maxCount > 0) return `${String(maxHour).padStart(2, '0')}:00 UTC`;
-        }
-        return '--';
+        const hourly = dailyStats[getMostRecentDay()] &&
+                       dailyStats[getMostRecentDay()].hourlyTxCounts;
+        if (!hourly || hourly.length !== 24) return '--';
+        let maxHour = 0, maxCount = 0;
+        hourly.forEach((c, h) => { if (c > maxCount) { maxCount = c; maxHour = h; } });
+        return maxCount > 0 ? `${String(maxHour).padStart(2, '0')}:00 UTC` : '--';
     }
 
     function getActiveWallets(days) {
@@ -308,12 +314,8 @@ const MetricsEngine = (() => {
     }
 
     function getTxTypeDistribution() {
-        const sorted = Object.keys(dailyStats).sort().reverse();
-        for (const day of sorted) {
-            const dist = dailyStats[day].txTypeDistribution;
-            if (dist && Object.keys(dist).length > 0) return dist;
-        }
-        return {};
+        const day = dailyStats[getMostRecentDay()];
+        return (day && day.txTypeDistribution) || {};
     }
 
     function getDailyActiveWalletsHistory() {
@@ -579,9 +581,6 @@ const MetricsEngine = (() => {
 
             const today = new Date().toISOString().slice(0, 10);
             for (const [date, data] of Object.entries(remote.days)) {
-                // Local session data takes priority for today (more accurate/real-time)
-                if (date === today && dailyStats[date]) continue;
-                // For past days, remote fills in gaps; keep whichever has higher txCount
                 const existing = dailyStats[date];
                 if (!existing || data.txCount > existing.txCount) {
                     dailyStats[date] = data;
