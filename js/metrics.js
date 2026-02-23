@@ -301,33 +301,6 @@ const MetricsEngine = (() => {
     }
 
     function getTxTypeDistribution() {
-        const today = new Date().toISOString().slice(0, 10);
-
-        // Build live distribution from today's in-memory ledgers
-        const live = {};
-        ledgers.forEach(l => {
-            const day = new Date(l.close_time).toISOString().slice(0, 10);
-            if (day !== today) return;
-            l.transactions.forEach(tx => {
-                const t = tx.type || 'Unknown';
-                live[t] = (live[t] || 0) + 1;
-            });
-        });
-
-        // Merge with server-collected data for today (server wins on counts since it's more complete)
-        const serverToday = dailyStats[today] && dailyStats[today].txTypeDistribution;
-        if (serverToday) {
-            const merged = { ...live };
-            for (const [type, count] of Object.entries(serverToday)) {
-                merged[type] = Math.max(merged[type] || 0, count);
-            }
-            return merged;
-        }
-
-        // Live-only data if server hasn't collected today yet
-        if (Object.keys(live).length > 0) return live;
-
-        // Fall back to most recent past day
         const sorted = Object.keys(dailyStats).sort().reverse();
         for (const day of sorted) {
             if (dailyStats[day].txTypeDistribution) return dailyStats[day].txTypeDistribution;
@@ -568,12 +541,7 @@ const MetricsEngine = (() => {
             retention: getCohortRetention(),
             recentTxns: getRecentTransactions(50),
             dataDayCount: Object.keys(dailyStats).length,
-            mostRecentDay: (() => {
-                const today = new Date().toISOString().slice(0, 10);
-                const hasLiveToday = ledgers.some(l => new Date(l.close_time).toISOString().slice(0, 10) === today);
-                if (hasLiveToday || (dailyStats[today] && dailyStats[today].txTypeDistribution)) return today;
-                return Object.keys(dailyStats).sort().reverse().find(d => dailyStats[d].txTypeDistribution) || null;
-            })()
+            mostRecentDay: Object.keys(dailyStats).sort().reverse().find(d => dailyStats[d].txTypeDistribution) || null
         };
     }
 
