@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-25T05:15:07.163Z",
+  "lastUpdated": "2026-02-25T08:03:35.186Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -521,8 +521,8 @@
       "lastSeq": 527930
     },
     "2026-02-25": {
-      "txCount": 2290,
-      "activeWallets": 54,
+      "txCount": 3509,
+      "activeWallets": 63,
       "walletAddresses": [
         "rExmSZKn1NkU1KA3HHxYW3LvpEWqmfu7ZU",
         "rBvWZbEc46eBw64Vr6Ny7GDSDSSGqryZs9",
@@ -577,12 +577,22 @@
         "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
         "rsZ8Si5t3TzEdnBfcRny6ydfnQvgjxspqq",
         "r3G143FswfaSdUUWBi9JdeJMgCNvWwy7gq",
-        "rJv98HTEbchrCFGvkF1S8Z84zwRCaiLJ3u"
+        "rJv98HTEbchrCFGvkF1S8Z84zwRCaiLJ3u",
+        "rwdm72S9YVKkZjeADKU2bbUMuY4vPnSfH7",
+        "rfAW8RK9GzQybCzNbYYcRLatBPAZU5GBQE",
+        "rUfBPjQnVQcmav2SVZapSesufjaWdWKePw",
+        "rDJ3cgibydxXDtGRaWue9c9QmRBfyKNXvu",
+        "rfKQTuyDX82aiuxpTHgRxwXckFkcqj27Km",
+        "r3zSaWsp5c1THJPRpvTFjk8nkoNPzjJrGY",
+        "rsSt98msArxEP4hWJMtZVJLkRYN8jXQkK3",
+        "rDVKRNp3kWE1ykryU8ta6bBZWrFjFetyjB",
+        "rLaKZnK5Uo3EnNJLjAxPsrchrs1pqtP4u5"
       ],
       "txTypeDistribution": {
-        "Payment": 1661,
-        "NFTokenMint": 181,
-        "NFTokenBurn": 448
+        "Payment": 2648,
+        "NFTokenMint": 278,
+        "NFTokenBurn": 582,
+        "AccountSet": 1
       },
       "hourlyTxCounts": [
         436,
@@ -590,10 +600,10 @@
         422,
         415,
         433,
-        106,
-        0,
-        0,
-        0,
+        433,
+        422,
+        454,
+        16,
         0,
         0,
         0,
@@ -610,11 +620,11 @@
         0,
         0
       ],
-      "tps": 0.13,
-      "avgFee": "0.00001011",
+      "tps": 0.08,
+      "avgFee": "0.00001000",
       "nodeCount": 29,
       "validatorCount": 26,
-      "lastSeq": 535287
+      "lastSeq": 538652
     }
   },
   "firstSeen": {
@@ -761,6 +771,10 @@
     "rDqf4nowC2PAZgn1UGHDn46mcUMREYJrsr": "2026-02-25",
     "rGu432jQ34PcCUZyDkujpQPByVCA4LDcw9": "2026-02-25",
     "r3G143FswfaSdUUWBi9JdeJMgCNvWwy7gq": "2026-02-25",
-    "rJv98HTEbchrCFGvkF1S8Z84zwRCaiLJ3u": "2026-02-25"
+    "rJv98HTEbchrCFGvkF1S8Z84zwRCaiLJ3u": "2026-02-25",
+    "rfAW8RK9GzQybCzNbYYcRLatBPAZU5GBQE": "2026-02-25",
+    "rfKQTuyDX82aiuxpTHgRxwXckFkcqj27Km": "2026-02-25",
+    "r3zSaWsp5c1THJPRpvTFjk8nkoNPzjJrGY": "2026-02-25",
+    "rLaKZnK5Uo3EnNJLjAxPsrchrs1pqtP4u5": "2026-02-25"
   }
 }
