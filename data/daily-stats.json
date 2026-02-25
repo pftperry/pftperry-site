@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-25T11:13:58.079Z",
+  "lastUpdated": "2026-02-25T14:36:48.866Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -521,8 +521,8 @@
       "lastSeq": 527930
     },
     "2026-02-25": {
-      "txCount": 4851,
-      "activeWallets": 68,
+      "txCount": 6251,
+      "activeWallets": 71,
       "walletAddresses": [
         "rExmSZKn1NkU1KA3HHxYW3LvpEWqmfu7ZU",
         "rBvWZbEc46eBw64Vr6Ny7GDSDSSGqryZs9",
@@ -591,13 +591,16 @@
         "rKZ9SVg1z764ABrLQ3Q1Dh5PPR7gM1z4Df",
         "rfXRE9mPGcW4yD6JAziRxUqjqjThSNu2H",
         "rKbEFHVAQ5JM2LTyrbYUr4cvSUcDKLzXqF",
-        "rw98GVXmucKMgjFKZjxbFbriJBKqju35P6"
+        "rw98GVXmucKMgjFKZjxbFbriJBKqju35P6",
+        "r9dDnDPcwP2Y1GjbatbPn5DpPwtcFirTH5",
+        "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
+        "r4ahFvpMuDHfjsc8kuECSTTQNbFPaw5XyU"
       ],
       "txTypeDistribution": {
-        "Payment": 3772,
-        "NFTokenMint": 401,
-        "NFTokenBurn": 677,
-        "AccountSet": 1
+        "Payment": 4956,
+        "NFTokenMint": 525,
+        "NFTokenBurn": 768,
+        "AccountSet": 2
       },
       "hourlyTxCounts": [
         436,
@@ -611,10 +614,10 @@
         402,
         410,
         449,
-        97,
-        0,
-        0,
-        0,
+        409,
+        430,
+        387,
+        271,
         0,
         0,
         0,
@@ -625,11 +628,11 @@
         0,
         0
       ],
-      "tps": 0.11,
+      "tps": 0.14,
       "avgFee": "0.00001000",
       "nodeCount": 29,
       "validatorCount": 26,
-      "lastSeq": 542435
+      "lastSeq": 546474
     }
   },
   "firstSeen": {
@@ -784,6 +787,8 @@
     "rYtcWnr1n5fMCRpP2xwcqRq5cREfxVWkZ": "2026-02-25",
     "rfXRE9mPGcW4yD6JAziRxUqjqjThSNu2H": "2026-02-25",
     "rKbEFHVAQ5JM2LTyrbYUr4cvSUcDKLzXqF": "2026-02-25",
-    "rw98GVXmucKMgjFKZjxbFbriJBKqju35P6": "2026-02-25"
+    "rw98GVXmucKMgjFKZjxbFbriJBKqju35P6": "2026-02-25",
+    "r9dDnDPcwP2Y1GjbatbPn5DpPwtcFirTH5": "2026-02-25",
+    "r4ahFvpMuDHfjsc8kuECSTTQNbFPaw5XyU": "2026-02-25"
   }
 }
