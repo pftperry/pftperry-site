@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-26T14:35:27.505Z",
+  "lastUpdated": "2026-02-26T18:04:47.329Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -654,8 +654,8 @@
       "lastSeq": 556608
     },
     "2026-02-26": {
-      "txCount": 6118,
-      "activeWallets": 82,
+      "txCount": 7534,
+      "activeWallets": 87,
       "walletAddresses": [
         "rKNuW8uvNUhKX8SAgyPGLHAoZr2vSLhUXM",
         "rw98GVXmucKMgjFKZjxbFbriJBKqju35P6",
@@ -738,12 +738,17 @@
         "rMfBWUQkpAqCcE85hzKQQ9j3sbbdpsGLAG",
         "rQ1w4WWxkV9pPJBg2DSzsGzTPdSh8xp5x",
         "rav3w8w1ffTbcZYzaB5H25AdDFWHoex6Xz",
-        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf"
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "rDqf4nowC2PAZgn1UGHDn46mcUMREYJrsr",
+        "rsSt98msArxEP4hWJMtZVJLkRYN8jXQkK3",
+        "rnQoHkyjGhSCu89E2SZP2XzzEzptud7zKK",
+        "r3WF1k5n5amGKJGjKiMJckeMQ5LhAzRGYn",
+        "rKPt2QupQ9L6mLYRN9Tk3uFVD5186Hbkmv"
       ],
       "txTypeDistribution": {
-        "Payment": 5034,
-        "NFTokenMint": 510,
-        "NFTokenBurn": 573,
+        "Payment": 6226,
+        "NFTokenMint": 609,
+        "NFTokenBurn": 698,
         "AccountSet": 1
       },
       "hourlyTxCounts": [
@@ -761,22 +766,22 @@
         435,
         394,
         504,
-        291,
-        0,
-        0,
-        0,
-        0,
+        457,
+        410,
+        396,
+        415,
+        29,
         0,
         0,
         0,
         0,
         0
       ],
-      "tps": 0.1,
-      "avgFee": "0.00001014",
-      "nodeCount": 33,
+      "tps": 0.11,
+      "avgFee": "0.00001000",
+      "nodeCount": 31,
       "validatorCount": 29,
-      "lastSeq": 575132
+      "lastSeq": 579301
     }
   },
   "firstSeen": {
@@ -970,6 +975,9 @@
     "rJ3kWrv2jyzaNGLskDP4aiaAb3yavup9Eu": "2026-02-26",
     "rMfBWUQkpAqCcE85hzKQQ9j3sbbdpsGLAG": "2026-02-26",
     "rQ1w4WWxkV9pPJBg2DSzsGzTPdSh8xp5x": "2026-02-26",
-    "rav3w8w1ffTbcZYzaB5H25AdDFWHoex6Xz": "2026-02-26"
+    "rav3w8w1ffTbcZYzaB5H25AdDFWHoex6Xz": "2026-02-26",
+    "rnQoHkyjGhSCu89E2SZP2XzzEzptud7zKK": "2026-02-26",
+    "r3WF1k5n5amGKJGjKiMJckeMQ5LhAzRGYn": "2026-02-26",
+    "rKPt2QupQ9L6mLYRN9Tk3uFVD5186Hbkmv": "2026-02-26"
   }
 }
