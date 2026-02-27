@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-27T07:56:05.902Z",
+  "lastUpdated": "2026-02-27T10:04:20.384Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -793,8 +793,8 @@
       "lastSeq": 585270
     },
     "2026-02-27": {
-      "txCount": 3412,
-      "activeWallets": 58,
+      "txCount": 4341,
+      "activeWallets": 62,
       "walletAddresses": [
         "rDmEFXUDoqBzfPNHVD6JGpkKPmqQsZNBrF",
         "r39W7EqYf6HnZfWCLJGv6H9pqGNhGVrN9z",
@@ -853,12 +853,16 @@
         "rM57MEKbgWt914VmTbELspH3JoFJir1Acf",
         "rUfBPjQnVQcmav2SVZapSesufjaWdWKePw",
         "rGoX6GuHgJSVSRWHfXr13kjrRdsQV7bXhr",
-        "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97"
+        "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97",
+        "rfKbhQwM2CvhNf9N9rhHGXPkoj6roo3vKZ",
+        "rKRGA2HbcRd6DRwrAzbwg8kPFK6BaxbgAe",
+        "rfkmggF5KDVCeiNnZorX8wn1WZQhgkSZSF",
+        "rLnrtLSQdtmWgTiY3o6NNWKpb43RsvZ1yW"
       ],
       "txTypeDistribution": {
-        "Payment": 2871,
-        "NFTokenMint": 304,
-        "NFTokenBurn": 237
+        "Payment": 3550,
+        "NFTokenMint": 364,
+        "NFTokenBurn": 427
       },
       "hourlyTxCounts": [
         436,
@@ -868,10 +872,10 @@
         420,
         411,
         399,
-        414,
-        0,
-        0,
-        0,
+        438,
+        433,
+        442,
+        30,
         0,
         0,
         0,
@@ -886,11 +890,11 @@
         0,
         0
       ],
-      "tps": 0.17,
-      "avgFee": "0.00001016",
+      "tps": 0.1,
+      "avgFee": "0.00001013",
       "nodeCount": 31,
       "validatorCount": 29,
-      "lastSeq": 595863
+      "lastSeq": 598419
     }
   },
   "firstSeen": {
@@ -1096,6 +1100,9 @@
     "rMNt4cSt1Hd1n24VPaX3oHavR51Xc97oyA": "2026-02-27",
     "rMtY9oJpfw8P28vqCtCsyzVGvGpDGZNnZK": "2026-02-27",
     "rJd7qitsTnP71ewGHqSaByxdcZkwMhothg": "2026-02-27",
-    "rM57MEKbgWt914VmTbELspH3JoFJir1Acf": "2026-02-27"
+    "rM57MEKbgWt914VmTbELspH3JoFJir1Acf": "2026-02-27",
+    "rfKbhQwM2CvhNf9N9rhHGXPkoj6roo3vKZ": "2026-02-27",
+    "rKRGA2HbcRd6DRwrAzbwg8kPFK6BaxbgAe": "2026-02-27",
+    "rfkmggF5KDVCeiNnZorX8wn1WZQhgkSZSF": "2026-02-27"
   }
 }
