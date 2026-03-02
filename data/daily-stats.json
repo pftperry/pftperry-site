@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-02T21:06:26.245Z",
+  "lastUpdated": "2026-03-02T22:52:02.568Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -1150,8 +1150,8 @@
       "lastSeq": 672091
     },
     "2026-03-02": {
-      "txCount": 9021,
-      "activeWallets": 72,
+      "txCount": 9850,
+      "activeWallets": 77,
       "walletAddresses": [
         "rngowiW51YvR8fLSQpnLKxrmzN8KZ9F9wM",
         "rMqdogdiXTyNwt7qxxGC6pWfdc7H8xmyLn",
@@ -1224,12 +1224,17 @@
         "rPBh3iymyev6Fwoec5EgRmK3ZejsdfTrvs",
         "rLethbCWSbYS6aeUyZRZAJHh4Hw3QNQf9w",
         "rUCkRipq6icYfj6F6EthnKYH3cgYg4GKFL",
-        "rDqf4nowC2PAZgn1UGHDn46mcUMREYJrsr"
+        "rDqf4nowC2PAZgn1UGHDn46mcUMREYJrsr",
+        "ra9jycCnCsM6yPgZrKecDjxtSuySxz4Yd8",
+        "rLWqU6jr9KxtWYhRTPAAeCGmSAuaLup3Cf",
+        "r4ahFvpMuDHfjsc8kuECSTTQNbFPaw5XyU",
+        "rK62sBTVzc4PG79QrQZJkfAHiqwCyFKqdk",
+        "rDdwAxumXqzivspfveSdGoXmghxHDC3nDf"
       ],
       "txTypeDistribution": {
-        "Payment": 7241,
-        "NFTokenMint": 988,
-        "NFTokenBurn": 788,
+        "Payment": 7915,
+        "NFTokenMint": 1075,
+        "NFTokenBurn": 856,
         "AccountSet": 4
       },
       "hourlyTxCounts": [
@@ -1254,15 +1259,15 @@
         476,
         577,
         452,
-        42,
-        0,
+        428,
+        443,
         0
       ],
-      "tps": 0.12,
+      "tps": 0.18,
       "avgFee": "0.00001000",
       "nodeCount": 33,
       "validatorCount": 31,
-      "lastSeq": 697625
+      "lastSeq": 699729
     }
   },
   "firstSeen": {
@@ -1529,6 +1534,10 @@
     "r3SuD5Jm4ARdi53YnbQA1CjxJba53GM6Ru": "2026-03-02",
     "rYShYQDU6kJvPcoCDhk4igcWtYGSNtmv4": "2026-03-02",
     "rLethbCWSbYS6aeUyZRZAJHh4Hw3QNQf9w": "2026-03-02",
-    "rUCkRipq6icYfj6F6EthnKYH3cgYg4GKFL": "2026-03-02"
+    "rUCkRipq6icYfj6F6EthnKYH3cgYg4GKFL": "2026-03-02",
+    "ra9jycCnCsM6yPgZrKecDjxtSuySxz4Yd8": "2026-03-02",
+    "rLWqU6jr9KxtWYhRTPAAeCGmSAuaLup3Cf": "2026-03-02",
+    "rK62sBTVzc4PG79QrQZJkfAHiqwCyFKqdk": "2026-03-02",
+    "rDdwAxumXqzivspfveSdGoXmghxHDC3nDf": "2026-03-02"
   }
 }
