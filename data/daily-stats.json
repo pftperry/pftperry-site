@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-03T07:53:00.396Z",
+  "lastUpdated": "2026-03-03T10:04:41.356Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -1272,8 +1272,8 @@
       "lastSeq": 700950
     },
     "2026-03-03": {
-      "txCount": 3360,
-      "activeWallets": 56,
+      "txCount": 4203,
+      "activeWallets": 59,
       "walletAddresses": [
         "r4yTqaQLHzd53TKRdhqPximMkjm88Unr5m",
         "ra9jycCnCsM6yPgZrKecDjxtSuySxz4Yd8",
@@ -1330,12 +1330,16 @@
         "rwvK55q4AeC8nA5Cebcnd2VgTDgaGDeBtg",
         "rpc9FcxtaNVdWonAXv3rABecNLx7kcA3sY",
         "raKm1F14bPuHaETmYxdwj5NxWQmT4kaa9Y",
-        "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx"
+        "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
+        "rJ1VKtZMpBjj3Ti4YQDYBNayBEGqoq2GBX",
+        "rNigQEP5edcpfFirsYJZkmvUX1Uzm2s4zL",
+        "rDxtRTJczPCjws78Kuzm5oD8SgGwewf8er"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 323,
-        "Payment": 2649,
-        "NFTokenMint": 388
+        "NFTokenBurn": 407,
+        "Payment": 3317,
+        "NFTokenMint": 478,
+        "AccountSet": 1
       },
       "hourlyTxCounts": [
         449,
@@ -1345,10 +1349,10 @@
         491,
         417,
         407,
-        352,
-        0,
-        0,
-        0,
+        395,
+        407,
+        369,
+        24,
         0,
         0,
         0,
@@ -1363,11 +1367,11 @@
         0,
         0
       ],
-      "tps": 0.12,
-      "avgFee": "0.00001000",
+      "tps": 0.1,
+      "avgFee": "0.00001013",
       "nodeCount": 33,
       "validatorCount": 30,
-      "lastSeq": 710505
+      "lastSeq": 713130
     }
   },
   "firstSeen": {
@@ -1643,6 +1647,8 @@
     "reqF4TAWQa79UDznMcPAhLdG5G4U9XyEc": "2026-03-03",
     "rMYUddsx2AMqvoQBgHwPZV2RUzf6Fr5Akh": "2026-03-03",
     "rwvK55q4AeC8nA5Cebcnd2VgTDgaGDeBtg": "2026-03-03",
-    "raKm1F14bPuHaETmYxdwj5NxWQmT4kaa9Y": "2026-03-03"
+    "raKm1F14bPuHaETmYxdwj5NxWQmT4kaa9Y": "2026-03-03",
+    "rJ1VKtZMpBjj3Ti4YQDYBNayBEGqoq2GBX": "2026-03-03",
+    "rDxtRTJczPCjws78Kuzm5oD8SgGwewf8er": "2026-03-03"
   }
 }
