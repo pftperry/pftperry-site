@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-03T14:12:04.794Z",
+  "lastUpdated": "2026-03-03T17:09:49.405Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -1272,8 +1272,8 @@
       "lastSeq": 700950
     },
     "2026-03-03": {
-      "txCount": 6049,
-      "activeWallets": 66,
+      "txCount": 7310,
+      "activeWallets": 73,
       "walletAddresses": [
         "r4yTqaQLHzd53TKRdhqPximMkjm88Unr5m",
         "ra9jycCnCsM6yPgZrKecDjxtSuySxz4Yd8",
@@ -1340,12 +1340,19 @@
         "rPo8GkCA9YMKzuJGTHbj11kdVfPqSJHxNx",
         "rGGodJFqgreLgXKVGspkZ68dqBH8RBGCJr",
         "rn3GN63X1DUdCdAh99GkqJcnfp7GiD31tv",
-        "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu"
+        "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "rpFgT43r6geDRAsNFZjUY25j7mSTNh6pmd",
+        "rKZ9SVg1z764ABrLQ3Q1Dh5PPR7gM1z4Df",
+        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
+        "rKddMw1hqMGwfgJvzjbWQHtBQT8hDcZNCP",
+        "rBTYXwQofjJraScghrzt9CUHCa1gzUxknC",
+        "rMVf6xiZwzMyha1AnoeGLjkoGBUvc1c5cs"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 758,
-        "Payment": 4641,
-        "NFTokenMint": 649,
+        "NFTokenBurn": 852,
+        "Payment": 5669,
+        "NFTokenMint": 788,
         "AccountSet": 1
       },
       "hourlyTxCounts": [
@@ -1363,10 +1370,10 @@
         471,
         432,
         441,
-        92,
-        0,
-        0,
-        0,
+        450,
+        423,
+        410,
+        70,
         0,
         0,
         0,
@@ -1374,11 +1381,11 @@
         0,
         0
       ],
-      "tps": 0.12,
-      "avgFee": "0.00001000",
+      "tps": 0.14,
+      "avgFee": "0.00001020",
       "nodeCount": 33,
       "validatorCount": 30,
-      "lastSeq": 718056
+      "lastSeq": 721593
     }
   },
   "firstSeen": {
@@ -1659,6 +1666,8 @@
     "rDxtRTJczPCjws78Kuzm5oD8SgGwewf8er": "2026-03-03",
     "rnqFPHKwcNJS1BMoeWHGTcamEnqyGVXZH7": "2026-03-03",
     "rfju5VD6qpSrTcsNBj6xim3ccAPVNsGmtT": "2026-03-03",
-    "rn3GN63X1DUdCdAh99GkqJcnfp7GiD31tv": "2026-03-03"
+    "rn3GN63X1DUdCdAh99GkqJcnfp7GiD31tv": "2026-03-03",
+    "rBTYXwQofjJraScghrzt9CUHCa1gzUxknC": "2026-03-03",
+    "rMVf6xiZwzMyha1AnoeGLjkoGBUvc1c5cs": "2026-03-03"
   }
 }
