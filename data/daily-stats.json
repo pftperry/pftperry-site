@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T22:03:59.910Z",
+  "lastUpdated": "2026-03-06T00:06:18.905Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -1655,6 +1655,68 @@
       "nodeCount": 39,
       "validatorCount": 36,
       "lastSeq": 784819
+    },
+    "2026-03-06": {
+      "txCount": 39,
+      "activeWallets": 21,
+      "walletAddresses": [
+        "rEA5dY6GeauWJQtPX1CUDz6MiEyYQKA78A",
+        "r9KLHitnpFfDVnZCTV18ivtxkYovV3eByC",
+        "rEaE2XF4n5EUqTKZp6TUoWjdcV39pGy6H7",
+        "rn6KCDstYQf2s1CWHzBz8jUb23zRJ3VJC4",
+        "rKRphMiqo2LWKoNUT9CgzmEHc4fRED3emz",
+        "rahVeaVJmUBeh5p3AxxH4V9SLrMQQ4wCWA",
+        "rp3AWShE32Y6Xaz14BaMXi2NpsUvFJrvQL",
+        "rJV3nRcWCExSsajdcH7aZi8MrokFuuTu4x",
+        "rBEYigB138RUJkBoV5PCNE31utm3TkpD4U",
+        "rn3GN63X1DUdCdAh99GkqJcnfp7GiD31tv",
+        "rfs44Bx8aEzDY2MVDbGz9pYbMuoSNh7Wuc",
+        "rfr21G3f6avrMs2BcuWhhhb4j4ZmbQRfaB",
+        "rMv2WbSm1rRLDPsJiJ6XTYi9B8iF3f3DC1",
+        "rGGodJFqgreLgXKVGspkZ68dqBH8RBGCJr",
+        "rQLbhi9BBVuoJ95TG7FcjzEVfAg2hFJCKA",
+        "rpWWYWjX4kEcwFLJ6SahKgDithNjLEbJBj",
+        "rKEXJEWFEfCYgto3ExA9VbCQ47s8d6TNsW",
+        "rf1z6CzgY1sGNLHC8Ssg2Jun5LHRzjENW7",
+        "rUPzbu7VVCEkDyfYqACxfWq8zt3eoYaaG7",
+        "rnYeTpPQCLRLuLqu32CyuQCJQQKXPFwdUk",
+        "r4CLcrjd3Do1Zd9M583Zj2FzfWKNjCYpC2"
+      ],
+      "txTypeDistribution": {
+        "Payment": 29,
+        "NFTokenMint": 10
+      },
+      "hourlyTxCounts": [
+        39,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tps": 0.13,
+      "avgFee": "0.00001011",
+      "nodeCount": 40,
+      "validatorCount": 36,
+      "lastSeq": 787252
     }
   },
   "firstSeen": {
@@ -1980,6 +2042,7 @@
     "rf1z6CzgY1sGNLHC8Ssg2Jun5LHRzjENW7": "2026-03-05",
     "rfs44Bx8aEzDY2MVDbGz9pYbMuoSNh7Wuc": "2026-03-05",
     "rfr21G3f6avrMs2BcuWhhhb4j4ZmbQRfaB": "2026-03-05",
-    "rs5hbB6HCiYSonfz5Dtxi6yKQupZLMwcZQ": "2026-03-05"
+    "rs5hbB6HCiYSonfz5Dtxi6yKQupZLMwcZQ": "2026-03-05",
+    "rp3AWShE32Y6Xaz14BaMXi2NpsUvFJrvQL": "2026-03-06"
   }
 }
