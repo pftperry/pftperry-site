@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-07T17:43:53.764Z",
+  "lastUpdated": "2026-03-07T18:59:25.566Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -1780,8 +1780,8 @@
       "lastSeq": 815663
     },
     "2026-03-07": {
-      "txCount": 7302,
-      "activeWallets": 65,
+      "txCount": 7821,
+      "activeWallets": 70,
       "walletAddresses": [
         "r4NUeLLsYbBqzQwsnYVYDe7Knun5tDswJ4",
         "rxsRMg48RMHU3YoExiaTMnTwCwu1m24CR",
@@ -1847,12 +1847,17 @@
         "rLpm3soVaFFAeYf7XehHNTC5GAJGi6tFXs",
         "rpc9FcxtaNVdWonAXv3rABecNLx7kcA3sY",
         "rKZ9SVg1z764ABrLQ3Q1Dh5PPR7gM1z4Df",
-        "r9oHNN143VkaVeQ5kfQnRyc9gwL8HhSa32"
+        "r9oHNN143VkaVeQ5kfQnRyc9gwL8HhSa32",
+        "rpMUHcT27EdLsAGEgaqRaFPtSxnLzYycaQ",
+        "rp1Tis2X3L4ebEvA1y9Y2RrGfDgQwYi9bk",
+        "rBTYXwQofjJraScghrzt9CUHCa1gzUxknC",
+        "rDxG2EXUmQThZJtZcq4cp18obb8gU7oxuR",
+        "rNG4jRn2oybDmLbx2g6EsiZUENdjQ2o3PZ"
       ],
       "txTypeDistribution": {
-        "Payment": 5478,
-        "NFTokenBurn": 750,
-        "NFTokenMint": 1074
+        "Payment": 5743,
+        "NFTokenBurn": 957,
+        "NFTokenMint": 1121
       },
       "hourlyTxCounts": [
         418,
@@ -1872,19 +1877,19 @@
         423,
         421,
         410,
-        300,
-        0,
+        412,
+        407,
         0,
         0,
         0,
         0,
         0
       ],
-      "tps": 0.1,
+      "tps": 0.11,
       "avgFee": "0.00001000",
       "nodeCount": 43,
       "validatorCount": 41,
-      "lastSeq": 836988
+      "lastSeq": 838492
     }
   },
   "firstSeen": {
@@ -2237,6 +2242,9 @@
     "rBM3uRzEi4ThiuryPiD1rtVarzkDQZro2N": "2026-03-07",
     "rUcSjWCg5Lg9eK2tV8Yw99VEFgYR3qPEwH": "2026-03-07",
     "rfvQjbJMgmmhSpZ2aRb4MJMv75WPU9qPS5": "2026-03-07",
-    "rLpm3soVaFFAeYf7XehHNTC5GAJGi6tFXs": "2026-03-07"
+    "rLpm3soVaFFAeYf7XehHNTC5GAJGi6tFXs": "2026-03-07",
+    "rpMUHcT27EdLsAGEgaqRaFPtSxnLzYycaQ": "2026-03-07",
+    "rp1Tis2X3L4ebEvA1y9Y2RrGfDgQwYi9bk": "2026-03-07",
+    "rNG4jRn2oybDmLbx2g6EsiZUENdjQ2o3PZ": "2026-03-07"
   }
 }
