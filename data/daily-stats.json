@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08T05:00:58.008Z",
+  "lastUpdated": "2026-03-08T07:21:47.858Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -1900,8 +1900,8 @@
       "lastSeq": 844102
     },
     "2026-03-08": {
-      "txCount": 2115,
-      "activeWallets": 45,
+      "txCount": 3111,
+      "activeWallets": 51,
       "walletAddresses": [
         "rNG4jRn2oybDmLbx2g6EsiZUENdjQ2o3PZ",
         "rUcSjWCg5Lg9eK2tV8Yw99VEFgYR3qPEwH",
@@ -1947,12 +1947,18 @@
         "raLpHgxDEvRuKLtG4rBuyhbpPUkq2NGt1Q",
         "rsZ8Si5t3TzEdnBfcRny6ydfnQvgjxspqq",
         "rGu432jQ34PcCUZyDkujpQPByVCA4LDcw9",
-        "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH"
+        "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
+        "rH3dfGifdXzghxKXS74WRA3WtdKLKGj5Um",
+        "rsqZiJ6vnmWtaymWh7EW8EK1oEeXrLWvLC",
+        "rhLTB67HjDqCn1ZqFhXpGWcvv8bynY1n2H",
+        "r3Zo6VJzsitmtqyYxF5MYsFyP1221r1VFv",
+        "rsyNi5ZXbAnF8qu8Bh5A9AoGRMjvHYBP9M",
+        "racDKzeGRgraB8CoQDZvpTFpbveBh5tKPh"
       ],
       "txTypeDistribution": {
-        "Payment": 1683,
-        "NFTokenBurn": 170,
-        "NFTokenMint": 260,
+        "Payment": 2385,
+        "NFTokenBurn": 343,
+        "NFTokenMint": 381,
         "NFTokenCreateOffer": 2
       },
       "hourlyTxCounts": [
@@ -1961,9 +1967,9 @@
         391,
         431,
         444,
-        1,
-        0,
-        0,
+        425,
+        425,
+        147,
         0,
         0,
         0,
@@ -1981,11 +1987,11 @@
         0,
         0
       ],
-      "tps": 0.11,
-      "avgFee": "0.00001024",
+      "tps": 0.1,
+      "avgFee": "0.00001000",
       "nodeCount": 43,
       "validatorCount": 41,
-      "lastSeq": 850456
+      "lastSeq": 853265
     }
   },
   "firstSeen": {
@@ -2348,6 +2354,10 @@
     "r3Qve8Sq2Bg1gVKFohSQWb4gRc5LUzibSh": "2026-03-07",
     "rhYseYjDVdJzHmXx4f37TGnNjknqwdSF55": "2026-03-07",
     "r3VJK1T6NYC3bEKBpG7UbsMRmMaXZgwGbf": "2026-03-08",
-    "raLpHgxDEvRuKLtG4rBuyhbpPUkq2NGt1Q": "2026-03-08"
+    "raLpHgxDEvRuKLtG4rBuyhbpPUkq2NGt1Q": "2026-03-08",
+    "rhLTB67HjDqCn1ZqFhXpGWcvv8bynY1n2H": "2026-03-08",
+    "r3Zo6VJzsitmtqyYxF5MYsFyP1221r1VFv": "2026-03-08",
+    "rsyNi5ZXbAnF8qu8Bh5A9AoGRMjvHYBP9M": "2026-03-08",
+    "racDKzeGRgraB8CoQDZvpTFpbveBh5tKPh": "2026-03-08"
   }
 }
