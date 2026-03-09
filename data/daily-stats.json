@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-09T10:30:45.429Z",
+  "lastUpdated": "2026-03-09T12:00:14.450Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -2011,8 +2011,8 @@
       "lastSeq": 872861
     },
     "2026-03-09": {
-      "txCount": 4468,
-      "activeWallets": 59,
+      "txCount": 5139,
+      "activeWallets": 63,
       "walletAddresses": [
         "r97CbazMTLgw3Ey3zCCua1KfTzwf4JMv7j",
         "rDo492es5MCpnz7pAJmGzv5vy3peBxHvwQ",
@@ -2072,12 +2072,16 @@
         "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu",
         "rJNwqDPKSkbqDPNoNxbW6C3KCS84ZaQc96",
         "rGGodJFqgreLgXKVGspkZ68dqBH8RBGCJr",
-        "rEuQ2cYHCDTg5xpUbnK4sF2eoXE8vK6npV"
+        "rEuQ2cYHCDTg5xpUbnK4sF2eoXE8vK6npV",
+        "r9mQM9WJQcmnMBUYVhh7h7x14xKBjzXtzk",
+        "r9oHNN143VkaVeQ5kfQnRyc9gwL8HhSa32",
+        "rDY44d2oaiPmoCLbNPsjvMNxkRwNSeiHE1",
+        "rH4iijgyzjxP4SWiEowdcfVoMuTsyJvHiE"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 609,
-        "Payment": 3299,
-        "NFTokenMint": 560
+        "NFTokenBurn": 730,
+        "Payment": 3780,
+        "NFTokenMint": 629
       },
       "hourlyTxCounts": [
         426,
@@ -2090,8 +2094,8 @@
         367,
         409,
         479,
-        238,
-        0,
+        469,
+        440,
         0,
         0,
         0,
@@ -2105,11 +2109,11 @@
         0,
         0
       ],
-      "tps": 0.13,
+      "tps": 0.17,
       "avgFee": "0.00001000",
       "nodeCount": 44,
       "validatorCount": 42,
-      "lastSeq": 885707
+      "lastSeq": 887496
     }
   },
   "firstSeen": {
@@ -2489,6 +2493,9 @@
     "raobukVzhjhR9CiGGYbbHLR6ucp5sxSH3a": "2026-03-09",
     "rEv3AzJcdGYv1hw1hrgnWZp2PWZ896vVB4": "2026-03-09",
     "rMDxWYDc1xByrRPRrFHG4FVqNw5k29ANfT": "2026-03-09",
-    "rEuQ2cYHCDTg5xpUbnK4sF2eoXE8vK6npV": "2026-03-09"
+    "rEuQ2cYHCDTg5xpUbnK4sF2eoXE8vK6npV": "2026-03-09",
+    "r9mQM9WJQcmnMBUYVhh7h7x14xKBjzXtzk": "2026-03-09",
+    "rDY44d2oaiPmoCLbNPsjvMNxkRwNSeiHE1": "2026-03-09",
+    "rH4iijgyzjxP4SWiEowdcfVoMuTsyJvHiE": "2026-03-09"
   }
 }
