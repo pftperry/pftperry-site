@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-10T07:28:56.259Z",
+  "lastUpdated": "2026-03-10T10:02:17.009Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -2135,8 +2135,8 @@
       "lastSeq": 901769
     },
     "2026-03-10": {
-      "txCount": 3214,
-      "activeWallets": 54,
+      "txCount": 4299,
+      "activeWallets": 59,
       "walletAddresses": [
         "r3Qve8Sq2Bg1gVKFohSQWb4gRc5LUzibSh",
         "rhYseYjDVdJzHmXx4f37TGnNjknqwdSF55",
@@ -2191,12 +2191,17 @@
         "rsZ8Si5t3TzEdnBfcRny6ydfnQvgjxspqq",
         "r3s2YyuiKh9iuJSf1kSgRhKUT3jWXdo4Yj",
         "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
-        "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97"
+        "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97",
+        "rKxm1yUXZ8hnretnQEZoUHpYJfvAx89Hp2",
+        "rDVKRNp3kWE1ykryU8ta6bBZWrFjFetyjB",
+        "rEATkUo7kjbN8zQkW1MTKEgk3n9piPiMqd",
+        "rfXRE9mPGcW4yD6JAziRxUqjqjThSNu2H",
+        "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo"
       ],
       "txTypeDistribution": {
-        "Payment": 2619,
-        "NFTokenMint": 310,
-        "NFTokenBurn": 285
+        "Payment": 3497,
+        "NFTokenMint": 424,
+        "NFTokenBurn": 378
       },
       "hourlyTxCounts": [
         420,
@@ -2206,10 +2211,10 @@
         440,
         415,
         425,
-        200,
-        0,
-        0,
-        0,
+        457,
+        407,
+        408,
+        13,
         0,
         0,
         0,
@@ -2224,11 +2229,11 @@
         0,
         0
       ],
-      "tps": 0.08,
+      "tps": 0.11,
       "avgFee": "0.00001000",
       "nodeCount": 44,
       "validatorCount": 42,
-      "lastSeq": 910764
+      "lastSeq": 913815
     }
   },
   "firstSeen": {
@@ -2620,6 +2625,8 @@
     "rfEdfCm55ujYi4og19BeirEAnnNYWMgMTM": "2026-03-10",
     "rJhfxcVXhgWGnRPVsiV1QSUrJ4gdHjWw98": "2026-03-10",
     "rGspHtmoxhy7p29PbtUm8qPhoWfAYXDSNy": "2026-03-10",
-    "r3s2YyuiKh9iuJSf1kSgRhKUT3jWXdo4Yj": "2026-03-10"
+    "r3s2YyuiKh9iuJSf1kSgRhKUT3jWXdo4Yj": "2026-03-10",
+    "rKxm1yUXZ8hnretnQEZoUHpYJfvAx89Hp2": "2026-03-10",
+    "rEATkUo7kjbN8zQkW1MTKEgk3n9piPiMqd": "2026-03-10"
   }
 }
