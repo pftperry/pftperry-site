@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-11T07:52:49.377Z",
+  "lastUpdated": "2026-03-11T10:06:24.961Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -2262,8 +2262,8 @@
       "lastSeq": 930350
     },
     "2026-03-11": {
-      "txCount": 3302,
-      "activeWallets": 53,
+      "txCount": 4212,
+      "activeWallets": 58,
       "walletAddresses": [
         "rDY44d2oaiPmoCLbNPsjvMNxkRwNSeiHE1",
         "r9pNg3yqi1GGuLFZCRMJHvMLrSCNRDQxZh",
@@ -2317,12 +2317,17 @@
         "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
         "rhD8tdfagAsoVmq1qrLkH3PWUNF9dSBzux",
         "rwdm72S9YVKkZjeADKU2bbUMuY4vPnSfH7",
-        "rKne3os6hx6yENqtHkeLVdWWoF1rNrjRAo"
+        "rKne3os6hx6yENqtHkeLVdWWoF1rNrjRAo",
+        "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
+        "rPksMySKJJhwVj9Wy5NzkkR384vXLs341x",
+        "rDVKRNp3kWE1ykryU8ta6bBZWrFjFetyjB",
+        "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97",
+        "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 492,
-        "Payment": 2482,
-        "NFTokenMint": 328
+        "NFTokenBurn": 551,
+        "Payment": 3225,
+        "NFTokenMint": 436
       },
       "hourlyTxCounts": [
         455,
@@ -2332,10 +2337,10 @@
         414,
         378,
         434,
-        354,
-        0,
-        0,
-        0,
+        401,
+        428,
+        395,
+        40,
         0,
         0,
         0,
@@ -2350,11 +2355,11 @@
         0,
         0
       ],
-      "tps": 0.13,
+      "tps": 0.1,
       "avgFee": "0.00001000",
       "nodeCount": 45,
       "validatorCount": 43,
-      "lastSeq": 939908
+      "lastSeq": 942570
     }
   },
   "firstSeen": {
@@ -2765,6 +2770,7 @@
     "rQNjtZQ9Ka22WNQnboksjNf9UGLqRCCZAF": "2026-03-11",
     "rNt9n8GfQCkkqtPtjZTgkLRvUrR4faRgDL": "2026-03-11",
     "rhD8tdfagAsoVmq1qrLkH3PWUNF9dSBzux": "2026-03-11",
-    "rKne3os6hx6yENqtHkeLVdWWoF1rNrjRAo": "2026-03-11"
+    "rKne3os6hx6yENqtHkeLVdWWoF1rNrjRAo": "2026-03-11",
+    "rPksMySKJJhwVj9Wy5NzkkR384vXLs341x": "2026-03-11"
   }
 }
