@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-12T07:54:57.098Z",
+  "lastUpdated": "2026-03-12T10:05:58.011Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -2385,8 +2385,8 @@
       "lastSeq": 959044
     },
     "2026-03-12": {
-      "txCount": 3349,
-      "activeWallets": 57,
+      "txCount": 4213,
+      "activeWallets": 60,
       "walletAddresses": [
         "rDhFXqciD1HRrkL9pEmcHU5sm2mv4yTXqD",
         "rH4iijgyzjxP4SWiEowdcfVoMuTsyJvHiE",
@@ -2444,15 +2444,18 @@
         "rwSreyZud7nYp2ECmezy9Zqtok6d4A5kPZ",
         "rDVKRNp3kWE1ykryU8ta6bBZWrFjFetyjB",
         "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
-        "rN5T2eoFEZcexwikC5qYpU5mEv8RvDf9ix"
+        "rN5T2eoFEZcexwikC5qYpU5mEv8RvDf9ix",
+        "rwdm72S9YVKkZjeADKU2bbUMuY4vPnSfH7",
+        "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu",
+        "rnUofFN1twodGYhEJEmgtqrrTeDBTJZowE"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 433,
-        "Payment": 2569,
-        "NFTokenMint": 343,
+        "NFTokenBurn": 502,
+        "Payment": 3267,
+        "NFTokenMint": 438,
         "NFTokenCancelOffer": 1,
-        "NFTokenCreateOffer": 2,
-        "NFTokenAcceptOffer": 1
+        "NFTokenCreateOffer": 3,
+        "NFTokenAcceptOffer": 2
       },
       "hourlyTxCounts": [
         440,
@@ -2462,10 +2465,10 @@
         408,
         436,
         412,
-        353,
-        0,
-        0,
-        0,
+        396,
+        400,
+        391,
+        30,
         0,
         0,
         0,
@@ -2484,7 +2487,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 44,
       "validatorCount": 43,
-      "lastSeq": 968605
+      "lastSeq": 971239
     }
   },
   "firstSeen": {
@@ -2911,6 +2914,7 @@
     "rHzpaM1kg5wCz2bivrDUNpuQtk8qNw8bc8": "2026-03-12",
     "r3pWKwD9SZ9W1GQvWJEnZ1UqGMSu78wHm5": "2026-03-12",
     "rwSreyZud7nYp2ECmezy9Zqtok6d4A5kPZ": "2026-03-12",
-    "rN5T2eoFEZcexwikC5qYpU5mEv8RvDf9ix": "2026-03-12"
+    "rN5T2eoFEZcexwikC5qYpU5mEv8RvDf9ix": "2026-03-12",
+    "rnUofFN1twodGYhEJEmgtqrrTeDBTJZowE": "2026-03-12"
   }
 }
