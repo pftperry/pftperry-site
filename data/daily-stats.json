@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-13T07:54:08.752Z",
+  "lastUpdated": "2026-03-13T09:59:08.699Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -2521,8 +2521,8 @@
       "lastSeq": 987821
     },
     "2026-03-13": {
-      "txCount": 3347,
-      "activeWallets": 60,
+      "txCount": 4248,
+      "activeWallets": 64,
       "walletAddresses": [
         "rfEdfCm55ujYi4og19BeirEAnnNYWMgMTM",
         "rnUofFN1twodGYhEJEmgtqrrTeDBTJZowE",
@@ -2583,13 +2583,17 @@
         "rDVKRNp3kWE1ykryU8ta6bBZWrFjFetyjB",
         "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
         "rGjx4FqDtnGsNd9orKnV8oXmqTZWzRgZjF",
-        "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH"
+        "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
+        "rDqf4nowC2PAZgn1UGHDn46mcUMREYJrsr",
+        "rPUUiMLmn46s2PreFRejiM71A5Z5Xbz9D4",
+        "rfXRE9mPGcW4yD6JAziRxUqjqjThSNu2H",
+        "rUfBPjQnVQcmav2SVZapSesufjaWdWKePw"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 290,
-        "NFTokenMint": 423,
-        "Payment": 2633,
-        "AccountSet": 1
+        "NFTokenBurn": 349,
+        "NFTokenMint": 534,
+        "Payment": 3357,
+        "AccountSet": 8
       },
       "hourlyTxCounts": [
         447,
@@ -2599,9 +2603,9 @@
         403,
         440,
         416,
-        380,
-        0,
-        0,
+        444,
+        434,
+        403,
         0,
         0,
         0,
@@ -2617,11 +2621,11 @@
         0,
         0
       ],
-      "tps": 0.12,
-      "avgFee": "0.00001011",
+      "tps": 0.16,
+      "avgFee": "0.00001000",
       "nodeCount": 45,
       "validatorCount": 42,
-      "lastSeq": 997278
+      "lastSeq": 999766
     }
   },
   "firstSeen": {
@@ -3070,6 +3074,7 @@
     "r4Km5TtCzxgQgVYSVvzxymVYd54rBCY6Zf": "2026-03-13",
     "rGNYaRdt6Hp21DUXGa3MdEfDtoyyJXt2Y6": "2026-03-13",
     "rsRBtXHiDyU9tLMmLmGVWV1jgKBSphbDpP": "2026-03-13",
-    "rGjx4FqDtnGsNd9orKnV8oXmqTZWzRgZjF": "2026-03-13"
+    "rGjx4FqDtnGsNd9orKnV8oXmqTZWzRgZjF": "2026-03-13",
+    "rPUUiMLmn46s2PreFRejiM71A5Z5Xbz9D4": "2026-03-13"
   }
 }
