@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-14T00:01:41.949Z",
+  "lastUpdated": "2026-03-14T05:04:39.331Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -2645,27 +2645,74 @@
       "lastSeq": 1015377
     },
     "2026-03-14": {
-      "txCount": 8,
-      "activeWallets": 6,
+      "txCount": 2199,
+      "activeWallets": 52,
       "walletAddresses": [
         "rHzpaM1kg5wCz2bivrDUNpuQtk8qNw8bc8",
         "r4KectUU4f6LuBikQBmXsczesWWhG7YNZn",
         "rJSWcuvwqEEu7xW3M4NJ3PhbdNHGueR2mu",
         "rfofEmbXhRorqeWWcJV7swdJUiErRXR5WD",
         "rKPPks1JmdAUMusKwVQJ78KH3SnJpL9bjw",
-        "rnUofFN1twodGYhEJEmgtqrrTeDBTJZowE"
+        "rnUofFN1twodGYhEJEmgtqrrTeDBTJZowE",
+        "rHyv2n3dAtNAbzVKyh3FMjYJXrE8qSCN8L",
+        "rK9hX9JihYevHvpC4UA9SDRJCMxYHrMW8n",
+        "r4Km5TtCzxgQgVYSVvzxymVYd54rBCY6Zf",
+        "rMoVb7WYFsUqGaPWhJGSsLaVXtoc8k4YBi",
+        "r3pWKwD9SZ9W1GQvWJEnZ1UqGMSu78wHm5",
+        "rf9cJqew2w7PTr75nwZvWfw8L31Mp2J1F6",
+        "rp25kN3Yn3Mr8UwM8ykxwaiU7iN99oPKFW",
+        "rGjx4FqDtnGsNd9orKnV8oXmqTZWzRgZjF",
+        "rBhys5BDTb353eryCMR1GzSVGrhEteKoYf",
+        "rLMFyK32xaCLsn2nSNU317STxtKfZQLaMk",
+        "rD437947h5g7q3BaqaRxrnxoV5A5XyeU7Q",
+        "rN5T2eoFEZcexwikC5qYpU5mEv8RvDf9ix",
+        "raMwYVir11pwUGembxtj97B8Xx1X2RPvX3",
+        "r4ahFvpMuDHfjsc8kuECSTTQNbFPaw5XyU",
+        "rBNxdwcYVXomAtfTneDHowJv1x9MdL9fzv",
+        "rn7252ipApmmy1RN9FFb5GgvYt71g8evqA",
+        "rP7TF4cC5uX9GSLLt4W87e3asVAZJ16bWy",
+        "rniShYGPnwbEKiyikcK7SMPV7aGAJM7D8v",
+        "rDf9juvCPXk9wpWfVJauSwxiuMd6dCGZwK",
+        "rUwWrJqaeAMn5f721LPW7Dqsshaw7YtTXt",
+        "rUAiiWnseawf5tdqspJDkGLNu4KUCSFnhq",
+        "rmYHqwQeC5b3r5zS4fqvkTKJ9v44MQYJC",
+        "rBh4GGwzrq7q2H94Sh88bnBXNSPvwu8CFe",
+        "rGNYaRdt6Hp21DUXGa3MdEfDtoyyJXt2Y6",
+        "rpyTMcAKiCxqY7VXenD5ercGGzGWNV9xpg",
+        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
+        "rGBKxoTcavpfEso7ASRELZAMcCMqKa8oFk",
+        "rwYTQfzPDKGhmke7Mds7pMM1X2peb1kyjp",
+        "rKkdEkxU9H9hkmCp18virv3sgU7atsipDp",
+        "rpyzVNjFKvw2didgxeEsHqCatX9zv87YFc",
+        "ravun9tXjzH3xYjnx2uihrzGj7BwJpjPuQ",
+        "rH3dfGifdXzghxKXS74WRA3WtdKLKGj5Um",
+        "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
+        "rKt4peDozpRW9zdYGiTZC54DSNU3Af6pQE",
+        "rMDeEK6SHXGJbuHQSKQq2aTkKCJ9ErsQTP",
+        "r4tMgsbNJbYmZKNW7DkaEtT4dc4wPLUKni",
+        "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
+        "rsZ8Si5t3TzEdnBfcRny6ydfnQvgjxspqq",
+        "rJNwqDPKSkbqDPNoNxbW6C3KCS84ZaQc96",
+        "rsqZiJ6vnmWtaymWh7EW8EK1oEeXrLWvLC",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "rKPoW95tMpPHRgAcSxbvjgNUg8LefhiXp3",
+        "rKnKyoQJRzRGsU1vE7eX2easCuYvEaxn1i",
+        "rf32z8oGAeJ3xvLZsDmEQBR5cBBT8BnZD4",
+        "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97"
       ],
       "txTypeDistribution": {
-        "NFTokenMint": 2,
-        "Payment": 6
+        "NFTokenMint": 216,
+        "Payment": 1692,
+        "NFTokenBurn": 291
       },
       "hourlyTxCounts": [
-        8,
-        0,
-        0,
-        0,
-        0,
-        0,
+        457,
+        425,
+        435,
+        416,
+        434,
+        32,
         0,
         0,
         0,
@@ -2685,11 +2732,11 @@
         0,
         0
       ],
-      "tps": 0.09,
-      "avgFee": "0.00001029",
+      "tps": 0.13,
+      "avgFee": "0.00001000",
       "nodeCount": 45,
       "validatorCount": 42,
-      "lastSeq": 1016554
+      "lastSeq": 1022577
     }
   },
   "firstSeen": {
@@ -3145,6 +3192,12 @@
     "rnoejXEeYLo8haCf9rceGT7bxLdvkjNMWw": "2026-03-13",
     "rBh4GGwzrq7q2H94Sh88bnBXNSPvwu8CFe": "2026-03-13",
     "rMoVb7WYFsUqGaPWhJGSsLaVXtoc8k4YBi": "2026-03-13",
-    "rKkdEkxU9H9hkmCp18virv3sgU7atsipDp": "2026-03-13"
+    "rKkdEkxU9H9hkmCp18virv3sgU7atsipDp": "2026-03-13",
+    "rK9hX9JihYevHvpC4UA9SDRJCMxYHrMW8n": "2026-03-14",
+    "rP7TF4cC5uX9GSLLt4W87e3asVAZJ16bWy": "2026-03-14",
+    "rwYTQfzPDKGhmke7Mds7pMM1X2peb1kyjp": "2026-03-14",
+    "ravun9tXjzH3xYjnx2uihrzGj7BwJpjPuQ": "2026-03-14",
+    "r4tMgsbNJbYmZKNW7DkaEtT4dc4wPLUKni": "2026-03-14",
+    "rf32z8oGAeJ3xvLZsDmEQBR5cBBT8BnZD4": "2026-03-14"
   }
 }
