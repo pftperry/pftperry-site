@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-14T22:56:26.717Z",
+  "lastUpdated": "2026-03-14T23:53:39.610Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -2645,8 +2645,8 @@
       "lastSeq": 1015377
     },
     "2026-03-14": {
-      "txCount": 9678,
-      "activeWallets": 84,
+      "txCount": 10087,
+      "activeWallets": 89,
       "walletAddresses": [
         "rHzpaM1kg5wCz2bivrDUNpuQtk8qNw8bc8",
         "r4KectUU4f6LuBikQBmXsczesWWhG7YNZn",
@@ -2731,12 +2731,17 @@
         "rKxXH2Gi7HYHDmcVxmmGAJbeQ7M9JsRgvV",
         "rJLXZVdGZNecWvLEhjJBkdZmu9EZsDZBjd",
         "r4imXZus1CbmuZ9uqGJBGa1KyY7vjFVuix",
-        "rUbUFjvAyA27Jr1EczdY5kN4mF3mDbeuWU"
+        "rUbUFjvAyA27Jr1EczdY5kN4mF3mDbeuWU",
+        "rLXsYzpRfmMYBJRdG4HUvVtPYTp1meg39F",
+        "rPemfXmXcMhdH6mAHL2UyAdpJNnPrZXP2V",
+        "rHTxDGnaaLtXuKpUXw4Heap4tNN6LSwTPD",
+        "rfXRE9mPGcW4yD6JAziRxUqjqjThSNu2H",
+        "rp23y9Yv4LwUbXoNhG3RL1RS7kjpsPfhoy"
       ],
       "txTypeDistribution": {
-        "NFTokenMint": 1063,
-        "Payment": 7496,
-        "NFTokenBurn": 1117,
+        "NFTokenMint": 1098,
+        "Payment": 7726,
+        "NFTokenBurn": 1261,
         "AccountSet": 2
       },
       "hourlyTxCounts": [
@@ -2762,14 +2767,14 @@
         432,
         440,
         397,
-        418,
-        0
+        443,
+        384
       ],
-      "tps": 0.08,
-      "avgFee": "0.00001000",
+      "tps": 0.1,
+      "avgFee": "0.00001013",
       "nodeCount": 45,
       "validatorCount": 42,
-      "lastSeq": 1043941
+      "lastSeq": 1045079
     }
   },
   "firstSeen": {
@@ -3247,6 +3252,10 @@
     "rpvBtxA66CZ4HeYGERawLTkz52ovANaXiE": "2026-03-14",
     "rMyDV7XrHW6N25TCEKDJE4PeoB9Yp1L92J": "2026-03-14",
     "r4imXZus1CbmuZ9uqGJBGa1KyY7vjFVuix": "2026-03-14",
-    "rUbUFjvAyA27Jr1EczdY5kN4mF3mDbeuWU": "2026-03-14"
+    "rUbUFjvAyA27Jr1EczdY5kN4mF3mDbeuWU": "2026-03-14",
+    "rLXsYzpRfmMYBJRdG4HUvVtPYTp1meg39F": "2026-03-14",
+    "rPemfXmXcMhdH6mAHL2UyAdpJNnPrZXP2V": "2026-03-14",
+    "rHTxDGnaaLtXuKpUXw4Heap4tNN6LSwTPD": "2026-03-14",
+    "rp23y9Yv4LwUbXoNhG3RL1RS7kjpsPfhoy": "2026-03-14"
   }
 }
