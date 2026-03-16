@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-16T19:43:39.741Z",
+  "lastUpdated": "2026-03-16T21:56:11.459Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -2893,8 +2893,8 @@
       "lastSeq": 1073822
     },
     "2026-03-16": {
-      "txCount": 8282,
-      "activeWallets": 78,
+      "txCount": 9227,
+      "activeWallets": 84,
       "walletAddresses": [
         "rfUhpbDsXiHviihsHKgq9rB6sz5aJJLGSr",
         "rwVgrzj3qq6pY9Vk6chUovXkbYhTKnRFYu",
@@ -2973,12 +2973,18 @@
         "rJLXZVdGZNecWvLEhjJBkdZmu9EZsDZBjd",
         "rJoXbqLJtsjA7HSEP1KaGEfcKiS8Vv2zsb",
         "rpG3QygJX3mumdeoqfNSdZcLCvzTNSCuw3",
-        "rBTYXwQofjJraScghrzt9CUHCa1gzUxknC"
+        "rBTYXwQofjJraScghrzt9CUHCa1gzUxknC",
+        "rs5hbB6HCiYSonfz5Dtxi6yKQupZLMwcZQ",
+        "rNir1aos547NHCj3oUiJCKGpQTKt61qn2D",
+        "rDkx2F985taBso525CH7SoYbrTKMXJjv6P",
+        "rKZ9SVg1z764ABrLQ3Q1Dh5PPR7gM1z4Df",
+        "rZvzMBLunDzy1GKiESQa4JysX4T2yGZ5T",
+        "r4ahFvpMuDHfjsc8kuECSTTQNbFPaw5XyU"
       ],
       "txTypeDistribution": {
-        "Payment": 6360,
-        "NFTokenMint": 915,
-        "NFTokenBurn": 1006,
+        "Payment": 7049,
+        "NFTokenMint": 1009,
+        "NFTokenBurn": 1168,
         "AccountSet": 1
       },
       "hourlyTxCounts": [
@@ -3001,17 +3007,17 @@
         427,
         438,
         429,
-        278,
-        0,
-        0,
+        408,
+        415,
+        400,
         0,
         0
       ],
-      "tps": 0.13,
+      "tps": 0.12,
       "avgFee": "0.00001000",
       "nodeCount": 45,
       "validatorCount": 42,
-      "lastSeq": 1097470
+      "lastSeq": 1100111
     }
   },
   "firstSeen": {
@@ -3518,6 +3524,9 @@
     "r4faEJ8iHcsPabxCRAVXN6PVzbeUmaWUiC": "2026-03-16",
     "rfDtyozU32xtkvGrNwozeW4vMhMyBEUyan": "2026-03-16",
     "rhcQR1ehoffimtsMMtakdm4ydfFedxf1DC": "2026-03-16",
-    "rpG3QygJX3mumdeoqfNSdZcLCvzTNSCuw3": "2026-03-16"
+    "rpG3QygJX3mumdeoqfNSdZcLCvzTNSCuw3": "2026-03-16",
+    "rNir1aos547NHCj3oUiJCKGpQTKt61qn2D": "2026-03-16",
+    "rDkx2F985taBso525CH7SoYbrTKMXJjv6P": "2026-03-16",
+    "rZvzMBLunDzy1GKiESQa4JysX4T2yGZ5T": "2026-03-16"
   }
 }
