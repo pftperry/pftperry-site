@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-17T05:25:41.689Z",
+  "lastUpdated": "2026-03-17T08:03:46.629Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -3022,8 +3022,8 @@
       "lastSeq": 1101397
     },
     "2026-03-17": {
-      "txCount": 2271,
-      "activeWallets": 48,
+      "txCount": 3360,
+      "activeWallets": 53,
       "walletAddresses": [
         "rHTxDGnaaLtXuKpUXw4Heap4tNN6LSwTPD",
         "rZvzMBLunDzy1GKiESQa4JysX4T2yGZ5T",
@@ -3072,12 +3072,17 @@
         "rpyTMcAKiCxqY7VXenD5ercGGzGWNV9xpg",
         "rKW3qdJG2bHyjSZVHTmuHrjoWaUp2aG9Yv",
         "r41GX8ADuuN72E1eagewctdQDAMSedYgWb",
-        "rfAW8RK9GzQybCzNbYYcRLatBPAZU5GBQE"
+        "rfAW8RK9GzQybCzNbYYcRLatBPAZU5GBQE",
+        "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97",
+        "rLXpFGzi4SEnP9fzppMGj5bWiqrFSKVLxC",
+        "rDVKRNp3kWE1ykryU8ta6bBZWrFjFetyjB",
+        "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
+        "r3goV9HN8HpZY1bC18tnybEmPqjKCzBDnG"
       ],
       "txTypeDistribution": {
-        "Payment": 1784,
-        "NFTokenBurn": 253,
-        "NFTokenMint": 234
+        "Payment": 2629,
+        "NFTokenBurn": 389,
+        "NFTokenMint": 342
       },
       "hourlyTxCounts": [
         447,
@@ -3085,10 +3090,10 @@
         399,
         440,
         422,
-        167,
-        0,
-        0,
-        0,
+        404,
+        413,
+        420,
+        19,
         0,
         0,
         0,
@@ -3107,9 +3112,9 @@
       ],
       "tps": 0.09,
       "avgFee": "0.00001000",
-      "nodeCount": 45,
+      "nodeCount": 43,
       "validatorCount": 42,
-      "lastSeq": 1109054
+      "lastSeq": 1112215
     }
   },
   "firstSeen": {
@@ -3624,6 +3629,8 @@
     "r915H6D13cwKmJaDYFy3qwRj5Po994eoH": "2026-03-17",
     "raZoo9knLkZs3QLz5GiEQWkxFJiBxXXC9K": "2026-03-17",
     "rKW3qdJG2bHyjSZVHTmuHrjoWaUp2aG9Yv": "2026-03-17",
-    "r41GX8ADuuN72E1eagewctdQDAMSedYgWb": "2026-03-17"
+    "r41GX8ADuuN72E1eagewctdQDAMSedYgWb": "2026-03-17",
+    "rLXpFGzi4SEnP9fzppMGj5bWiqrFSKVLxC": "2026-03-17",
+    "r3goV9HN8HpZY1bC18tnybEmPqjKCzBDnG": "2026-03-17"
   }
 }
