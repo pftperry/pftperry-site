@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-17T08:03:46.629Z",
+  "lastUpdated": "2026-03-17T11:11:56.635Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -3022,8 +3022,8 @@
       "lastSeq": 1101397
     },
     "2026-03-17": {
-      "txCount": 3360,
-      "activeWallets": 53,
+      "txCount": 4610,
+      "activeWallets": 59,
       "walletAddresses": [
         "rHTxDGnaaLtXuKpUXw4Heap4tNN6LSwTPD",
         "rZvzMBLunDzy1GKiESQa4JysX4T2yGZ5T",
@@ -3077,12 +3077,18 @@
         "rLXpFGzi4SEnP9fzppMGj5bWiqrFSKVLxC",
         "rDVKRNp3kWE1ykryU8ta6bBZWrFjFetyjB",
         "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
-        "r3goV9HN8HpZY1bC18tnybEmPqjKCzBDnG"
+        "r3goV9HN8HpZY1bC18tnybEmPqjKCzBDnG",
+        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
+        "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
+        "rwdm72S9YVKkZjeADKU2bbUMuY4vPnSfH7",
+        "rGqvorV7d6daE1wPx1TvLXNTQpBaxvQM7H",
+        "rMXDp5eTmAYvuJu6zGjZMBuyq8oEu78vNm",
+        "rJNwqDPKSkbqDPNoNxbW6C3KCS84ZaQc96"
       ],
       "txTypeDistribution": {
-        "Payment": 2629,
-        "NFTokenBurn": 389,
-        "NFTokenMint": 342
+        "Payment": 3649,
+        "NFTokenBurn": 479,
+        "NFTokenMint": 482
       },
       "hourlyTxCounts": [
         447,
@@ -3093,10 +3099,10 @@
         404,
         413,
         420,
-        19,
-        0,
-        0,
-        0,
+        385,
+        397,
+        404,
+        83,
         0,
         0,
         0,
@@ -3110,11 +3116,11 @@
         0,
         0
       ],
-      "tps": 0.09,
+      "tps": 0.15,
       "avgFee": "0.00001000",
-      "nodeCount": 43,
+      "nodeCount": 42,
       "validatorCount": 42,
-      "lastSeq": 1112215
+      "lastSeq": 1115964
     }
   },
   "firstSeen": {
@@ -3631,6 +3637,8 @@
     "rKW3qdJG2bHyjSZVHTmuHrjoWaUp2aG9Yv": "2026-03-17",
     "r41GX8ADuuN72E1eagewctdQDAMSedYgWb": "2026-03-17",
     "rLXpFGzi4SEnP9fzppMGj5bWiqrFSKVLxC": "2026-03-17",
-    "r3goV9HN8HpZY1bC18tnybEmPqjKCzBDnG": "2026-03-17"
+    "r3goV9HN8HpZY1bC18tnybEmPqjKCzBDnG": "2026-03-17",
+    "rGqvorV7d6daE1wPx1TvLXNTQpBaxvQM7H": "2026-03-17",
+    "rMXDp5eTmAYvuJu6zGjZMBuyq8oEu78vNm": "2026-03-17"
   }
 }
