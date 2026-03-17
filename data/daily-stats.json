@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-17T11:11:56.635Z",
+  "lastUpdated": "2026-03-17T14:44:16.124Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -3022,8 +3022,8 @@
       "lastSeq": 1101397
     },
     "2026-03-17": {
-      "txCount": 4610,
-      "activeWallets": 59,
+      "txCount": 6114,
+      "activeWallets": 70,
       "walletAddresses": [
         "rHTxDGnaaLtXuKpUXw4Heap4tNN6LSwTPD",
         "rZvzMBLunDzy1GKiESQa4JysX4T2yGZ5T",
@@ -3083,12 +3083,23 @@
         "rwdm72S9YVKkZjeADKU2bbUMuY4vPnSfH7",
         "rGqvorV7d6daE1wPx1TvLXNTQpBaxvQM7H",
         "rMXDp5eTmAYvuJu6zGjZMBuyq8oEu78vNm",
-        "rJNwqDPKSkbqDPNoNxbW6C3KCS84ZaQc96"
+        "rJNwqDPKSkbqDPNoNxbW6C3KCS84ZaQc96",
+        "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "rJLXZVdGZNecWvLEhjJBkdZmu9EZsDZBjd",
+        "rJ8SuRSZYQtP4xnii2mjHrLy1Xxdxi7XUq",
+        "rGGodJFqgreLgXKVGspkZ68dqBH8RBGCJr",
+        "rBpbBMEDqqD1q3qhuLvwDtig2RTjT9jk5L",
+        "rQhVPGNXPCfWC7B7zdcJgSJuVsnpUFLvNt",
+        "rExmSZKn1NkU1KA3HHxYW3LvpEWqmfu7ZU",
+        "rKnKyoQJRzRGsU1vE7eX2easCuYvEaxn1i",
+        "rKddMw1hqMGwfgJvzjbWQHtBQT8hDcZNCP",
+        "r9gDEzp4n9TBTBv4vKPyt1zjEg8eCYozFi"
       ],
       "txTypeDistribution": {
-        "Payment": 3649,
-        "NFTokenBurn": 479,
-        "NFTokenMint": 482
+        "Payment": 4881,
+        "NFTokenBurn": 583,
+        "NFTokenMint": 650
       },
       "hourlyTxCounts": [
         447,
@@ -3102,10 +3113,10 @@
         385,
         397,
         404,
-        83,
-        0,
-        0,
-        0,
+        423,
+        392,
+        451,
+        321,
         0,
         0,
         0,
@@ -3116,11 +3127,11 @@
         0,
         0
       ],
-      "tps": 0.15,
-      "avgFee": "0.00001000",
+      "tps": 0.14,
+      "avgFee": "0.00001010",
       "nodeCount": 42,
       "validatorCount": 42,
-      "lastSeq": 1115964
+      "lastSeq": 1120190
     }
   },
   "firstSeen": {
@@ -3639,6 +3650,7 @@
     "rLXpFGzi4SEnP9fzppMGj5bWiqrFSKVLxC": "2026-03-17",
     "r3goV9HN8HpZY1bC18tnybEmPqjKCzBDnG": "2026-03-17",
     "rGqvorV7d6daE1wPx1TvLXNTQpBaxvQM7H": "2026-03-17",
-    "rMXDp5eTmAYvuJu6zGjZMBuyq8oEu78vNm": "2026-03-17"
+    "rMXDp5eTmAYvuJu6zGjZMBuyq8oEu78vNm": "2026-03-17",
+    "r9gDEzp4n9TBTBv4vKPyt1zjEg8eCYozFi": "2026-03-17"
   }
 }
