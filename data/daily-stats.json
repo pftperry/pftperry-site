@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-18T15:51:09.875Z",
+  "lastUpdated": "2026-03-18T18:39:43.175Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -3145,8 +3145,8 @@
       "lastSeq": 1131101
     },
     "2026-03-18": {
-      "txCount": 6642,
-      "activeWallets": 73,
+      "txCount": 7849,
+      "activeWallets": 80,
       "walletAddresses": [
         "r8eHHfYdhby2VdDSEzqFBxL69UmUbGUgj",
         "r915H6D13cwKmJaDYFy3qwRj5Po994eoH",
@@ -3220,12 +3220,19 @@
         "rcmkL9JAgjXFQzwih7XceRfVr5uGY9MNN",
         "rEsxEHta1dvVAv7NNk2P9tSuYg2ZT3N8SB",
         "rGGodJFqgreLgXKVGspkZ68dqBH8RBGCJr",
-        "rLethbCWSbYS6aeUyZRZAJHh4Hw3QNQf9w"
+        "rLethbCWSbYS6aeUyZRZAJHh4Hw3QNQf9w",
+        "rn6bidx2QTD9D8vfS4bCGtGrMNSDnerWir",
+        "r4QCXwcz4qPb4jQzpsnf1ek7FKnAGg14a",
+        "r4ahFvpMuDHfjsc8kuECSTTQNbFPaw5XyU",
+        "rKxXH2Gi7HYHDmcVxmmGAJbeQ7M9JsRgvV",
+        "rDrNZsGinnodgGGoj9giaaMTEe2Bg6G8VC",
+        "rJoXbqLJtsjA7HSEP1KaGEfcKiS8Vv2zsb",
+        "rHTgM9rZBZkuqF5H8DQxFWTR7biXmMvPLm"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 639,
-        "Payment": 5312,
-        "NFTokenMint": 691
+        "NFTokenBurn": 847,
+        "Payment": 6206,
+        "NFTokenMint": 796
       },
       "hourlyTxCounts": [
         415,
@@ -3243,21 +3250,21 @@
         402,
         437,
         414,
-        348,
-        0,
-        0,
-        0,
+        429,
+        434,
+        432,
+        260,
         0,
         0,
         0,
         0,
         0
       ],
-      "tps": 0.1,
-      "avgFee": "0.00001029",
+      "tps": 0.09,
+      "avgFee": "0.00001000",
       "nodeCount": 43,
       "validatorCount": 42,
-      "lastSeq": 1150180
+      "lastSeq": 1153545
     }
   },
   "firstSeen": {
@@ -3793,6 +3800,9 @@
     "rJgRX86NPAVSvKjMQFV49KokZ3gFaHtsjd": "2026-03-18",
     "rP6Gcu71LBiPaof2jQgcGJ9wmkHxyZCfuC": "2026-03-18",
     "rcmkL9JAgjXFQzwih7XceRfVr5uGY9MNN": "2026-03-18",
-    "rEsxEHta1dvVAv7NNk2P9tSuYg2ZT3N8SB": "2026-03-18"
+    "rEsxEHta1dvVAv7NNk2P9tSuYg2ZT3N8SB": "2026-03-18",
+    "rn6bidx2QTD9D8vfS4bCGtGrMNSDnerWir": "2026-03-18",
+    "r4QCXwcz4qPb4jQzpsnf1ek7FKnAGg14a": "2026-03-18",
+    "rDrNZsGinnodgGGoj9giaaMTEe2Bg6G8VC": "2026-03-18"
   }
 }
