@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-24T11:36:46.808Z",
+  "lastUpdated": "2026-03-24T12:41:38.219Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -3881,8 +3881,8 @@
       "lastSeq": 1303175
     },
     "2026-03-24": {
-      "txCount": 4760,
-      "activeWallets": 71,
+      "txCount": 5192,
+      "activeWallets": 74,
       "walletAddresses": [
         "r49nba7E9wqZe1DKZWeXuB2okjmgffPzUa",
         "rfxy8EJW4V1EZRe337v9izRvpoyxSu8gsM",
@@ -3954,12 +3954,15 @@
         "rLKjbnc1vNaJp8a1DHRr5G2cUxctY7rS3B",
         "rDVKRNp3kWE1ykryU8ta6bBZWrFjFetyjB",
         "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
-        "r9oHNN143VkaVeQ5kfQnRyc9gwL8HhSa32"
+        "r9oHNN143VkaVeQ5kfQnRyc9gwL8HhSa32",
+        "rwN5EU2n9or7C2g786Th91WWi4SwSNKrFj",
+        "rNgM6m9fvrS9CcuFmwffz7dbK6zBVer77n",
+        "rGyTRWW4ATqGJzgGEgWUooSdNU6MJsAQ3Y"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 550,
-        "Payment": 3725,
-        "NFTokenMint": 485
+        "NFTokenBurn": 623,
+        "Payment": 4029,
+        "NFTokenMint": 540
       },
       "hourlyTxCounts": [
         418,
@@ -3973,8 +3976,8 @@
         380,
         397,
         435,
-        236,
-        0,
+        373,
+        295,
         0,
         0,
         0,
@@ -3987,11 +3990,11 @@
         0,
         0
       ],
-      "tps": 0.1,
-      "avgFee": "0.00001013",
+      "tps": 0.11,
+      "avgFee": "0.00001000",
       "nodeCount": 41,
       "validatorCount": 38,
-      "lastSeq": 1317207
+      "lastSeq": 1318500
     }
   },
   "firstSeen": {
@@ -4625,6 +4628,9 @@
     "r3AR5f4Rb1iM6MXZQJLn5zYqmZY15y48FW": "2026-03-24",
     "rsvdqDKgiq2iaHEUsGifFLq7c4jiryyo7A": "2026-03-24",
     "rnGqBUAUanqcy9VZLapy9hPbuKRnBhBPr7": "2026-03-24",
-    "rLKjbnc1vNaJp8a1DHRr5G2cUxctY7rS3B": "2026-03-24"
+    "rLKjbnc1vNaJp8a1DHRr5G2cUxctY7rS3B": "2026-03-24",
+    "rwN5EU2n9or7C2g786Th91WWi4SwSNKrFj": "2026-03-24",
+    "rNgM6m9fvrS9CcuFmwffz7dbK6zBVer77n": "2026-03-24",
+    "rGyTRWW4ATqGJzgGEgWUooSdNU6MJsAQ3Y": "2026-03-24"
   }
 }
