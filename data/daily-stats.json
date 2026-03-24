@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-24T09:43:18.529Z",
+  "lastUpdated": "2026-03-24T10:39:27.224Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -3881,8 +3881,8 @@
       "lastSeq": 1303175
     },
     "2026-03-24": {
-      "txCount": 3974,
-      "activeWallets": 63,
+      "txCount": 4370,
+      "activeWallets": 69,
       "walletAddresses": [
         "r49nba7E9wqZe1DKZWeXuB2okjmgffPzUa",
         "rfxy8EJW4V1EZRe337v9izRvpoyxSu8gsM",
@@ -3946,12 +3946,18 @@
         "rsvdqDKgiq2iaHEUsGifFLq7c4jiryyo7A",
         "rBuyRGChHtBa5hnenDRA2tpAPsa3LoGrqC",
         "rBpbBMEDqqD1q3qhuLvwDtig2RTjT9jk5L",
-        "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu"
+        "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu",
+        "rnGqBUAUanqcy9VZLapy9hPbuKRnBhBPr7",
+        "rJLXZVdGZNecWvLEhjJBkdZmu9EZsDZBjd",
+        "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
+        "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+        "rLKjbnc1vNaJp8a1DHRr5G2cUxctY7rS3B",
+        "rDVKRNp3kWE1ykryU8ta6bBZWrFjFetyjB"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 474,
-        "Payment": 3106,
-        "NFTokenMint": 394
+        "NFTokenBurn": 523,
+        "Payment": 3416,
+        "NFTokenMint": 431
       },
       "hourlyTxCounts": [
         418,
@@ -3963,8 +3969,8 @@
         422,
         414,
         380,
-        282,
-        0,
+        397,
+        281,
         0,
         0,
         0,
@@ -3979,11 +3985,11 @@
         0,
         0
       ],
-      "tps": 0.11,
-      "avgFee": "0.00001000",
+      "tps": 0.16,
+      "avgFee": "0.00001008",
       "nodeCount": 41,
       "validatorCount": 38,
-      "lastSeq": 1314949
+      "lastSeq": 1316066
     }
   },
   "firstSeen": {
@@ -4615,6 +4621,8 @@
     "rLoVwkv3wHXAgycrnRL1o1cRBtMHXxfmH3": "2026-03-24",
     "rfd9cvXVMgJs5qTYdh9ixsxG9rbyuVH5Be": "2026-03-24",
     "r3AR5f4Rb1iM6MXZQJLn5zYqmZY15y48FW": "2026-03-24",
-    "rsvdqDKgiq2iaHEUsGifFLq7c4jiryyo7A": "2026-03-24"
+    "rsvdqDKgiq2iaHEUsGifFLq7c4jiryyo7A": "2026-03-24",
+    "rnGqBUAUanqcy9VZLapy9hPbuKRnBhBPr7": "2026-03-24",
+    "rLKjbnc1vNaJp8a1DHRr5G2cUxctY7rS3B": "2026-03-24"
   }
 }
