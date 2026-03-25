@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-25T05:18:38.694Z",
+  "lastUpdated": "2026-03-25T06:36:20.137Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -4011,8 +4011,8 @@
       "lastSeq": 1331840
     },
     "2026-03-25": {
-      "txCount": 2154,
-      "activeWallets": 47,
+      "txCount": 2699,
+      "activeWallets": 52,
       "walletAddresses": [
         "r9yrRGGiqUo6UKc9B4XyAj3iXKsVBPh7RN",
         "rJC7sxmQSNBnmxECWuix4ejsMBoVRBZ68Z",
@@ -4060,12 +4060,17 @@
         "r4r2Kfe7hH72gb1owkkrWa9miHE9n3xJi4",
         "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97",
         "rhczhWeG3eSohzcH5jw8m8Ynca9cgH4eZm",
-        "rLWqU6jr9KxtWYhRTPAAeCGmSAuaLup3Cf"
+        "rLWqU6jr9KxtWYhRTPAAeCGmSAuaLup3Cf",
+        "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
+        "rBuyRGChHtBa5hnenDRA2tpAPsa3LoGrqC",
+        "rnEZhNFFiGwHXYjP1HpVcY6D1iyNYp4Vmt",
+        "rfsc2s39JfjSceVsuW1hYHmywLof9JV5u1",
+        "rJoXbqLJtsjA7HSEP1KaGEfcKiS8Vv2zsb"
       ],
       "txTypeDistribution": {
-        "Payment": 1710,
-        "NFTokenMint": 304,
-        "NFTokenBurn": 139,
+        "Payment": 2122,
+        "NFTokenMint": 375,
+        "NFTokenBurn": 201,
         "AccountSet": 1
       },
       "hourlyTxCounts": [
@@ -4074,8 +4079,8 @@
         409,
         396,
         405,
-        119,
-        0,
+        401,
+        263,
         0,
         0,
         0,
@@ -4094,11 +4099,11 @@
         0,
         0
       ],
-      "tps": 0.12,
-      "avgFee": "0.00001000",
+      "tps": 0.14,
+      "avgFee": "0.00001010",
       "nodeCount": 40,
       "validatorCount": 38,
-      "lastSeq": 1338346
+      "lastSeq": 1339894
     }
   },
   "firstSeen": {
@@ -4741,6 +4746,8 @@
     "r3aYnGHfr25VZ5ftKMyWEsdH7eiR7j2CTS": "2026-03-24",
     "rpFfZt19DJfmMCgBvSbbJbiQmXfb46xTfx": "2026-03-24",
     "rJC7sxmQSNBnmxECWuix4ejsMBoVRBZ68Z": "2026-03-24",
-    "rhyXs77Z1FJmDsQQCdSs1SDaPzDFrSYrGX": "2026-03-25"
+    "rhyXs77Z1FJmDsQQCdSs1SDaPzDFrSYrGX": "2026-03-25",
+    "rnEZhNFFiGwHXYjP1HpVcY6D1iyNYp4Vmt": "2026-03-25",
+    "rfsc2s39JfjSceVsuW1hYHmywLof9JV5u1": "2026-03-25"
   }
 }
