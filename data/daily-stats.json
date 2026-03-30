@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-30T12:48:55.629Z",
+  "lastUpdated": "2026-03-30T14:18:30.563Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -4609,8 +4609,8 @@
       "lastSeq": 1475254
     },
     "2026-03-30": {
-      "txCount": 5159,
-      "activeWallets": 58,
+      "txCount": 5769,
+      "activeWallets": 63,
       "walletAddresses": [
         "r96hZBZv9EJ6LyExWRxv5Qp7BevdbRBM29",
         "rQaYPRSz9e6sz3vq4WzTKpfJ3Pi51N35DL",
@@ -4669,12 +4669,17 @@
         "rfXCGBpo4Z6UWvJpE46xLW5d6KCYBub85x",
         "rJNwqDPKSkbqDPNoNxbW6C3KCS84ZaQc96",
         "rJLXZVdGZNecWvLEhjJBkdZmu9EZsDZBjd",
-        "rUhdbkckYte8oWBSkdrttucbj4tLgXwKz9"
+        "rUhdbkckYte8oWBSkdrttucbj4tLgXwKz9",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "r9iMgX4eaYRaTuR8dfccwoLJXdS8iMM2SB",
+        "rE5iY3qtn6fXr1HpAcLJg3eJkC8vGNJnxZ",
+        "rMD3M7jZQayct2gTua5oeKaVCcAwBWtT4w",
+        "rDep8SDqobEKGG8VxFYh9cx3W7wwP7EQKu"
       ],
       "txTypeDistribution": {
-        "Payment": 4278,
-        "NFTokenMint": 515,
-        "NFTokenBurn": 366
+        "Payment": 4742,
+        "NFTokenMint": 577,
+        "NFTokenBurn": 450
       },
       "hourlyTxCounts": [
         431,
@@ -4689,9 +4694,9 @@
         391,
         405,
         413,
-        367,
-        0,
-        0,
+        442,
+        397,
+        138,
         0,
         0,
         0,
@@ -4702,11 +4707,11 @@
         0,
         0
       ],
-      "tps": 0.09,
-      "avgFee": "0.00001000",
+      "tps": 0.12,
+      "avgFee": "0.00001011",
       "nodeCount": 41,
       "validatorCount": 40,
-      "lastSeq": 1490715
+      "lastSeq": 1492499
     }
   },
   "firstSeen": {
@@ -5436,6 +5441,8 @@
     "rnJZVmaA5CbPLgKK25eqqiJVnkk7mRs7W9": "2026-03-30",
     "rsUmtPTRsPBSPQKgRMGE7D1s5kPBLMppqE": "2026-03-30",
     "rfXCGBpo4Z6UWvJpE46xLW5d6KCYBub85x": "2026-03-30",
-    "rUhdbkckYte8oWBSkdrttucbj4tLgXwKz9": "2026-03-30"
+    "rUhdbkckYte8oWBSkdrttucbj4tLgXwKz9": "2026-03-30",
+    "rE5iY3qtn6fXr1HpAcLJg3eJkC8vGNJnxZ": "2026-03-30",
+    "rMD3M7jZQayct2gTua5oeKaVCcAwBWtT4w": "2026-03-30"
   }
 }
