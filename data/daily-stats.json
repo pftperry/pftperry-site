@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-30T01:17:14.302Z",
+  "lastUpdated": "2026-03-30T04:20:45.839Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -4609,8 +4609,8 @@
       "lastSeq": 1475254
     },
     "2026-03-30": {
-      "txCount": 540,
-      "activeWallets": 36,
+      "txCount": 1765,
+      "activeWallets": 44,
       "walletAddresses": [
         "r96hZBZv9EJ6LyExWRxv5Qp7BevdbRBM29",
         "rQaYPRSz9e6sz3vq4WzTKpfJ3Pi51N35DL",
@@ -4647,19 +4647,27 @@
         "rKt4peDozpRW9zdYGiTZC54DSNU3Af6pQE",
         "rH3dfGifdXzghxKXS74WRA3WtdKLKGj5Um",
         "r4a8ztjVZTyMegFxuCHkzWcPyhcdV7Yi3a",
-        "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ"
+        "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
+        "rwwuYnnm5pouV5FCF24bU7c98dvg4skbyf",
+        "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu",
+        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
+        "rP24hRAGc88Mey1N9b2Zm95BBpVQRJujZr",
+        "rpyTMcAKiCxqY7VXenD5ercGGzGWNV9xpg",
+        "rBuyRGChHtBa5hnenDRA2tpAPsa3LoGrqC",
+        "r93RnAGnktawsdVFg43otKggYhkqTaZEBA",
+        "rsqZiJ6vnmWtaymWh7EW8EK1oEeXrLWvLC"
       ],
       "txTypeDistribution": {
-        "Payment": 435,
-        "NFTokenMint": 63,
-        "NFTokenBurn": 42
+        "Payment": 1473,
+        "NFTokenMint": 162,
+        "NFTokenBurn": 130
       },
       "hourlyTxCounts": [
         431,
-        109,
-        0,
-        0,
-        0,
+        393,
+        385,
+        414,
+        142,
         0,
         0,
         0,
@@ -4680,11 +4688,11 @@
         0,
         0
       ],
-      "tps": 0.08,
+      "tps": 0.1,
       "avgFee": "0.00001000",
       "nodeCount": 41,
       "validatorCount": 40,
-      "lastSeq": 1476920
+      "lastSeq": 1480575
     }
   },
   "firstSeen": {
@@ -5408,6 +5416,8 @@
     "rhSGuEgdRWdQxeWXmXjSdHbp3oEPJoofha": "2026-03-29",
     "raRKMUf9aUwbFVR4jnRtgsL2EAviy39tZ5": "2026-03-29",
     "rJaBBxWr9oPCjBYhjmihi26pKUHEGTPdF1": "2026-03-29",
-    "r3omzFdtvvGM1ha7s19rEzx1FepCogaxpa": "2026-03-29"
+    "r3omzFdtvvGM1ha7s19rEzx1FepCogaxpa": "2026-03-29",
+    "rP24hRAGc88Mey1N9b2Zm95BBpVQRJujZr": "2026-03-30",
+    "r93RnAGnktawsdVFg43otKggYhkqTaZEBA": "2026-03-30"
   }
 }
