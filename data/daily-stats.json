@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-01T08:59:35.528Z",
+  "lastUpdated": "2026-04-01T10:05:56.085Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -4853,8 +4853,8 @@
       "lastSeq": 1532650
     },
     "2026-04-01": {
-      "txCount": 3634,
-      "activeWallets": 59,
+      "txCount": 4084,
+      "activeWallets": 63,
       "walletAddresses": [
         "rnGdmvRfQFnZSUR4VNvMoCZ2xZDpdtwMZA",
         "rGyM14ZEMpyHZNPo96kEmaVNgo6unV9rhs",
@@ -4914,12 +4914,16 @@
         "r42qTujwEWVEcES1qAW4zeAQ7hU8Ca1Lko",
         "r3HpHcq1oG8Nwd4KAKyb8qPdUJ21jLveV7",
         "rE35U7AdjRsd5xHJjCujVg6CvBi3nTiNr6",
-        "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu"
+        "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu",
+        "rpsymnShdRGKNjm9EM7HmesnSwWfNAGVQw",
+        "r4ahFvpMuDHfjsc8kuECSTTQNbFPaw5XyU",
+        "rB11ESmzQBfWovrQSuLNoEhL2AUjuHH3HU",
+        "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH"
       ],
       "txTypeDistribution": {
-        "Payment": 2660,
-        "NFTokenMint": 426,
-        "NFTokenBurn": 548
+        "Payment": 2983,
+        "NFTokenMint": 480,
+        "NFTokenBurn": 621
       },
       "hourlyTxCounts": [
         380,
@@ -4930,9 +4934,9 @@
         407,
         392,
         407,
-        398,
-        0,
-        0,
+        402,
+        407,
+        39,
         0,
         0,
         0,
@@ -4947,11 +4951,11 @@
         0,
         0
       ],
-      "tps": 0.15,
-      "avgFee": "0.00001009",
+      "tps": 0.09,
+      "avgFee": "0.00001000",
       "nodeCount": 41,
       "validatorCount": 40,
-      "lastSeq": 1543507
+      "lastSeq": 1544824
     }
   },
   "firstSeen": {
@@ -5708,6 +5712,8 @@
     "rMSvMAyjtJRxU79CxqzpE8k5Wc1JpXrJxV": "2026-04-01",
     "r42qTujwEWVEcES1qAW4zeAQ7hU8Ca1Lko": "2026-04-01",
     "r3HpHcq1oG8Nwd4KAKyb8qPdUJ21jLveV7": "2026-04-01",
-    "rE35U7AdjRsd5xHJjCujVg6CvBi3nTiNr6": "2026-04-01"
+    "rE35U7AdjRsd5xHJjCujVg6CvBi3nTiNr6": "2026-04-01",
+    "rpsymnShdRGKNjm9EM7HmesnSwWfNAGVQw": "2026-04-01",
+    "rB11ESmzQBfWovrQSuLNoEhL2AUjuHH3HU": "2026-04-01"
   }
 }
