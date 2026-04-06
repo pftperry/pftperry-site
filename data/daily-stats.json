@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-06T06:13:38.015Z",
+  "lastUpdated": "2026-04-06T08:07:40.900Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -5460,8 +5460,8 @@
       "lastSeq": 1676079
     },
     "2026-04-06": {
-      "txCount": 2544,
-      "activeWallets": 51,
+      "txCount": 3293,
+      "activeWallets": 56,
       "walletAddresses": [
         "rpPkoXpznY8zrmrhiRn8RH6FkJdoSKaR68",
         "rn3RhgWyPtjmjWdJtvR6uzU41LmmmfKfAJ",
@@ -5513,12 +5513,17 @@
         "rsZ8Si5t3TzEdnBfcRny6ydfnQvgjxspqq",
         "rDxG2EXUmQThZJtZcq4cp18obb8gU7oxuR",
         "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
-        "rKy1cvqZvm56oU2daawSnA5tMi6R1jyAxp"
+        "rKy1cvqZvm56oU2daawSnA5tMi6R1jyAxp",
+        "rGduTYjH3JPKvWa6qYsi32dPmbFmB3BFdv",
+        "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
+        "r9vCptNdEs6hjQ889hW67K9CqPC5mUtYsz",
+        "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
+        "rGJxnRAUMD6dP3688yJo2V5rjyQTodoivj"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 478,
-        "NFTokenMint": 234,
-        "Payment": 1832
+        "NFTokenBurn": 617,
+        "NFTokenMint": 301,
+        "Payment": 2375
       },
       "hourlyTxCounts": [
         418,
@@ -5527,9 +5532,9 @@
         416,
         403,
         383,
-        93,
-        0,
-        0,
+        397,
+        402,
+        43,
         0,
         0,
         0,
@@ -5550,7 +5555,7 @@
       "avgFee": "0.00001011",
       "nodeCount": 40,
       "validatorCount": 37,
-      "lastSeq": 1683611
+      "lastSeq": 1685878
     }
   },
   "firstSeen": {
@@ -6384,6 +6389,9 @@
     "rN4Rc7ERnrXy7aFb6aPmLuBecTX8JyRhXW": "2026-04-06",
     "r3vihxfxNuZsprKAADzE1c8fazjp16pdKg": "2026-04-06",
     "r96eK6Ysfg4tp2V8BUVV9pnMNCR5faGwLd": "2026-04-06",
-    "rKy1cvqZvm56oU2daawSnA5tMi6R1jyAxp": "2026-04-06"
+    "rKy1cvqZvm56oU2daawSnA5tMi6R1jyAxp": "2026-04-06",
+    "rGduTYjH3JPKvWa6qYsi32dPmbFmB3BFdv": "2026-04-06",
+    "r9vCptNdEs6hjQ889hW67K9CqPC5mUtYsz": "2026-04-06",
+    "rGJxnRAUMD6dP3688yJo2V5rjyQTodoivj": "2026-04-06"
   }
 }
