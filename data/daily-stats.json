@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-06T01:15:50.768Z",
+  "lastUpdated": "2026-04-06T04:19:50.923Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -5460,8 +5460,8 @@
       "lastSeq": 1676079
     },
     "2026-04-06": {
-      "txCount": 524,
-      "activeWallets": 41,
+      "txCount": 1801,
+      "activeWallets": 49,
       "walletAddresses": [
         "rpPkoXpznY8zrmrhiRn8RH6FkJdoSKaR68",
         "rn3RhgWyPtjmjWdJtvR6uzU41LmmmfKfAJ",
@@ -5503,19 +5503,27 @@
         "rGu432jQ34PcCUZyDkujpQPByVCA4LDcw9",
         "rHTgM9rZBZkuqF5H8DQxFWTR7biXmMvPLm",
         "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
-        "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx"
+        "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
+        "rJNwqDPKSkbqDPNoNxbW6C3KCS84ZaQc96",
+        "rKddMw1hqMGwfgJvzjbWQHtBQT8hDcZNCP",
+        "rN4Rc7ERnrXy7aFb6aPmLuBecTX8JyRhXW",
+        "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97",
+        "r3vihxfxNuZsprKAADzE1c8fazjp16pdKg",
+        "r96eK6Ysfg4tp2V8BUVV9pnMNCR5faGwLd",
+        "rsZ8Si5t3TzEdnBfcRny6ydfnQvgjxspqq",
+        "rDxG2EXUmQThZJtZcq4cp18obb8gU7oxuR"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 37,
-        "NFTokenMint": 62,
-        "Payment": 425
+        "NFTokenBurn": 402,
+        "NFTokenMint": 170,
+        "Payment": 1229
       },
       "hourlyTxCounts": [
         418,
-        106,
-        0,
-        0,
-        0,
+        399,
+        432,
+        416,
+        136,
         0,
         0,
         0,
@@ -5536,11 +5544,11 @@
         0,
         0
       ],
-      "tps": 0.07,
+      "tps": 0.12,
       "avgFee": "0.00001000",
       "nodeCount": 40,
       "validatorCount": 37,
-      "lastSeq": 1677692
+      "lastSeq": 1681346
     }
   },
   "firstSeen": {
@@ -6370,6 +6378,9 @@
     "rwQNGMfM3FHjWW9Pq4urK4d66iypaXKute": "2026-04-05",
     "rgqgbkKwh6cZVzYw1J47E3Y5UWvV9vZq7": "2026-04-05",
     "rpQrSa3Hh5grVQ4jaasmxbgYfwCv9g86KR": "2026-04-05",
-    "rE8aYNYvLtxBwvQrx7rDwBzbHvBHveHxMx": "2026-04-05"
+    "rE8aYNYvLtxBwvQrx7rDwBzbHvBHveHxMx": "2026-04-05",
+    "rN4Rc7ERnrXy7aFb6aPmLuBecTX8JyRhXW": "2026-04-06",
+    "r3vihxfxNuZsprKAADzE1c8fazjp16pdKg": "2026-04-06",
+    "r96eK6Ysfg4tp2V8BUVV9pnMNCR5faGwLd": "2026-04-06"
   }
 }
