@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-07T12:52:47.806Z",
+  "lastUpdated": "2026-04-07T14:24:49.805Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -5587,8 +5587,8 @@
       "lastSeq": 1704761
     },
     "2026-04-07": {
-      "txCount": 5314,
-      "activeWallets": 65,
+      "txCount": 5938,
+      "activeWallets": 69,
       "walletAddresses": [
         "rwGE9qA8iGV54ud3Ec4djb5bXdXcXhKXcX",
         "rMMoCM3i8Y6mzzpJDYbpK8MrE7jH1AjtMZ",
@@ -5654,12 +5654,16 @@
         "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
         "rBmKohGK4PLMvK4qoQ5mxCY8hX4zbCywPJ",
         "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
-        "rUDZkMftKMGQK1tovF8KmUm2rtP54U1fSJ"
+        "rUDZkMftKMGQK1tovF8KmUm2rtP54U1fSJ",
+        "rBq2QsBgkqsjrczWpCeXmKMJwEAR3yMYFU",
+        "rnUMC1ywupzaNidYJDaFxg62cbThm2BKYg",
+        "rqQTsAR55FDJVxwRmyunX3bKp7YcgMQVB",
+        "rBpbBMEDqqD1q3qhuLvwDtig2RTjT9jk5L"
       ],
       "txTypeDistribution": {
-        "Payment": 4164,
-        "NFTokenBurn": 488,
-        "NFTokenMint": 662
+        "Payment": 4640,
+        "NFTokenBurn": 562,
+        "NFTokenMint": 736
       },
       "hourlyTxCounts": [
         431,
@@ -5674,9 +5678,9 @@
         406,
         424,
         407,
-        351,
-        0,
-        0,
+        396,
+        412,
+        167,
         0,
         0,
         0,
@@ -5687,11 +5691,11 @@
         0,
         0
       ],
-      "tps": 0.16,
-      "avgFee": "0.00001000",
+      "tps": 0.14,
+      "avgFee": "0.00001010",
       "nodeCount": 40,
       "validatorCount": 38,
-      "lastSeq": 1720237
+      "lastSeq": 1722069
     }
   },
   "firstSeen": {
@@ -6543,6 +6547,9 @@
     "rwQZYJf3jMeVVjo99TA6hwrCtYMcWtHsYA": "2026-04-07",
     "raZvmdVWFE99AET5iU4whAHvtzdYCo9mHd": "2026-04-07",
     "rBmKohGK4PLMvK4qoQ5mxCY8hX4zbCywPJ": "2026-04-07",
-    "rUDZkMftKMGQK1tovF8KmUm2rtP54U1fSJ": "2026-04-07"
+    "rUDZkMftKMGQK1tovF8KmUm2rtP54U1fSJ": "2026-04-07",
+    "rBq2QsBgkqsjrczWpCeXmKMJwEAR3yMYFU": "2026-04-07",
+    "rnUMC1ywupzaNidYJDaFxg62cbThm2BKYg": "2026-04-07",
+    "rqQTsAR55FDJVxwRmyunX3bKp7YcgMQVB": "2026-04-07"
   }
 }
