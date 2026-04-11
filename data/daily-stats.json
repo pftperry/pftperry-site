@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-11T16:22:20.399Z",
+  "lastUpdated": "2026-04-11T17:00:50.301Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -6087,8 +6087,8 @@
       "lastSeq": 1819515
     },
     "2026-04-11": {
-      "txCount": 6696,
-      "activeWallets": 69,
+      "txCount": 6956,
+      "activeWallets": 75,
       "walletAddresses": [
         "rDW9akzLHWe5fTTFu2GDJsDju9JjwFEJng",
         "rEJE2H4xeaokZkZxsVxYW2tLK2PeCmXXfD",
@@ -6158,12 +6158,18 @@
         "rJLXZVdGZNecWvLEhjJBkdZmu9EZsDZBjd",
         "rBpbBMEDqqD1q3qhuLvwDtig2RTjT9jk5L",
         "r4KJsXArTmVMpeumNMESZGMKYs9z1w8oj3",
-        "r3Qo4jrKhJn2uEb2xQ1CbyzYdFeq8Yenai"
+        "r3Qo4jrKhJn2uEb2xQ1CbyzYdFeq8Yenai",
+        "rGGodJFqgreLgXKVGspkZ68dqBH8RBGCJr",
+        "rUwWrJqaeAMn5f721LPW7Dqsshaw7YtTXt",
+        "rP4Au5C42fNZvTSZTd2X7wAtieSPmuvKUU",
+        "rQhV9rE7cs5zgFZohjVjjbwqcMkwpLb9rE",
+        "rho39S5awAt5SAh4dA1idQEpv3ZPpbYZpk",
+        "rfBFsbbQQJjoF5XC2MRXKnxeuBZa2yGMqb"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 675,
-        "Payment": 5394,
-        "NFTokenMint": 627
+        "NFTokenBurn": 709,
+        "Payment": 5599,
+        "NFTokenMint": 648
       },
       "hourlyTxCounts": [
         436,
@@ -6182,8 +6188,8 @@
         420,
         428,
         409,
-        189,
-        0,
+        443,
+        6,
         0,
         0,
         0,
@@ -6192,10 +6198,10 @@
         0
       ],
       "tps": 0.15,
-      "avgFee": "0.00001000",
-      "nodeCount": 39,
+      "avgFee": "0.00001027",
+      "nodeCount": 40,
       "validatorCount": 37,
-      "lastSeq": 1839164
+      "lastSeq": 1839931
     }
   },
   "firstSeen": {
@@ -7118,6 +7124,9 @@
     "rp8JpL9xpSfoYh9vNLgXrRTNW75Za6ec7D": "2026-04-11",
     "rBHA3eVy8Q3fJgbQVtsFDts9xTii29E62W": "2026-04-11",
     "r3UycNjMGmW4ZJsHFDn9xHPaLBaVwF9uwa": "2026-04-11",
-    "r3S7XJYqa9bH3JjZXR25Xvue3x6v9Krs4J": "2026-04-11"
+    "r3S7XJYqa9bH3JjZXR25Xvue3x6v9Krs4J": "2026-04-11",
+    "rP4Au5C42fNZvTSZTd2X7wAtieSPmuvKUU": "2026-04-11",
+    "rho39S5awAt5SAh4dA1idQEpv3ZPpbYZpk": "2026-04-11",
+    "rfBFsbbQQJjoF5XC2MRXKnxeuBZa2yGMqb": "2026-04-11"
   }
 }
