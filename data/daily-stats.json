@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-13T12:00:41.489Z",
+  "lastUpdated": "2026-04-13T14:11:36.691Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -6325,8 +6325,8 @@
       "lastSeq": 1876465
     },
     "2026-04-13": {
-      "txCount": 4860,
-      "activeWallets": 57,
+      "txCount": 5790,
+      "activeWallets": 63,
       "walletAddresses": [
         "rP4Au5C42fNZvTSZTd2X7wAtieSPmuvKUU",
         "rPRLi3siL7hCBJBjNWHf6dAb7M9EoPGkEb",
@@ -6384,12 +6384,18 @@
         "rH3dfGifdXzghxKXS74WRA3WtdKLKGj5Um",
         "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
         "rDVKRNp3kWE1ykryU8ta6bBZWrFjFetyjB",
-        "r4rNrsaYAU9omxfQTgrJAsaj81UZTEWw5y"
+        "r4rNrsaYAU9omxfQTgrJAsaj81UZTEWw5y",
+        "rsn2eD82iJoybh4ATJnP2RmgNi6c2gKJ88",
+        "rGGodJFqgreLgXKVGspkZ68dqBH8RBGCJr",
+        "rBAAaHY7X4ZcLC7zRKb7wMG9PSjceWiYr9",
+        "raXcGb9CswCNiA6cxPZB9Hm3yyK1EYxLgo",
+        "rVKcpCATa7Vbev2CJS6oyX7JCDDMnfD77",
+        "rBTYXwQofjJraScghrzt9CUHCa1gzUxknC"
       ],
       "txTypeDistribution": {
-        "Payment": 3770,
-        "NFTokenMint": 544,
-        "NFTokenBurn": 546
+        "Payment": 4357,
+        "NFTokenMint": 626,
+        "NFTokenBurn": 807
       },
       "hourlyTxCounts": [
         382,
@@ -6404,9 +6410,9 @@
         417,
         405,
         411,
-        5,
-        0,
-        0,
+        397,
+        452,
+        86,
         0,
         0,
         0,
@@ -6417,11 +6423,11 @@
         0,
         0
       ],
-      "tps": 0.14,
-      "avgFee": "0.00001010",
+      "tps": 0.12,
+      "avgFee": "0.00001000",
       "nodeCount": 40,
       "validatorCount": 37,
-      "lastSeq": 1891317
+      "lastSeq": 1893923
     }
   },
   "firstSeen": {
@@ -7369,6 +7375,10 @@
     "r4i2HQVygZCrVcdfg8ytSjyRiwL8UU54wt": "2026-04-13",
     "rfXFVKTjSQZKRcApPm7ZT1P8skXB5yjwNU": "2026-04-13",
     "rJkQ21RF5cmoA1rFyno2uU5HheUtBCzCGC": "2026-04-13",
-    "r4rNrsaYAU9omxfQTgrJAsaj81UZTEWw5y": "2026-04-13"
+    "r4rNrsaYAU9omxfQTgrJAsaj81UZTEWw5y": "2026-04-13",
+    "rsn2eD82iJoybh4ATJnP2RmgNi6c2gKJ88": "2026-04-13",
+    "rBAAaHY7X4ZcLC7zRKb7wMG9PSjceWiYr9": "2026-04-13",
+    "raXcGb9CswCNiA6cxPZB9Hm3yyK1EYxLgo": "2026-04-13",
+    "rVKcpCATa7Vbev2CJS6oyX7JCDDMnfD77": "2026-04-13"
   }
 }
