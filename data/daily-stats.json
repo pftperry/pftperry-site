@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-13T01:21:11.453Z",
+  "lastUpdated": "2026-04-13T04:34:18.137Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -6325,8 +6325,8 @@
       "lastSeq": 1876465
     },
     "2026-04-13": {
-      "txCount": 535,
-      "activeWallets": 36,
+      "txCount": 1855,
+      "activeWallets": 44,
       "walletAddresses": [
         "rP4Au5C42fNZvTSZTd2X7wAtieSPmuvKUU",
         "rPRLi3siL7hCBJBjNWHf6dAb7M9EoPGkEb",
@@ -6363,19 +6363,27 @@
         "rpyTMcAKiCxqY7VXenD5ercGGzGWNV9xpg",
         "rGBKxoTcavpfEso7ASRELZAMcCMqKa8oFk",
         "rKYJLGntHvPdr51nG3C16Cf53sqhYYUAm4",
-        "ryrXTMfvdSxQkGmJhBxKm5S5jyX3X5VuD"
+        "ryrXTMfvdSxQkGmJhBxKm5S5jyX3X5VuD",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
+        "rKt4peDozpRW9zdYGiTZC54DSNU3Af6pQE",
+        "rDxG2EXUmQThZJtZcq4cp18obb8gU7oxuR",
+        "rJNwqDPKSkbqDPNoNxbW6C3KCS84ZaQc96",
+        "rKddMw1hqMGwfgJvzjbWQHtBQT8hDcZNCP",
+        "r3uuDwSyq8im3rLoTEiDr9E927UUNPysya",
+        "rLLD6zo31kvekU6sLFh6Ua3tPSc86LLj26"
       ],
       "txTypeDistribution": {
-        "Payment": 369,
-        "NFTokenMint": 62,
-        "NFTokenBurn": 104
+        "Payment": 1373,
+        "NFTokenMint": 195,
+        "NFTokenBurn": 287
       },
       "hourlyTxCounts": [
         382,
-        153,
-        0,
-        0,
-        0,
+        415,
+        402,
+        428,
+        228,
         0,
         0,
         0,
@@ -6400,7 +6408,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 40,
       "validatorCount": 37,
-      "lastSeq": 1878570
+      "lastSeq": 1882414
     }
   },
   "firstSeen": {
@@ -7340,6 +7348,8 @@
     "rG5ZPeix9x7Upn5ZkJ3KVe1danGgRAdg8b": "2026-04-12",
     "rsKoGeHup2ZE5i1kB993WJejetQjG1LkT3": "2026-04-12",
     "rKYJLGntHvPdr51nG3C16Cf53sqhYYUAm4": "2026-04-13",
-    "ryrXTMfvdSxQkGmJhBxKm5S5jyX3X5VuD": "2026-04-13"
+    "ryrXTMfvdSxQkGmJhBxKm5S5jyX3X5VuD": "2026-04-13",
+    "r3uuDwSyq8im3rLoTEiDr9E927UUNPysya": "2026-04-13",
+    "rLLD6zo31kvekU6sLFh6Ua3tPSc86LLj26": "2026-04-13"
   }
 }
