@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-13T16:51:48.817Z",
+  "lastUpdated": "2026-04-13T17:53:20.317Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -6325,8 +6325,8 @@
       "lastSeq": 1876465
     },
     "2026-04-13": {
-      "txCount": 6883,
-      "activeWallets": 70,
+      "txCount": 7280,
+      "activeWallets": 76,
       "walletAddresses": [
         "rP4Au5C42fNZvTSZTd2X7wAtieSPmuvKUU",
         "rPRLi3siL7hCBJBjNWHf6dAb7M9EoPGkEb",
@@ -6397,12 +6397,19 @@
         "rQhVPGNXPCfWC7B7zdcJgSJuVsnpUFLvNt",
         "r4KJsXArTmVMpeumNMESZGMKYs9z1w8oj3",
         "rMBEeMuRJWP2kbNQSBd3qjwmprHcd8APnD",
-        "r4ahFvpMuDHfjsc8kuECSTTQNbFPaw5XyU"
+        "r4ahFvpMuDHfjsc8kuECSTTQNbFPaw5XyU",
+        "r9XYDxJDbmmhSGNpUguVhea6xn3Tu2HbeF",
+        "rMbPtyxQPU78Y7ZSEjip5DVVuXofdv3M3u",
+        "rJLXZVdGZNecWvLEhjJBkdZmu9EZsDZBjd",
+        "rpc9FcxtaNVdWonAXv3rABecNLx7kcA3sY",
+        "r99qK967m2dW78meahESfAPE1Pp7ekvTux",
+        "r9oHNN143VkaVeQ5kfQnRyc9gwL8HhSa32"
       ],
       "txTypeDistribution": {
-        "Payment": 5181,
-        "NFTokenMint": 747,
-        "NFTokenBurn": 955
+        "Payment": 5390,
+        "NFTokenMint": 775,
+        "NFTokenBurn": 1114,
+        "AccountSet": 1
       },
       "hourlyTxCounts": [
         382,
@@ -6421,8 +6428,8 @@
         452,
         429,
         395,
-        355,
-        0,
+        407,
+        345,
         0,
         0,
         0,
@@ -6430,11 +6437,11 @@
         0,
         0
       ],
-      "tps": 0.1,
+      "tps": 0.09,
       "avgFee": "0.00001000",
       "nodeCount": 40,
       "validatorCount": 36,
-      "lastSeq": 1897116
+      "lastSeq": 1898338
     }
   },
   "firstSeen": {
@@ -7387,6 +7394,9 @@
     "rBAAaHY7X4ZcLC7zRKb7wMG9PSjceWiYr9": "2026-04-13",
     "raXcGb9CswCNiA6cxPZB9Hm3yyK1EYxLgo": "2026-04-13",
     "rVKcpCATa7Vbev2CJS6oyX7JCDDMnfD77": "2026-04-13",
-    "rMBEeMuRJWP2kbNQSBd3qjwmprHcd8APnD": "2026-04-13"
+    "rMBEeMuRJWP2kbNQSBd3qjwmprHcd8APnD": "2026-04-13",
+    "r9XYDxJDbmmhSGNpUguVhea6xn3Tu2HbeF": "2026-04-13",
+    "rMbPtyxQPU78Y7ZSEjip5DVVuXofdv3M3u": "2026-04-13",
+    "r99qK967m2dW78meahESfAPE1Pp7ekvTux": "2026-04-13"
   }
 }
