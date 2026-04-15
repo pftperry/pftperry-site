@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T04:21:10.149Z",
+  "lastUpdated": "2026-04-15T06:15:04.065Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -6574,8 +6574,8 @@
       "lastSeq": 1933800
     },
     "2026-04-15": {
-      "txCount": 1738,
-      "activeWallets": 45,
+      "txCount": 2527,
+      "activeWallets": 49,
       "walletAddresses": [
         "rwKATJnmsHdon7NEHNEXgTJQ99nRFnawNB",
         "rpy9zDeGxNjSh8z6DzMmoxSe2bYPGP4WYc",
@@ -6621,21 +6621,25 @@
         "rJNwqDPKSkbqDPNoNxbW6C3KCS84ZaQc96",
         "rQhV9rE7cs5zgFZohjVjjbwqcMkwpLb9rE",
         "rpyTMcAKiCxqY7VXenD5ercGGzGWNV9xpg",
-        "rsZ8Si5t3TzEdnBfcRny6ydfnQvgjxspqq"
+        "rsZ8Si5t3TzEdnBfcRny6ydfnQvgjxspqq",
+        "rH3dfGifdXzghxKXS74WRA3WtdKLKGj5Um",
+        "rQsiNhMd7dQe9Tq5QXP5fJo39FtqQ1gd3J",
+        "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
+        "rBFuu9ABaajsNNYei2Rj8pVREeR9vyvmzH"
       ],
       "txTypeDistribution": {
-        "Payment": 1297,
-        "NFTokenBurn": 230,
-        "NFTokenMint": 211
+        "Payment": 1886,
+        "NFTokenBurn": 337,
+        "NFTokenMint": 304
       },
       "hourlyTxCounts": [
         398,
         387,
         398,
         399,
-        156,
-        0,
-        0,
+        435,
+        411,
+        99,
         0,
         0,
         0,
@@ -6654,11 +6658,11 @@
         0,
         0
       ],
-      "tps": 0.1,
-      "avgFee": "0.00001014",
-      "nodeCount": 41,
+      "tps": 0.12,
+      "avgFee": "0.00001000",
+      "nodeCount": 40,
       "validatorCount": 36,
-      "lastSeq": 1939517
+      "lastSeq": 1941790
     }
   },
   "firstSeen": {
@@ -7632,6 +7636,8 @@
     "rKhAoDzSK6YmNBC7JGmZNjMeEpkSwK6krC": "2026-04-14",
     "rwuRvXyGWUhta7CNQqnKKy3f7iiAp74UJ2": "2026-04-15",
     "rMnEgGPqyL923xJC3oYLTXnFGSdN23fVWe": "2026-04-15",
-    "rLnnK63jivaWUs8y3zaGqf9TuFE9Sfzrbr": "2026-04-15"
+    "rLnnK63jivaWUs8y3zaGqf9TuFE9Sfzrbr": "2026-04-15",
+    "rQsiNhMd7dQe9Tq5QXP5fJo39FtqQ1gd3J": "2026-04-15",
+    "rBFuu9ABaajsNNYei2Rj8pVREeR9vyvmzH": "2026-04-15"
   }
 }
