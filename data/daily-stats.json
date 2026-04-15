@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T01:19:49.351Z",
+  "lastUpdated": "2026-04-15T04:21:10.149Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -6574,8 +6574,8 @@
       "lastSeq": 1933800
     },
     "2026-04-15": {
-      "txCount": 524,
-      "activeWallets": 39,
+      "txCount": 1738,
+      "activeWallets": 45,
       "walletAddresses": [
         "rwKATJnmsHdon7NEHNEXgTJQ99nRFnawNB",
         "rpy9zDeGxNjSh8z6DzMmoxSe2bYPGP4WYc",
@@ -6615,19 +6615,25 @@
         "rGBKxoTcavpfEso7ASRELZAMcCMqKa8oFk",
         "r9XYDxJDbmmhSGNpUguVhea6xn3Tu2HbeF",
         "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
-        "rMnEgGPqyL923xJC3oYLTXnFGSdN23fVWe"
+        "rMnEgGPqyL923xJC3oYLTXnFGSdN23fVWe",
+        "rLnnK63jivaWUs8y3zaGqf9TuFE9Sfzrbr",
+        "r4KJsXArTmVMpeumNMESZGMKYs9z1w8oj3",
+        "rJNwqDPKSkbqDPNoNxbW6C3KCS84ZaQc96",
+        "rQhV9rE7cs5zgFZohjVjjbwqcMkwpLb9rE",
+        "rpyTMcAKiCxqY7VXenD5ercGGzGWNV9xpg",
+        "rsZ8Si5t3TzEdnBfcRny6ydfnQvgjxspqq"
       ],
       "txTypeDistribution": {
-        "Payment": 380,
-        "NFTokenBurn": 83,
-        "NFTokenMint": 61
+        "Payment": 1297,
+        "NFTokenBurn": 230,
+        "NFTokenMint": 211
       },
       "hourlyTxCounts": [
         398,
-        126,
-        0,
-        0,
-        0,
+        387,
+        398,
+        399,
+        156,
         0,
         0,
         0,
@@ -6648,11 +6654,11 @@
         0,
         0
       ],
-      "tps": 0.08,
-      "avgFee": "0.00001000",
+      "tps": 0.1,
+      "avgFee": "0.00001014",
       "nodeCount": 41,
       "validatorCount": 36,
-      "lastSeq": 1935909
+      "lastSeq": 1939517
     }
   },
   "firstSeen": {
@@ -7625,6 +7631,7 @@
     "raxfv1R6VLp5sdh3DLozL4fyE8J7dS4bPp": "2026-04-14",
     "rKhAoDzSK6YmNBC7JGmZNjMeEpkSwK6krC": "2026-04-14",
     "rwuRvXyGWUhta7CNQqnKKy3f7iiAp74UJ2": "2026-04-15",
-    "rMnEgGPqyL923xJC3oYLTXnFGSdN23fVWe": "2026-04-15"
+    "rMnEgGPqyL923xJC3oYLTXnFGSdN23fVWe": "2026-04-15",
+    "rLnnK63jivaWUs8y3zaGqf9TuFE9Sfzrbr": "2026-04-15"
   }
 }
