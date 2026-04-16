@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-16T11:34:46.351Z",
+  "lastUpdated": "2026-04-16T13:00:01.175Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -6697,8 +6697,8 @@
       "lastSeq": 1961931
     },
     "2026-04-16": {
-      "txCount": 4619,
-      "activeWallets": 57,
+      "txCount": 5233,
+      "activeWallets": 64,
       "walletAddresses": [
         "rMnEgGPqyL923xJC3oYLTXnFGSdN23fVWe",
         "rfXJTYMiLdBKmWR6PmUw8TwM897vCps8ZY",
@@ -6756,12 +6756,19 @@
         "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu",
         "rBK3UyNDMcBGkQ1mMiyr2ZnBMX2d2ZpVv5",
         "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
-        "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd"
+        "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
+        "rKddMw1hqMGwfgJvzjbWQHtBQT8hDcZNCP",
+        "r9588mS4NG6oms9ATULPZb9phdCn7H8XNv",
+        "rKZ9SVg1z764ABrLQ3Q1Dh5PPR7gM1z4Df",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "rBTYXwQofjJraScghrzt9CUHCa1gzUxknC",
+        "r4ahFvpMuDHfjsc8kuECSTTQNbFPaw5XyU",
+        "rJ8SuRSZYQtP4xnii2mjHrLy1Xxdxi7XUq"
       ],
       "txTypeDistribution": {
-        "Payment": 3306,
-        "NFTokenMint": 596,
-        "NFTokenBurn": 717
+        "Payment": 3769,
+        "NFTokenMint": 676,
+        "NFTokenBurn": 788
       },
       "hourlyTxCounts": [
         379,
@@ -6775,8 +6782,8 @@
         419,
         427,
         400,
-        222,
-        0,
+        416,
+        420,
         0,
         0,
         0,
@@ -6789,11 +6796,11 @@
         0,
         0
       ],
-      "tps": 0.13,
-      "avgFee": "0.00001000",
+      "tps": 0.09,
+      "avgFee": "0.00001014",
       "nodeCount": 39,
       "validatorCount": 36,
-      "lastSeq": 1976837
+      "lastSeq": 1978532
     }
   },
   "firstSeen": {
@@ -7791,6 +7798,7 @@
     "rpSA2LRdpKThnaGC461HUjTywbkndCgmDe": "2026-04-16",
     "r46UMG9tiuyxR9BU2sxWNRh92yRHz34JM4": "2026-04-16",
     "r3yGCx9aU6sGE3GC9Jnw5m9d8DjDBxxqVF": "2026-04-16",
-    "rBK3UyNDMcBGkQ1mMiyr2ZnBMX2d2ZpVv5": "2026-04-16"
+    "rBK3UyNDMcBGkQ1mMiyr2ZnBMX2d2ZpVv5": "2026-04-16",
+    "r9588mS4NG6oms9ATULPZb9phdCn7H8XNv": "2026-04-16"
   }
 }
