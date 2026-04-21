@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-21T11:58:19.943Z",
+  "lastUpdated": "2026-04-21T13:18:48.376Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -7308,8 +7308,8 @@
       "lastSeq": 2105828
     },
     "2026-04-21": {
-      "txCount": 4854,
-      "activeWallets": 61,
+      "txCount": 5372,
+      "activeWallets": 66,
       "walletAddresses": [
         "rMBxUebgBrqQfxeyLbaEj6jhH8a7kep4ux",
         "rEN1u7zMx1N6ouSdCYJuHCTJsscaSqF9fQ",
@@ -7371,12 +7371,17 @@
         "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
         "rKddMw1hqMGwfgJvzjbWQHtBQT8hDcZNCP",
         "rnrHp39XYDgnT668qDCZ2Xo8PUTbgCCDAN",
-        "rhczhWeG3eSohzcH5jw8m8Ynca9cgH4eZm"
+        "rhczhWeG3eSohzcH5jw8m8Ynca9cgH4eZm",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
+        "rKZAv7namwdt6RGK3cZ31KpV997sB5D6xU",
+        "rnLEtPa8T3EAzpXUH7EvGkUTKS1ZiFk95F",
+        "rJbjr3m4g6crTGdvvqpW8tVJauQkGLJguN"
       ],
       "txTypeDistribution": {
-        "Payment": 3801,
-        "NFTokenMint": 466,
-        "NFTokenBurn": 587
+        "Payment": 4221,
+        "NFTokenMint": 513,
+        "NFTokenBurn": 638
       },
       "hourlyTxCounts": [
         391,
@@ -7390,9 +7395,9 @@
         390,
         380,
         428,
-        388,
-        0,
-        0,
+        398,
+        397,
+        111,
         0,
         0,
         0,
@@ -7404,11 +7409,11 @@
         0,
         0
       ],
-      "tps": 0.11,
-      "avgFee": "0.00001013",
+      "tps": 0.09,
+      "avgFee": "0.00001015",
       "nodeCount": 39,
       "validatorCount": 36,
-      "lastSeq": 2120700
+      "lastSeq": 2122303
     }
   },
   "firstSeen": {
@@ -8490,6 +8495,8 @@
     "rjjzQ4PrMpgqa41GBgE7FQDH7qzzPWvar": "2026-04-21",
     "rNDoaHqEG3i3R7Gq3SZHxdsjKHdC62WAek": "2026-04-21",
     "rpG45VB98kuWTVUksuor4FmiJkwDm23S8o": "2026-04-21",
-    "rnrHp39XYDgnT668qDCZ2Xo8PUTbgCCDAN": "2026-04-21"
+    "rnrHp39XYDgnT668qDCZ2Xo8PUTbgCCDAN": "2026-04-21",
+    "rnLEtPa8T3EAzpXUH7EvGkUTKS1ZiFk95F": "2026-04-21",
+    "rJbjr3m4g6crTGdvvqpW8tVJauQkGLJguN": "2026-04-21"
   }
 }
