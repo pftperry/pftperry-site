@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-21T14:55:07.860Z",
+  "lastUpdated": "2026-04-21T16:02:08.439Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -7308,8 +7308,8 @@
       "lastSeq": 2105828
     },
     "2026-04-21": {
-      "txCount": 6035,
-      "activeWallets": 69,
+      "txCount": 6497,
+      "activeWallets": 73,
       "walletAddresses": [
         "rMBxUebgBrqQfxeyLbaEj6jhH8a7kep4ux",
         "rEN1u7zMx1N6ouSdCYJuHCTJsscaSqF9fQ",
@@ -7379,12 +7379,16 @@
         "rJbjr3m4g6crTGdvvqpW8tVJauQkGLJguN",
         "rnZvSKiqTgV3AnXivSYjmsfGNkzhZeZFXN",
         "rKZ9SVg1z764ABrLQ3Q1Dh5PPR7gM1z4Df",
-        "rGPfkgDKRpqEEBDf819RnZ3VEmzwJQqk6T"
+        "rGPfkgDKRpqEEBDf819RnZ3VEmzwJQqk6T",
+        "rJQ93gBERjcwnWAmPxyvyHcRtRQXW84kTH",
+        "rnzG62usqhnVekGBWbKHPx8TA9ihrrhQYq",
+        "rf9ZVyjxdVwsB8LCnQ3TmKMmpG5aconuEy",
+        "rHTgM9rZBZkuqF5H8DQxFWTR7biXmMvPLm"
       ],
       "txTypeDistribution": {
-        "Payment": 4734,
-        "NFTokenMint": 569,
-        "NFTokenBurn": 732
+        "Payment": 4999,
+        "NFTokenMint": 598,
+        "NFTokenBurn": 900
       },
       "hourlyTxCounts": [
         391,
@@ -7401,9 +7405,9 @@
         398,
         397,
         399,
-        375,
-        0,
-        0,
+        400,
+        421,
+        16,
         0,
         0,
         0,
@@ -7412,11 +7416,11 @@
         0,
         0
       ],
-      "tps": 0.09,
-      "avgFee": "0.00001014",
+      "tps": 0.13,
+      "avgFee": "0.00001050",
       "nodeCount": 39,
       "validatorCount": 36,
-      "lastSeq": 2124222
+      "lastSeq": 2125557
     }
   },
   "firstSeen": {
@@ -8502,6 +8506,8 @@
     "rnLEtPa8T3EAzpXUH7EvGkUTKS1ZiFk95F": "2026-04-21",
     "rJbjr3m4g6crTGdvvqpW8tVJauQkGLJguN": "2026-04-21",
     "rnZvSKiqTgV3AnXivSYjmsfGNkzhZeZFXN": "2026-04-21",
-    "rGPfkgDKRpqEEBDf819RnZ3VEmzwJQqk6T": "2026-04-21"
+    "rGPfkgDKRpqEEBDf819RnZ3VEmzwJQqk6T": "2026-04-21",
+    "rJQ93gBERjcwnWAmPxyvyHcRtRQXW84kTH": "2026-04-21",
+    "rf9ZVyjxdVwsB8LCnQ3TmKMmpG5aconuEy": "2026-04-21"
   }
 }
