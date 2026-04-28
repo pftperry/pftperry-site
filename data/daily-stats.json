@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-27T23:40:59.279Z",
+  "lastUpdated": "2026-04-28T01:45:03.123Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -8173,6 +8173,82 @@
       "nodeCount": 46,
       "validatorCount": 43,
       "lastSeq": 2306796
+    },
+    "2026-04-28": {
+      "txCount": 687,
+      "activeWallets": 34,
+      "walletAddresses": [
+        "rKcamye9ztUgWYDKriAeouzJi6dV2ptujc",
+        "rEA5RdGU6PFtnZoDJRHz1J2ThEzQsY5Twd",
+        "r9dqCNvo6kr6HXcP4MCQbZYbn3yS4F1j44",
+        "rwMqfTuPaYDqmYCQaXuVrQFWz5s8Rcpkn4",
+        "r4tLMfeqGEQMAzKXmswg7xReBdcaD1Wdbt",
+        "rDzX87WwaZwPE7LUVpbqCuReUELfrrsW5f",
+        "rBZVzQBAFrR86A5RvFotMqniTJMZ5oNRZW",
+        "rHmGHMV5GEH83aKhECZwLX5yc8KQviHhgy",
+        "rhWb4g9CuxdNiaJ8ixD9JjiEbQFDD9ovbu",
+        "ra7whWoZkewUeh6kA5KxGgvTokHFPcjVmW",
+        "rKSUbFLFFUH3ZzjJdjfCz9Y8U5xBpHmco9",
+        "rLaXnnLni6y3H7ANfyevUrshPuvYKpBAZz",
+        "rsD9TnfZAArgHUxtu57HNWrEU9JPCbSnMG",
+        "rMWxnkbasdeumyU4CSQt8wRUmtek8hmkHQ",
+        "rUnhJBhtUoNGqJYWYu6fjte2Tg3mVUz3d",
+        "rQw8L7EU27oDPC9Ch9xenNH8U4N1S3qmup",
+        "rPu1zqoms8QTDftu3M6niFm7KaH7sgLEfq",
+        "rwFm5mmD7c2XrTQzkeULA1nfao5rouemUZ",
+        "rzRofHdQiaTruK6u1WjM9npLqpS2QoQLt",
+        "rQKYsSB2oeMcRbzcYHfBfnAw5G3kQKt4NR",
+        "r4HhHy3Krp8TjqGLb6kEV6K42qwyfHu4Y3",
+        "rPGsnK4NAqeRwZ8AKgAmdWbsjPsFy9MLqD",
+        "rnTJcUWgoND7VMkNfqQwTWSfHvb3Lea3mu",
+        "r9XYDxJDbmmhSGNpUguVhea6xn3Tu2HbeF",
+        "rPNC1JBxZhZnYsFPjvugyxWpoBGPW92xjC",
+        "rndF2Meci6Lei52G2mRRzSBLAnKdf11UJe",
+        "rMx3P9iUgjfr9fNT8KmQU5WT1YY3mT5cX1",
+        "rh6f4xFGmb2JwVExoxhZLCFzrpFkCPWck5",
+        "rNMGxmxDfjf2dwcsoh1DLgAXasbqtcS5wZ",
+        "rQn17kqCyE2iTcwT2Cr6iPA7tNV5zNK54m",
+        "rKFKjSeYmWmyuea7sarg3Skjoc7TpAL9JH",
+        "rGBKxoTcavpfEso7ASRELZAMcCMqKa8oFk",
+        "rDxG2EXUmQThZJtZcq4cp18obb8gU7oxuR",
+        "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx"
+      ],
+      "txTypeDistribution": {
+        "Payment": 567,
+        "NFTokenBurn": 45,
+        "NFTokenMint": 75
+      },
+      "hourlyTxCounts": [
+        407,
+        280,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tps": 0.11,
+      "avgFee": "0.00001013",
+      "nodeCount": 46,
+      "validatorCount": 43,
+      "lastSeq": 2309265
     }
   },
   "firstSeen": {
@@ -9361,6 +9437,7 @@
     "rEPdN4QTUYFCjZVKWpSBNWAhE3a4wwV9zp": "2026-04-27",
     "rEA5RdGU6PFtnZoDJRHz1J2ThEzQsY5Twd": "2026-04-27",
     "rndF2Meci6Lei52G2mRRzSBLAnKdf11UJe": "2026-04-27",
-    "rzRofHdQiaTruK6u1WjM9npLqpS2QoQLt": "2026-04-27"
+    "rzRofHdQiaTruK6u1WjM9npLqpS2QoQLt": "2026-04-27",
+    "rPGsnK4NAqeRwZ8AKgAmdWbsjPsFy9MLqD": "2026-04-28"
   }
 }
