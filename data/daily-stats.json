@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28T18:11:37.778Z",
+  "lastUpdated": "2026-04-28T19:58:45.383Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -8175,8 +8175,8 @@
       "lastSeq": 2306796
     },
     "2026-04-28": {
-      "txCount": 7332,
-      "activeWallets": 70,
+      "txCount": 8075,
+      "activeWallets": 75,
       "walletAddresses": [
         "rKcamye9ztUgWYDKriAeouzJi6dV2ptujc",
         "rEA5RdGU6PFtnZoDJRHz1J2ThEzQsY5Twd",
@@ -8247,12 +8247,17 @@
         "raD5QffAdmLDaYQjCEiPu9dXREAoZhyeCf",
         "rHTgM9rZBZkuqF5H8DQxFWTR7biXmMvPLm",
         "rUUQvwxc9w1rCd6Edeq96i63qWgGixCb4j",
-        "rKPoW95tMpPHRgAcSxbvjgNUg8LefhiXp3"
+        "rKPoW95tMpPHRgAcSxbvjgNUg8LefhiXp3",
+        "rGGodJFqgreLgXKVGspkZ68dqBH8RBGCJr",
+        "rnpmJHJxcevh7tUqr8V1uGGUAhhd8QSmsv",
+        "rExmSZKn1NkU1KA3HHxYW3LvpEWqmfu7ZU",
+        "rE2NdfrPnuxQgEzVs1wfko52TS23WZU7DS",
+        "rUwWrJqaeAMn5f721LPW7Dqsshaw7YtTXt"
       ],
       "txTypeDistribution": {
-        "Payment": 5909,
-        "NFTokenBurn": 658,
-        "NFTokenMint": 765
+        "Payment": 6485,
+        "NFTokenBurn": 733,
+        "NFTokenMint": 857
       },
       "hourlyTxCounts": [
         407,
@@ -8273,18 +8278,18 @@
         430,
         392,
         410,
-        81,
-        0,
+        417,
+        407,
         0,
         0,
         0,
         0
       ],
-      "tps": 0.14,
-      "avgFee": "0.00001000",
+      "tps": 0.16,
+      "avgFee": "0.00001009",
       "nodeCount": 47,
       "validatorCount": 43,
-      "lastSeq": 2328917
+      "lastSeq": 2331055
     }
   },
   "firstSeen": {
@@ -9486,6 +9491,8 @@
     "rUaaQRRirkQQ414MZ76sBiYt7KfvVajNca": "2026-04-28",
     "raoFcLXvsmxC9xCqUP9VwRNJGPChzmjdze": "2026-04-28",
     "raD5QffAdmLDaYQjCEiPu9dXREAoZhyeCf": "2026-04-28",
-    "rUUQvwxc9w1rCd6Edeq96i63qWgGixCb4j": "2026-04-28"
+    "rUUQvwxc9w1rCd6Edeq96i63qWgGixCb4j": "2026-04-28",
+    "rnpmJHJxcevh7tUqr8V1uGGUAhhd8QSmsv": "2026-04-28",
+    "rE2NdfrPnuxQgEzVs1wfko52TS23WZU7DS": "2026-04-28"
   }
 }
