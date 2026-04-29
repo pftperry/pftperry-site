@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-29T09:04:26.316Z",
+  "lastUpdated": "2026-04-29T11:12:17.725Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -8304,8 +8304,8 @@
       "lastSeq": 2335216
     },
     "2026-04-29": {
-      "txCount": 3726,
-      "activeWallets": 50,
+      "txCount": 4613,
+      "activeWallets": 56,
       "walletAddresses": [
         "rndF2Meci6Lei52G2mRRzSBLAnKdf11UJe",
         "rKcamye9ztUgWYDKriAeouzJi6dV2ptujc",
@@ -8356,12 +8356,18 @@
         "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
         "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
         "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
-        "rsKi61PjUrMxYiRdDd6uQWaCy6dDEua4qD"
+        "rsKi61PjUrMxYiRdDd6uQWaCy6dDEua4qD",
+        "rKZAv7namwdt6RGK3cZ31KpV997sB5D6xU",
+        "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+        "rnvSvASMo7vzCdFxXe7Bmn43X34EFF8QH6",
+        "rKt4peDozpRW9zdYGiTZC54DSNU3Af6pQE",
+        "rL8wxZCa1uh9NBF4pwzTtPfUdWRW9k51Q4",
+        "rsfaB2fx1tQQPyJQ5G8d6y3Lm8XqiA7dpg"
       ],
       "txTypeDistribution": {
-        "Payment": 2939,
-        "NFTokenMint": 442,
-        "NFTokenBurn": 345
+        "Payment": 3570,
+        "NFTokenMint": 548,
+        "NFTokenBurn": 495
       },
       "hourlyTxCounts": [
         417,
@@ -8373,9 +8379,9 @@
         411,
         399,
         406,
-        26,
-        0,
-        0,
+        417,
+        413,
+        83,
         0,
         0,
         0,
@@ -8389,11 +8395,11 @@
         0,
         0
       ],
-      "tps": 0.13,
-      "avgFee": "0.00001000",
+      "tps": 0.12,
+      "avgFee": "0.00001035",
       "nodeCount": 47,
       "validatorCount": 43,
-      "lastSeq": 2346717
+      "lastSeq": 2349262
     }
   },
   "firstSeen": {
@@ -9604,6 +9610,9 @@
     "rwZS8YU219ueBRc8dxcUMbqu6PQ2hNTG8y": "2026-04-29",
     "rMrHUY5zjnKJCWtMpqXrrRHfmdacczkvdc": "2026-04-29",
     "rPKaTiyjUJ95PgyG8dLXKCCvaLFRmMcJdn": "2026-04-29",
-    "rsKi61PjUrMxYiRdDd6uQWaCy6dDEua4qD": "2026-04-29"
+    "rsKi61PjUrMxYiRdDd6uQWaCy6dDEua4qD": "2026-04-29",
+    "rnvSvASMo7vzCdFxXe7Bmn43X34EFF8QH6": "2026-04-29",
+    "rL8wxZCa1uh9NBF4pwzTtPfUdWRW9k51Q4": "2026-04-29",
+    "rsfaB2fx1tQQPyJQ5G8d6y3Lm8XqiA7dpg": "2026-04-29"
   }
 }
