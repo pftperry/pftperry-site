@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28T23:27:30.795Z",
+  "lastUpdated": "2026-04-29T00:12:35.121Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -8302,6 +8302,74 @@
       "nodeCount": 47,
       "validatorCount": 43,
       "lastSeq": 2335216
+    },
+    "2026-04-29": {
+      "txCount": 88,
+      "activeWallets": 27,
+      "walletAddresses": [
+        "rndF2Meci6Lei52G2mRRzSBLAnKdf11UJe",
+        "rKcamye9ztUgWYDKriAeouzJi6dV2ptujc",
+        "rNxywgxomn4vnqqVU5jGHQDqosHmCHrNV8",
+        "raoFcLXvsmxC9xCqUP9VwRNJGPChzmjdze",
+        "r9dqCNvo6kr6HXcP4MCQbZYbn3yS4F1j44",
+        "rnQmMdUi2zwDL6QEvTu93DEUQ36JnNiTE2",
+        "rshA4yScXBU7U7prZHRkHHCcAj5X2hhbjd",
+        "rUaaQRRirkQQ414MZ76sBiYt7KfvVajNca",
+        "r9zTXFKZ5RWcZjZ9foQvsC5P7tbCCGfeMs",
+        "rQw8L7EU27oDPC9Ch9xenNH8U4N1S3qmup",
+        "rGKhPJaNe7BpjqkdqbpQL53VC4phSGFsxc",
+        "r4f7f4iebeuq6SCH5kuXbLZ3NA7ckWzTkc",
+        "r4HhHy3Krp8TjqGLb6kEV6K42qwyfHu4Y3",
+        "rDzX87WwaZwPE7LUVpbqCuReUELfrrsW5f",
+        "rhWb4g9CuxdNiaJ8ixD9JjiEbQFDD9ovbu",
+        "rE2NdfrPnuxQgEzVs1wfko52TS23WZU7DS",
+        "rnpmJHJxcevh7tUqr8V1uGGUAhhd8QSmsv",
+        "rwMqfTuPaYDqmYCQaXuVrQFWz5s8Rcpkn4",
+        "rL8sp1ha9q8Qm1Y4LkQpZDSwYK2riA8xG7",
+        "r9XYDxJDbmmhSGNpUguVhea6xn3Tu2HbeF",
+        "rrpNyFVqj3enEKmPXZpANevGe5BQei9YVa",
+        "rDTLbddzRExeYByvdz2AiMc6acFizzL1S",
+        "raD5QffAdmLDaYQjCEiPu9dXREAoZhyeCf",
+        "rzRofHdQiaTruK6u1WjM9npLqpS2QoQLt",
+        "rh6f4xFGmb2JwVExoxhZLCFzrpFkCPWck5",
+        "rUUQvwxc9w1rCd6Edeq96i63qWgGixCb4j",
+        "rLaXnnLni6y3H7ANfyevUrshPuvYKpBAZz"
+      ],
+      "txTypeDistribution": {
+        "Payment": 76,
+        "NFTokenMint": 12
+      },
+      "hourlyTxCounts": [
+        88,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tps": 0.13,
+      "avgFee": "0.00001000",
+      "nodeCount": 47,
+      "validatorCount": 43,
+      "lastSeq": 2336116
     }
   },
   "firstSeen": {
