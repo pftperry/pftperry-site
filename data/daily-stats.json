@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-01T07:57:59.147Z",
+  "lastUpdated": "2026-05-01T09:28:47.667Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -8553,8 +8553,8 @@
       "lastSeq": 2392848
     },
     "2026-05-01": {
-      "txCount": 3312,
-      "activeWallets": 52,
+      "txCount": 3950,
+      "activeWallets": 56,
       "walletAddresses": [
         "rU3Tn2KgznCmV5fZeE5gc6CUFrw6QHMZEJ",
         "r3d8FgLeaGA4oi1JQUVaJmjvnKLAsopQXx",
@@ -8607,12 +8607,16 @@
         "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
         "rDxG2EXUmQThZJtZcq4cp18obb8gU7oxuR",
         "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
-        "r4XLZKYK63z4zW8ttKzgy8NVW1Noa1pRwj"
+        "r4XLZKYK63z4zW8ttKzgy8NVW1Noa1pRwj",
+        "rKZAv7namwdt6RGK3cZ31KpV997sB5D6xU",
+        "r4zrZZTyFcp8fnJAm7N2ZT95YVahm3ucs8",
+        "rnDbwQE6whho2TUrdv1pP5i1KbpynSv1PF",
+        "rpc9FcxtaNVdWonAXv3rABecNLx7kcA3sY"
       ],
       "txTypeDistribution": {
-        "Payment": 2485,
-        "NFTokenBurn": 456,
-        "NFTokenMint": 371
+        "Payment": 2924,
+        "NFTokenBurn": 590,
+        "NFTokenMint": 436
       },
       "hourlyTxCounts": [
         444,
@@ -8622,9 +8626,9 @@
         391,
         379,
         390,
-        419,
-        0,
-        0,
+        440,
+        406,
+        211,
         0,
         0,
         0,
@@ -8640,11 +8644,11 @@
         0,
         0
       ],
-      "tps": 0.08,
-      "avgFee": "0.00001000",
+      "tps": 0.13,
+      "avgFee": "0.00001011",
       "nodeCount": 47,
       "validatorCount": 43,
-      "lastSeq": 2402761
+      "lastSeq": 2404575
     }
   },
   "firstSeen": {
@@ -9881,6 +9885,8 @@
     "rUXdbZdjWjgy83wg6K1PPBQsUzBjStKYKU": "2026-05-01",
     "rh6BPaPqBw4CLfA4e9Cd9PPyyPvw4FoAF1": "2026-05-01",
     "rhV6eoEfSkuVD3D6ceNhBY5oefaR3J342N": "2026-05-01",
-    "rHc7vX7WtnzSQCQC35aJosKJzxCv3aJVX4": "2026-05-01"
+    "rHc7vX7WtnzSQCQC35aJosKJzxCv3aJVX4": "2026-05-01",
+    "r4zrZZTyFcp8fnJAm7N2ZT95YVahm3ucs8": "2026-05-01",
+    "rnDbwQE6whho2TUrdv1pP5i1KbpynSv1PF": "2026-05-01"
   }
 }
