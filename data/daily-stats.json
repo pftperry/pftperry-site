@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-03T06:44:35.044Z",
+  "lastUpdated": "2026-05-03T08:28:32.704Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -8794,8 +8794,8 @@
       "lastSeq": 2449541
     },
     "2026-05-03": {
-      "txCount": 2807,
-      "activeWallets": 49,
+      "txCount": 3523,
+      "activeWallets": 53,
       "walletAddresses": [
         "r49hDupadCEoHecaUqPsKRzB25vwcGWYew",
         "r3srrzhMDBw2rHqWPWGw13cBao9QW4gBN2",
@@ -8845,12 +8845,16 @@
         "rP8v2SWPJq7KGz5M6zxWsENQzaYEDdg2FV",
         "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97",
         "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
-        "rnzG62usqhnVekGBWbKHPx8TA9ihrrhQYq"
+        "rnzG62usqhnVekGBWbKHPx8TA9ihrrhQYq",
+        "rBbVdmPKrJEzRYyx6ukRWcDB3Zsy1ppQ7d",
+        "rH3dfGifdXzghxKXS74WRA3WtdKLKGj5Um",
+        "r9NATmE1it3BReFuva2Q5oFwc33c6eFJGy",
+        "raMgWKa2XgpFdiLNtbMFsmCYGG7jKstzLf"
       ],
       "txTypeDistribution": {
-        "Payment": 2340,
-        "NFTokenMint": 287,
-        "NFTokenBurn": 180
+        "Payment": 2873,
+        "NFTokenMint": 354,
+        "NFTokenBurn": 296
       },
       "hourlyTxCounts": [
         415,
@@ -8859,9 +8863,9 @@
         408,
         424,
         441,
-        286,
-        0,
-        0,
+        393,
+        415,
+        194,
         0,
         0,
         0,
@@ -8878,11 +8882,11 @@
         0,
         0
       ],
-      "tps": 0.12,
+      "tps": 0.1,
       "avgFee": "0.00001000",
       "nodeCount": 48,
       "validatorCount": 45,
-      "lastSeq": 2458664
+      "lastSeq": 2460741
     }
   },
   "firstSeen": {
@@ -10149,6 +10153,9 @@
     "rB3CWaW6aP5xVgLtMBC71ZFAqwvmyWrVzc": "2026-05-03",
     "rnYM2n9tWkqD4Cwe2upuH9NjbxY4usycZU": "2026-05-03",
     "rpgkbDSUMTqkbH8Ufbfua5EkK79LqYhy4P": "2026-05-03",
-    "rP8v2SWPJq7KGz5M6zxWsENQzaYEDdg2FV": "2026-05-03"
+    "rP8v2SWPJq7KGz5M6zxWsENQzaYEDdg2FV": "2026-05-03",
+    "rBbVdmPKrJEzRYyx6ukRWcDB3Zsy1ppQ7d": "2026-05-03",
+    "r9NATmE1it3BReFuva2Q5oFwc33c6eFJGy": "2026-05-03",
+    "raMgWKa2XgpFdiLNtbMFsmCYGG7jKstzLf": "2026-05-03"
   }
 }
