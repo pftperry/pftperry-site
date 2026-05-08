@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-08T08:04:08.187Z",
+  "lastUpdated": "2026-05-08T09:59:37.137Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -9407,8 +9407,8 @@
       "lastSeq": 2593490
     },
     "2026-05-08": {
-      "txCount": 3353,
-      "activeWallets": 59,
+      "txCount": 4155,
+      "activeWallets": 64,
       "walletAddresses": [
         "rDAgYiMSmmjTP6h2ohMFoUCLCgJpCJDRbH",
         "r3S9anYQUxFYtKa1rkVhYGtkh1i6K8ZVEu",
@@ -9468,12 +9468,17 @@
         "r4XLZKYK63z4zW8ttKzgy8NVW1Noa1pRwj",
         "rwdm72S9YVKkZjeADKU2bbUMuY4vPnSfH7",
         "rftM1zyXEtrxQ8Yb5e3RPCXTdY4xEB4Raj",
-        "rHjZRdFpZUxNnEqTB4NLGGeHyhg4t98V9x"
+        "rHjZRdFpZUxNnEqTB4NLGGeHyhg4t98V9x",
+        "rKZAv7namwdt6RGK3cZ31KpV997sB5D6xU",
+        "rpYfT9QKHFS2nVNrZG2NBK4oazvxGusPKu",
+        "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
+        "rKt4peDozpRW9zdYGiTZC54DSNU3Af6pQE",
+        "rfjoXkgcVvZW8js7X7fz41ZHtsjo2gNuNQ"
       ],
       "txTypeDistribution": {
-        "Payment": 2576,
-        "NFTokenBurn": 455,
-        "NFTokenMint": 322
+        "Payment": 3218,
+        "NFTokenBurn": 546,
+        "NFTokenMint": 391
       },
       "hourlyTxCounts": [
         413,
@@ -9484,8 +9489,8 @@
         375,
         410,
         414,
-        35,
-        0,
+        379,
+        458,
         0,
         0,
         0,
@@ -9501,11 +9506,11 @@
         0,
         0
       ],
-      "tps": 0.17,
+      "tps": 0.11,
       "avgFee": "0.00001000",
       "nodeCount": 50,
       "validatorCount": 48,
-      "lastSeq": 2603468
+      "lastSeq": 2605759
     }
   },
   "firstSeen": {
@@ -10864,6 +10869,8 @@
     "rQaSh9AG2tQ8XyUxG9qibtioTdzcfGBJ2q": "2026-05-08",
     "rDErK8yHFVfRmN5w73CzE5K7GqUkPEnU5L": "2026-05-08",
     "rftM1zyXEtrxQ8Yb5e3RPCXTdY4xEB4Raj": "2026-05-08",
-    "rHjZRdFpZUxNnEqTB4NLGGeHyhg4t98V9x": "2026-05-08"
+    "rHjZRdFpZUxNnEqTB4NLGGeHyhg4t98V9x": "2026-05-08",
+    "rpYfT9QKHFS2nVNrZG2NBK4oazvxGusPKu": "2026-05-08",
+    "rfjoXkgcVvZW8js7X7fz41ZHtsjo2gNuNQ": "2026-05-08"
   }
 }
