@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-09T18:10:27.150Z",
+  "lastUpdated": "2026-05-09T19:37:35.979Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -9528,8 +9528,8 @@
       "lastSeq": 2622138
     },
     "2026-05-09": {
-      "txCount": 7593,
-      "activeWallets": 61,
+      "txCount": 8180,
+      "activeWallets": 66,
       "walletAddresses": [
         "rGBKxoTcavpfEso7ASRELZAMcCMqKa8oFk",
         "rhDQP8J64RDvjVxkKruEdmP8pNHG1yyy2J",
@@ -9591,12 +9591,17 @@
         "rM4RJmyeeFjC2F4mMS76upSzBL1rk9N5ZY",
         "rpyTMcAKiCxqY7VXenD5ercGGzGWNV9xpg",
         "rJoXbqLJtsjA7HSEP1KaGEfcKiS8Vv2zsb",
-        "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ"
+        "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
+        "rHTgM9rZBZkuqF5H8DQxFWTR7biXmMvPLm",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "rfPs49UJodjtMuMWKQwd3Qpi8k94a52Qca",
+        "rDxG2EXUmQThZJtZcq4cp18obb8gU7oxuR",
+        "rfqjYRAFjCzXhim6Sb1RdoiZWFdojPvGsn"
       ],
       "txTypeDistribution": {
-        "Payment": 6219,
-        "NFTokenBurn": 653,
-        "NFTokenMint": 721
+        "Payment": 6634,
+        "NFTokenBurn": 772,
+        "NFTokenMint": 774
       },
       "hourlyTxCounts": [
         423,
@@ -9617,18 +9622,18 @@
         422,
         404,
         394,
-        62,
-        0,
+        380,
+        269,
         0,
         0,
         0,
         0
       ],
-      "tps": 0.14,
-      "avgFee": "0.00001010",
+      "tps": 0.12,
+      "avgFee": "0.00001000",
       "nodeCount": 51,
       "validatorCount": 49,
-      "lastSeq": 2644140
+      "lastSeq": 2645867
     }
   },
   "firstSeen": {
@@ -11004,6 +11009,8 @@
     "rJvTZTJQBnZKFUcZ4si6sD7wshRTZvm6rH": "2026-05-09",
     "rK43giA98VBjkb5W7mrTLHFujZSLQJZxt5": "2026-05-09",
     "rwdBFSYJP1f4N7C7rQGSyZqZRHAizqizfF": "2026-05-09",
-    "rM4RJmyeeFjC2F4mMS76upSzBL1rk9N5ZY": "2026-05-09"
+    "rM4RJmyeeFjC2F4mMS76upSzBL1rk9N5ZY": "2026-05-09",
+    "rfPs49UJodjtMuMWKQwd3Qpi8k94a52Qca": "2026-05-09",
+    "rfqjYRAFjCzXhim6Sb1RdoiZWFdojPvGsn": "2026-05-09"
   }
 }
