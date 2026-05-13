@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-13T08:30:09.306Z",
+  "lastUpdated": "2026-05-13T11:07:04.343Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -10017,8 +10017,8 @@
       "lastSeq": 2736362
     },
     "2026-05-13": {
-      "txCount": 3604,
-      "activeWallets": 54,
+      "txCount": 4713,
+      "activeWallets": 62,
       "walletAddresses": [
         "r3Q4ocxnFmSDN3UDdrL84AV84NrJ5gU2gD",
         "rsqswWxMv1ZDGkcxF2fhwCwZJQQ3FmGnLb",
@@ -10073,12 +10073,20 @@
         "rDHBBMt5SNbfEhM2cwj3BtofCSo8e5AweX",
         "rMA69kTJR6vat3LUANkPy3oDCcwjj3rcQK",
         "rDT8rfj8c4P59psBwmJoYQVniKNSjwQCBi",
-        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS"
+        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
+        "rGhGjw31wvioyQPx26ceNw8mhKirF4NyA5",
+        "rQrA6VWPUdgNYdGZSbbbWmBnBwaggooeJ6",
+        "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu",
+        "rJ8SuRSZYQtP4xnii2mjHrLy1Xxdxi7XUq",
+        "rQhVPGNXPCfWC7B7zdcJgSJuVsnpUFLvNt",
+        "rNSTC76gCcma4papfZhigeNWAUN8w8oog7",
+        "rBpbBMEDqqD1q3qhuLvwDtig2RTjT9jk5L",
+        "rBAYnxr8QuzPqDzQL93EJau64XQ2aY5eu8"
       ],
       "txTypeDistribution": {
-        "Payment": 2740,
-        "NFTokenMint": 442,
-        "NFTokenBurn": 422
+        "Payment": 3486,
+        "NFTokenMint": 558,
+        "NFTokenBurn": 669
       },
       "hourlyTxCounts": [
         437,
@@ -10089,10 +10097,10 @@
         439,
         421,
         429,
-        224,
-        0,
-        0,
-        0,
+        417,
+        439,
+        417,
+        60,
         0,
         0,
         0,
@@ -10106,11 +10114,11 @@
         0,
         0
       ],
-      "tps": 0.09,
+      "tps": 0.15,
       "avgFee": "0.00001000",
       "nodeCount": 51,
       "validatorCount": 49,
-      "lastSeq": 2747024
+      "lastSeq": 2750139
     }
   },
   "firstSeen": {
@@ -11554,6 +11562,10 @@
     "rKCu4X1GUGAPfceEQ4VFNaa7HDDZLB2t3k": "2026-05-13",
     "rPyqAuf66ka9a9YuhFNKSR97ELyhq1odY1": "2026-05-13",
     "r9vvhLzwm5YigZWxQZ9dEt1vaCaxKMbAYW": "2026-05-13",
-    "rDHBBMt5SNbfEhM2cwj3BtofCSo8e5AweX": "2026-05-13"
+    "rDHBBMt5SNbfEhM2cwj3BtofCSo8e5AweX": "2026-05-13",
+    "rGhGjw31wvioyQPx26ceNw8mhKirF4NyA5": "2026-05-13",
+    "rQrA6VWPUdgNYdGZSbbbWmBnBwaggooeJ6": "2026-05-13",
+    "rNSTC76gCcma4papfZhigeNWAUN8w8oog7": "2026-05-13",
+    "rBAYnxr8QuzPqDzQL93EJau64XQ2aY5eu8": "2026-05-13"
   }
 }
