@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-14T15:01:39.070Z",
+  "lastUpdated": "2026-05-14T17:16:34.779Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -10148,8 +10148,8 @@
       "lastSeq": 2765229
     },
     "2026-05-14": {
-      "txCount": 6284,
-      "activeWallets": 69,
+      "txCount": 7225,
+      "activeWallets": 75,
       "walletAddresses": [
         "rsqswWxMv1ZDGkcxF2fhwCwZJQQ3FmGnLb",
         "r3ASQLmivvjiXJdhwVcPYeBjvdBffMDd3Z",
@@ -10219,12 +10219,18 @@
         "r3CYDXmTdqz4mXKrB3xFqa8kMs76js9TRr",
         "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
         "rJ8SuRSZYQtP4xnii2mjHrLy1Xxdxi7XUq",
-        "rJLXZVdGZNecWvLEhjJBkdZmu9EZsDZBjd"
+        "rJLXZVdGZNecWvLEhjJBkdZmu9EZsDZBjd",
+        "rs5hbB6HCiYSonfz5Dtxi6yKQupZLMwcZQ",
+        "rpc9FcxtaNVdWonAXv3rABecNLx7kcA3sY",
+        "rJoXbqLJtsjA7HSEP1KaGEfcKiS8Vv2zsb",
+        "rKZAv7namwdt6RGK3cZ31KpV997sB5D6xU",
+        "rHTgM9rZBZkuqF5H8DQxFWTR7biXmMvPLm",
+        "rs7cAvmVkqBsyGXGnu1jjGbVgfvgmKFGhz"
       ],
       "txTypeDistribution": {
-        "Payment": 5150,
-        "NFTokenBurn": 594,
-        "NFTokenMint": 539,
+        "Payment": 5947,
+        "NFTokenBurn": 649,
+        "NFTokenMint": 628,
         "AccountSet": 1
       },
       "hourlyTxCounts": [
@@ -10243,9 +10249,9 @@
         424,
         391,
         405,
-        10,
-        0,
-        0,
+        410,
+        424,
+        117,
         0,
         0,
         0,
@@ -10253,11 +10259,11 @@
         0,
         0
       ],
-      "tps": 0.15,
+      "tps": 0.16,
       "avgFee": "0.00001000",
       "nodeCount": 51,
       "validatorCount": 47,
-      "lastSeq": 2783413
+      "lastSeq": 2786100
     }
   },
   "firstSeen": {
@@ -11724,6 +11730,7 @@
     "rpTw1L1pA13UvhivpR3fgPDuMHd21xPkvz": "2026-05-14",
     "r3RD35tb58DspjUESHdFFcXsXrof6pPb4S": "2026-05-14",
     "rQ32UooSB1Mb4CCJx64mBMw1XwrXk1jH1e": "2026-05-14",
-    "r3CYDXmTdqz4mXKrB3xFqa8kMs76js9TRr": "2026-05-14"
+    "r3CYDXmTdqz4mXKrB3xFqa8kMs76js9TRr": "2026-05-14",
+    "rs7cAvmVkqBsyGXGnu1jjGbVgfvgmKFGhz": "2026-05-14"
   }
 }
