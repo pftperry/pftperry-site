@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-17T08:06:22.542Z",
+  "lastUpdated": "2026-05-17T10:02:26.209Z",
   "days": {
     "2026-02-21": {
       "txCount": 9824,
@@ -10516,8 +10516,8 @@
       "lastSeq": 2850933
     },
     "2026-05-17": {
-      "txCount": 3348,
-      "activeWallets": 51,
+      "txCount": 4153,
+      "activeWallets": 54,
       "walletAddresses": [
         "r3Z2nH94JYvpivKYsDkD3HNpsw2h4rW7o2",
         "rJwq1Qzcfyg2aq9xUCRQNC83AJFD6t7EEw",
@@ -10569,12 +10569,15 @@
         "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
         "rKrrdNdfm1kkoAmEDZT4XCtUMvNQgfnnyp",
         "rKZ9SVg1z764ABrLQ3Q1Dh5PPR7gM1z4Df",
-        "rUgGHH68E9HMGSPzxBLfu4jGf5HLGwNTQT"
+        "rUgGHH68E9HMGSPzxBLfu4jGf5HLGwNTQT",
+        "rB1jgTLDHZofrueVqY9DiEdSvroMRzqthz",
+        "rfDGTtPUa75fKM4mjMy4mkyTF7xgrbr6V1",
+        "rEEEDmAKwqDrdYHUonvSrP2ENxXmeCUs3k"
       ],
       "txTypeDistribution": {
-        "Payment": 2683,
-        "NFTokenMint": 387,
-        "NFTokenBurn": 277,
+        "Payment": 3327,
+        "NFTokenMint": 474,
+        "NFTokenBurn": 351,
         "AccountSet": 1
       },
       "hourlyTxCounts": [
@@ -10586,9 +10589,9 @@
         414,
         431,
         388,
-        44,
-        0,
-        0,
+        423,
+        410,
+        16,
         0,
         0,
         0,
@@ -10603,11 +10606,11 @@
         0,
         0
       ],
-      "tps": 0.16,
+      "tps": 0.12,
       "avgFee": "0.00001000",
       "nodeCount": 51,
       "validatorCount": 47,
-      "lastSeq": 2861004
+      "lastSeq": 2863314
     }
   },
   "firstSeen": {
@@ -12129,6 +12132,9 @@
     "r9HGtwLGFLK6KX1vSaoQM7jH2zQkJey3ay": "2026-05-17",
     "rsyeH3SjXX1d5qn6BgW83fiyWBYJhDsFyC": "2026-05-17",
     "rKrrdNdfm1kkoAmEDZT4XCtUMvNQgfnnyp": "2026-05-17",
-    "rUgGHH68E9HMGSPzxBLfu4jGf5HLGwNTQT": "2026-05-17"
+    "rUgGHH68E9HMGSPzxBLfu4jGf5HLGwNTQT": "2026-05-17",
+    "rB1jgTLDHZofrueVqY9DiEdSvroMRzqthz": "2026-05-17",
+    "rfDGTtPUa75fKM4mjMy4mkyTF7xgrbr6V1": "2026-05-17",
+    "rEEEDmAKwqDrdYHUonvSrP2ENxXmeCUs3k": "2026-05-17"
   }
 }
