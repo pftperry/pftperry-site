@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-22T06:37:24.366Z",
+  "lastUpdated": "2026-05-22T10:14:07.495Z",
   "days": {
     "2026-02-22": {
       "txCount": 2566,
@@ -10967,8 +10967,8 @@
       "lastSeq": 2994354
     },
     "2026-05-22": {
-      "txCount": 2683,
-      "activeWallets": 48,
+      "txCount": 4234,
+      "activeWallets": 55,
       "walletAddresses": [
         "rnaVCAQLumAZP1nFQwBgKGgZsM9XKdYLPP",
         "rs1LDsa6wN8VeyUsWgJa1q6Sc35DJmX3cF",
@@ -11017,12 +11017,19 @@
         "rH3dfGifdXzghxKXS74WRA3WtdKLKGj5Um",
         "rwwuYnnm5pouV5FCF24bU7c98dvg4skbyf",
         "rGbBfmzpTV9GubYxPvyn2TQ75Ny5Qh3e2t",
-        "raavqhgwV2QtNZtdxWeTGogff9ArtzArfE"
+        "raavqhgwV2QtNZtdxWeTGogff9ArtzArfE",
+        "rKZ9SVg1z764ABrLQ3Q1Dh5PPR7gM1z4Df",
+        "rBTYXwQofjJraScghrzt9CUHCa1gzUxknC",
+        "r31Z5ej3eY64JiXn4qhRZhrRrBW1XNm2Th",
+        "rhsbPPsEd6hKP7QbXU3YWHMeR6NLodPhHs",
+        "rfqiamKNdRhn6ngg2qVeB6u8aummbjhNeV",
+        "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
+        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS"
       ],
       "txTypeDistribution": {
-        "Payment": 1976,
-        "NFTokenBurn": 366,
-        "NFTokenMint": 341
+        "Payment": 3162,
+        "NFTokenBurn": 538,
+        "NFTokenMint": 534
       },
       "hourlyTxCounts": [
         393,
@@ -11031,11 +11038,11 @@
         429,
         418,
         397,
-        255,
-        0,
-        0,
-        0,
-        0,
+        406,
+        457,
+        411,
+        428,
+        104,
         0,
         0,
         0,
@@ -11050,11 +11057,11 @@
         0,
         0
       ],
-      "tps": 0.15,
-      "avgFee": "0.00001000",
+      "tps": 0.14,
+      "avgFee": "0.00001019",
       "nodeCount": 50,
       "validatorCount": 48,
-      "lastSeq": 3002300
+      "lastSeq": 3006603
     }
   },
   "firstSeen": {
@@ -12719,6 +12726,9 @@
     "rGLHBvurmfR76ypnbnP8hRWsMnoU5gdvYp": "2026-05-21",
     "rn8uawnbM2LWKBgUtDpcQocTc8UZh6huf8": "2026-05-22",
     "rGbBfmzpTV9GubYxPvyn2TQ75Ny5Qh3e2t": "2026-05-22",
-    "raavqhgwV2QtNZtdxWeTGogff9ArtzArfE": "2026-05-22"
+    "raavqhgwV2QtNZtdxWeTGogff9ArtzArfE": "2026-05-22",
+    "r31Z5ej3eY64JiXn4qhRZhrRrBW1XNm2Th": "2026-05-22",
+    "rhsbPPsEd6hKP7QbXU3YWHMeR6NLodPhHs": "2026-05-22",
+    "rfqiamKNdRhn6ngg2qVeB6u8aummbjhNeV": "2026-05-22"
   }
 }
