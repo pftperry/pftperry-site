@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-22T12:36:29.726Z",
+  "lastUpdated": "2026-05-22T15:43:46.105Z",
   "days": {
     "2026-02-22": {
       "txCount": 2566,
@@ -10967,8 +10967,8 @@
       "lastSeq": 2994354
     },
     "2026-05-22": {
-      "txCount": 5153,
-      "activeWallets": 56,
+      "txCount": 6469,
+      "activeWallets": 59,
       "walletAddresses": [
         "rnaVCAQLumAZP1nFQwBgKGgZsM9XKdYLPP",
         "rs1LDsa6wN8VeyUsWgJa1q6Sc35DJmX3cF",
@@ -11025,12 +11025,15 @@
         "rfqiamKNdRhn6ngg2qVeB6u8aummbjhNeV",
         "r4WS8fhYgpvnV5j4qkb7yvbt96Bvx9gMZH",
         "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
-        "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo"
+        "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+        "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
+        "rM6m1NMkwWo9U65qF9AC4Pc54yaJrXZCdy",
+        "rN7yzuUSJ6NPGTSQAQdYmuPr7rahCWyJb9"
       ],
       "txTypeDistribution": {
-        "Payment": 3881,
-        "NFTokenBurn": 620,
-        "NFTokenMint": 652
+        "Payment": 4944,
+        "NFTokenBurn": 697,
+        "NFTokenMint": 828
       },
       "hourlyTxCounts": [
         393,
@@ -11045,10 +11048,10 @@
         428,
         413,
         384,
-        226,
-        0,
-        0,
-        0,
+        402,
+        432,
+        409,
+        299,
         0,
         0,
         0,
@@ -11058,11 +11061,11 @@
         0,
         0
       ],
-      "tps": 0.13,
-      "avgFee": "0.00001010",
+      "tps": 0.1,
+      "avgFee": "0.00001000",
       "nodeCount": 48,
       "validatorCount": 48,
-      "lastSeq": 3009435
+      "lastSeq": 3013153
     }
   },
   "firstSeen": {
@@ -12730,6 +12733,8 @@
     "raavqhgwV2QtNZtdxWeTGogff9ArtzArfE": "2026-05-22",
     "r31Z5ej3eY64JiXn4qhRZhrRrBW1XNm2Th": "2026-05-22",
     "rhsbPPsEd6hKP7QbXU3YWHMeR6NLodPhHs": "2026-05-22",
-    "rfqiamKNdRhn6ngg2qVeB6u8aummbjhNeV": "2026-05-22"
+    "rfqiamKNdRhn6ngg2qVeB6u8aummbjhNeV": "2026-05-22",
+    "rM6m1NMkwWo9U65qF9AC4Pc54yaJrXZCdy": "2026-05-22",
+    "rN7yzuUSJ6NPGTSQAQdYmuPr7rahCWyJb9": "2026-05-22"
   }
 }
