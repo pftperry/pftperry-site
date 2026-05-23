@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-23T01:52:00.707Z",
+  "lastUpdated": "2026-05-23T05:31:00.759Z",
   "days": {
     "2026-02-23": {
       "txCount": 9874,
@@ -10995,8 +10995,8 @@
       "lastSeq": 3022922
     },
     "2026-05-23": {
-      "txCount": 726,
-      "activeWallets": 36,
+      "txCount": 2239,
+      "activeWallets": 40,
       "walletAddresses": [
         "rfqiamKNdRhn6ngg2qVeB6u8aummbjhNeV",
         "rPVXjffArzPQtNwgaEA2q8QTUsFgt4y79q",
@@ -11033,20 +11033,24 @@
         "rwdm72S9YVKkZjeADKU2bbUMuY4vPnSfH7",
         "rhwiJxkiTkxTC65MrmLG7WiUkbiCyw2TaE",
         "rGBKxoTcavpfEso7ASRELZAMcCMqKa8oFk",
-        "rKt4peDozpRW9zdYGiTZC54DSNU3Af6pQE"
+        "rKt4peDozpRW9zdYGiTZC54DSNU3Af6pQE",
+        "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
+        "r9jZLJEqwjMSK8LsNnW2HYS9L55neZFk6t",
+        "rPtyTCRdi86HfeetMRtjyRRBrNEBsXFUZf",
+        "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97"
       ],
       "txTypeDistribution": {
-        "Payment": 594,
-        "NFTokenBurn": 54,
-        "NFTokenMint": 78
+        "Payment": 1774,
+        "NFTokenBurn": 198,
+        "NFTokenMint": 267
       },
       "hourlyTxCounts": [
         390,
-        336,
-        0,
-        0,
-        0,
-        0,
+        392,
+        411,
+        414,
+        418,
+        214,
         0,
         0,
         0,
@@ -11066,11 +11070,11 @@
         0,
         0
       ],
-      "tps": 0.14,
+      "tps": 0.12,
       "avgFee": "0.00001000",
-      "nodeCount": 48,
+      "nodeCount": 47,
       "validatorCount": 48,
-      "lastSeq": 3025242
+      "lastSeq": 3029587
     }
   },
   "firstSeen": {
@@ -12745,6 +12749,8 @@
     "rMP4aJPTFKgrSGf8MdRTAkYw8CmNT2abkr": "2026-05-22",
     "rJTcDFQbFtxVm1bibxmijuoDYYT9khPFu7": "2026-05-22",
     "rMytRHtDwHj3fxmaGQ1EBNPXn2HqKsmr68": "2026-05-22",
-    "rPEPkoBhhhJTGSLrrfZKgT42SXRS1w8pK7": "2026-05-23"
+    "rPEPkoBhhhJTGSLrrfZKgT42SXRS1w8pK7": "2026-05-23",
+    "r9jZLJEqwjMSK8LsNnW2HYS9L55neZFk6t": "2026-05-23",
+    "rPtyTCRdi86HfeetMRtjyRRBrNEBsXFUZf": "2026-05-23"
   }
 }
