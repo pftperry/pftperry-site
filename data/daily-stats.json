@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-23T12:54:34.966Z",
+  "lastUpdated": "2026-05-23T14:24:30.606Z",
   "days": {
     "2026-02-23": {
       "txCount": 9874,
@@ -10995,8 +10995,8 @@
       "lastSeq": 3022922
     },
     "2026-05-23": {
-      "txCount": 5446,
-      "activeWallets": 51,
+      "txCount": 6040,
+      "activeWallets": 57,
       "walletAddresses": [
         "rfqiamKNdRhn6ngg2qVeB6u8aummbjhNeV",
         "rPVXjffArzPQtNwgaEA2q8QTUsFgt4y79q",
@@ -11048,12 +11048,18 @@
         "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
         "rBTYXwQofjJraScghrzt9CUHCa1gzUxknC",
         "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu",
-        "rUWZ2oUPMLoSa23hkAJouroXr8YNxunuSU"
+        "rUWZ2oUPMLoSa23hkAJouroXr8YNxunuSU",
+        "rJ8SuRSZYQtP4xnii2mjHrLy1Xxdxi7XUq",
+        "radpEamhAfNyqUqnnrGz7VWSrFsVKWMY3Z",
+        "rDT8rfj8c4P59psBwmJoYQVniKNSjwQCBi",
+        "rJLXZVdGZNecWvLEhjJBkdZmu9EZsDZBjd",
+        "rwFDoJTitanVPFQY8kZmyKyv8hMxKHdarT",
+        "rH7Hwh5oJem1RFAiaSrdPW3VnV1sHsaTkS"
       ],
       "txTypeDistribution": {
-        "Payment": 4380,
-        "NFTokenBurn": 466,
-        "NFTokenMint": 600
+        "Payment": 4822,
+        "NFTokenBurn": 565,
+        "NFTokenMint": 653
       },
       "hourlyTxCounts": [
         390,
@@ -11068,9 +11074,9 @@
         445,
         430,
         417,
-        401,
-        0,
-        0,
+        439,
+        394,
+        162,
         0,
         0,
         0,
@@ -11081,11 +11087,11 @@
         0,
         0
       ],
-      "tps": 0.1,
-      "avgFee": "0.00001000",
+      "tps": 0.09,
+      "avgFee": "0.00001014",
       "nodeCount": 47,
       "validatorCount": 48,
-      "lastSeq": 3038403
+      "lastSeq": 3040188
     }
   },
   "firstSeen": {
@@ -12766,6 +12772,9 @@
     "r3R5rHDikycTPzYgCgPmeevSzUFBpuo7Ht": "2026-05-23",
     "rpWQNpZw7fhXG77M4ieguJSmsNCgc9VM3V": "2026-05-23",
     "rHZzki4wxH8t1Zc3nqkgcZkhQk7d31q7wk": "2026-05-23",
-    "rUWZ2oUPMLoSa23hkAJouroXr8YNxunuSU": "2026-05-23"
+    "rUWZ2oUPMLoSa23hkAJouroXr8YNxunuSU": "2026-05-23",
+    "radpEamhAfNyqUqnnrGz7VWSrFsVKWMY3Z": "2026-05-23",
+    "rwFDoJTitanVPFQY8kZmyKyv8hMxKHdarT": "2026-05-23",
+    "rH7Hwh5oJem1RFAiaSrdPW3VnV1sHsaTkS": "2026-05-23"
   }
 }
