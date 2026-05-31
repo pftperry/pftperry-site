@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-31T02:07:00.629Z",
+  "lastUpdated": "2026-05-31T06:37:32.443Z",
   "days": {
     "2026-03-03": {
       "txCount": 10198,
@@ -10879,8 +10879,8 @@
       "lastSeq": 3251672
     },
     "2026-05-31": {
-      "txCount": 867,
-      "activeWallets": 39,
+      "txCount": 2682,
+      "activeWallets": 45,
       "walletAddresses": [
         "rHpN6PKQNB98K24LnffsxcY5VYQzZcsibs",
         "rKQa1D2RUVnWaCrcpGRMdLdWitmtND8Xyi",
@@ -10920,21 +10920,27 @@
         "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
         "rHAckqP8mo66HFJDeHyciNSQTDnpAYbmvc",
         "r4XLZKYK63z4zW8ttKzgy8NVW1Noa1pRwj",
-        "rDEctdSURvTScTsaCUocxTZ5LWnF6FpZ5s"
+        "rDEctdSURvTScTsaCUocxTZ5LWnF6FpZ5s",
+        "rc8qDnPCSLczDHq9oBrBuohdp6yNFdS5Y",
+        "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
+        "rf7mcVnoXBkvQ7HCHzPbJKDzaHxwpTVPWC",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "r9AZofyqLAEq3FsHdziChQSACcqPc4Fy3u",
+        "rKZ9SVg1z764ABrLQ3Q1Dh5PPR7gM1z4Df"
       ],
       "txTypeDistribution": {
-        "Payment": 716,
-        "NFTokenMint": 87,
-        "NFTokenBurn": 64
+        "Payment": 2090,
+        "NFTokenMint": 327,
+        "NFTokenBurn": 265
       },
       "hourlyTxCounts": [
         408,
         419,
-        40,
-        0,
-        0,
-        0,
-        0,
+        365,
+        423,
+        398,
+        414,
+        255,
         0,
         0,
         0,
@@ -10957,7 +10963,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 52,
       "validatorCount": 50,
-      "lastSeq": 3254390
+      "lastSeq": 3259763
     }
   },
   "firstSeen": {
@@ -12766,6 +12772,9 @@
     "rD2mZDXcZkCzSWZYhVZnoDN9t8cLMFYKLY": "2026-05-30",
     "rsAAa4ukbdqfYEVFssiQSTJwVDHAwXKHrw": "2026-05-30",
     "rHAckqP8mo66HFJDeHyciNSQTDnpAYbmvc": "2026-05-31",
-    "rDEctdSURvTScTsaCUocxTZ5LWnF6FpZ5s": "2026-05-31"
+    "rDEctdSURvTScTsaCUocxTZ5LWnF6FpZ5s": "2026-05-31",
+    "rc8qDnPCSLczDHq9oBrBuohdp6yNFdS5Y": "2026-05-31",
+    "rf7mcVnoXBkvQ7HCHzPbJKDzaHxwpTVPWC": "2026-05-31",
+    "r9AZofyqLAEq3FsHdziChQSACcqPc4Fy3u": "2026-05-31"
   }
 }
