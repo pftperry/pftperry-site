@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-01T07:27:31.053Z",
+  "lastUpdated": "2026-06-01T13:08:10.238Z",
   "days": {
     "2026-03-04": {
       "txCount": 9944,
@@ -10864,8 +10864,8 @@
       "lastSeq": 3280364
     },
     "2026-06-01": {
-      "txCount": 3077,
-      "activeWallets": 47,
+      "txCount": 5466,
+      "activeWallets": 57,
       "walletAddresses": [
         "rHAckqP8mo66HFJDeHyciNSQTDnpAYbmvc",
         "r9AZofyqLAEq3FsHdziChQSACcqPc4Fy3u",
@@ -10913,12 +10913,22 @@
         "rU9ToUo4xNCnPgbRBABFSCu8jhiUstLE1Q",
         "rpzqZDmUb1oJ3K2WtsMAZPdCyssP4Kw8oo",
         "rfqKU7rr9knhMdzKpaCjMBcnR7axDGZb1W",
-        "rw8u9WksWNeG3MwNJQGzkvx9JGWuQPcDnP"
+        "rw8u9WksWNeG3MwNJQGzkvx9JGWuQPcDnP",
+        "rhXFnqNti1r137gcWb4aHtuwMFW81s2dTQ",
+        "rp3pWZ4RUuje1CQk2eUJVvc1FgyhBqi8h3",
+        "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu",
+        "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+        "r36cMjofhESkEUrZCdvqrot4y6PMj1qmS8",
+        "rUwWrJqaeAMn5f721LPW7Dqsshaw7YtTXt",
+        "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
+        "rKjozZiA9Yi97eHefiKZppxCcX3wEDkf4u",
+        "rKZAv7namwdt6RGK3cZ31KpV997sB5D6xU",
+        "rs5hbB6HCiYSonfz5Dtxi6yKQupZLMwcZQ"
       ],
       "txTypeDistribution": {
-        "Payment": 2267,
-        "NFTokenBurn": 442,
-        "NFTokenMint": 368
+        "Payment": 4092,
+        "NFTokenBurn": 722,
+        "NFTokenMint": 652
       },
       "hourlyTxCounts": [
         375,
@@ -10928,13 +10938,13 @@
         410,
         437,
         421,
-        180,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        408,
+        449,
+        451,
+        380,
+        403,
+        433,
+        45,
         0,
         0,
         0,
@@ -10950,7 +10960,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 49,
       "validatorCount": 52,
-      "lastSeq": 3289346
+      "lastSeq": 3296120
     }
   },
   "firstSeen": {
@@ -12784,6 +12794,9 @@
     "rU9ToUo4xNCnPgbRBABFSCu8jhiUstLE1Q": "2026-06-01",
     "rpzqZDmUb1oJ3K2WtsMAZPdCyssP4Kw8oo": "2026-06-01",
     "rfqKU7rr9knhMdzKpaCjMBcnR7axDGZb1W": "2026-06-01",
-    "rw8u9WksWNeG3MwNJQGzkvx9JGWuQPcDnP": "2026-06-01"
+    "rw8u9WksWNeG3MwNJQGzkvx9JGWuQPcDnP": "2026-06-01",
+    "rhXFnqNti1r137gcWb4aHtuwMFW81s2dTQ": "2026-06-01",
+    "rp3pWZ4RUuje1CQk2eUJVvc1FgyhBqi8h3": "2026-06-01",
+    "rKjozZiA9Yi97eHefiKZppxCcX3wEDkf4u": "2026-06-01"
   }
 }
