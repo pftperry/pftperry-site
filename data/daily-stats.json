@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-03T05:22:39.682Z",
+  "lastUpdated": "2026-06-03T10:14:51.868Z",
   "days": {
     "2026-03-06": {
       "txCount": 10098,
@@ -10825,8 +10825,8 @@
       "lastSeq": 3335598
     },
     "2026-06-03": {
-      "txCount": 2225,
-      "activeWallets": 44,
+      "txCount": 4286,
+      "activeWallets": 49,
       "walletAddresses": [
         "rhtadYG85N7JGjBqN6PsPifwprvpmTvzPJ",
         "rnpLzBizQfsnpgyknphxyzJ5Cgo5VFJtcd",
@@ -10871,12 +10871,18 @@
         "r4fE9Ywyyq55Cy788fSBtxM97pcTARHcEt",
         "r48j6mAywk8QCB6LiZckv98f4R6ZmD1Pn",
         "rs5gToNMtNDsbTdpj85tdrtGukXzc2VF97",
-        "rP5keRkeZtHKPdyoN5sDdRVbwEFYfUWijZ"
+        "rP5keRkeZtHKPdyoN5sDdRVbwEFYfUWijZ",
+        "ranJQW6paQkGHtUk4N9WdePwNGgHZdUDkW",
+        "rEfJgULfxd7WwE2odq4d9Qbo6Tgxp48GWm",
+        "rKxXH2Gi7HYHDmcVxmmGAJbeQ7M9JsRgvV",
+        "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
+        "rnmLkDT2SBeaFA5z2ogdUCbJ2GMzn2sLLu"
       ],
       "txTypeDistribution": {
-        "NFTokenMint": 282,
-        "Payment": 1686,
-        "NFTokenBurn": 257
+        "NFTokenMint": 459,
+        "Payment": 3229,
+        "NFTokenBurn": 597,
+        "AccountSet": 1
       },
       "hourlyTxCounts": [
         393,
@@ -10884,12 +10890,12 @@
         423,
         430,
         416,
-        134,
-        0,
-        0,
-        0,
-        0,
-        0,
+        395,
+        432,
+        429,
+        435,
+        419,
+        85,
         0,
         0,
         0,
@@ -10904,11 +10910,11 @@
         0,
         0
       ],
-      "tps": 0.1,
+      "tps": 0.08,
       "avgFee": "0.00001000",
       "nodeCount": 55,
       "validatorCount": 59,
-      "lastSeq": 3344079
+      "lastSeq": 3349890
     }
   },
   "firstSeen": {
@@ -12770,6 +12776,8 @@
     "rM2GpvpUZNT1E5mfFrngumPiwc7KyAhk9G": "2026-06-03",
     "r4fE9Ywyyq55Cy788fSBtxM97pcTARHcEt": "2026-06-03",
     "r48j6mAywk8QCB6LiZckv98f4R6ZmD1Pn": "2026-06-03",
-    "rP5keRkeZtHKPdyoN5sDdRVbwEFYfUWijZ": "2026-06-03"
+    "rP5keRkeZtHKPdyoN5sDdRVbwEFYfUWijZ": "2026-06-03",
+    "ranJQW6paQkGHtUk4N9WdePwNGgHZdUDkW": "2026-06-03",
+    "rEfJgULfxd7WwE2odq4d9Qbo6Tgxp48GWm": "2026-06-03"
   }
 }
