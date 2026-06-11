@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-11T15:29:17.640Z",
+  "lastUpdated": "2026-06-11T18:33:15.267Z",
   "days": {
     "2026-03-14": {
       "txCount": 10087,
@@ -10705,8 +10705,8 @@
       "lastSeq": 3566480
     },
     "2026-06-11": {
-      "txCount": 6581,
-      "activeWallets": 58,
+      "txCount": 7834,
+      "activeWallets": 63,
       "walletAddresses": [
         "rhnxtwpnbSU5DQkB1SFc8PEy27cfo9EgBa",
         "rfRrnpexvw3U6SCvmNecJz6cDrvDZo9EQB",
@@ -10765,12 +10765,17 @@
         "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
         "rnKbPdkqjWwhFJNyTMPuwfoqEac788ywvk",
         "rEHJkDT6PY19gPVMj7eoXHF6WbpoEiYwXF",
-        "raJNar9cEhVD4ArLKB4BKPapnvBXAD5MKR"
+        "raJNar9cEhVD4ArLKB4BKPapnvBXAD5MKR",
+        "r4r2Kfe7hH72gb1owkkrWa9miHE9n3xJi4",
+        "rNigQEP5edcpfFirsYJZkmvUX1Uzm2s4zL",
+        "rs8Mt9ANVNSZAaxDrvekSC3zVqCiCrZ7Ar",
+        "r3NQiiUCiNMacRWrf27Y9fZL2izn6an5b7",
+        "r4M8i9BYpoUyULEGE9WszS38mrYjnNU4xf"
       ],
       "txTypeDistribution": {
-        "NFTokenMint": 752,
-        "Payment": 5066,
-        "NFTokenBurn": 763
+        "NFTokenMint": 878,
+        "Payment": 6088,
+        "NFTokenBurn": 868
       },
       "hourlyTxCounts": [
         428,
@@ -10788,10 +10793,10 @@
         405,
         396,
         435,
-        229,
-        0,
-        0,
-        0,
+        422,
+        405,
+        429,
+        226,
         0,
         0,
         0,
@@ -10802,7 +10807,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 51,
       "validatorCount": 56,
-      "lastSeq": 3585077
+      "lastSeq": 3588736
     }
   },
   "firstSeen": {
@@ -12807,6 +12812,9 @@
     "r9uTq9Csp8p7voZjUCTvaQV2G7yXAUtrYG": "2026-06-11",
     "rUjqjrb1rH6jESDvTzjYbLbd3ZUcDrPFdn": "2026-06-11",
     "rQwWuqGzwfzMMwdaYEgxogbwdu16cLNF4J": "2026-06-11",
-    "raJNar9cEhVD4ArLKB4BKPapnvBXAD5MKR": "2026-06-11"
+    "raJNar9cEhVD4ArLKB4BKPapnvBXAD5MKR": "2026-06-11",
+    "rs8Mt9ANVNSZAaxDrvekSC3zVqCiCrZ7Ar": "2026-06-11",
+    "r3NQiiUCiNMacRWrf27Y9fZL2izn6an5b7": "2026-06-11",
+    "r4M8i9BYpoUyULEGE9WszS38mrYjnNU4xf": "2026-06-11"
   }
 }
