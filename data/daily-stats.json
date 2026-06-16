@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T00:20:56.710Z",
+  "lastUpdated": "2026-06-16T05:41:13.331Z",
   "days": {
     "2026-03-19": {
       "txCount": 9566,
@@ -10604,8 +10604,8 @@
       "lastSeq": 3707889
     },
     "2026-06-16": {
-      "txCount": 149,
-      "activeWallets": 35,
+      "txCount": 2399,
+      "activeWallets": 40,
       "walletAddresses": [
         "rE4xmVw98ABYYcVMfkoBy1eJEBHWHdsjCN",
         "rGAMCMEM3RpqnsV65n7uVLoEkwQJZaG6cR",
@@ -10641,20 +10641,25 @@
         "rPgBi9DyPwD81msJKqxnqSzZjnzW7cQGSE",
         "rBDcZHpFggDzwtqrtfWTUM1drRFstrQdj1",
         "rULSF7WfYYdJw4dgZrf34WCqN5UNQH3TPf",
-        "rUWwpgN2ETHgBAGh5JZb9eu3qBSxxK7CjE"
+        "rUWwpgN2ETHgBAGh5JZb9eu3qBSxxK7CjE",
+        "rKTbxK4DRZii5hFmvqJ5z5nxvD6uYCgot3",
+        "rDT8rfj8c4P59psBwmJoYQVniKNSjwQCBi",
+        "r7Giz3xTXoXpfjt3UFjkBfvnbDA8P981g",
+        "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
+        "rfX7QWQT9gwJEWByRsTbvP91kEZxfG72rc"
       ],
       "txTypeDistribution": {
-        "Payment": 115,
-        "NFTokenMint": 17,
-        "NFTokenBurn": 17
+        "Payment": 1739,
+        "NFTokenMint": 306,
+        "NFTokenBurn": 354
       },
       "hourlyTxCounts": [
-        149,
-        0,
-        0,
-        0,
-        0,
-        0,
+        446,
+        461,
+        417,
+        385,
+        417,
+        273,
         0,
         0,
         0,
@@ -10674,11 +10679,11 @@
         0,
         0
       ],
-      "tps": 0.11,
+      "tps": 0.1,
       "avgFee": "0.00001000",
       "nodeCount": 55,
       "validatorCount": 57,
-      "lastSeq": 3710053
+      "lastSeq": 3716409
     }
   },
   "firstSeen": {
@@ -12756,6 +12761,8 @@
     "rPnsKcAAdshySC7huz9bMjxZBSTgHrtrSk": "2026-06-15",
     "r4tqfhEKSLjhvoSRzVEHYwc3iKfcPr5Xny": "2026-06-15",
     "rf4fbK7xuXVAAnWHKg5uq3mKJHTe2vindk": "2026-06-16",
-    "rMn57UBkSR9DQhwdnm4hhRw6bDRxvBjTZr": "2026-06-16"
+    "rMn57UBkSR9DQhwdnm4hhRw6bDRxvBjTZr": "2026-06-16",
+    "r7Giz3xTXoXpfjt3UFjkBfvnbDA8P981g": "2026-06-16",
+    "rfX7QWQT9gwJEWByRsTbvP91kEZxfG72rc": "2026-06-16"
   }
 }
