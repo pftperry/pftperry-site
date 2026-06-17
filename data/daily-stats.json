@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T15:26:17.151Z",
+  "lastUpdated": "2026-06-17T18:00:39.841Z",
   "days": {
     "2026-03-20": {
       "txCount": 9888,
@@ -10578,8 +10578,8 @@
       "lastSeq": 3737453
     },
     "2026-06-17": {
-      "txCount": 6414,
-      "activeWallets": 55,
+      "txCount": 7596,
+      "activeWallets": 60,
       "walletAddresses": [
         "rKGFzzKPZusWhwvdxAWTjKUXSCUYAvd4XM",
         "rN3TfeMqDQKEex3wCa1DQ71AwSmBJPe8HW",
@@ -10635,12 +10635,17 @@
         "rBJnsdrU21nJRJjM7HPFBgFBBGmKAmDTh1",
         "rsXdPPwoPHS9dbZVMoxrWiLTtvdGD2EBhu",
         "rEHJkDT6PY19gPVMj7eoXHF6WbpoEiYwXF",
-        "r9hrwWd6oYMwJXoBNgs87nabVv3m5xfhw5"
+        "r9hrwWd6oYMwJXoBNgs87nabVv3m5xfhw5",
+        "rGyfn2U8Av42B1nQRnL9gmkn6Lzv6oCyuo",
+        "rKPoW95tMpPHRgAcSxbvjgNUg8LefhiXp3",
+        "rJvvr2dsycG9AAZ5VbfDcbkxwSptcquY8R",
+        "rfMZSS4LtXsCuxQqJktx5zAoieYkqWvFUz",
+        "rfmdkPTQSXnu3qVW7ib85BE6ixkfeXEgMB"
       ],
       "txTypeDistribution": {
-        "Payment": 5088,
-        "NFTokenBurn": 679,
-        "NFTokenMint": 647
+        "Payment": 5990,
+        "NFTokenBurn": 841,
+        "NFTokenMint": 765
       },
       "hourlyTxCounts": [
         429,
@@ -10658,21 +10663,21 @@
         441,
         385,
         426,
-        164,
-        0,
-        0,
-        0,
+        448,
+        438,
+        457,
+        3,
         0,
         0,
         0,
         0,
         0
       ],
-      "tps": 0.07,
-      "avgFee": "0.00001020",
+      "tps": 0.12,
+      "avgFee": "0.00001011",
       "nodeCount": 55,
       "validatorCount": 57,
-      "lastSeq": 3756639
+      "lastSeq": 3759710
     }
   },
   "firstSeen": {
@@ -12775,6 +12780,9 @@
     "rpGz91qw1QJi1JEwEkiHdsLFEfzmgHUi2K": "2026-06-17",
     "rwYeYtAvEzccKE7nKwk8DNsm1ZuH4uKPy6": "2026-06-17",
     "rBJnsdrU21nJRJjM7HPFBgFBBGmKAmDTh1": "2026-06-17",
-    "rsXdPPwoPHS9dbZVMoxrWiLTtvdGD2EBhu": "2026-06-17"
+    "rsXdPPwoPHS9dbZVMoxrWiLTtvdGD2EBhu": "2026-06-17",
+    "rGyfn2U8Av42B1nQRnL9gmkn6Lzv6oCyuo": "2026-06-17",
+    "rJvvr2dsycG9AAZ5VbfDcbkxwSptcquY8R": "2026-06-17",
+    "rfMZSS4LtXsCuxQqJktx5zAoieYkqWvFUz": "2026-06-17"
   }
 }
