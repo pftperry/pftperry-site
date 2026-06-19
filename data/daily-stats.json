@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T00:07:50.945Z",
+  "lastUpdated": "2026-06-19T05:31:00.235Z",
   "days": {
     "2026-03-22": {
       "txCount": 9775,
@@ -10539,8 +10539,8 @@
       "lastSeq": 3793620
     },
     "2026-06-19": {
-      "txCount": 52,
-      "activeWallets": 25,
+      "txCount": 2340,
+      "activeWallets": 37,
       "walletAddresses": [
         "rhq99hgZTfDi21RfMzkdYai927qSEzQSRC",
         "rN1ZRWjxo1f69KoJV3KHirikogQsbbT7Vf",
@@ -10566,20 +10566,32 @@
         "rGyfn2U8Av42B1nQRnL9gmkn6Lzv6oCyuo",
         "r3QirkwdbjrqKHYYN9xrgdYajAsA2oa8Lt",
         "rPBUyNcdKucb34m7V8LRpKPC3a2gbJpM1u",
-        "r7sV7bHqArwLcXkRFLeZMESgnAqhfUirX"
+        "r7sV7bHqArwLcXkRFLeZMESgnAqhfUirX",
+        "rDkia2B4v2rwPjcPDHgjS6oSnf9SY1mckL",
+        "rZm12LACMqcmGXrM5LsBvmsHnMcpzwJp9",
+        "rG9gF6Hygop7MUSBFcBemcuRRvQmJMMf9z",
+        "rsf3d3gpiHLydyWXdE23JuJ4wSKE6CJFDW",
+        "rwYeYtAvEzccKE7nKwk8DNsm1ZuH4uKPy6",
+        "rBrpTETnX52zjvWFKhN5oiZ6jPthDMGzU8",
+        "rP74DcCYzQBn2cLC3D5DRJmmnD2kp7sBze",
+        "raUWC44pUJdFgrQYvP8aVUTMJ9TJWSTbsW",
+        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
+        "rBK9putHxEwcrww6vK5MZdDXRqW8uEiVbD",
+        "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
+        "r9QsVuqiS5Kn5ZcYA1NpjP2LLf31E3rJyW"
       ],
       "txTypeDistribution": {
-        "Payment": 40,
-        "NFTokenMint": 4,
-        "NFTokenBurn": 8
+        "Payment": 1950,
+        "NFTokenMint": 226,
+        "NFTokenBurn": 164
       },
       "hourlyTxCounts": [
-        52,
-        0,
-        0,
-        0,
-        0,
-        0,
+        465,
+        394,
+        427,
+        447,
+        422,
+        185,
         0,
         0,
         0,
@@ -10599,11 +10611,11 @@
         0,
         0
       ],
-      "tps": 0.13,
+      "tps": 0.12,
       "avgFee": "0.00001000",
       "nodeCount": 55,
       "validatorCount": 57,
-      "lastSeq": 3795605
+      "lastSeq": 3802014
     }
   },
   "firstSeen": {
@@ -12728,6 +12740,8 @@
     "rNUvcnGmajqkTfFe2BYM6StCBgT2gP2Bn3": "2026-06-18",
     "rG9yZXtdiEurADdRAHz9e8ryv1dF9ebvdQ": "2026-06-18",
     "r7sV7bHqArwLcXkRFLeZMESgnAqhfUirX": "2026-06-18",
-    "rP74DcCYzQBn2cLC3D5DRJmmnD2kp7sBze": "2026-06-18"
+    "rP74DcCYzQBn2cLC3D5DRJmmnD2kp7sBze": "2026-06-18",
+    "rBK9putHxEwcrww6vK5MZdDXRqW8uEiVbD": "2026-06-19",
+    "r9QsVuqiS5Kn5ZcYA1NpjP2LLf31E3rJyW": "2026-06-19"
   }
 }
