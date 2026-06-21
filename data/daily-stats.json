@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T08:15:34.834Z",
+  "lastUpdated": "2026-06-21T11:27:09.855Z",
   "days": {
     "2026-03-24": {
       "txCount": 9729,
@@ -10509,8 +10509,8 @@
       "lastSeq": 3852615
     },
     "2026-06-21": {
-      "txCount": 3361,
-      "activeWallets": 42,
+      "txCount": 4634,
+      "activeWallets": 47,
       "walletAddresses": [
         "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
         "rEKBakvM4cp1ckxpksbwT4ZmFncT4AYGoe",
@@ -10553,12 +10553,17 @@
         "r3ug1sgen3mTfAqdoS3V2D3k23v7r3xbPH",
         "rNdmS5u6LS4rhwn3ppvXR9DQ7KeKS7qr3U",
         "rUjqjrb1rH6jESDvTzjYbLbd3ZUcDrPFdn",
-        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS"
+        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
+        "rfmxrfQZvRkeWW1rzECAg1MBTcg2LbtKv9",
+        "rPJ3VzY3jiKk2FwGMSYYzshwVC7AL41jE2",
+        "rGqvorV7d6daE1wPx1TvLXNTQpBaxvQM7H",
+        "rak5kB5NsKJkWskEWNej8jnvMbHZ4rMgxt",
+        "r3easeFysdZDGCrXGVgwHH6yvsQPiz2t22"
       ],
       "txTypeDistribution": {
-        "Payment": 2589,
-        "NFTokenMint": 367,
-        "NFTokenBurn": 405
+        "Payment": 3613,
+        "NFTokenMint": 497,
+        "NFTokenBurn": 524
       },
       "hourlyTxCounts": [
         422,
@@ -10569,10 +10574,10 @@
         426,
         400,
         421,
-        114,
-        0,
-        0,
-        0,
+        446,
+        395,
+        381,
+        165,
         0,
         0,
         0,
@@ -10586,11 +10591,11 @@
         0,
         0
       ],
-      "tps": 0.09,
+      "tps": 0.07,
       "avgFee": "0.00001000",
       "nodeCount": 55,
       "validatorCount": 55,
-      "lastSeq": 3862487
+      "lastSeq": 3866303
     }
   },
   "firstSeen": {
@@ -12752,6 +12757,9 @@
     "raSpsrFCbmLWBvkfiQ6tMDBQRbKbDkszWw": "2026-06-21",
     "rUVTDXgUiPAN1xjm2Zi6YCE7SMc9vtZiyK": "2026-06-21",
     "r3ug1sgen3mTfAqdoS3V2D3k23v7r3xbPH": "2026-06-21",
-    "rNdmS5u6LS4rhwn3ppvXR9DQ7KeKS7qr3U": "2026-06-21"
+    "rNdmS5u6LS4rhwn3ppvXR9DQ7KeKS7qr3U": "2026-06-21",
+    "rfmxrfQZvRkeWW1rzECAg1MBTcg2LbtKv9": "2026-06-21",
+    "rak5kB5NsKJkWskEWNej8jnvMbHZ4rMgxt": "2026-06-21",
+    "r3easeFysdZDGCrXGVgwHH6yvsQPiz2t22": "2026-06-21"
   }
 }
