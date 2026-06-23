@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T05:35:51.805Z",
+  "lastUpdated": "2026-06-23T08:54:08.505Z",
   "days": {
     "2026-03-26": {
       "txCount": 9604,
@@ -10457,8 +10457,8 @@
       "lastSeq": 3908890
     },
     "2026-06-23": {
-      "txCount": 2314,
-      "activeWallets": 36,
+      "txCount": 3698,
+      "activeWallets": 41,
       "walletAddresses": [
         "rJsurSqkh4Xsjs7sM7Mh9QYhVcea2EnJtG",
         "rBfX15unDjtSwcuuu3ZFvMJ2vtBxMqeucC",
@@ -10495,12 +10495,17 @@
         "rEkbwhPFHNrGvZHHxA33mykhAQPeqCCWDc",
         "rHR5WT6pYXQVpBxhoZn4XDD3rGwEiBE16F",
         "raVJqrxFa7PQFMhgboodvh4ks2JYbQkqHt",
-        "rnxaDuUPsWbxXF3J8DB2jjUTmxNJerfUS8"
+        "rnxaDuUPsWbxXF3J8DB2jjUTmxNJerfUS8",
+        "rQHcLD25fQ9J5VdNapqKEdCwkrn2eLwpfq",
+        "rUjqjrb1rH6jESDvTzjYbLbd3ZUcDrPFdn",
+        "rLnaMA6CiRFDu3YTsKx92qobN3HxppDYEH",
+        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
+        "r4JNytvMCHbhiKbJhLY5C5AJFtZB7ciqJy"
       ],
       "txTypeDistribution": {
-        "Payment": 1746,
-        "NFTokenMint": 286,
-        "NFTokenBurn": 282
+        "Payment": 2769,
+        "NFTokenMint": 446,
+        "NFTokenBurn": 483
       },
       "hourlyTxCounts": [
         431,
@@ -10508,10 +10513,10 @@
         407,
         406,
         413,
-        227,
-        0,
-        0,
-        0,
+        395,
+        472,
+        376,
+        368,
         0,
         0,
         0,
@@ -10528,11 +10533,11 @@
         0,
         0
       ],
-      "tps": 0.14,
+      "tps": 0.05,
       "avgFee": "0.00001000",
       "nodeCount": 55,
       "validatorCount": 52,
-      "lastSeq": 3916548
+      "lastSeq": 3920492
     }
   },
   "firstSeen": {
@@ -12721,6 +12726,9 @@
     "rJhKQCAABW7RLh4hHRbJCYssT4WQGEdU6a": "2026-06-22",
     "rEkbwhPFHNrGvZHHxA33mykhAQPeqCCWDc": "2026-06-22",
     "rMWnsgfoLh7b338zMWTvFLUzEW9gm2SgBk": "2026-06-23",
-    "raVJqrxFa7PQFMhgboodvh4ks2JYbQkqHt": "2026-06-23"
+    "raVJqrxFa7PQFMhgboodvh4ks2JYbQkqHt": "2026-06-23",
+    "rQHcLD25fQ9J5VdNapqKEdCwkrn2eLwpfq": "2026-06-23",
+    "rLnaMA6CiRFDu3YTsKx92qobN3HxppDYEH": "2026-06-23",
+    "r4JNytvMCHbhiKbJhLY5C5AJFtZB7ciqJy": "2026-06-23"
   }
 }
