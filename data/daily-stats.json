@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T21:08:52.511Z",
+  "lastUpdated": "2026-06-25T22:53:07.870Z",
   "days": {
     "2026-03-28": {
       "txCount": 9517,
@@ -10414,8 +10414,8 @@
       "lastSeq": 3967038
     },
     "2026-06-25": {
-      "txCount": 8667,
-      "activeWallets": 49,
+      "txCount": 9386,
+      "activeWallets": 53,
       "walletAddresses": [
         "rwaUf3m7oLpqYvh1tzodKS8F6V5NCVEfFS",
         "rNYXXCR6WXctqg89cP68AZssK5XszAy8pX",
@@ -10465,12 +10465,16 @@
         "rBnNjQXLAUkP61ub1A8vVN4MN5o5AQX6TJ",
         "rNWUaZKp9HrzheGxQtFpj8STuvTqoc11nG",
         "rfmdkPTQSXnu3qVW7ib85BE6ixkfeXEgMB",
-        "r9JGyq16xJeCczCJpJtWzxgmNo86xfEhcs"
+        "r9JGyq16xJeCczCJpJtWzxgmNo86xfEhcs",
+        "rGuD7xNCdE323HrraHGsyLu7e3VpWbb4MW",
+        "r3UugeD11qsDvamg2kfqhE6kUfjhDp2zKD",
+        "rEKWxE1ABS6iFNFneMKvNAHnZbCpfP5DRS",
+        "rGbmKTy8NKbMwPxuuQNjP2QXsGzdEgNSUb"
       ],
       "txTypeDistribution": {
-        "Payment": 6620,
-        "NFTokenBurn": 1004,
-        "NFTokenMint": 1043
+        "Payment": 7142,
+        "NFTokenBurn": 1125,
+        "NFTokenMint": 1119
       },
       "hourlyTxCounts": [
         403,
@@ -10494,15 +10498,15 @@
         409,
         431,
         427,
-        46,
-        0,
+        389,
+        376,
         0
       ],
-      "tps": 0.07,
+      "tps": 0.11,
       "avgFee": "0.00001000",
       "nodeCount": 55,
       "validatorCount": 53,
-      "lastSeq": 3992316
+      "lastSeq": 3994387
     }
   },
   "firstSeen": {
@@ -12733,6 +12737,10 @@
     "rhRjwHxassazM1PhY3duhtb8k1HYTPfUee": "2026-06-25",
     "rBnNjQXLAUkP61ub1A8vVN4MN5o5AQX6TJ": "2026-06-25",
     "rNWUaZKp9HrzheGxQtFpj8STuvTqoc11nG": "2026-06-25",
-    "r9JGyq16xJeCczCJpJtWzxgmNo86xfEhcs": "2026-06-25"
+    "r9JGyq16xJeCczCJpJtWzxgmNo86xfEhcs": "2026-06-25",
+    "rGuD7xNCdE323HrraHGsyLu7e3VpWbb4MW": "2026-06-25",
+    "r3UugeD11qsDvamg2kfqhE6kUfjhDp2zKD": "2026-06-25",
+    "rEKWxE1ABS6iFNFneMKvNAHnZbCpfP5DRS": "2026-06-25",
+    "rGbmKTy8NKbMwPxuuQNjP2QXsGzdEgNSUb": "2026-06-25"
   }
 }
