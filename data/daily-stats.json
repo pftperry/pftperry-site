@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T11:20:08.931Z",
+  "lastUpdated": "2026-06-26T13:26:04.410Z",
   "days": {
     "2026-03-29": {
       "txCount": 9909,
@@ -10396,8 +10396,8 @@
       "lastSeq": 3994387
     },
     "2026-06-26": {
-      "txCount": 4657,
-      "activeWallets": 40,
+      "txCount": 5505,
+      "activeWallets": 43,
       "walletAddresses": [
         "rMWnsgfoLh7b338zMWTvFLUzEW9gm2SgBk",
         "rEDT9guELembwyafvFzSRj9wMtgvdyGHEb",
@@ -10438,12 +10438,15 @@
         "r4JSVnupwUphWQJTR4eB4krA27yaErqWHt",
         "r4DtVorC2P7txpBXdprb9mhawwEJ9sFTXk",
         "rMgmtxABcoogH12a4TTEadSP3Zktvcdufd",
-        "rNEbLj7x8bCu5N5PCx7P7rtBJb2ge5FuNJ"
+        "rNEbLj7x8bCu5N5PCx7P7rtBJb2ge5FuNJ",
+        "rMLNdFZLYw1zoy7A6hwSiASYBUwdD5mHy8",
+        "rDbmK6N4ccchFpB59xJg4LhfpvBVS7vBMH",
+        "r4KpVvZQ6g7on3Eae1NMwqN3nhfkw77TEY"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 432,
-        "Payment": 3712,
-        "NFTokenMint": 513
+        "NFTokenBurn": 588,
+        "Payment": 4288,
+        "NFTokenMint": 629
       },
       "hourlyTxCounts": [
         430,
@@ -10457,9 +10460,9 @@
         444,
         388,
         425,
-        115,
-        0,
-        0,
+        366,
+        444,
+        153,
         0,
         0,
         0,
@@ -10471,11 +10474,11 @@
         0,
         0
       ],
-      "tps": 0.08,
+      "tps": 0.17,
       "avgFee": "0.00001000",
       "nodeCount": 54,
       "validatorCount": 53,
-      "lastSeq": 4009220
+      "lastSeq": 4011721
     }
   },
   "firstSeen": {
@@ -12717,6 +12720,9 @@
     "r4JSVnupwUphWQJTR4eB4krA27yaErqWHt": "2026-06-26",
     "r4DtVorC2P7txpBXdprb9mhawwEJ9sFTXk": "2026-06-26",
     "rMgmtxABcoogH12a4TTEadSP3Zktvcdufd": "2026-06-26",
-    "rNEbLj7x8bCu5N5PCx7P7rtBJb2ge5FuNJ": "2026-06-26"
+    "rNEbLj7x8bCu5N5PCx7P7rtBJb2ge5FuNJ": "2026-06-26",
+    "rMLNdFZLYw1zoy7A6hwSiASYBUwdD5mHy8": "2026-06-26",
+    "rDbmK6N4ccchFpB59xJg4LhfpvBVS7vBMH": "2026-06-26",
+    "r4KpVvZQ6g7on3Eae1NMwqN3nhfkw77TEY": "2026-06-26"
   }
 }
