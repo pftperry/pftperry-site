@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T07:20:23.640Z",
+  "lastUpdated": "2026-06-29T12:14:37.595Z",
   "days": {
     "2026-04-01": {
       "txCount": 9669,
@@ -10306,8 +10306,8 @@
       "lastSeq": 4081482
     },
     "2026-06-29": {
-      "txCount": 2927,
-      "activeWallets": 36,
+      "txCount": 4874,
+      "activeWallets": 39,
       "walletAddresses": [
         "r9f2VZe4kZ18j4vpnXNoA3nmMBSLq2W8qe",
         "rF843eES3ggm7DnnavWDV5S9cxYomMXe9",
@@ -10344,12 +10344,15 @@
         "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
         "rEdRb8xTYWBZ9zDoYDxeZppH9Bbay174oe",
         "rLBgyFtAvohbvwCZCzdevcfEPxExq2Uh79",
-        "rsBNJeRGhfzjn7R9o1bqjH17ZjTmP487c5"
+        "rsBNJeRGhfzjn7R9o1bqjH17ZjTmP487c5",
+        "rUjqjrb1rH6jESDvTzjYbLbd3ZUcDrPFdn",
+        "raPDi83GxWkHeytkr3pmJp28gb8Js1dAv7",
+        "rpb6W2a3Dg6LKfj85HA7Jvm8JX9QSMMNF6"
       ],
       "txTypeDistribution": {
-        "Payment": 2259,
-        "NFTokenMint": 382,
-        "NFTokenBurn": 286
+        "Payment": 3760,
+        "NFTokenMint": 647,
+        "NFTokenBurn": 467
       },
       "hourlyTxCounts": [
         404,
@@ -10359,12 +10362,12 @@
         423,
         377,
         380,
-        139,
-        0,
-        0,
-        0,
-        0,
-        0,
+        423,
+        395,
+        412,
+        397,
+        370,
+        89,
         0,
         0,
         0,
@@ -10377,11 +10380,11 @@
         0,
         0
       ],
-      "tps": 0.16,
+      "tps": 0.11,
       "avgFee": "0.00001000",
-      "nodeCount": 55,
+      "nodeCount": 54,
       "validatorCount": 52,
-      "lastSeq": 4090262
+      "lastSeq": 4096103
     }
   },
   "firstSeen": {
@@ -12670,6 +12673,7 @@
     "rPhGfDZ3bSd9QGpU3PFk5xkiHutbYtddaw": "2026-06-28",
     "rEdRb8xTYWBZ9zDoYDxeZppH9Bbay174oe": "2026-06-29",
     "rLBgyFtAvohbvwCZCzdevcfEPxExq2Uh79": "2026-06-29",
-    "rsBNJeRGhfzjn7R9o1bqjH17ZjTmP487c5": "2026-06-29"
+    "rsBNJeRGhfzjn7R9o1bqjH17ZjTmP487c5": "2026-06-29",
+    "rpb6W2a3Dg6LKfj85HA7Jvm8JX9QSMMNF6": "2026-06-29"
   }
 }
