@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T02:55:41.397Z",
+  "lastUpdated": "2026-06-29T07:20:23.640Z",
   "days": {
     "2026-04-01": {
       "txCount": 9669,
@@ -10306,8 +10306,8 @@
       "lastSeq": 4081482
     },
     "2026-06-29": {
-      "txCount": 1184,
-      "activeWallets": 33,
+      "txCount": 2927,
+      "activeWallets": 36,
       "walletAddresses": [
         "r9f2VZe4kZ18j4vpnXNoA3nmMBSLq2W8qe",
         "rF843eES3ggm7DnnavWDV5S9cxYomMXe9",
@@ -10341,22 +10341,25 @@
         "rMqiME3j87eo8GJzPbbUefUtJef75GSUtF",
         "rEcZdMv7UPV8rjyGmagF8w4roUS8qcLQ9C",
         "rsVf8gQufj4X8WFB4FFtAXVAJPF2pE7e43",
-        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR"
+        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
+        "rEdRb8xTYWBZ9zDoYDxeZppH9Bbay174oe",
+        "rLBgyFtAvohbvwCZCzdevcfEPxExq2Uh79",
+        "rsBNJeRGhfzjn7R9o1bqjH17ZjTmP487c5"
       ],
       "txTypeDistribution": {
-        "Payment": 968,
-        "NFTokenMint": 144,
-        "NFTokenBurn": 72
+        "Payment": 2259,
+        "NFTokenMint": 382,
+        "NFTokenBurn": 286
       },
       "hourlyTxCounts": [
         404,
         380,
+        424,
         400,
-        0,
-        0,
-        0,
-        0,
-        0,
+        423,
+        377,
+        380,
+        139,
         0,
         0,
         0,
@@ -10374,11 +10377,11 @@
         0,
         0
       ],
-      "tps": 0.18,
+      "tps": 0.16,
       "avgFee": "0.00001000",
       "nodeCount": 55,
       "validatorCount": 52,
-      "lastSeq": 4085009
+      "lastSeq": 4090262
     }
   },
   "firstSeen": {
@@ -12664,6 +12667,9 @@
     "rEmdYKiUHvTYsG21C3ityZTzqPL44hKhuT": "2026-06-28",
     "ra7GSQzxYApSASWRgSAQ9bUUXubRa9uwxp": "2026-06-28",
     "rG4GmUvJS6hJDJyHN9gh25GASMhzRJu5J8": "2026-06-28",
-    "rPhGfDZ3bSd9QGpU3PFk5xkiHutbYtddaw": "2026-06-28"
+    "rPhGfDZ3bSd9QGpU3PFk5xkiHutbYtddaw": "2026-06-28",
+    "rEdRb8xTYWBZ9zDoYDxeZppH9Bbay174oe": "2026-06-29",
+    "rLBgyFtAvohbvwCZCzdevcfEPxExq2Uh79": "2026-06-29",
+    "rsBNJeRGhfzjn7R9o1bqjH17ZjTmP487c5": "2026-06-29"
   }
 }
