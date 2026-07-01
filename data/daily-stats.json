@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T06:49:26.871Z",
+  "lastUpdated": "2026-07-01T10:36:34.418Z",
   "days": {
     "2026-04-03": {
       "txCount": 9832,
@@ -10245,8 +10245,8 @@
       "lastSeq": 4138641
     },
     "2026-07-01": {
-      "txCount": 2783,
-      "activeWallets": 38,
+      "txCount": 4318,
+      "activeWallets": 43,
       "walletAddresses": [
         "rsBNJeRGhfzjn7R9o1bqjH17ZjTmP487c5",
         "r9gtD21KqNoWTSrffQJstPUS4Dx8uDMLFf",
@@ -10285,12 +10285,17 @@
         "rMTxhcXKPFoUBLRmVt11yno5dz3KJmfvn1",
         "raHtaLrksALGLC6mCov6fvMJTMyGWhePRT",
         "rKpnQDWgRsV9d716BhW5uhRs8kPHQuK7eA",
-        "rNWMbZ8zXq4CRMhYdQFYHFoYKUCuw3Chsf"
+        "rNWMbZ8zXq4CRMhYdQFYHFoYKUCuw3Chsf",
+        "raBwpxCehqMxEo1Kb4t1azwdrNmJs4MLsc",
+        "rH3dfGifdXzghxKXS74WRA3WtdKLKGj5Um",
+        "rns8dag3ek1iF4khaV546a6VYfSwrLsA7H",
+        "r9cihYWsQcJ6bY2BvDYofpTAzRJ4rUGcXN",
+        "ra4N3iaB3RFBZqnn5nvo8azJXpNP2iCrNx"
       ],
       "txTypeDistribution": {
-        "Payment": 2036,
-        "NFTokenBurn": 478,
-        "NFTokenMint": 269
+        "Payment": 3200,
+        "NFTokenBurn": 712,
+        "NFTokenMint": 406
       },
       "hourlyTxCounts": [
         402,
@@ -10299,11 +10304,11 @@
         409,
         428,
         396,
-        335,
-        0,
-        0,
-        0,
-        0,
+        395,
+        410,
+        411,
+        417,
+        237,
         0,
         0,
         0,
@@ -10318,11 +10323,11 @@
         0,
         0
       ],
-      "tps": 0.09,
+      "tps": 0.2,
       "avgFee": "0.00001000",
-      "nodeCount": 53,
+      "nodeCount": 54,
       "validatorCount": 53,
-      "lastSeq": 4146850
+      "lastSeq": 4151363
     }
   },
   "firstSeen": {
@@ -12642,6 +12647,10 @@
     "rMTxhcXKPFoUBLRmVt11yno5dz3KJmfvn1": "2026-07-01",
     "raHtaLrksALGLC6mCov6fvMJTMyGWhePRT": "2026-07-01",
     "rKpnQDWgRsV9d716BhW5uhRs8kPHQuK7eA": "2026-07-01",
-    "rNWMbZ8zXq4CRMhYdQFYHFoYKUCuw3Chsf": "2026-07-01"
+    "rNWMbZ8zXq4CRMhYdQFYHFoYKUCuw3Chsf": "2026-07-01",
+    "raBwpxCehqMxEo1Kb4t1azwdrNmJs4MLsc": "2026-07-01",
+    "rns8dag3ek1iF4khaV546a6VYfSwrLsA7H": "2026-07-01",
+    "r9cihYWsQcJ6bY2BvDYofpTAzRJ4rUGcXN": "2026-07-01",
+    "ra4N3iaB3RFBZqnn5nvo8azJXpNP2iCrNx": "2026-07-01"
   }
 }
