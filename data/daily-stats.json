@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T15:31:34.467Z",
+  "lastUpdated": "2026-07-03T17:09:26.310Z",
   "days": {
     "2026-04-05": {
       "txCount": 9595,
@@ -10190,8 +10190,8 @@
       "lastSeq": 4195825
     },
     "2026-07-03": {
-      "txCount": 6328,
-      "activeWallets": 44,
+      "txCount": 7036,
+      "activeWallets": 49,
       "walletAddresses": [
         "raHtaLrksALGLC6mCov6fvMJTMyGWhePRT",
         "rB1mKfVu26VzU7FDLTvBFPNUkcXRXHi93v",
@@ -10236,12 +10236,17 @@
         "rB46AXXLVfEEUKCPtwKdWxTcTjvAnJF8Vg",
         "rUjqjrb1rH6jESDvTzjYbLbd3ZUcDrPFdn",
         "rLuQ28y4zKhBNL1iirCnrPqzB3R4JDDF7M",
-        "ra3TJ8BZUMgrDDt8w2wSsnbdYNCfEG7yGi"
+        "ra3TJ8BZUMgrDDt8w2wSsnbdYNCfEG7yGi",
+        "rw3inWJuyVgJGxmkwAofqXRzgtqhbFpH9k",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "rMqdncPLCsTobvecRwAoskV1nDmPDcN1BH",
+        "rNkw5KNg3ddRQboQKWMx3EnYRnaT2mtfWn",
+        "rEgJA7peRLBVYbXSrXdVgp1XbNDaKnvf9A"
       ],
       "txTypeDistribution": {
-        "Payment": 5221,
-        "NFTokenBurn": 519,
-        "NFTokenMint": 588
+        "Payment": 5626,
+        "NFTokenBurn": 768,
+        "NFTokenMint": 642
       },
       "hourlyTxCounts": [
         437,
@@ -10259,9 +10264,9 @@
         411,
         386,
         392,
-        214,
-        0,
-        0,
+        422,
+        429,
+        71,
         0,
         0,
         0,
@@ -10269,11 +10274,11 @@
         0,
         0
       ],
-      "tps": 0.14,
+      "tps": 0.1,
       "avgFee": "0.00001000",
       "nodeCount": 55,
       "validatorCount": 53,
-      "lastSeq": 4214457
+      "lastSeq": 4216398
     }
   },
   "firstSeen": {
@@ -12627,6 +12632,10 @@
     "rp8hRTJeXBv31aaBUUcgccsU1gYrvSiuK7": "2026-07-03",
     "rB46AXXLVfEEUKCPtwKdWxTcTjvAnJF8Vg": "2026-07-03",
     "rLuQ28y4zKhBNL1iirCnrPqzB3R4JDDF7M": "2026-07-03",
-    "ra3TJ8BZUMgrDDt8w2wSsnbdYNCfEG7yGi": "2026-07-03"
+    "ra3TJ8BZUMgrDDt8w2wSsnbdYNCfEG7yGi": "2026-07-03",
+    "rw3inWJuyVgJGxmkwAofqXRzgtqhbFpH9k": "2026-07-03",
+    "rMqdncPLCsTobvecRwAoskV1nDmPDcN1BH": "2026-07-03",
+    "rNkw5KNg3ddRQboQKWMx3EnYRnaT2mtfWn": "2026-07-03",
+    "rEgJA7peRLBVYbXSrXdVgp1XbNDaKnvf9A": "2026-07-03"
   }
 }
