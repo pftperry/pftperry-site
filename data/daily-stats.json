@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T18:43:40.033Z",
+  "lastUpdated": "2026-07-03T20:07:30.817Z",
   "days": {
     "2026-04-05": {
       "txCount": 9595,
@@ -10190,8 +10190,8 @@
       "lastSeq": 4195825
     },
     "2026-07-03": {
-      "txCount": 7703,
-      "activeWallets": 50,
+      "txCount": 8236,
+      "activeWallets": 54,
       "walletAddresses": [
         "raHtaLrksALGLC6mCov6fvMJTMyGWhePRT",
         "rB1mKfVu26VzU7FDLTvBFPNUkcXRXHi93v",
@@ -10242,12 +10242,16 @@
         "rMqdncPLCsTobvecRwAoskV1nDmPDcN1BH",
         "rNkw5KNg3ddRQboQKWMx3EnYRnaT2mtfWn",
         "rEgJA7peRLBVYbXSrXdVgp1XbNDaKnvf9A",
-        "rpyTMcAKiCxqY7VXenD5ercGGzGWNV9xpg"
+        "rpyTMcAKiCxqY7VXenD5ercGGzGWNV9xpg",
+        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
+        "rnf6VC1R9J7QusbH2d12ToqXFVfhsnh6wY",
+        "rpiiYD74MuyUFQCD3tkcp7jpPhaDhk7ghU",
+        "r9HbkGYiBhV8cjmJV8DiRLDEavrSekVax3"
       ],
       "txTypeDistribution": {
-        "Payment": 6142,
-        "NFTokenBurn": 857,
-        "NFTokenMint": 704
+        "Payment": 6575,
+        "NFTokenBurn": 909,
+        "NFTokenMint": 752
       },
       "hourlyTxCounts": [
         437,
@@ -10268,18 +10272,18 @@
         422,
         429,
         414,
-        324,
-        0,
-        0,
+        426,
+        381,
+        50,
         0,
         0,
         0
       ],
-      "tps": 0.14,
+      "tps": 0.09,
       "avgFee": "0.00001000",
       "nodeCount": 55,
       "validatorCount": 53,
-      "lastSeq": 4218266
+      "lastSeq": 4219932
     }
   },
   "firstSeen": {
@@ -12637,6 +12641,9 @@
     "rw3inWJuyVgJGxmkwAofqXRzgtqhbFpH9k": "2026-07-03",
     "rMqdncPLCsTobvecRwAoskV1nDmPDcN1BH": "2026-07-03",
     "rNkw5KNg3ddRQboQKWMx3EnYRnaT2mtfWn": "2026-07-03",
-    "rEgJA7peRLBVYbXSrXdVgp1XbNDaKnvf9A": "2026-07-03"
+    "rEgJA7peRLBVYbXSrXdVgp1XbNDaKnvf9A": "2026-07-03",
+    "rnf6VC1R9J7QusbH2d12ToqXFVfhsnh6wY": "2026-07-03",
+    "rpiiYD74MuyUFQCD3tkcp7jpPhaDhk7ghU": "2026-07-03",
+    "r9HbkGYiBhV8cjmJV8DiRLDEavrSekVax3": "2026-07-03"
   }
 }
