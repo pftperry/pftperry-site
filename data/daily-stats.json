@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T15:38:02.074Z",
+  "lastUpdated": "2026-07-07T17:49:20.962Z",
   "days": {
     "2026-04-09": {
       "txCount": 9729,
@@ -10068,8 +10068,8 @@
       "lastSeq": 4310301
     },
     "2026-07-07": {
-      "txCount": 6547,
-      "activeWallets": 42,
+      "txCount": 7506,
+      "activeWallets": 45,
       "walletAddresses": [
         "rE3TaNtJAP3uCiPQyBz4RBu8oRBYEpVZxt",
         "rPcHt5rJZUKtiprVacq1vp1tiSMNDC8JdY",
@@ -10112,12 +10112,15 @@
         "rMBkqjawb6mgrdTBMCdE8ax8pFQc6JU1uy",
         "rMQZLS8H93S698DoN37yLGyQnTWwM3vKVS",
         "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
-        "r8YQuaycLQtuAGM9W2p27zxLdTreZFHWz"
+        "r8YQuaycLQtuAGM9W2p27zxLdTreZFHWz",
+        "rnB7gzEY9j45nVcDCFagRKHxtZkBy2EmGT",
+        "rBYkDvwoohrzgjsWxtYQ3UPgNMj7qQmRUf",
+        "rNv9d8p6iEMAzP5oZUT3ErqvtRR8PDRWAV"
       ],
       "txTypeDistribution": {
-        "Payment": 5018,
-        "NFTokenBurn": 717,
-        "NFTokenMint": 812
+        "Payment": 5706,
+        "NFTokenBurn": 860,
+        "NFTokenMint": 940
       },
       "hourlyTxCounts": [
         438,
@@ -10135,9 +10138,9 @@
         420,
         412,
         418,
-        254,
-        0,
-        0,
+        428,
+        442,
+        343,
         0,
         0,
         0,
@@ -10145,11 +10148,11 @@
         0,
         0
       ],
-      "tps": 0.11,
+      "tps": 0.08,
       "avgFee": "0.00001000",
       "nodeCount": 53,
       "validatorCount": 53,
-      "lastSeq": 4329019
+      "lastSeq": 4331625
     }
   },
   "firstSeen": {
@@ -12563,6 +12566,9 @@
     "rnW5t7x84JpBSia5F7UhPMtb4gsaXBwNmH": "2026-07-07",
     "rMBkqjawb6mgrdTBMCdE8ax8pFQc6JU1uy": "2026-07-07",
     "rMQZLS8H93S698DoN37yLGyQnTWwM3vKVS": "2026-07-07",
-    "r8YQuaycLQtuAGM9W2p27zxLdTreZFHWz": "2026-07-07"
+    "r8YQuaycLQtuAGM9W2p27zxLdTreZFHWz": "2026-07-07",
+    "rnB7gzEY9j45nVcDCFagRKHxtZkBy2EmGT": "2026-07-07",
+    "rBYkDvwoohrzgjsWxtYQ3UPgNMj7qQmRUf": "2026-07-07",
+    "rNv9d8p6iEMAzP5oZUT3ErqvtRR8PDRWAV": "2026-07-07"
   }
 }
