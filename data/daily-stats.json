@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T08:56:56.641Z",
+  "lastUpdated": "2026-07-14T10:38:26.689Z",
   "days": {
     "2026-04-16": {
       "txCount": 9342,
@@ -9853,8 +9853,8 @@
       "lastSeq": 4510283
     },
     "2026-07-14": {
-      "txCount": 3570,
-      "activeWallets": 40,
+      "txCount": 4247,
+      "activeWallets": 44,
       "walletAddresses": [
         "rLSRNUCTVFwqgcZk7fFgQYMCysDWN4w4nb",
         "rh9hxNicZ8dLdRL4y1zjqTKzeThcjc2HxK",
@@ -9895,12 +9895,16 @@
         "rEW2fS1Kws1i1cDXYuaznhoZC2PsUzaRNX",
         "r4CLfRSkUswaVEyLghS11aarDvhmfFYMZn",
         "rU6649e9sbse2dDzsaiv1JVMiQoEwSidPC",
-        "rhmLUjCR1FU8WH5gDS7fbucDdSkCp4g3nG"
+        "rhmLUjCR1FU8WH5gDS7fbucDdSkCp4g3nG",
+        "rJSzjpQM4CBmjWBuFDpfwQPxMorF987ER",
+        "rUjqjrb1rH6jESDvTzjYbLbd3ZUcDrPFdn",
+        "rNUqXMH8RbYbvqRpCB5hXxWNVDa78UDJGn",
+        "rBTDSAnQzKqsgPtr7FrHcPRdFVyaQSPr3A"
       ],
       "txTypeDistribution": {
-        "Payment": 2478,
-        "NFTokenMint": 533,
-        "NFTokenBurn": 559
+        "Payment": 2866,
+        "NFTokenMint": 609,
+        "NFTokenBurn": 772
       },
       "hourlyTxCounts": [
         421,
@@ -9911,9 +9915,9 @@
         369,
         402,
         388,
-        400,
-        0,
-        0,
+        422,
+        383,
+        272,
         0,
         0,
         0,
@@ -9928,11 +9932,11 @@
         0,
         0
       ],
-      "tps": 0.09,
+      "tps": 0.15,
       "avgFee": "0.00001000",
       "nodeCount": 54,
-      "validatorCount": 51,
-      "lastSeq": 4521340
+      "validatorCount": 50,
+      "lastSeq": 4523353
     }
   },
   "firstSeen": {
@@ -12447,6 +12451,9 @@
     "rEW2fS1Kws1i1cDXYuaznhoZC2PsUzaRNX": "2026-07-14",
     "r4CLfRSkUswaVEyLghS11aarDvhmfFYMZn": "2026-07-14",
     "rU6649e9sbse2dDzsaiv1JVMiQoEwSidPC": "2026-07-14",
-    "rhmLUjCR1FU8WH5gDS7fbucDdSkCp4g3nG": "2026-07-14"
+    "rhmLUjCR1FU8WH5gDS7fbucDdSkCp4g3nG": "2026-07-14",
+    "rJSzjpQM4CBmjWBuFDpfwQPxMorF987ER": "2026-07-14",
+    "rNUqXMH8RbYbvqRpCB5hXxWNVDa78UDJGn": "2026-07-14",
+    "rBTDSAnQzKqsgPtr7FrHcPRdFVyaQSPr3A": "2026-07-14"
   }
 }
