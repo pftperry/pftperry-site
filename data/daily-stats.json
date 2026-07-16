@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-16T16:08:08.736Z",
+  "lastUpdated": "2026-07-16T17:43:52.042Z",
   "days": {
     "2026-04-18": {
       "txCount": 9844,
@@ -9822,8 +9822,8 @@
       "lastSeq": 4567745
     },
     "2026-07-16": {
-      "txCount": 6229,
-      "activeWallets": 40,
+      "txCount": 6826,
+      "activeWallets": 44,
       "walletAddresses": [
         "rszbxNa2HHbwssA534kKpGw6tBb2ZqyKiz",
         "rSPNpFSFfyGVGnbtxZEBjjtSTUNivNBZH",
@@ -9864,12 +9864,16 @@
         "rsgn4pUptXiWTMcbLjJ65fAxRw5AaVcXiW",
         "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
         "rNPW7SR4aKfv1Fri3vverDQZojpqy5uKsU",
-        "rnz6PTzqYtfL23AMr6dpLAap2ZBqwr1oGa"
+        "rnz6PTzqYtfL23AMr6dpLAap2ZBqwr1oGa",
+        "r4KJStXj3U4Jq73dw9jgzyGM1E8zPMn435",
+        "r9j3R23MWcRTCJEKqZnHVTsZGPaygPbWnV",
+        "rNQKgHaRwDnjgwmrkMqv4JDp63wE8GAp8Z",
+        "rBtMCTLQJ7ERkuQ98AynmpGihbaBh7v2uE"
       ],
       "txTypeDistribution": {
-        "Payment": 4904,
-        "NFTokenMint": 748,
-        "NFTokenBurn": 577
+        "Payment": 5372,
+        "NFTokenMint": 818,
+        "NFTokenBurn": 636
       },
       "hourlyTxCounts": [
         407,
@@ -9888,8 +9892,8 @@
         365,
         381,
         381,
-        57,
-        0,
+        397,
+        257,
         0,
         0,
         0,
@@ -9901,7 +9905,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 54,
       "validatorCount": 50,
-      "lastSeq": 4587116
+      "lastSeq": 4589015
     }
   },
   "firstSeen": {
@@ -12450,6 +12454,10 @@
     "rhq7EZhzGa5CQRaxqB6KHv62pPkoNT4rwe": "2026-07-16",
     "rsgn4pUptXiWTMcbLjJ65fAxRw5AaVcXiW": "2026-07-16",
     "rNPW7SR4aKfv1Fri3vverDQZojpqy5uKsU": "2026-07-16",
-    "rnz6PTzqYtfL23AMr6dpLAap2ZBqwr1oGa": "2026-07-16"
+    "rnz6PTzqYtfL23AMr6dpLAap2ZBqwr1oGa": "2026-07-16",
+    "r4KJStXj3U4Jq73dw9jgzyGM1E8zPMn435": "2026-07-16",
+    "r9j3R23MWcRTCJEKqZnHVTsZGPaygPbWnV": "2026-07-16",
+    "rNQKgHaRwDnjgwmrkMqv4JDp63wE8GAp8Z": "2026-07-16",
+    "rBtMCTLQJ7ERkuQ98AynmpGihbaBh7v2uE": "2026-07-16"
   }
 }
