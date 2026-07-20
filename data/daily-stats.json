@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-20T22:43:59.786Z",
+  "lastUpdated": "2026-07-20T23:44:42.808Z",
   "days": {
     "2026-04-22": {
       "txCount": 9399,
@@ -9692,8 +9692,8 @@
       "lastSeq": 4682020
     },
     "2026-07-20": {
-      "txCount": 9276,
-      "activeWallets": 47,
+      "txCount": 9697,
+      "activeWallets": 50,
       "walletAddresses": [
         "rnuW9sNqRwSxNQhj3dfZuTbrJGHQqxwvTQ",
         "rLLUtGQEzxG2FfJVxAN2hiiZ4aSm11vwxH",
@@ -9741,12 +9741,15 @@
         "rh9JH1h9dNooiKuSBCHaPy2ZrTd6YsPNDn",
         "rfmdkPTQSXnu3qVW7ib85BE6ixkfeXEgMB",
         "rBPsW6C13MnygDZtMwBXLggxUMdaHVEGZA",
-        "ra8FtRUpxzaACD6ahPmp4he65YsWzsvo5J"
+        "ra8FtRUpxzaACD6ahPmp4he65YsWzsvo5J",
+        "rUTZ1VYDfN6p5mbHFJDWFNkEC4Qx7Qwj33",
+        "r4XLZKYK63z4zW8ttKzgy8NVW1Noa1pRwj",
+        "rngPEwN9tXxAUo57MZLiwxqqKy8toVS9qK"
       ],
       "txTypeDistribution": {
-        "Payment": 7146,
-        "NFTokenMint": 1158,
-        "NFTokenBurn": 970,
+        "Payment": 7450,
+        "NFTokenMint": 1204,
+        "NFTokenBurn": 1041,
         "UNLModify": 2
       },
       "hourlyTxCounts": [
@@ -9772,14 +9775,14 @@
         415,
         442,
         384,
-        303,
-        0
+        416,
+        308
       ],
       "tps": 0.11,
       "avgFee": "0.00001000",
       "nodeCount": 55,
       "validatorCount": 52,
-      "lastSeq": 4709439
+      "lastSeq": 4710644
     }
   },
   "firstSeen": {
@@ -12397,6 +12400,8 @@
     "rUzZC3B3T7Qho8pGzzaQyEcpjjazJT5Fo8": "2026-07-20",
     "rh9JH1h9dNooiKuSBCHaPy2ZrTd6YsPNDn": "2026-07-20",
     "rBPsW6C13MnygDZtMwBXLggxUMdaHVEGZA": "2026-07-20",
-    "ra8FtRUpxzaACD6ahPmp4he65YsWzsvo5J": "2026-07-20"
+    "ra8FtRUpxzaACD6ahPmp4he65YsWzsvo5J": "2026-07-20",
+    "rUTZ1VYDfN6p5mbHFJDWFNkEC4Qx7Qwj33": "2026-07-20",
+    "rngPEwN9tXxAUo57MZLiwxqqKy8toVS9qK": "2026-07-20"
   }
 }
