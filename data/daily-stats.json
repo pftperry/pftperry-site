@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-29T07:35:43.362Z",
+  "lastUpdated": "2026-07-29T10:25:27.591Z",
   "days": {
     "2026-05-01": {
       "txCount": 9740,
@@ -9442,8 +9442,8 @@
       "lastSeq": 4939559
     },
     "2026-07-29": {
-      "txCount": 3075,
-      "activeWallets": 36,
+      "txCount": 4212,
+      "activeWallets": 39,
       "walletAddresses": [
         "rB4VzQ5crGKMzdQsqp9ZDNhx2ro4YqDhft",
         "rhw18sdnVzJkQwPwmgquX2CGBTMxnyAz4M",
@@ -9480,12 +9480,15 @@
         "rMbQ4RwANXUaoLzfZY4WBHj3RLsaPWNLFo",
         "rMWREa1EQxbg1JhdTQLMPpSowAWJrY8Av2",
         "r4XLZKYK63z4zW8ttKzgy8NVW1Noa1pRwj",
-        "rUjqjrb1rH6jESDvTzjYbLbd3ZUcDrPFdn"
+        "rUjqjrb1rH6jESDvTzjYbLbd3ZUcDrPFdn",
+        "rNk3Vgs5C97jZ9B29y8UskNy8h7tNYp7CC",
+        "rrnNpqN6gshBamTBGfHpwWMqtQj7ih3wmR",
+        "rsApyr9o2CveiJCdMogBkQSW8PZjW5Dacz"
       ],
       "txTypeDistribution": {
-        "Payment": 2437,
-        "NFTokenBurn": 208,
-        "NFTokenMint": 430
+        "Payment": 3244,
+        "NFTokenBurn": 376,
+        "NFTokenMint": 592
       },
       "hourlyTxCounts": [
         421,
@@ -9495,10 +9498,10 @@
         412,
         380,
         395,
-        241,
-        0,
-        0,
-        0,
+        379,
+        403,
+        450,
+        146,
         0,
         0,
         0,
@@ -9513,11 +9516,11 @@
         0,
         0
       ],
-      "tps": 0.13,
+      "tps": 0.11,
       "avgFee": "0.00001000",
-      "nodeCount": 56,
-      "validatorCount": 53,
-      "lastSeq": 4948857
+      "nodeCount": 57,
+      "validatorCount": 54,
+      "lastSeq": 4952231
     }
   },
   "firstSeen": {
@@ -12263,6 +12266,9 @@
     "rp79bs3pFtpp3GQuJQfmsUAz4UdZfSMLHV": "2026-07-28",
     "rKyBCZGsud63wnx1GQY7Cy7BRydEdTGa3m": "2026-07-28",
     "rMbQ4RwANXUaoLzfZY4WBHj3RLsaPWNLFo": "2026-07-29",
-    "rMWREa1EQxbg1JhdTQLMPpSowAWJrY8Av2": "2026-07-29"
+    "rMWREa1EQxbg1JhdTQLMPpSowAWJrY8Av2": "2026-07-29",
+    "rNk3Vgs5C97jZ9B29y8UskNy8h7tNYp7CC": "2026-07-29",
+    "rrnNpqN6gshBamTBGfHpwWMqtQj7ih3wmR": "2026-07-29",
+    "rsApyr9o2CveiJCdMogBkQSW8PZjW5Dacz": "2026-07-29"
   }
 }
