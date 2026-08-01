@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-01T04:45:02.209Z",
+  "lastUpdated": "2026-08-01T07:22:20.696Z",
   "days": {
     "2026-05-04": {
       "txCount": 9984,
@@ -9354,8 +9354,8 @@
       "lastSeq": 5025006
     },
     "2026-08-01": {
-      "txCount": 1997,
-      "activeWallets": 34,
+      "txCount": 3138,
+      "activeWallets": 37,
       "walletAddresses": [
         "rary4dp9SFSFF9c4jDTV5AzepEuuGp6g8t",
         "r4oRomU4F88gpzAXLwpUZqp4PTNRZ6Yuir",
@@ -9390,22 +9390,25 @@
         "rhqen5Mb78rgYXmrL6LBNZUK7hykePTNYi",
         "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
         "rrhBVmsELobJBy5ZCbTyBrsx6MW37kNcxF",
-        "rwUWKotXRLbRN97nNiRF2v4HYqehEZRNS6"
+        "rwUWKotXRLbRN97nNiRF2v4HYqehEZRNS6",
+        "rQfA3euMVrsz28tsE8XUX4zn9BUmmopDqR",
+        "r48HPSCPfsBZApwnUFe8RXD2jK9gN24daT",
+        "rKATTGnGLyG2konCR2bh5SjUGQrmZMSSfE"
       ],
       "txTypeDistribution": {
-        "Payment": 1599,
-        "NFTokenMint": 172,
-        "NFTokenBurn": 226
+        "Payment": 2454,
+        "NFTokenMint": 305,
+        "NFTokenBurn": 379
       },
       "hourlyTxCounts": [
         423,
         436,
         379,
         461,
-        298,
-        0,
-        0,
-        0,
+        414,
+        437,
+        414,
+        174,
         0,
         0,
         0,
@@ -9423,11 +9426,11 @@
         0,
         0
       ],
-      "tps": 0.1,
+      "tps": 0.13,
       "avgFee": "0.00001000",
       "nodeCount": 56,
       "validatorCount": 54,
-      "lastSeq": 5031276
+      "lastSeq": 5034394
     }
   },
   "firstSeen": {
@@ -12218,6 +12221,9 @@
     "rDF3rvqLtHdP7Npx6ZxHhwSpRpJYPuyrug": "2026-07-31",
     "rMufhj4Gwsrxf7bXwQ6LkfbeavdPy4qiBN": "2026-07-31",
     "rrhBVmsELobJBy5ZCbTyBrsx6MW37kNcxF": "2026-08-01",
-    "rwUWKotXRLbRN97nNiRF2v4HYqehEZRNS6": "2026-08-01"
+    "rwUWKotXRLbRN97nNiRF2v4HYqehEZRNS6": "2026-08-01",
+    "rQfA3euMVrsz28tsE8XUX4zn9BUmmopDqR": "2026-08-01",
+    "r48HPSCPfsBZApwnUFe8RXD2jK9gN24daT": "2026-08-01",
+    "rKATTGnGLyG2konCR2bh5SjUGQrmZMSSfE": "2026-08-01"
   }
 }
