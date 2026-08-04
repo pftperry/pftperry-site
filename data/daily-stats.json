@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-04T07:29:30.560Z",
+  "lastUpdated": "2026-08-04T10:08:50.201Z",
   "days": {
     "2026-05-07": {
       "txCount": 10010,
@@ -9265,8 +9265,8 @@
       "lastSeq": 5111384
     },
     "2026-08-04": {
-      "txCount": 2985,
-      "activeWallets": 36,
+      "txCount": 4175,
+      "activeWallets": 40,
       "walletAddresses": [
         "rfz28B7fknkz3EXJU54DQc9RfXUeJa3VFf",
         "rJhAwhRiXxwuFTW5PCRBEPrZBmqzjpdFDy",
@@ -9303,12 +9303,16 @@
         "r3rQBCn1i7w1rsG5n8djyV76bGNZR48SUd",
         "raEF1NP26dybkzvtYwzNoV6JSW6261jf2B",
         "rJ8St5nxBZzbXzG7p6BxTPEbp1broH4DvX",
-        "rs2jX22m9bvi44AATBtAQMzWUchxoJNVo4"
+        "rs2jX22m9bvi44AATBtAQMzWUchxoJNVo4",
+        "rEXrjkScKMpUCRif46QqaYmtBdUpfZAbZK",
+        "rJmr9HtK5ykqnXS787o3RnPfDJgVv7bZns",
+        "ramV89br68AuHpf9nrhR2r2b1a8HD9VAN8",
+        "rJznFxjVWXLzsPLPyx6eDikBpHz3LZCiBE"
       ],
       "txTypeDistribution": {
-        "Payment": 2496,
-        "NFTokenMint": 308,
-        "NFTokenBurn": 181
+        "Payment": 3458,
+        "NFTokenMint": 404,
+        "NFTokenBurn": 313
       },
       "hourlyTxCounts": [
         437,
@@ -9318,10 +9322,10 @@
         400,
         380,
         367,
-        195,
-        0,
-        0,
-        0,
+        432,
+        453,
+        445,
+        55,
         0,
         0,
         0,
@@ -9340,7 +9344,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 55,
       "validatorCount": 54,
-      "lastSeq": 5120366
+      "lastSeq": 5123530
     }
   },
   "firstSeen": {
@@ -12179,6 +12183,10 @@
     "rJuydzButuZogaQNptNQQzGMxEje6VKPMP": "2026-08-03",
     "rEJsowJ9jonH6BGvDPctYUyfwHmrLzUu9y": "2026-08-03",
     "raEF1NP26dybkzvtYwzNoV6JSW6261jf2B": "2026-08-04",
-    "rs2jX22m9bvi44AATBtAQMzWUchxoJNVo4": "2026-08-04"
+    "rs2jX22m9bvi44AATBtAQMzWUchxoJNVo4": "2026-08-04",
+    "rEXrjkScKMpUCRif46QqaYmtBdUpfZAbZK": "2026-08-04",
+    "rJmr9HtK5ykqnXS787o3RnPfDJgVv7bZns": "2026-08-04",
+    "ramV89br68AuHpf9nrhR2r2b1a8HD9VAN8": "2026-08-04",
+    "rJznFxjVWXLzsPLPyx6eDikBpHz3LZCiBE": "2026-08-04"
   }
 }
