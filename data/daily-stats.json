@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-06T03:56:13.088Z",
+  "lastUpdated": "2026-08-06T06:21:43.757Z",
   "days": {
     "2026-05-09": {
       "txCount": 9856,
@@ -9219,8 +9219,8 @@
       "lastSeq": 5168005
     },
     "2026-08-06": {
-      "txCount": 1596,
-      "activeWallets": 32,
+      "txCount": 2601,
+      "activeWallets": 36,
       "walletAddresses": [
         "rwEe5F81XhS9nFJTSWQbEE8MYp5JX5mrG4",
         "rDnyHKEvvD1AmMyspE39KCDZm9zyg8Qkx4",
@@ -9253,21 +9253,25 @@
         "rhhdEmWp7aipEFnMdE9Jv1iMP81SNYuF8H",
         "rJznFxjVWXLzsPLPyx6eDikBpHz3LZCiBE",
         "rsa1t8bhuiNApSGCwCm8v84gPkKSDdTQwZ",
-        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR"
+        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
+        "rwiGARk2AnWzw7xgBjrRD7fSTriznYJ8sk",
+        "rKHi2ckhJ81CVaPTVA8VzrhJoYvxAZdRph",
+        "r85mSYYjdW5jxcraVumBXq2DjhXkWMPd6",
+        "rHot1iUJguwqK7qHaW3GQ2hQmzmxj9EjDh"
       ],
       "txTypeDistribution": {
-        "Payment": 1302,
-        "NFTokenBurn": 82,
-        "NFTokenMint": 212
+        "Payment": 2007,
+        "NFTokenBurn": 285,
+        "NFTokenMint": 309
       },
       "hourlyTxCounts": [
         414,
         420,
         403,
-        359,
-        0,
-        0,
-        0,
+        380,
+        432,
+        416,
+        136,
         0,
         0,
         0,
@@ -9290,7 +9294,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 56,
       "validatorCount": 53,
-      "lastSeq": 5173347
+      "lastSeq": 5176238
     }
   },
   "firstSeen": {
@@ -12156,6 +12160,10 @@
     "rUXuEkyRZRekizjLFsWCKozfa37VHcwwTr": "2026-08-05",
     "rfERM5ydEug8VP59vjBDrmpZPX8zbwTFnz": "2026-08-05",
     "rNSCyp4feq7eDac3mbJeKhL1ktqgnbTf6z": "2026-08-05",
-    "rfMBfEsmQHNRreqETmEyuJ52mNYt6PYF6G": "2026-08-05"
+    "rfMBfEsmQHNRreqETmEyuJ52mNYt6PYF6G": "2026-08-05",
+    "rwiGARk2AnWzw7xgBjrRD7fSTriznYJ8sk": "2026-08-06",
+    "rKHi2ckhJ81CVaPTVA8VzrhJoYvxAZdRph": "2026-08-06",
+    "r85mSYYjdW5jxcraVumBXq2DjhXkWMPd6": "2026-08-06",
+    "rHot1iUJguwqK7qHaW3GQ2hQmzmxj9EjDh": "2026-08-06"
   }
 }
