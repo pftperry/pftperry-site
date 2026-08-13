@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-13T00:03:46.483Z",
+  "lastUpdated": "2026-08-13T03:04:43.546Z",
   "days": {
     "2026-05-16": {
       "txCount": 9900,
@@ -9014,8 +9014,8 @@
       "lastSeq": 5367873
     },
     "2026-08-13": {
-      "txCount": 23,
-      "activeWallets": 20,
+      "txCount": 1244,
+      "activeWallets": 35,
       "walletAddresses": [
         "rPXuEDPRx3YrZknq4AtAo4YeCU2DFUKqn6",
         "rnTyS8uBz3zHzSojC1ove2565c5zuPb3X5",
@@ -9036,18 +9036,33 @@
         "rwXehjQBAbFSYtrcqhTkivHB77545jnQ1S",
         "rwsNWuhmUgYyWBeYBw2hgicQFvhJs5rfJF",
         "rUDyXC1Bt6efdb3DoFrps7sb4p2z4214uP",
-        "rQNQdTnZbNyeCgrda3fpgqw3pTkhuktY4M"
+        "rQNQdTnZbNyeCgrda3fpgqw3pTkhuktY4M",
+        "rpvtq28URTz66vD4JAm2f45SRbWuH6pLDi",
+        "rhhSEt6irbuC5rw9TeqdHnuBMuihfQYDQk",
+        "rwZ3VpSsUSpjfQ68Tt1X9BUV6K83rDA6Jz",
+        "r3Y9U6RhzdRqidn73mFiazifphnWaDTfMC",
+        "r4VrxeW6qUneiTsDgvmANGVm9DJwJTmSW2",
+        "rnHLUUFfQTPzQJJoxoPZbVqFQVz69W8tSE",
+        "rBhNyzjc6nFn7ZhgpRqXNqhu4mLomjhZkh",
+        "rKjP2D6S7iVmmiFWuCqXKdZucno19uJF7x",
+        "rLWZ61dZdYjMqxxrkTYB8s2uyNb1DKguq",
+        "rnWHHikHeifnmvtePDvWmQRv1nKRBtRV5L",
+        "rKFvHoqYXCFdp1Mt5yyi168gZBzMXLCycV",
+        "rfmdkPTQSXnu3qVW7ib85BE6ixkfeXEgMB",
+        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
+        "rMSP9PUfmvA9c9vBK8FLP3P74KqZwcnkPB",
+        "rH1XZKy8DLpD7BdhTpCWPfwuWTJJ1EBF5Q"
       ],
       "txTypeDistribution": {
-        "Payment": 19,
-        "NFTokenBurn": 1,
-        "NFTokenMint": 3
+        "Payment": 895,
+        "NFTokenBurn": 149,
+        "NFTokenMint": 200
       },
       "hourlyTxCounts": [
-        23,
-        0,
-        0,
-        0,
+        400,
+        406,
+        409,
+        29,
         0,
         0,
         0,
@@ -9073,7 +9088,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 57,
       "validatorCount": 55,
-      "lastSeq": 5369006
+      "lastSeq": 5372593
     }
   },
   "firstSeen": {
@@ -12047,6 +12062,8 @@
     "rnWHHikHeifnmvtePDvWmQRv1nKRBtRV5L": "2026-08-12",
     "rUpSHn6DGruxqph1YvakctQVXTjashQnrp": "2026-08-12",
     "rKFvHoqYXCFdp1Mt5yyi168gZBzMXLCycV": "2026-08-12",
-    "rwsNWuhmUgYyWBeYBw2hgicQFvhJs5rfJF": "2026-08-13"
+    "rwsNWuhmUgYyWBeYBw2hgicQFvhJs5rfJF": "2026-08-13",
+    "rMSP9PUfmvA9c9vBK8FLP3P74KqZwcnkPB": "2026-08-13",
+    "rH1XZKy8DLpD7BdhTpCWPfwuWTJJ1EBF5Q": "2026-08-13"
   }
 }
