@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-14T00:03:36.982Z",
+  "lastUpdated": "2026-08-14T03:03:46.853Z",
   "days": {
     "2026-05-17": {
       "txCount": 9798,
@@ -8981,8 +8981,8 @@
       "lastSeq": 5396523
     },
     "2026-08-14": {
-      "txCount": 17,
-      "activeWallets": 14,
+      "txCount": 1277,
+      "activeWallets": 32,
       "walletAddresses": [
         "rFFzx6osPAAg9UKnKSdLWoRRm2GqTtmma",
         "rELxx1k7pxUK3jsBBM1y2pNNpC7MeGXKEU",
@@ -8997,18 +8997,36 @@
         "rsp4JwKpXRAWzGkbpxx3qawXm6xZ5wYDqV",
         "rMVarb56cdGcwiCBJjpX5qJdQw3mqmVkRh",
         "rpXwRhcRy5CTLz7GBJtarfz6BgtT5G2gRR",
-        "rE1zW4g78Z6UAdC1Kt7k9Y1ivSjjKaioyG"
+        "rE1zW4g78Z6UAdC1Kt7k9Y1ivSjjKaioyG",
+        "rpvtq28URTz66vD4JAm2f45SRbWuH6pLDi",
+        "rnWHHikHeifnmvtePDvWmQRv1nKRBtRV5L",
+        "rMf6X7kF9erMtKxPnXMHL2DbBZCDBu7dkY",
+        "rhwtdZi9RAJDNBKY88T3snjhxuFjrBNKSc",
+        "rNh2SbFx3AAfJpm3buoGSDcUMtsvPVB1TE",
+        "rLWZ61dZdYjMqxxrkTYB8s2uyNb1DKguq",
+        "rfFo5npuHdQeqZ9ZaARchroY6zDnnencf5",
+        "rMWUR5ps3NBmXkqzTuby9hHGPyfZYnfFir",
+        "rL4mEd4iNFrgmsHVSH9GwVSGxzXSxqnzQ7",
+        "rH1XZKy8DLpD7BdhTpCWPfwuWTJJ1EBF5Q",
+        "rUJuY8XtvPLyeBdbnYNkTCJWTyyXQLFf3A",
+        "rNbqXQDDiLk8XQu5QLjGjA6i1WRv4S1bRg",
+        "rsbTp8HrrQgqEx7sCJcYFRTEb38fcz9uQU",
+        "rpGBTcGmpfsDMVCwUPtRyDAXGVikq6jr4W",
+        "rJpDT8GVRDyjLEyEwYjA8f3ijQmorjxWTY",
+        "rnWZKc8WBe2TDvrCKoDwa4gREsCvpasTZx",
+        "rwdm72S9YVKkZjeADKU2bbUMuY4vPnSfH7",
+        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR"
       ],
       "txTypeDistribution": {
-        "Payment": 14,
-        "NFTokenBurn": 2,
-        "NFTokenMint": 1
+        "Payment": 1016,
+        "NFTokenBurn": 99,
+        "NFTokenMint": 162
       },
       "hourlyTxCounts": [
-        17,
-        0,
-        0,
-        0,
+        420,
+        421,
+        411,
+        25,
         0,
         0,
         0,
@@ -9034,7 +9052,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 57,
       "validatorCount": 55,
-      "lastSeq": 5397609
+      "lastSeq": 5401179
     }
   },
   "firstSeen": {
