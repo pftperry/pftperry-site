@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-17T21:14:11.762Z",
+  "lastUpdated": "2026-08-17T21:45:25.418Z",
   "days": {
     "2026-05-20": {
       "txCount": 9963,
@@ -8836,7 +8836,7 @@
       "lastSeq": 5482949
     },
     "2026-08-17": {
-      "txCount": 8650,
+      "txCount": 8863,
       "activeWallets": 49,
       "walletAddresses": [
         "rGMtXCY4ktAb6mTfFYqq57f67worho159i",
@@ -8890,9 +8890,9 @@
         "rEy8DK4TarVKLH4Kn2HzemGSJqRMQfRyfK"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 1018,
-        "Payment": 6681,
-        "NFTokenMint": 951
+        "NFTokenBurn": 1100,
+        "Payment": 6793,
+        "NFTokenMint": 970
       },
       "hourlyTxCounts": [
         424,
@@ -8916,7 +8916,7 @@
         377,
         370,
         406,
-        83,
+        296,
         0,
         0
       ],
@@ -8924,7 +8924,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 58,
       "validatorCount": 54,
-      "lastSeq": 5508667
+      "lastSeq": 5509288
     }
   },
   "firstSeen": {
