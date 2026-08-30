@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-30T21:42:45.488Z",
+  "lastUpdated": "2026-08-30T23:59:43.127Z",
   "days": {
     "2026-06-01": {
       "txCount": 9915,
@@ -8616,8 +8616,8 @@
       "lastSeq": 5803945
     },
     "2026-08-30": {
-      "txCount": 8823,
-      "activeWallets": 42,
+      "txCount": 9755,
+      "activeWallets": 46,
       "walletAddresses": [
         "rLYVhYyXTatrVdq3ZceJDAwMw4VsLoSLJk",
         "rQfmAfLoL8ELbzjvaXtB7pMtZyEAZAZ7HA",
@@ -8660,12 +8660,16 @@
         "rKJh9rL15om1FhRx9fQtK96FSivTTm2szw",
         "r98YGUEU6UDr5dBR1SDYAJyC2Eh81hFzKa",
         "rQn2MnSEEs7gLsMuwLfdE5gw6cWUQLQ9Yc",
-        "rKGCArJjbafBXAE5J5w5aCqy4ThinMc99i"
+        "rKGCArJjbafBXAE5J5w5aCqy4ThinMc99i",
+        "rQaS7Wcyi34Ch2gwvWpV35FBhDF7Ekk1b7",
+        "rNM8VpYRLNvNBJhni4daBUyMCxWYvqG2qi",
+        "rPMBfNfGvp8qUGuHhy64eXUrJ6qAFjY8Vw",
+        "rnrwZyXATCKVPXN8EpmZ1vJrn6apFguvWA"
       ],
       "txTypeDistribution": {
-        "Payment": 6912,
-        "NFTokenMint": 1044,
-        "NFTokenBurn": 867
+        "Payment": 7559,
+        "NFTokenMint": 1137,
+        "NFTokenBurn": 1059
       },
       "hourlyTxCounts": [
         423,
@@ -8689,15 +8693,15 @@
         416,
         399,
         403,
-        289,
-        0,
-        0
+        425,
+        422,
+        374
       ],
       "tps": 0.11,
       "avgFee": "0.00001000",
       "nodeCount": 59,
       "validatorCount": 56,
-      "lastSeq": 5880991
+      "lastSeq": 5883702
     }
   },
   "firstSeen": {
@@ -11935,6 +11939,10 @@
     "rKJh9rL15om1FhRx9fQtK96FSivTTm2szw": "2026-08-30",
     "r98YGUEU6UDr5dBR1SDYAJyC2Eh81hFzKa": "2026-08-30",
     "rQn2MnSEEs7gLsMuwLfdE5gw6cWUQLQ9Yc": "2026-08-30",
-    "rKGCArJjbafBXAE5J5w5aCqy4ThinMc99i": "2026-08-30"
+    "rKGCArJjbafBXAE5J5w5aCqy4ThinMc99i": "2026-08-30",
+    "rQaS7Wcyi34Ch2gwvWpV35FBhDF7Ekk1b7": "2026-08-30",
+    "rNM8VpYRLNvNBJhni4daBUyMCxWYvqG2qi": "2026-08-30",
+    "rPMBfNfGvp8qUGuHhy64eXUrJ6qAFjY8Vw": "2026-08-30",
+    "rnrwZyXATCKVPXN8EpmZ1vJrn6apFguvWA": "2026-08-30"
   }
 }
