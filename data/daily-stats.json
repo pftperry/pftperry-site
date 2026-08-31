@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-31T03:54:30.112Z",
+  "lastUpdated": "2026-08-31T10:11:38.909Z",
   "days": {
     "2026-06-02": {
       "txCount": 9169,
@@ -8593,8 +8593,8 @@
       "lastSeq": 5883702
     },
     "2026-08-31": {
-      "txCount": 1584,
-      "activeWallets": 34,
+      "txCount": 4134,
+      "activeWallets": 37,
       "walletAddresses": [
         "rKJh9rL15om1FhRx9fQtK96FSivTTm2szw",
         "rLAR87q28JhsmzhLSWVdV48NVqtm9JXhYZ",
@@ -8629,25 +8629,28 @@
         "rwdm72S9YVKkZjeADKU2bbUMuY4vPnSfH7",
         "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
         "rNJqwHgQAeRphgzkx76GQgMEnNi2MFtcFc",
-        "rhi1wrPueNHtjnotkSLd7C3mPJ1jPsDR2B"
+        "rhi1wrPueNHtjnotkSLd7C3mPJ1jPsDR2B",
+        "raS13A7oxdhK5SJGhxYaSXyHhiXgcQz2q5",
+        "rKyA9zB5c5EKNfDKbFXMArhfWNfqhhewnL",
+        "rUCeE1em4MfR29mWGNCa3QfMfihFy8kemc"
       ],
       "txTypeDistribution": {
-        "Payment": 1221,
-        "NFTokenMint": 171,
-        "NFTokenBurn": 192
+        "Payment": 3203,
+        "NFTokenMint": 413,
+        "NFTokenBurn": 518
       },
       "hourlyTxCounts": [
         410,
         391,
         409,
-        374,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        415,
+        395,
+        402,
+        412,
+        405,
+        417,
+        386,
+        92,
         0,
         0,
         0,
@@ -8666,7 +8669,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 59,
       "validatorCount": 56,
-      "lastSeq": 5888356
+      "lastSeq": 5895836
     }
   },
   "firstSeen": {
@@ -11910,6 +11913,9 @@
     "rPMBfNfGvp8qUGuHhy64eXUrJ6qAFjY8Vw": "2026-08-30",
     "rnrwZyXATCKVPXN8EpmZ1vJrn6apFguvWA": "2026-08-30",
     "rNJqwHgQAeRphgzkx76GQgMEnNi2MFtcFc": "2026-08-31",
-    "rhi1wrPueNHtjnotkSLd7C3mPJ1jPsDR2B": "2026-08-31"
+    "rhi1wrPueNHtjnotkSLd7C3mPJ1jPsDR2B": "2026-08-31",
+    "raS13A7oxdhK5SJGhxYaSXyHhiXgcQz2q5": "2026-08-31",
+    "rKyA9zB5c5EKNfDKbFXMArhfWNfqhhewnL": "2026-08-31",
+    "rUCeE1em4MfR29mWGNCa3QfMfihFy8kemc": "2026-08-31"
   }
 }
