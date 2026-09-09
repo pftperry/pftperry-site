@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-09T12:01:39.058Z",
+  "lastUpdated": "2026-09-09T16:47:17.304Z",
   "days": {
     "2026-06-11": {
       "txCount": 9698,
@@ -8468,8 +8468,8 @@
       "lastSeq": 6140371
     },
     "2026-09-09": {
-      "txCount": 4913,
-      "activeWallets": 43,
+      "txCount": 6892,
+      "activeWallets": 49,
       "walletAddresses": [
         "raNxJdg69FadGcNk4dXF9WjJ7cpc2tXqmj",
         "rUcYTU2NMCo68c2KT938t6aurc4mqC7KcC",
@@ -8513,12 +8513,18 @@
         "rf4FRq7wtDJ3N4sgr2PT3dPUtdN6Tyjumy",
         "rDep8SDqobEKGG8VxFYh9cx3W7wwP7EQKu",
         "r9eSiuMn2duHxDcXwn2YU6Rj5Up8PQwkvX",
-        "rKoJo4bJh9rcsR2N2BWWvJHnt7eF5aNYDM"
+        "rKoJo4bJh9rcsR2N2BWWvJHnt7eF5aNYDM",
+        "rpATFzzGzXCoLnn4RA7vvqsT5kkb2tgY2K",
+        "rULbZfiS6Nk62ox1GNMqK3RgS7rphW81Ho",
+        "rpg6o4fh2DAEyDvhe28mBibtyAH1Uhc3Ps",
+        "rPTCS8SJr17SbMVSoro1vHF13iFQAXPN5w",
+        "rh6iNMb7aQ5rbiagZnsFfJchuEBVR2hMGA",
+        "rE1ALa6Nn73CSZkTTRKMephmycdvYnLbRQ"
       ],
       "txTypeDistribution": {
-        "Payment": 3687,
-        "NFTokenBurn": 771,
-        "NFTokenMint": 455
+        "Payment": 5250,
+        "NFTokenBurn": 1000,
+        "NFTokenMint": 642
       },
       "hourlyTxCounts": [
         402,
@@ -8533,11 +8539,11 @@
         396,
         387,
         413,
-        2,
-        0,
-        0,
-        0,
-        0,
+        418,
+        421,
+        433,
+        379,
+        330,
         0,
         0,
         0,
@@ -8550,7 +8556,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 58,
       "validatorCount": 60,
-      "lastSeq": 6155243
+      "lastSeq": 6160919
     }
   },
   "firstSeen": {
@@ -11931,6 +11937,11 @@
     "rwUw9szSgmnn8eMRkX8Lg4Lz4GDqrAXp7B": "2026-09-09",
     "rf4FRq7wtDJ3N4sgr2PT3dPUtdN6Tyjumy": "2026-09-09",
     "r9eSiuMn2duHxDcXwn2YU6Rj5Up8PQwkvX": "2026-09-09",
-    "rKoJo4bJh9rcsR2N2BWWvJHnt7eF5aNYDM": "2026-09-09"
+    "rKoJo4bJh9rcsR2N2BWWvJHnt7eF5aNYDM": "2026-09-09",
+    "rpATFzzGzXCoLnn4RA7vvqsT5kkb2tgY2K": "2026-09-09",
+    "rULbZfiS6Nk62ox1GNMqK3RgS7rphW81Ho": "2026-09-09",
+    "rpg6o4fh2DAEyDvhe28mBibtyAH1Uhc3Ps": "2026-09-09",
+    "rh6iNMb7aQ5rbiagZnsFfJchuEBVR2hMGA": "2026-09-09",
+    "rE1ALa6Nn73CSZkTTRKMephmycdvYnLbRQ": "2026-09-09"
   }
 }
