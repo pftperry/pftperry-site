@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-09T06:49:46.109Z",
+  "lastUpdated": "2026-09-09T12:01:39.058Z",
   "days": {
     "2026-06-11": {
       "txCount": 9698,
@@ -8468,8 +8468,8 @@
       "lastSeq": 6140371
     },
     "2026-09-09": {
-      "txCount": 2806,
-      "activeWallets": 39,
+      "txCount": 4913,
+      "activeWallets": 43,
       "walletAddresses": [
         "raNxJdg69FadGcNk4dXF9WjJ7cpc2tXqmj",
         "rUcYTU2NMCo68c2KT938t6aurc4mqC7KcC",
@@ -8509,12 +8509,16 @@
         "rDkhhem9jUvWfkvT1yauY7hZfwsGM613Kd",
         "rsqZiJ6vnmWtaymWh7EW8EK1oEeXrLWvLC",
         "rUXjQPssQ7ovfwNkRnzQkgiNFYPbmZBChp",
-        "rwUw9szSgmnn8eMRkX8Lg4Lz4GDqrAXp7B"
+        "rwUw9szSgmnn8eMRkX8Lg4Lz4GDqrAXp7B",
+        "rf4FRq7wtDJ3N4sgr2PT3dPUtdN6Tyjumy",
+        "rDep8SDqobEKGG8VxFYh9cx3W7wwP7EQKu",
+        "r9eSiuMn2duHxDcXwn2YU6Rj5Up8PQwkvX",
+        "rKoJo4bJh9rcsR2N2BWWvJHnt7eF5aNYDM"
       ],
       "txTypeDistribution": {
-        "Payment": 1973,
-        "NFTokenBurn": 551,
-        "NFTokenMint": 282
+        "Payment": 3687,
+        "NFTokenBurn": 771,
+        "NFTokenMint": 455
       },
       "hourlyTxCounts": [
         402,
@@ -8523,13 +8527,13 @@
         420,
         431,
         401,
-        333,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        405,
+        433,
+        404,
+        396,
+        387,
+        413,
+        2,
         0,
         0,
         0,
@@ -8546,7 +8550,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 58,
       "validatorCount": 60,
-      "lastSeq": 6149051
+      "lastSeq": 6155243
     }
   },
   "firstSeen": {
@@ -11924,6 +11928,9 @@
     "rPtWWqhcEmBxDqiHSJzdZBHRfLw75kfhgQ": "2026-09-09",
     "rDkhhem9jUvWfkvT1yauY7hZfwsGM613Kd": "2026-09-09",
     "rUXjQPssQ7ovfwNkRnzQkgiNFYPbmZBChp": "2026-09-09",
-    "rwUw9szSgmnn8eMRkX8Lg4Lz4GDqrAXp7B": "2026-09-09"
+    "rwUw9szSgmnn8eMRkX8Lg4Lz4GDqrAXp7B": "2026-09-09",
+    "rf4FRq7wtDJ3N4sgr2PT3dPUtdN6Tyjumy": "2026-09-09",
+    "r9eSiuMn2duHxDcXwn2YU6Rj5Up8PQwkvX": "2026-09-09",
+    "rKoJo4bJh9rcsR2N2BWWvJHnt7eF5aNYDM": "2026-09-09"
   }
 }
