@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-10T04:57:35.639Z",
+  "lastUpdated": "2026-09-10T09:18:44.439Z",
   "days": {
     "2026-06-12": {
       "txCount": 9832,
@@ -8450,8 +8450,8 @@
       "lastSeq": 6167194
     },
     "2026-09-10": {
-      "txCount": 2099,
-      "activeWallets": 36,
+      "txCount": 3865,
+      "activeWallets": 40,
       "walletAddresses": [
         "rf4FRq7wtDJ3N4sgr2PT3dPUtdN6Tyjumy",
         "rD9v6Cfs2jAsTNT8aW1nahN8zyVu3eSVxV",
@@ -8488,24 +8488,28 @@
         "rm3KNbfSxJzx8SzAuwkybpaDSkr4NPsGE",
         "rskDooe3opQ97aFRQTUeU1ncFe62KZdpVL",
         "rrpJZZKhNK7qBY44Ne3nC1Zxyrdoo9459y",
-        "rDF4xcQqMa1Cgfvd2gVZ4TjJKdj3huhnCc"
+        "rDF4xcQqMa1Cgfvd2gVZ4TjJKdj3huhnCc",
+        "rKrEkqNbnvp8mT1Twu7hR1ppxxpixPsW9P",
+        "rBTYXwQofjJraScghrzt9CUHCa1gzUxknC",
+        "rDVkT8nzuFCKCHmXpw6YaDCELErAx7F746",
+        "r9ks3A8fa2KGhBy9uADh6XmCHHQwBQ3HDA"
       ],
       "txTypeDistribution": {
-        "Payment": 1671,
-        "NFTokenBurn": 250,
-        "NFTokenMint": 178
+        "Payment": 3099,
+        "NFTokenBurn": 429,
+        "NFTokenMint": 337
       },
       "hourlyTxCounts": [
         440,
         436,
         409,
         411,
+        422,
+        427,
         403,
-        0,
-        0,
-        0,
-        0,
-        0,
+        379,
+        393,
+        145,
         0,
         0,
         0,
@@ -8525,7 +8529,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 58,
       "validatorCount": 60,
-      "lastSeq": 6175413
+      "lastSeq": 6180594
     }
   },
   "firstSeen": {
@@ -11917,6 +11921,9 @@
     "rm3KNbfSxJzx8SzAuwkybpaDSkr4NPsGE": "2026-09-10",
     "rskDooe3opQ97aFRQTUeU1ncFe62KZdpVL": "2026-09-10",
     "rrpJZZKhNK7qBY44Ne3nC1Zxyrdoo9459y": "2026-09-10",
-    "rDF4xcQqMa1Cgfvd2gVZ4TjJKdj3huhnCc": "2026-09-10"
+    "rDF4xcQqMa1Cgfvd2gVZ4TjJKdj3huhnCc": "2026-09-10",
+    "rKrEkqNbnvp8mT1Twu7hR1ppxxpixPsW9P": "2026-09-10",
+    "rDVkT8nzuFCKCHmXpw6YaDCELErAx7F746": "2026-09-10",
+    "r9ks3A8fa2KGhBy9uADh6XmCHHQwBQ3HDA": "2026-09-10"
   }
 }
