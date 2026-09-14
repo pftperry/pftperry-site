@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-14T06:32:08.504Z",
+  "lastUpdated": "2026-09-14T13:27:00.286Z",
   "days": {
     "2026-06-16": {
       "txCount": 9817,
@@ -8401,8 +8401,8 @@
       "lastSeq": 6283002
     },
     "2026-09-14": {
-      "txCount": 2642,
-      "activeWallets": 36,
+      "txCount": 5515,
+      "activeWallets": 42,
       "walletAddresses": [
         "rBYnUxfRASE3fBXQHzKZ2Nk4qg7LXMn2Rz",
         "rhP1WPVAfcNCFgncfyN8xyNC3xcS2PAEng",
@@ -8439,12 +8439,18 @@
         "rfo5PXejjp6xA4H8cNhodhkfz9tHLMCVNx",
         "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
         "rUktzHJELdFG2QEWzrqyMgM4k5hYViKej2",
-        "rDYN3HqXaqvJH1DEybhLKpuvEv4buUHhJA"
+        "rDYN3HqXaqvJH1DEybhLKpuvEv4buUHhJA",
+        "rsVY9Z1pD86DPq2TfpTAFGy5UYpuFiYZAC",
+        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
+        "rDYYs34t9pBgfAoTeayLS9AF8dFk9qNy9v",
+        "rUgvkE4e1gn5Fxpz5y3ZTdA9XdvE11UPQL",
+        "r4sLeoPG16HJP5M1v9WBTUgp1VkMT8NtAP",
+        "rpg7LaA9mX5hGMnbmbvhNB9P5DEkj7DvtK"
       ],
       "txTypeDistribution": {
-        "Payment": 2172,
-        "NFTokenBurn": 232,
-        "NFTokenMint": 238
+        "Payment": 4545,
+        "NFTokenBurn": 476,
+        "NFTokenMint": 494
       },
       "hourlyTxCounts": [
         418,
@@ -8453,14 +8459,14 @@
         404,
         391,
         411,
-        200,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        390,
+        397,
+        433,
+        397,
+        404,
+        419,
+        447,
+        186,
         0,
         0,
         0,
@@ -8475,8 +8481,8 @@
       "tps": 0.11,
       "avgFee": "0.00001000",
       "nodeCount": 57,
-      "validatorCount": 57,
-      "lastSeq": 6291647
+      "validatorCount": 56,
+      "lastSeq": 6299890
     }
   },
   "firstSeen": {
@@ -11925,6 +11931,11 @@
     "rGH5Cw1yBAsYcoQogrgia8eqJX6zDQ42zB": "2026-09-13",
     "rabtHKhR9SNSPsNTg3QiRDLUPuYA5vVXuJ": "2026-09-14",
     "rUktzHJELdFG2QEWzrqyMgM4k5hYViKej2": "2026-09-14",
-    "rDYN3HqXaqvJH1DEybhLKpuvEv4buUHhJA": "2026-09-14"
+    "rDYN3HqXaqvJH1DEybhLKpuvEv4buUHhJA": "2026-09-14",
+    "rsVY9Z1pD86DPq2TfpTAFGy5UYpuFiYZAC": "2026-09-14",
+    "rDYYs34t9pBgfAoTeayLS9AF8dFk9qNy9v": "2026-09-14",
+    "rUgvkE4e1gn5Fxpz5y3ZTdA9XdvE11UPQL": "2026-09-14",
+    "r4sLeoPG16HJP5M1v9WBTUgp1VkMT8NtAP": "2026-09-14",
+    "rpg7LaA9mX5hGMnbmbvhNB9P5DEkj7DvtK": "2026-09-14"
   }
 }
