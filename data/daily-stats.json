@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-16T21:49:47.821Z",
+  "lastUpdated": "2026-09-16T23:56:49.554Z",
   "days": {
     "2026-06-18": {
       "txCount": 9393,
@@ -8388,8 +8388,8 @@
       "lastSeq": 6339111
     },
     "2026-09-16": {
-      "txCount": 8975,
-      "activeWallets": 53,
+      "txCount": 9869,
+      "activeWallets": 57,
       "walletAddresses": [
         "rBieducKvMAYQqH6bqPL4e9UStQpXDsGpK",
         "rJRiC4aHQwhsni3CiBWq88uvGThnPEvaAd",
@@ -8443,12 +8443,16 @@
         "r4eQNe7sJtfx7gJ9EMZrqCwaSah9rBVKXj",
         "rPSYWukGRmSXYNC4NvZdy2FKMftfYhhrkz",
         "rDjr7UzfWrqGsQPecdAMJZYH449Fi1mQJp",
-        "rsd4iY4xFwkpn2XCQ1NouSZHne8s5dqiDB"
+        "rsd4iY4xFwkpn2XCQ1NouSZHne8s5dqiDB",
+        "r96xVL3ac7rnMydmivjfm9d6pXVprUhwni",
+        "rBRPPijmuR4NCQAhg3iHtNAXYJsC2JEn3s",
+        "rw2afWGtQz22jLWuSQrPA3nJUsF6VoPa8c",
+        "rUqQr5RE18S1ovARvimwWVeDH6VsB4goCJ"
       ],
       "txTypeDistribution": {
-        "Payment": 6943,
-        "NFTokenBurn": 1024,
-        "NFTokenMint": 1008
+        "Payment": 7620,
+        "NFTokenBurn": 1144,
+        "NFTokenMint": 1105
       },
       "hourlyTxCounts": [
         401,
@@ -8472,15 +8476,15 @@
         421,
         424,
         428,
-        329,
-        0,
-        0
+        390,
+        415,
+        418
       ],
       "tps": 0.11,
       "avgFee": "0.00001000",
       "nodeCount": 57,
       "validatorCount": 54,
-      "lastSeq": 6367085
+      "lastSeq": 6369612
     }
   },
   "firstSeen": {
@@ -11971,6 +11975,10 @@
     "r4eQNe7sJtfx7gJ9EMZrqCwaSah9rBVKXj": "2026-09-16",
     "rPSYWukGRmSXYNC4NvZdy2FKMftfYhhrkz": "2026-09-16",
     "rDjr7UzfWrqGsQPecdAMJZYH449Fi1mQJp": "2026-09-16",
-    "rsd4iY4xFwkpn2XCQ1NouSZHne8s5dqiDB": "2026-09-16"
+    "rsd4iY4xFwkpn2XCQ1NouSZHne8s5dqiDB": "2026-09-16",
+    "r96xVL3ac7rnMydmivjfm9d6pXVprUhwni": "2026-09-16",
+    "rBRPPijmuR4NCQAhg3iHtNAXYJsC2JEn3s": "2026-09-16",
+    "rw2afWGtQz22jLWuSQrPA3nJUsF6VoPa8c": "2026-09-16",
+    "rUqQr5RE18S1ovARvimwWVeDH6VsB4goCJ": "2026-09-16"
   }
 }
