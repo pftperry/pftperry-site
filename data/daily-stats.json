@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-18T06:05:32.763Z",
+  "lastUpdated": "2026-09-18T11:30:57.382Z",
   "days": {
     "2026-06-20": {
       "txCount": 9891,
@@ -8379,8 +8379,8 @@
       "lastSeq": 6397308
     },
     "2026-09-18": {
-      "txCount": 2469,
-      "activeWallets": 38,
+      "txCount": 4650,
+      "activeWallets": 42,
       "walletAddresses": [
         "rDjr7UzfWrqGsQPecdAMJZYH449Fi1mQJp",
         "rPSYWukGRmSXYNC4NvZdy2FKMftfYhhrkz",
@@ -8419,12 +8419,16 @@
         "rDRzDxcwPAN9WvZ5fLRjKty1e3RV6JmGLt",
         "rHqLrYzXvXYxWdx8aYtVcdvBUTrQEWqFiD",
         "rMz9qSHh6j4ozpxeaE8ai9vfGfacem5mp1",
-        "rfsKC8gbaRXCbJbXKdcJqRY92fvv6gdFxz"
+        "rfsKC8gbaRXCbJbXKdcJqRY92fvv6gdFxz",
+        "rBototg6iy4MRteGH2ftqQVF1D3mqdvmqf",
+        "rDep8SDqobEKGG8VxFYh9cx3W7wwP7EQKu",
+        "rJGDNJzmEtbzHe1ZmZwgCAcQeS3VW1h1A1",
+        "raspMvVNWqK6STmn63Ln1NZmDn4cP12nC2"
       ],
       "txTypeDistribution": {
-        "Payment": 1876,
-        "NFTokenMint": 230,
-        "NFTokenBurn": 363
+        "Payment": 3691,
+        "NFTokenMint": 452,
+        "NFTokenBurn": 507
       },
       "hourlyTxCounts": [
         395,
@@ -8433,12 +8437,12 @@
         389,
         426,
         437,
-        34,
-        0,
-        0,
-        0,
-        0,
-        0,
+        418,
+        423,
+        365,
+        393,
+        411,
+        205,
         0,
         0,
         0,
@@ -8456,7 +8460,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 57,
       "validatorCount": 54,
-      "lastSeq": 6405530
+      "lastSeq": 6411990
     }
   },
   "firstSeen": {
@@ -11968,6 +11972,9 @@
     "rDRzDxcwPAN9WvZ5fLRjKty1e3RV6JmGLt": "2026-09-18",
     "rHqLrYzXvXYxWdx8aYtVcdvBUTrQEWqFiD": "2026-09-18",
     "rMz9qSHh6j4ozpxeaE8ai9vfGfacem5mp1": "2026-09-18",
-    "rfsKC8gbaRXCbJbXKdcJqRY92fvv6gdFxz": "2026-09-18"
+    "rfsKC8gbaRXCbJbXKdcJqRY92fvv6gdFxz": "2026-09-18",
+    "rBototg6iy4MRteGH2ftqQVF1D3mqdvmqf": "2026-09-18",
+    "rJGDNJzmEtbzHe1ZmZwgCAcQeS3VW1h1A1": "2026-09-18",
+    "raspMvVNWqK6STmn63Ln1NZmDn4cP12nC2": "2026-09-18"
   }
 }
