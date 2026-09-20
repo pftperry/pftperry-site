@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20T07:29:06.304Z",
+  "lastUpdated": "2026-09-20T12:33:08.181Z",
   "days": {
     "2026-06-22": {
       "txCount": 9631,
@@ -8373,8 +8373,8 @@
       "lastSeq": 6455151
     },
     "2026-09-20": {
-      "txCount": 3067,
-      "activeWallets": 34,
+      "txCount": 5156,
+      "activeWallets": 37,
       "walletAddresses": [
         "rpLeDq98Zwmtm6z9zRr5VxhZLaqGdKHoKj",
         "rDRzDxcwPAN9WvZ5fLRjKty1e3RV6JmGLt",
@@ -8409,12 +8409,15 @@
         "raspMvVNWqK6STmn63Ln1NZmDn4cP12nC2",
         "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
         "rUQVKGqQJNUMU7bFSGCHAL4aHkpSR4ohfz",
-        "rhHfxhQJxWCpgJDemV84QrA5BPW6xYvvzL"
+        "rhHfxhQJxWCpgJDemV84QrA5BPW6xYvvzL",
+        "rKWteZTv7dXJKxhiHGnFqXxqJRcrYKz24T",
+        "rKAXj7wWY2dUPfpJ2pb4HMoqje3wjFxakF",
+        "rpzKymZfY5bq6anZhAsuoPSV2qrwMsP7iV"
       ],
       "txTypeDistribution": {
-        "Payment": 2520,
-        "NFTokenMint": 322,
-        "NFTokenBurn": 225
+        "Payment": 4180,
+        "NFTokenMint": 570,
+        "NFTokenBurn": 406
       },
       "hourlyTxCounts": [
         420,
@@ -8424,12 +8427,12 @@
         417,
         381,
         395,
-        200,
-        0,
-        0,
-        0,
-        0,
-        0,
+        414,
+        421,
+        427,
+        426,
+        391,
+        210,
         0,
         0,
         0,
@@ -8446,7 +8449,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 57,
       "validatorCount": 53,
-      "lastSeq": 6464383
+      "lastSeq": 6470425
     }
   },
   "firstSeen": {
@@ -11985,6 +11988,9 @@
     "rGpeGmza8LuBLt9FLFS4mcjK2e6maWJTWd": "2026-09-19",
     "rUUC7w3Bp7NRezpgv4EZZAn8WUp8KsKw27": "2026-09-20",
     "rUQVKGqQJNUMU7bFSGCHAL4aHkpSR4ohfz": "2026-09-20",
-    "rhHfxhQJxWCpgJDemV84QrA5BPW6xYvvzL": "2026-09-20"
+    "rhHfxhQJxWCpgJDemV84QrA5BPW6xYvvzL": "2026-09-20",
+    "rKWteZTv7dXJKxhiHGnFqXxqJRcrYKz24T": "2026-09-20",
+    "rKAXj7wWY2dUPfpJ2pb4HMoqje3wjFxakF": "2026-09-20",
+    "rpzKymZfY5bq6anZhAsuoPSV2qrwMsP7iV": "2026-09-20"
   }
 }
