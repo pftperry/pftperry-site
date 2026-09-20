@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20T12:33:08.181Z",
+  "lastUpdated": "2026-09-20T16:34:57.106Z",
   "days": {
     "2026-06-22": {
       "txCount": 9631,
@@ -8373,8 +8373,8 @@
       "lastSeq": 6455151
     },
     "2026-09-20": {
-      "txCount": 5156,
-      "activeWallets": 37,
+      "txCount": 6744,
+      "activeWallets": 42,
       "walletAddresses": [
         "rpLeDq98Zwmtm6z9zRr5VxhZLaqGdKHoKj",
         "rDRzDxcwPAN9WvZ5fLRjKty1e3RV6JmGLt",
@@ -8412,12 +8412,17 @@
         "rhHfxhQJxWCpgJDemV84QrA5BPW6xYvvzL",
         "rKWteZTv7dXJKxhiHGnFqXxqJRcrYKz24T",
         "rKAXj7wWY2dUPfpJ2pb4HMoqje3wjFxakF",
-        "rpzKymZfY5bq6anZhAsuoPSV2qrwMsP7iV"
+        "rpzKymZfY5bq6anZhAsuoPSV2qrwMsP7iV",
+        "rKZ9SVg1z764ABrLQ3Q1Dh5PPR7gM1z4Df",
+        "rDTZ2xswRs128PmjND6jjo4G66EM314VTG",
+        "rEZz4K445KBtVs88fqJf156HTemNLj2iB2",
+        "rPzLiEeqJ74ywk4bwCo9NxXgsLLysRAZAK",
+        "rD1U5XXxPdPcNvD1nwgLMstyQr1p2xzQCm"
       ],
       "txTypeDistribution": {
-        "Payment": 4180,
-        "NFTokenMint": 570,
-        "NFTokenBurn": 406
+        "Payment": 5347,
+        "NFTokenMint": 709,
+        "NFTokenBurn": 688
       },
       "hourlyTxCounts": [
         420,
@@ -8432,11 +8437,11 @@
         427,
         426,
         391,
-        210,
-        0,
-        0,
-        0,
-        0,
+        383,
+        417,
+        393,
+        385,
+        220,
         0,
         0,
         0,
@@ -8449,7 +8454,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 57,
       "validatorCount": 53,
-      "lastSeq": 6470425
+      "lastSeq": 6475226
     }
   },
   "firstSeen": {
@@ -11991,6 +11996,10 @@
     "rhHfxhQJxWCpgJDemV84QrA5BPW6xYvvzL": "2026-09-20",
     "rKWteZTv7dXJKxhiHGnFqXxqJRcrYKz24T": "2026-09-20",
     "rKAXj7wWY2dUPfpJ2pb4HMoqje3wjFxakF": "2026-09-20",
-    "rpzKymZfY5bq6anZhAsuoPSV2qrwMsP7iV": "2026-09-20"
+    "rpzKymZfY5bq6anZhAsuoPSV2qrwMsP7iV": "2026-09-20",
+    "rDTZ2xswRs128PmjND6jjo4G66EM314VTG": "2026-09-20",
+    "rEZz4K445KBtVs88fqJf156HTemNLj2iB2": "2026-09-20",
+    "rPzLiEeqJ74ywk4bwCo9NxXgsLLysRAZAK": "2026-09-20",
+    "rD1U5XXxPdPcNvD1nwgLMstyQr1p2xzQCm": "2026-09-20"
   }
 }
