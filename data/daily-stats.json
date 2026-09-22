@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-22T12:16:19.515Z",
+  "lastUpdated": "2026-09-22T17:05:40.623Z",
   "days": {
     "2026-06-24": {
       "txCount": 9776,
@@ -8351,8 +8351,8 @@
       "lastSeq": 6511932
     },
     "2026-09-22": {
-      "txCount": 4943,
-      "activeWallets": 44,
+      "txCount": 6932,
+      "activeWallets": 65,
       "walletAddresses": [
         "r4K4UP6irK7JbPUsLsU6VDDiHQcbHsiUNH",
         "rB3GjDV24joFTNMgu5nWtDy9rfXbptBwru",
@@ -8397,12 +8397,33 @@
         "rpmpf9TD8NU11T4Yh5bB3fVJMV75uPtqAR",
         "rUfs7ZHVgqdhwWAZKLGdBDCq7x27itG5Ev",
         "r3rCNrqzytpHd9Xu9mk2ZJ47nTnhkJjKBX",
-        "rNyttpVo8S1wFceyVdiXyU5Tgbb78TNmzn"
+        "rNyttpVo8S1wFceyVdiXyU5Tgbb78TNmzn",
+        "rKZ9SVg1z764ABrLQ3Q1Dh5PPR7gM1z4Df",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "r4jqPXNeQW6cCcnQGeN4RqiyViguV8Moe2",
+        "rsqZiJ6vnmWtaymWh7EW8EK1oEeXrLWvLC",
+        "rsm4H6JbPGB7o9P5mVQZxhzKBXs2iv88cn",
+        "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
+        "rrp5XAU9K76LFCx5y8mTa1rwDmUMznodbN",
+        "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+        "rpyTMcAKiCxqY7VXenD5ercGGzGWNV9xpg",
+        "raa9hPL4Q4RYCfXADSjfkuo4jaTwwPWbpP",
+        "rpi6tHw9Yzm8hwZFTkz7w4PoqK8SfvMARa",
+        "rKjozZiA9Yi97eHefiKZppxCcX3wEDkf4u",
+        "rPJ3VzY3jiKk2FwGMSYYzshwVC7AL41jE2",
+        "rKbEFHVAQ5JM2LTyrbYUr4cvSUcDKLzXqF",
+        "rnQX8qQNioZzmCfrTG6d5d4cwfAuWRhSyB",
+        "rE21bSNSTziZ7bZ4fzGJxHmZ8KHyQm5vFv",
+        "rQhV9rE7cs5zgFZohjVjjbwqcMkwpLb9rE",
+        "rPvj8ASok1oS5yE7LveUdymmbT6HE7VnRF",
+        "rUwWrJqaeAMn5f721LPW7Dqsshaw7YtTXt",
+        "rnFC8oUEDq2yV7F62nQBYftDbm7BNqFfJB",
+        "rSSNrRqDoEDdHmHJtPSVkwnyxzaXskFze"
       ],
       "txTypeDistribution": {
-        "Payment": 3910,
-        "NFTokenBurn": 435,
-        "NFTokenMint": 598
+        "Payment": 5513,
+        "NFTokenBurn": 593,
+        "NFTokenMint": 826
       },
       "hourlyTxCounts": [
         410,
@@ -8417,12 +8438,12 @@
         388,
         406,
         417,
-        122,
-        0,
-        0,
-        0,
-        0,
-        0,
+        426,
+        402,
+        380,
+        426,
+        447,
+        30,
         0,
         0,
         0,
@@ -8434,7 +8455,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 57,
       "validatorCount": 53,
-      "lastSeq": 6527266
+      "lastSeq": 6533010
     }
   },
   "firstSeen": {
@@ -12007,6 +12028,8 @@
     "rsUoigxr5JLLny5hPVi5N5eZ4ybroTQbNr": "2026-09-22",
     "rpmpf9TD8NU11T4Yh5bB3fVJMV75uPtqAR": "2026-09-22",
     "rUfs7ZHVgqdhwWAZKLGdBDCq7x27itG5Ev": "2026-09-22",
-    "r3rCNrqzytpHd9Xu9mk2ZJ47nTnhkJjKBX": "2026-09-22"
+    "r3rCNrqzytpHd9Xu9mk2ZJ47nTnhkJjKBX": "2026-09-22",
+    "r4jqPXNeQW6cCcnQGeN4RqiyViguV8Moe2": "2026-09-22",
+    "rSSNrRqDoEDdHmHJtPSVkwnyxzaXskFze": "2026-09-22"
   }
 }
