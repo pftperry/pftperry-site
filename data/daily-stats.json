@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-25T18:00:16.877Z",
+  "lastUpdated": "2026-09-25T21:09:16.630Z",
   "days": {
     "2026-06-27": {
       "txCount": 9774,
@@ -8368,8 +8368,8 @@
       "lastSeq": 6597892
     },
     "2026-09-25": {
-      "txCount": 7346,
-      "activeWallets": 52,
+      "txCount": 8659,
+      "activeWallets": 56,
       "walletAddresses": [
         "rdYTjoHToUhAbV9gjjgM2GMmVqKPB6jhk",
         "rfQeshWdQPWXrDvBktiya7PgdCKdXBcYK1",
@@ -8422,12 +8422,16 @@
         "rDNGP2FeA77tgiAvTeepMTUuM1CszJJyoS",
         "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
         "rEgzLiQv9iK1hDSiLhQhT7FXd4S85geg77",
-        "rMF4gHHxi5kB4TjzpygGY6BiSh5CG1pCw8"
+        "rMF4gHHxi5kB4TjzpygGY6BiSh5CG1pCw8",
+        "rK4dKJ1KAfywX4aUPuyTtpDGHcgLUiGAR3",
+        "rUJWfxU2gZ548vj65QrJwi1ZxUo1Tvh3Sv",
+        "r4JVkQfy56wyLk7mTYR8xefCZFPm8HFwM",
+        "rH3dfGifdXzghxKXS74WRA3WtdKLKGj5Um"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 1096,
-        "Payment": 5009,
-        "NFTokenMint": 1241
+        "NFTokenBurn": 1387,
+        "Payment": 5839,
+        "NFTokenMint": 1433
       },
       "hourlyTxCounts": [
         424,
@@ -8447,19 +8451,19 @@
         401,
         392,
         409,
-        390,
-        0,
-        0,
-        0,
-        0,
+        392,
+        441,
+        400,
+        428,
+        42,
         0,
         0
       ],
       "tps": 0.11,
       "avgFee": "0.00001000",
-      "nodeCount": 54,
+      "nodeCount": 55,
       "validatorCount": 53,
-      "lastSeq": 6619778
+      "lastSeq": 6623526
     }
   },
   "firstSeen": {
@@ -12080,6 +12084,9 @@
     "r3shAoPGryyuPT6qi1qHEu24dCd1oxyR7S": "2026-09-25",
     "rDNGP2FeA77tgiAvTeepMTUuM1CszJJyoS": "2026-09-25",
     "rEgzLiQv9iK1hDSiLhQhT7FXd4S85geg77": "2026-09-25",
-    "rMF4gHHxi5kB4TjzpygGY6BiSh5CG1pCw8": "2026-09-25"
+    "rMF4gHHxi5kB4TjzpygGY6BiSh5CG1pCw8": "2026-09-25",
+    "rK4dKJ1KAfywX4aUPuyTtpDGHcgLUiGAR3": "2026-09-25",
+    "rUJWfxU2gZ548vj65QrJwi1ZxUo1Tvh3Sv": "2026-09-25",
+    "r4JVkQfy56wyLk7mTYR8xefCZFPm8HFwM": "2026-09-25"
   }
 }
