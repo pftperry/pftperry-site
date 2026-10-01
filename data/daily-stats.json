@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-01T02:14:31.593Z",
+  "lastUpdated": "2026-10-01T09:08:40.795Z",
   "days": {
     "2026-07-03": {
       "txCount": 9756,
@@ -8385,8 +8385,8 @@
       "lastSeq": 6768957
     },
     "2026-10-01": {
-      "txCount": 949,
-      "activeWallets": 35,
+      "txCount": 3811,
+      "activeWallets": 42,
       "walletAddresses": [
         "rLRGiCaSbaahTc1DnFVJxfvKhPnKyWvUNF",
         "rJfHnKsbZwkgS5BZzsn8jiDiDLygbixW5M",
@@ -8422,24 +8422,31 @@
         "rHZEYvBNecwg15LzA95LdpyisqDgzSSv8y",
         "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
         "rPAXk18EcA5YGaKUbm6uCDNySJ5537X7SM",
-        "rDcewiavoGveuPeUMMmT447bFhPJ1mLLhz"
+        "rDcewiavoGveuPeUMMmT447bFhPJ1mLLhz",
+        "rP14Swp89m5bduhq8pBZcZyoAfnwzDaRUE",
+        "r4XLZKYK63z4zW8ttKzgy8NVW1Noa1pRwj",
+        "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
+        "rhdb253yJaJG2pveJ6WTZ2BGe1B7YZvTra",
+        "rEZa2KQNFK7idRZtKpDPL556RqntkhSCvX",
+        "rs3QMDHvmnCeK14NgccerVjjC1fYpNqX2Y",
+        "rDep8SDqobEKGG8VxFYh9cx3W7wwP7EQKu"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 116,
-        "NFTokenMint": 107,
-        "Payment": 726
+        "NFTokenBurn": 404,
+        "NFTokenMint": 459,
+        "Payment": 2948
       },
       "hourlyTxCounts": [
         432,
         441,
-        76,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        391,
+        411,
+        380,
+        417,
+        467,
+        386,
+        419,
+        67,
         0,
         0,
         0,
@@ -8458,8 +8465,8 @@
       "tps": 0.11,
       "avgFee": "0.00001000",
       "nodeCount": 55,
-      "validatorCount": 52,
-      "lastSeq": 6772489
+      "validatorCount": 51,
+      "lastSeq": 6780701
     }
   },
   "firstSeen": {
@@ -12160,6 +12167,10 @@
     "rLUTvszHcumTC7i7v2C7jubtJ8toJ8kqnm": "2026-09-30",
     "rJfHnKsbZwkgS5BZzsn8jiDiDLygbixW5M": "2026-10-01",
     "rPAXk18EcA5YGaKUbm6uCDNySJ5537X7SM": "2026-10-01",
-    "rDcewiavoGveuPeUMMmT447bFhPJ1mLLhz": "2026-10-01"
+    "rDcewiavoGveuPeUMMmT447bFhPJ1mLLhz": "2026-10-01",
+    "rP14Swp89m5bduhq8pBZcZyoAfnwzDaRUE": "2026-10-01",
+    "rhdb253yJaJG2pveJ6WTZ2BGe1B7YZvTra": "2026-10-01",
+    "rEZa2KQNFK7idRZtKpDPL556RqntkhSCvX": "2026-10-01",
+    "rs3QMDHvmnCeK14NgccerVjjC1fYpNqX2Y": "2026-10-01"
   }
 }
