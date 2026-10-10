@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-10T02:28:19.632Z",
+  "lastUpdated": "2026-10-10T08:46:27.287Z",
   "days": {
     "2026-07-12": {
       "txCount": 9566,
@@ -8390,8 +8390,8 @@
       "lastSeq": 7026222
     },
     "2026-10-10": {
-      "txCount": 1052,
-      "activeWallets": 36,
+      "txCount": 3634,
+      "activeWallets": 40,
       "walletAddresses": [
         "rLdmhFgVnhWf8Vy2xJVq3cRv3weSFfMcJW",
         "rYjLiArmdgYZnY9sYwFJdtijqSW4HmDNT",
@@ -8428,23 +8428,27 @@
         "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
         "rJy8QpnM88NKkRLNK5uotUSsad7Jvu1cPh",
         "rNzjzxZNFbsGhFUquhbybsfaiiQFqi2Lri",
-        "rEdUNrxYAqCgkb5hjSk6QRrNL8fDD8vFdP"
+        "rEdUNrxYAqCgkb5hjSk6QRrNL8fDD8vFdP",
+        "r3J2TXJWYjeorTxphJKjqf8VYDHtrYDAxY",
+        "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
+        "rNxVxsKCa8yEErCAKczhxJii2jTibUwAka",
+        "rrhTNZVF5hxjCigTpn4vSkKsGm6VtypAA5"
       ],
       "txTypeDistribution": {
-        "Payment": 720,
-        "NFTokenMint": 87,
-        "NFTokenBurn": 245
+        "Payment": 2732,
+        "NFTokenMint": 356,
+        "NFTokenBurn": 546
       },
       "hourlyTxCounts": [
         434,
         423,
-        195,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        423,
+        397,
+        402,
+        418,
+        405,
+        418,
+        314,
         0,
         0,
         0,
@@ -8461,11 +8465,11 @@
         0,
         0
       ],
-      "tps": 0.09,
+      "tps": 0.12,
       "avgFee": "0.00001000",
       "nodeCount": 56,
       "validatorCount": 52,
-      "lastSeq": 7029922
+      "lastSeq": 7037425
     }
   },
   "firstSeen": {
@@ -12300,6 +12304,9 @@
     "rLdmhFgVnhWf8Vy2xJVq3cRv3weSFfMcJW": "2026-10-09",
     "rJy8QpnM88NKkRLNK5uotUSsad7Jvu1cPh": "2026-10-10",
     "rNzjzxZNFbsGhFUquhbybsfaiiQFqi2Lri": "2026-10-10",
-    "rEdUNrxYAqCgkb5hjSk6QRrNL8fDD8vFdP": "2026-10-10"
+    "rEdUNrxYAqCgkb5hjSk6QRrNL8fDD8vFdP": "2026-10-10",
+    "r3J2TXJWYjeorTxphJKjqf8VYDHtrYDAxY": "2026-10-10",
+    "rNxVxsKCa8yEErCAKczhxJii2jTibUwAka": "2026-10-10",
+    "rrhTNZVF5hxjCigTpn4vSkKsGm6VtypAA5": "2026-10-10"
   }
 }
