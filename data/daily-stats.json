@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-13T16:10:14.084Z",
+  "lastUpdated": "2026-10-13T21:22:54.577Z",
   "days": {
     "2026-07-15": {
       "txCount": 9581,
@@ -8386,8 +8386,8 @@
       "lastSeq": 7107022
     },
     "2026-10-13": {
-      "txCount": 6653,
-      "activeWallets": 48,
+      "txCount": 8852,
+      "activeWallets": 66,
       "walletAddresses": [
         "rfbDaQMuw6YLH2bfVbJQjw8HSvLSsp9DET",
         "rKJNKBzFp1ktX6Ltj6U5Co6QkHSdqEu1jy",
@@ -8436,12 +8436,30 @@
         "rGBsoy65Ff1d9iJUzXbDct6VCa8sHZ5yxE",
         "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
         "rJqG3Hbu98NaCLqjiExG4xpzeGzfUyDoWc",
-        "rsm4H6JbPGB7o9P5mVQZxhzKBXs2iv88cn"
+        "rsm4H6JbPGB7o9P5mVQZxhzKBXs2iv88cn",
+        "rpi6tHw9Yzm8hwZFTkz7w4PoqK8SfvMARa",
+        "rE21bSNSTziZ7bZ4fzGJxHmZ8KHyQm5vFv",
+        "rQhV9rE7cs5zgFZohjVjjbwqcMkwpLb9rE",
+        "rnQX8qQNioZzmCfrTG6d5d4cwfAuWRhSyB",
+        "rUwWrJqaeAMn5f721LPW7Dqsshaw7YtTXt",
+        "rNyttpVo8S1wFceyVdiXyU5Tgbb78TNmzn",
+        "rfmdkPTQSXnu3qVW7ib85BE6ixkfeXEgMB",
+        "rrp5XAU9K76LFCx5y8mTa1rwDmUMznodbN",
+        "rnFC8oUEDq2yV7F62nQBYftDbm7BNqFfJB",
+        "raL2kvboRVC7Q1pm7C9VvhJuXK4M1FGwzd",
+        "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+        "rPJ3VzY3jiKk2FwGMSYYzshwVC7AL41jE2",
+        "rPvj8ASok1oS5yE7LveUdymmbT6HE7VnRF",
+        "raa9hPL4Q4RYCfXADSjfkuo4jaTwwPWbpP",
+        "rKbEFHVAQ5JM2LTyrbYUr4cvSUcDKLzXqF",
+        "rKjozZiA9Yi97eHefiKZppxCcX3wEDkf4u",
+        "rUKkypf632vPpJf9rphzY8Bp3Bwh4MSJrq",
+        "rwVrcnpFsFpaS2drrqydAb5LoLRXyS9ip9"
       ],
       "txTypeDistribution": {
-        "Payment": 5411,
-        "NFTokenMint": 704,
-        "NFTokenBurn": 538
+        "Payment": 7239,
+        "NFTokenMint": 921,
+        "NFTokenBurn": 692
       },
       "hourlyTxCounts": [
         435,
@@ -8460,20 +8478,20 @@
         404,
         395,
         391,
-        57,
-        0,
-        0,
-        0,
-        0,
-        0,
+        414,
+        420,
+        430,
+        418,
+        415,
+        159,
         0,
         0
       ],
-      "tps": 0.09,
+      "tps": 0.14,
       "avgFee": "0.00001000",
       "nodeCount": 57,
       "validatorCount": 53,
-      "lastSeq": 7131977
+      "lastSeq": 7138189
     }
   },
   "firstSeen": {
@@ -12366,6 +12384,8 @@
     "rQDrDbcVg22CxU3EwgcrUnaNgn6LD6SX1u": "2026-10-13",
     "raWgkA5As239XC2JM7hxf4Qqsvnpw6Mivb": "2026-10-13",
     "rGBsoy65Ff1d9iJUzXbDct6VCa8sHZ5yxE": "2026-10-13",
-    "rJqG3Hbu98NaCLqjiExG4xpzeGzfUyDoWc": "2026-10-13"
+    "rJqG3Hbu98NaCLqjiExG4xpzeGzfUyDoWc": "2026-10-13",
+    "rUKkypf632vPpJf9rphzY8Bp3Bwh4MSJrq": "2026-10-13",
+    "rwVrcnpFsFpaS2drrqydAb5LoLRXyS9ip9": "2026-10-13"
   }
 }
