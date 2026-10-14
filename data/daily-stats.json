@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-14T15:16:33.033Z",
+  "lastUpdated": "2026-10-14T19:31:45.317Z",
   "days": {
     "2026-07-16": {
       "txCount": 9346,
@@ -8387,8 +8387,8 @@
       "lastSeq": 7138189
     },
     "2026-10-14": {
-      "txCount": 6283,
-      "activeWallets": 46,
+      "txCount": 8013,
+      "activeWallets": 49,
       "walletAddresses": [
         "rsVTQvHYcQo63AF3nhqTdGGKLFkXqHTT3x",
         "rLkEyDekk82EqMRsiSmqoQxWgi8L25twzw",
@@ -8435,12 +8435,15 @@
         "rBRTZfXrzckhP2MRmsh2LVQVwZiYpCFaWN",
         "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
         "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
-        "rME9B9U7kDVfbbDE4moFtQEX3F6dtbVVAn"
+        "rME9B9U7kDVfbbDE4moFtQEX3F6dtbVVAn",
+        "rUi84GSM2inkEq7xbySg274uhBRKt87b9K",
+        "rhgyBRSGuDtQBpL161TkPS4EXXfkUNvtGt",
+        "rJEqDjkzHZ1FD3tTapqw3WhQDYBe6BhBs6"
       ],
       "txTypeDistribution": {
-        "Payment": 4849,
-        "NFTokenMint": 637,
-        "NFTokenBurn": 797
+        "Payment": 6250,
+        "NFTokenMint": 813,
+        "NFTokenBurn": 950
       },
       "hourlyTxCounts": [
         395,
@@ -8458,21 +8461,21 @@
         406,
         404,
         418,
-        114,
-        0,
-        0,
-        0,
-        0,
+        404,
+        407,
+        404,
+        428,
+        201,
         0,
         0,
         0,
         0
       ],
-      "tps": 0.11,
+      "tps": 0.13,
       "avgFee": "0.00001000",
       "nodeCount": 57,
       "validatorCount": 53,
-      "lastSeq": 7159505
+      "lastSeq": 7164575
     }
   },
   "firstSeen": {
@@ -12378,6 +12381,9 @@
     "rNBwXQB7nGMQxUT48kN6KWsAxcKiZNm2Ho": "2026-10-14",
     "rQ3hLa14w7VshnqUXmj4W7d1UBgFas13J8": "2026-10-14",
     "rBRTZfXrzckhP2MRmsh2LVQVwZiYpCFaWN": "2026-10-14",
-    "rME9B9U7kDVfbbDE4moFtQEX3F6dtbVVAn": "2026-10-14"
+    "rME9B9U7kDVfbbDE4moFtQEX3F6dtbVVAn": "2026-10-14",
+    "rUi84GSM2inkEq7xbySg274uhBRKt87b9K": "2026-10-14",
+    "rhgyBRSGuDtQBpL161TkPS4EXXfkUNvtGt": "2026-10-14",
+    "rJEqDjkzHZ1FD3tTapqw3WhQDYBe6BhBs6": "2026-10-14"
   }
 }
