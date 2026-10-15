@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-15T01:01:59.235Z",
+  "lastUpdated": "2026-10-15T06:00:14.789Z",
   "days": {
     "2026-07-17": {
       "txCount": 9123,
@@ -8387,8 +8387,8 @@
       "lastSeq": 7168434
     },
     "2026-10-15": {
-      "txCount": 403,
-      "activeWallets": 33,
+      "txCount": 2464,
+      "activeWallets": 37,
       "walletAddresses": [
         "rHrMZoPBTUJ86XTJPcrBUqaYsKMP9cLSXX",
         "rUVnkatVjEaKCbtFhzCZxDpGFtRkEtU8KX",
@@ -8422,20 +8422,24 @@
         "rQ3hLa14w7VshnqUXmj4W7d1UBgFas13J8",
         "rESyzfN4mpXHr7qMbBwd3rDJ5L7icxGMGF",
         "rP2NCgLh1jTA95P6FQYAEz7GBzzvSM4t7A",
-        "rNBwXQB7nGMQxUT48kN6KWsAxcKiZNm2Ho"
+        "rNBwXQB7nGMQxUT48kN6KWsAxcKiZNm2Ho",
+        "r3GiV4KNtvT5xvGUGno4np7VFdbkRrGokE",
+        "rj7njYSbbgidA32zYW8nLjjsqFXVorMJL",
+        "rMv4ba1QkrYiT1vzaMpMDeN7Wysv6KqmcD",
+        "rwtPwdaPGoRcimDeBp5CmhDwxWHXHicZ4v"
       ],
       "txTypeDistribution": {
-        "Payment": 342,
-        "NFTokenMint": 34,
-        "NFTokenBurn": 27
+        "Payment": 2025,
+        "NFTokenMint": 255,
+        "NFTokenBurn": 184
       },
       "hourlyTxCounts": [
         397,
-        6,
-        0,
-        0,
-        0,
-        0,
+        399,
+        421,
+        429,
+        405,
+        413,
         0,
         0,
         0,
@@ -8455,11 +8459,11 @@
         0,
         0
       ],
-      "tps": 0.05,
+      "tps": 0.1,
       "avgFee": "0.00001000",
       "nodeCount": 57,
       "validatorCount": 53,
-      "lastSeq": 7171128
+      "lastSeq": 7177049
     }
   },
   "firstSeen": {
@@ -12372,6 +12376,10 @@
     "rUVnkatVjEaKCbtFhzCZxDpGFtRkEtU8KX": "2026-10-14",
     "rESyzfN4mpXHr7qMbBwd3rDJ5L7icxGMGF": "2026-10-14",
     "rDmrsVNHM8Jj6W4BwrD4gDLuTLWohycJvM": "2026-10-15",
-    "rBYhftG8voEAHQFTsEEyCLuiAbR1LyXWa4": "2026-10-15"
+    "rBYhftG8voEAHQFTsEEyCLuiAbR1LyXWa4": "2026-10-15",
+    "r3GiV4KNtvT5xvGUGno4np7VFdbkRrGokE": "2026-10-15",
+    "rj7njYSbbgidA32zYW8nLjjsqFXVorMJL": "2026-10-15",
+    "rMv4ba1QkrYiT1vzaMpMDeN7Wysv6KqmcD": "2026-10-15",
+    "rwtPwdaPGoRcimDeBp5CmhDwxWHXHicZ4v": "2026-10-15"
   }
 }
