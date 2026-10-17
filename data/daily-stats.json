@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-17T17:22:27.556Z",
+  "lastUpdated": "2026-10-17T19:33:30.031Z",
   "days": {
     "2026-07-19": {
       "txCount": 9637,
@@ -8381,8 +8381,8 @@
       "lastSeq": 7226721
     },
     "2026-10-17": {
-      "txCount": 7136,
-      "activeWallets": 47,
+      "txCount": 8067,
+      "activeWallets": 51,
       "walletAddresses": [
         "rpmcs3gE5t1gtJn9YeMsFhkoFk8rMDUGfL",
         "rNLsuKk8AmQs2jxjqsq7vyJyUELrVtHo51",
@@ -8430,12 +8430,16 @@
         "rpYBWSjiYiKDSHqSVGDTASACM77LvRWLTH",
         "rLUoeayehY2wjKfp9Pw699PRvMmLPmfReh",
         "r3VNV2aVf1SkS8Ca83iJH1hLuacGqNAoG",
-        "rHFgJ1nDiQAyk4BP2AKDP4rxjLS1eRZD5t"
+        "rHFgJ1nDiQAyk4BP2AKDP4rxjLS1eRZD5t",
+        "rarNV4392xJoW1h92JwS6ZTSgDBWYziodt",
+        "rstFYdYh1ZPRSqLwUrk6yNcPGytH7CjQmm",
+        "radUqanYu72ZM8Hm4bpHTeajVYisueBLik",
+        "rDYz7kFgFz1pu5NqRnMaEoU7nad1bod3p9"
       ],
       "txTypeDistribution": {
-        "Payment": 5534,
-        "NFTokenMint": 683,
-        "NFTokenBurn": 919
+        "Payment": 6172,
+        "NFTokenMint": 756,
+        "NFTokenBurn": 1139
       },
       "hourlyTxCounts": [
         436,
@@ -8455,19 +8459,19 @@
         393,
         383,
         425,
-        157,
-        0,
-        0,
+        435,
+        395,
+        258,
         0,
         0,
         0,
         0
       ],
-      "tps": 0.16,
+      "tps": 0.09,
       "avgFee": "0.00001000",
       "nodeCount": 58,
       "validatorCount": 54,
-      "lastSeq": 7247737
+      "lastSeq": 7250338
     }
   },
   "firstSeen": {
@@ -12421,6 +12425,10 @@
     "rpYBWSjiYiKDSHqSVGDTASACM77LvRWLTH": "2026-10-17",
     "rLUoeayehY2wjKfp9Pw699PRvMmLPmfReh": "2026-10-17",
     "r3VNV2aVf1SkS8Ca83iJH1hLuacGqNAoG": "2026-10-17",
-    "rHFgJ1nDiQAyk4BP2AKDP4rxjLS1eRZD5t": "2026-10-17"
+    "rHFgJ1nDiQAyk4BP2AKDP4rxjLS1eRZD5t": "2026-10-17",
+    "rarNV4392xJoW1h92JwS6ZTSgDBWYziodt": "2026-10-17",
+    "rstFYdYh1ZPRSqLwUrk6yNcPGytH7CjQmm": "2026-10-17",
+    "radUqanYu72ZM8Hm4bpHTeajVYisueBLik": "2026-10-17",
+    "rDYz7kFgFz1pu5NqRnMaEoU7nad1bod3p9": "2026-10-17"
   }
 }
