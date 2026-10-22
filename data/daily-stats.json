@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-22T12:09:46.265Z",
+  "lastUpdated": "2026-10-22T17:23:15.606Z",
   "days": {
     "2026-07-24": {
       "txCount": 9771,
@@ -8377,8 +8377,8 @@
       "lastSeq": 7368191
     },
     "2026-10-22": {
-      "txCount": 5105,
-      "activeWallets": 43,
+      "txCount": 7254,
+      "activeWallets": 47,
       "walletAddresses": [
         "r9bHL4wBF4GQU9KLP6kxXrjAE1xyzGe7CU",
         "r9CEhbrPfLmLkZKPaTdqYsouwU1JknQ8UF",
@@ -8422,12 +8422,16 @@
         "rh2FiZAs3tFN9ZiSyXJiAopyFA3aWxiq9M",
         "rQLBrnDsay1wM8qH8cTaetL4UDkxrXj21g",
         "rKHnw2vPSSmBCtG7BiMePt3oMG8hNFYj9Z",
-        "rUR79SfZepDfdUSBpiWk8YRBz8VLMouQZt"
+        "rUR79SfZepDfdUSBpiWk8YRBz8VLMouQZt",
+        "rUA535svyAwL3tb9YGYN3xb3TCgTetBkzz",
+        "rU5DVV5iJpTUgJhP2RCENGVaBhAWGCXovY",
+        "r3wVc9bEY6nAi8XDGpgpqi8xJBeZZWhcVC",
+        "rE33q2oXG8C266V4JjfDt1vhnJSAvQsbRE"
       ],
       "txTypeDistribution": {
-        "Payment": 3974,
-        "NFTokenMint": 551,
-        "NFTokenBurn": 580
+        "Payment": 5588,
+        "NFTokenMint": 794,
+        "NFTokenBurn": 872
       },
       "hourlyTxCounts": [
         438,
@@ -8442,12 +8446,12 @@
         411,
         419,
         409,
-        81,
-        0,
-        0,
-        0,
-        0,
-        0,
+        420,
+        413,
+        416,
+        425,
+        391,
+        165,
         0,
         0,
         0,
@@ -8455,11 +8459,11 @@
         0,
         0
       ],
-      "tps": 0.11,
-      "avgFee": "0.00001013",
+      "tps": 0.1,
+      "avgFee": "0.00001000",
       "nodeCount": 67,
       "validatorCount": 61,
-      "lastSeq": 7384404
+      "lastSeq": 7390617
     }
   },
   "firstSeen": {
@@ -12493,6 +12497,10 @@
     "rh2FiZAs3tFN9ZiSyXJiAopyFA3aWxiq9M": "2026-10-22",
     "rQLBrnDsay1wM8qH8cTaetL4UDkxrXj21g": "2026-10-22",
     "rKHnw2vPSSmBCtG7BiMePt3oMG8hNFYj9Z": "2026-10-22",
-    "rUR79SfZepDfdUSBpiWk8YRBz8VLMouQZt": "2026-10-22"
+    "rUR79SfZepDfdUSBpiWk8YRBz8VLMouQZt": "2026-10-22",
+    "rUA535svyAwL3tb9YGYN3xb3TCgTetBkzz": "2026-10-22",
+    "rU5DVV5iJpTUgJhP2RCENGVaBhAWGCXovY": "2026-10-22",
+    "r3wVc9bEY6nAi8XDGpgpqi8xJBeZZWhcVC": "2026-10-22",
+    "rE33q2oXG8C266V4JjfDt1vhnJSAvQsbRE": "2026-10-22"
   }
 }
