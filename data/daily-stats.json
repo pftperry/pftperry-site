@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-04T11:41:12.826Z",
+  "lastUpdated": "2026-11-04T18:58:22.148Z",
   "days": {
     "2026-08-06": {
       "txCount": 6442,
@@ -8371,8 +8371,8 @@
       "lastSeq": 7740654
     },
     "2026-11-04": {
-      "txCount": 4859,
-      "activeWallets": 40,
+      "txCount": 7801,
+      "activeWallets": 44,
       "walletAddresses": [
         "rwR17aPETyhHMFaHqoyaRmPXcn2onFwpsk",
         "rUD8z2xcW89Zebja5FqD9Tt8N1RQJxsZwP",
@@ -8413,12 +8413,16 @@
         "r9MqpdMwnzEaLwdTHpBFrah4MpAJn6op2m",
         "rrnmVzGpeS9U1asM5DvFfLnFy679EB4cQ9",
         "rDTaftFFy79qX36x676L9BfsNRoJzhFZGo",
-        "rHxTQAsD6k2JkQMaHxht8iTKdbHTcxEEWs"
+        "rHxTQAsD6k2JkQMaHxht8iTKdbHTcxEEWs",
+        "rBcbVp63scEbhKWCA1TEUg5WykEvTQgpXP",
+        "rKmRKpFJwBWQcqAWxd9YDFFWa2ifE5nsii",
+        "rs4russanrQAcF2Qe5KQiUR9QmzBuNy18n",
+        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS"
       ],
       "txTypeDistribution": {
-        "Payment": 3833,
-        "NFTokenMint": 553,
-        "NFTokenBurn": 473
+        "Payment": 6180,
+        "NFTokenMint": 879,
+        "NFTokenBurn": 742
       },
       "hourlyTxCounts": [
         425,
@@ -8432,14 +8436,14 @@
         431,
         430,
         416,
-        278,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        427,
+        405,
+        408,
+        385,
+        380,
+        398,
+        421,
+        396,
         0,
         0,
         0,
@@ -8448,9 +8452,9 @@
       ],
       "tps": 0.09,
       "avgFee": "0.00001000",
-      "nodeCount": 70,
-      "validatorCount": 64,
-      "lastSeq": 7755052
+      "nodeCount": 71,
+      "validatorCount": 65,
+      "lastSeq": 7763726
     }
   },
   "firstSeen": {
@@ -12687,6 +12691,9 @@
     "r9MqpdMwnzEaLwdTHpBFrah4MpAJn6op2m": "2026-11-04",
     "rrnmVzGpeS9U1asM5DvFfLnFy679EB4cQ9": "2026-11-04",
     "rDTaftFFy79qX36x676L9BfsNRoJzhFZGo": "2026-11-04",
-    "rHxTQAsD6k2JkQMaHxht8iTKdbHTcxEEWs": "2026-11-04"
+    "rHxTQAsD6k2JkQMaHxht8iTKdbHTcxEEWs": "2026-11-04",
+    "rBcbVp63scEbhKWCA1TEUg5WykEvTQgpXP": "2026-11-04",
+    "rKmRKpFJwBWQcqAWxd9YDFFWa2ifE5nsii": "2026-11-04",
+    "rs4russanrQAcF2Qe5KQiUR9QmzBuNy18n": "2026-11-04"
   }
 }
