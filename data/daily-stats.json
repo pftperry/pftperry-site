@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-05T15:40:35.961Z",
+  "lastUpdated": "2026-11-05T21:38:22.824Z",
   "days": {
     "2026-08-07": {
       "txCount": 9825,
@@ -8373,8 +8373,8 @@
       "lastSeq": 7763726
     },
     "2026-11-05": {
-      "txCount": 6409,
-      "activeWallets": 43,
+      "txCount": 8878,
+      "activeWallets": 46,
       "walletAddresses": [
         "r3tvdhjoMuy8gmPkoh7Gr9dgDFaSC3A8CR",
         "rs4russanrQAcF2Qe5KQiUR9QmzBuNy18n",
@@ -8418,12 +8418,15 @@
         "rBchq87pZ8RjJU3Zmhu9jrtbgjpZLA7JhQ",
         "rEZWzy9DQFA282YP3euJFwUchqiZ9KHKRH",
         "r3p5EKZcpN5mC38gWeFGmAU7aqFRhuMY8W",
-        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS"
+        "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
+        "rMXDbUkyQeRzaHdoyiYgRaiJNeqGrChP2g",
+        "rp5pMxGJKSBCy6BEYBmXiNsmeGywJRVTvM",
+        "r4yCEJFRCguHJpX5HGw2nVMTw3RtzT2mb1"
       ],
       "txTypeDistribution": {
-        "Payment": 5027,
-        "NFTokenBurn": 598,
-        "NFTokenMint": 784
+        "Payment": 6940,
+        "NFTokenBurn": 841,
+        "NFTokenMint": 1097
       },
       "hourlyTxCounts": [
         417,
@@ -8441,13 +8444,13 @@
         416,
         410,
         400,
-        257,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        406,
+        409,
+        382,
+        414,
+        409,
+        423,
+        283,
         0,
         0
       ],
@@ -8455,7 +8458,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 72,
       "validatorCount": 65,
-      "lastSeq": 7788361
+      "lastSeq": 7795454
     }
   },
   "firstSeen": {
@@ -12707,6 +12710,9 @@
     "rHVW82cQsJbDnzQh2RPbZKTn6qm759TVas": "2026-11-05",
     "rBchq87pZ8RjJU3Zmhu9jrtbgjpZLA7JhQ": "2026-11-05",
     "rEZWzy9DQFA282YP3euJFwUchqiZ9KHKRH": "2026-11-05",
-    "r3p5EKZcpN5mC38gWeFGmAU7aqFRhuMY8W": "2026-11-05"
+    "r3p5EKZcpN5mC38gWeFGmAU7aqFRhuMY8W": "2026-11-05",
+    "rMXDbUkyQeRzaHdoyiYgRaiJNeqGrChP2g": "2026-11-05",
+    "rp5pMxGJKSBCy6BEYBmXiNsmeGywJRVTvM": "2026-11-05",
+    "r4yCEJFRCguHJpX5HGw2nVMTw3RtzT2mb1": "2026-11-05"
   }
 }
