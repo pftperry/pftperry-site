@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-05T00:04:28.583Z",
+  "lastUpdated": "2026-11-05T07:05:04.227Z",
   "days": {
     "2026-08-07": {
       "txCount": 9825,
@@ -8373,8 +8373,8 @@
       "lastSeq": 7763726
     },
     "2026-11-05": {
-      "txCount": 25,
-      "activeWallets": 17,
+      "txCount": 2832,
+      "activeWallets": 37,
       "walletAddresses": [
         "r3tvdhjoMuy8gmPkoh7Gr9dgDFaSC3A8CR",
         "rs4russanrQAcF2Qe5KQiUR9QmzBuNy18n",
@@ -8392,22 +8392,42 @@
         "rHcXeTpQkNNK2evGHvQDzoYYYgtgdd8EJw",
         "rMeBxxaweBaMCKe9FLdwvLFEXpsSgX7r32",
         "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
-        "r9B48oEz5JUiWPPaHCB9QvBx8ezFwoFXof"
+        "r9B48oEz5JUiWPPaHCB9QvBx8ezFwoFXof",
+        "rP186tFVcuXNqYL7DGUdcMsWhbihH9z8Z1",
+        "r3HY6pRwkPaqmM5z62xXnVFpoBgHZEv1NG",
+        "rEnJn68RARfzhzddxDqYaVxKfDhoenront",
+        "rGeQN2GtC5BKZDpAud8STD5VzgGAhySZjT",
+        "rUKrM8vL82pZW8pdNBv4uhqcTnhZQPbHwc",
+        "rQDGEWbsAx4tMrpjtPZH8uTWrGsJ2qvCo7",
+        "rNaS1jNWZupjgAMJqrcaUsFr1Q6EDqYGyk",
+        "rwE5RHXdZELQ3EaNYcFTjzxf1822yWXht",
+        "rP6vWfrXDv53aQihxxcb6yxmPoYxio6i8o",
+        "r9GoccJ4Q78YEtpqTESTDUWiGz2bmTaXDJ",
+        "rDfpM1pMG6iPbsAsYGbYmUkJ8Lz3FVR8c9",
+        "r9DytM31jyHhpkF7AgqZAWQ7DcjwwYCDnt",
+        "rGGw3c88wtU8YYPPntNQgf2CsPGrhAVXsS",
+        "rUD8z2xcW89Zebja5FqD9Tt8N1RQJxsZwP",
+        "rKmRKpFJwBWQcqAWxd9YDFFWa2ifE5nsii",
+        "rDR9sYQA24WwpfZh8PAFQnFmEDGRSTzdb8",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "rsSYAkLuAquosKCTC5TMdaeWoUXYGNAQvx",
+        "rQLhfWHGmEE6aqhAXc3RRifQZj1QUdnwUP",
+        "raiQWaAwUbcmHxBwDYsvdrjcY6wL5crvrw"
       ],
       "txTypeDistribution": {
-        "Payment": 18,
-        "NFTokenBurn": 6,
-        "NFTokenMint": 1
+        "Payment": 2194,
+        "NFTokenBurn": 300,
+        "NFTokenMint": 338
       },
       "hourlyTxCounts": [
-        25,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        417,
+        406,
+        397,
+        400,
+        402,
+        374,
+        395,
+        41,
         0,
         0,
         0,
@@ -8429,7 +8449,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 71,
       "validatorCount": 65,
-      "lastSeq": 7769800
+      "lastSeq": 7778131
     }
   },
   "firstSeen": {
@@ -12671,6 +12691,11 @@
     "rKmRKpFJwBWQcqAWxd9YDFFWa2ifE5nsii": "2026-11-04",
     "rs4russanrQAcF2Qe5KQiUR9QmzBuNy18n": "2026-11-04",
     "r3ZntGSWWgJSS2K3Tsd4nyAZgTzcqEzNr8": "2026-11-05",
-    "rN1LbCQk4mfPGibNNNuFvUKTuNVkPyQkqV": "2026-11-05"
+    "rN1LbCQk4mfPGibNNNuFvUKTuNVkPyQkqV": "2026-11-05",
+    "rDfpM1pMG6iPbsAsYGbYmUkJ8Lz3FVR8c9": "2026-11-05",
+    "rGGw3c88wtU8YYPPntNQgf2CsPGrhAVXsS": "2026-11-05",
+    "rsSYAkLuAquosKCTC5TMdaeWoUXYGNAQvx": "2026-11-05",
+    "rQLhfWHGmEE6aqhAXc3RRifQZj1QUdnwUP": "2026-11-05",
+    "raiQWaAwUbcmHxBwDYsvdrjcY6wL5crvrw": "2026-11-05"
   }
 }
