@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-06T16:25:03.708Z",
+  "lastUpdated": "2026-11-06T21:40:12.131Z",
   "days": {
     "2026-08-08": {
       "txCount": 9650,
@@ -8367,8 +8367,8 @@
       "lastSeq": 7795454
     },
     "2026-11-06": {
-      "txCount": 6685,
-      "activeWallets": 48,
+      "txCount": 8802,
+      "activeWallets": 51,
       "walletAddresses": [
         "raiQWaAwUbcmHxBwDYsvdrjcY6wL5crvrw",
         "rMeBxxaweBaMCKe9FLdwvLFEXpsSgX7r32",
@@ -8417,12 +8417,15 @@
         "rGgwsUN5p5Tp5sjKPCWMj3u4SCVpZtpwaF",
         "rhfpJbpMiaZR9MHw7uHB4jJv435fd3UScu",
         "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
-        "rhiGmYja4kFgQGmiYEE93dGuNgRK6UEGuk"
+        "rhiGmYja4kFgQGmiYEE93dGuNgRK6UEGuk",
+        "rxGvi692zyX2RJ2hBfY4CfywDy4Qe1wDh",
+        "rBCJAc11UibtTD36XpgXzdxYqEZ4WUcPGC",
+        "r9XbKMrRpxg3FHqzNNmhvAxy5QtNzYDLHs"
       ],
       "txTypeDistribution": {
-        "Payment": 5019,
-        "NFTokenMint": 660,
-        "NFTokenBurn": 1006
+        "Payment": 6669,
+        "NFTokenMint": 853,
+        "NFTokenBurn": 1280
       },
       "hourlyTxCounts": [
         405,
@@ -8441,12 +8444,12 @@
         394,
         465,
         390,
-        156,
-        0,
-        0,
-        0,
-        0,
-        0,
+        419,
+        402,
+        396,
+        402,
+        388,
+        266,
         0,
         0
       ],
@@ -8454,7 +8457,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 71,
       "validatorCount": 65,
-      "lastSeq": 7817792
+      "lastSeq": 7824047
     }
   },
   "firstSeen": {
@@ -12725,6 +12728,9 @@
     "rrpwXzihA7G58psfqzLsGydiJwadmzB6zz": "2026-11-06",
     "rGgwsUN5p5Tp5sjKPCWMj3u4SCVpZtpwaF": "2026-11-06",
     "rhfpJbpMiaZR9MHw7uHB4jJv435fd3UScu": "2026-11-06",
-    "rhiGmYja4kFgQGmiYEE93dGuNgRK6UEGuk": "2026-11-06"
+    "rhiGmYja4kFgQGmiYEE93dGuNgRK6UEGuk": "2026-11-06",
+    "rxGvi692zyX2RJ2hBfY4CfywDy4Qe1wDh": "2026-11-06",
+    "rBCJAc11UibtTD36XpgXzdxYqEZ4WUcPGC": "2026-11-06",
+    "r9XbKMrRpxg3FHqzNNmhvAxy5QtNzYDLHs": "2026-11-06"
   }
 }
