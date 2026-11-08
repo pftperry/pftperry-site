@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-08T15:25:51.470Z",
+  "lastUpdated": "2026-11-08T19:49:18.162Z",
   "days": {
     "2026-08-10": {
       "txCount": 9695,
@@ -8363,8 +8363,8 @@
       "lastSeq": 7853482
     },
     "2026-11-08": {
-      "txCount": 6364,
-      "activeWallets": 43,
+      "txCount": 8255,
+      "activeWallets": 47,
       "walletAddresses": [
         "rpiRkk86mYFhrYGJUksyzyWbDQvFbuCENJ",
         "rpVwVJrNFQQLkzhkn7EPsYSMk3X4S4Hf32",
@@ -8408,12 +8408,16 @@
         "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
         "r4yGNxYmBgbQCK79xT9jFh1MiUuobYzkot",
         "rN74pE5MFZGtD64i1EcX34eenzQeM8gfCJ",
-        "rayoQhgacV3Abe84vJ4dUxPVGAMTCcDXuZ"
+        "rayoQhgacV3Abe84vJ4dUxPVGAMTCcDXuZ",
+        "rHFd9HgQXaegmSj5oudYEtxspC23xKuJ5z",
+        "rpVBf5RadJ2HkEA84CmBvyUkVgWopDjCKM",
+        "rPX8Bx9Ucmnwdur4UVHHykPPARp4p9Xgjq",
+        "rfb3ypKk1yJSSDdiJCZSRUVqYKv7BYA1wC"
       ],
       "txTypeDistribution": {
-        "NFTokenBurn": 658,
-        "Payment": 4988,
-        "NFTokenMint": 718
+        "NFTokenBurn": 925,
+        "Payment": 6409,
+        "NFTokenMint": 921
       },
       "hourlyTxCounts": [
         424,
@@ -8431,11 +8435,11 @@
         402,
         437,
         413,
-        196,
-        0,
-        0,
-        0,
-        0,
+        469,
+        438,
+        423,
+        430,
+        327,
         0,
         0,
         0,
@@ -8445,7 +8449,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 70,
       "validatorCount": 65,
-      "lastSeq": 7873729
+      "lastSeq": 7878953
     }
   },
   "firstSeen": {
@@ -12744,6 +12748,9 @@
     "rwaaE1PvSUxkNejc2Vz6m6Dyt8TBDao7NT": "2026-11-08",
     "r4yGNxYmBgbQCK79xT9jFh1MiUuobYzkot": "2026-11-08",
     "rN74pE5MFZGtD64i1EcX34eenzQeM8gfCJ": "2026-11-08",
-    "rayoQhgacV3Abe84vJ4dUxPVGAMTCcDXuZ": "2026-11-08"
+    "rayoQhgacV3Abe84vJ4dUxPVGAMTCcDXuZ": "2026-11-08",
+    "rpVBf5RadJ2HkEA84CmBvyUkVgWopDjCKM": "2026-11-08",
+    "rPX8Bx9Ucmnwdur4UVHHykPPARp4p9Xgjq": "2026-11-08",
+    "rfb3ypKk1yJSSDdiJCZSRUVqYKv7BYA1wC": "2026-11-08"
   }
 }
