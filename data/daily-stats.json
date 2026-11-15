@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T01:24:28.866Z",
+  "lastUpdated": "2026-11-15T07:59:12.433Z",
   "days": {
     "2026-08-17": {
       "txCount": 9653,
@@ -8364,8 +8364,8 @@
       "lastSeq": 8052397
     },
     "2026-11-15": {
-      "txCount": 596,
-      "activeWallets": 33,
+      "txCount": 3343,
+      "activeWallets": 39,
       "walletAddresses": [
         "rGfq4zsMCDWeEJ1npTQb8cYidMCmVzo8zV",
         "r9JiCW9y22iuNP96YQjV7EFiEZFsfUSw8k",
@@ -8399,22 +8399,28 @@
         "r3KFGRnfKnrhJqn4hLsJY2XigbMtbR9Mn5",
         "rwCz9tandQUxaNeBxQXPuy8US1877k4CoR",
         "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
-        "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ"
+        "rsS2Y6CK9dz9dVFjJvRyD2gBdoLPqjaXRZ",
+        "rBsVJmgmbRySoPPM8EjVHFVzsCicYogV5d",
+        "rUeute6ijhVgMRtHwso8avzX4xcjEGHdtk",
+        "rKm9PyqaDjQ3df3jSA4VogkJtEiEu1uSV7",
+        "rGiy1bLtpY5UzTYQx6ZFkLUuobf53b9kpU",
+        "rM4VS14uA8TmLHr4R5x2on9SAHd5gGoU2w",
+        "rnr7hJpRs4XHqLFWHiySMPoPz6WE6hUkxw"
       ],
       "txTypeDistribution": {
-        "Payment": 502,
-        "NFTokenMint": 64,
-        "NFTokenBurn": 30
+        "Payment": 2688,
+        "NFTokenMint": 294,
+        "NFTokenBurn": 361
       },
       "hourlyTxCounts": [
         433,
-        163,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        420,
+        420,
+        415,
+        412,
+        438,
+        408,
+        397,
         0,
         0,
         0,
@@ -8436,7 +8442,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 70,
       "validatorCount": 66,
-      "lastSeq": 8056907
+      "lastSeq": 8064727
     }
   },
   "firstSeen": {
@@ -12828,6 +12834,12 @@
     "rsNc6T7qLUz6qEmZ79ssrqEa9Suvkn99md": "2026-11-14",
     "rhLChE7vMqayjU8AKDH9oYxAVSWBrVyKBj": "2026-11-14",
     "rD7amLCcNPFjNNWAj9tWRPjECuKTd7BnoX": "2026-11-14",
-    "rvyRVnys1ybpAjks27NRz97BnVj2imznx": "2026-11-14"
+    "rvyRVnys1ybpAjks27NRz97BnVj2imznx": "2026-11-14",
+    "rBsVJmgmbRySoPPM8EjVHFVzsCicYogV5d": "2026-11-15",
+    "rUeute6ijhVgMRtHwso8avzX4xcjEGHdtk": "2026-11-15",
+    "rKm9PyqaDjQ3df3jSA4VogkJtEiEu1uSV7": "2026-11-15",
+    "rGiy1bLtpY5UzTYQx6ZFkLUuobf53b9kpU": "2026-11-15",
+    "rM4VS14uA8TmLHr4R5x2on9SAHd5gGoU2w": "2026-11-15",
+    "rnr7hJpRs4XHqLFWHiySMPoPz6WE6hUkxw": "2026-11-15"
   }
 }
