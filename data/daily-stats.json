@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T15:17:39.428Z",
+  "lastUpdated": "2026-11-15T20:27:42.700Z",
   "days": {
     "2026-08-17": {
       "txCount": 9653,
@@ -8364,8 +8364,8 @@
       "lastSeq": 8052397
     },
     "2026-11-15": {
-      "txCount": 6305,
-      "activeWallets": 45,
+      "txCount": 8411,
+      "activeWallets": 52,
       "walletAddresses": [
         "rGfq4zsMCDWeEJ1npTQb8cYidMCmVzo8zV",
         "r9JiCW9y22iuNP96YQjV7EFiEZFsfUSw8k",
@@ -8411,12 +8411,19 @@
         "rUZtgcHw2z7dQEPvyFbffKYwEX3X4XqBse",
         "rBJ8voRqPhNsefZYwJYHCWyLEp5zJ5iu5C",
         "rBTYXwQofjJraScghrzt9CUHCa1gzUxknC",
-        "rMVXKzaVeHdUzvY7ZLqwUj5UHRMvAapW7i"
+        "rMVXKzaVeHdUzvY7ZLqwUj5UHRMvAapW7i",
+        "rB2BUtncow1npgDwiT3xixavP5vVLtuq2B",
+        "r3x8ebX68WwwdBy23FUeQam8EeP5kKMpsg",
+        "rasMBhQxk71vg3MeZeY9ciAZtiU9gQnLXB",
+        "rLweH2LvnKHbCQdz61ijzLCGN6zvVEesFr",
+        "r4oQx3bEms46RZzXUQqUwTRRhpbBf2KcyD",
+        "r4XLZKYK63z4zW8ttKzgy8NVW1Noa1pRwj",
+        "rf19QMA7MFstCRzWpTnbWgbe7HPJSsL2Uu"
       ],
       "txTypeDistribution": {
-        "Payment": 5194,
-        "NFTokenMint": 564,
-        "NFTokenBurn": 547
+        "Payment": 6910,
+        "NFTokenMint": 762,
+        "NFTokenBurn": 739
       },
       "hourlyTxCounts": [
         433,
@@ -8434,12 +8441,12 @@
         420,
         415,
         417,
-        112,
-        0,
-        0,
-        0,
-        0,
-        0,
+        402,
+        402,
+        433,
+        408,
+        402,
+        171,
         0,
         0,
         0
@@ -8448,7 +8455,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 70,
       "validatorCount": 66,
-      "lastSeq": 8073414
+      "lastSeq": 8079560
     }
   },
   "firstSeen": {
@@ -12850,6 +12857,12 @@
     "rpeDvLA3xPhjZdWhNXxXwL9FjGuRT1Ckc9": "2026-11-15",
     "rhvbWCwcRTJCD667DVmPTpZ7Agw4WaQZ3g": "2026-11-15",
     "rUZtgcHw2z7dQEPvyFbffKYwEX3X4XqBse": "2026-11-15",
-    "rMVXKzaVeHdUzvY7ZLqwUj5UHRMvAapW7i": "2026-11-15"
+    "rMVXKzaVeHdUzvY7ZLqwUj5UHRMvAapW7i": "2026-11-15",
+    "rB2BUtncow1npgDwiT3xixavP5vVLtuq2B": "2026-11-15",
+    "r3x8ebX68WwwdBy23FUeQam8EeP5kKMpsg": "2026-11-15",
+    "rasMBhQxk71vg3MeZeY9ciAZtiU9gQnLXB": "2026-11-15",
+    "rLweH2LvnKHbCQdz61ijzLCGN6zvVEesFr": "2026-11-15",
+    "r4oQx3bEms46RZzXUQqUwTRRhpbBf2KcyD": "2026-11-15",
+    "rf19QMA7MFstCRzWpTnbWgbe7HPJSsL2Uu": "2026-11-15"
   }
 }
