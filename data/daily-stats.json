@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T00:33:01.712Z",
+  "lastUpdated": "2026-11-17T08:38:25.811Z",
   "days": {
     "2026-08-19": {
       "txCount": 9711,
@@ -8345,8 +8345,8 @@
       "lastSeq": 8103473
     },
     "2026-11-17": {
-      "txCount": 229,
-      "activeWallets": 32,
+      "txCount": 3534,
+      "activeWallets": 39,
       "walletAddresses": [
         "rLweH2LvnKHbCQdz61ijzLCGN6zvVEesFr",
         "r4oQx3bEms46RZzXUQqUwTRRhpbBf2KcyD",
@@ -8379,23 +8379,30 @@
         "rDWzYXv9n4nfgxryKBKqwKksSqT7hZXgLk",
         "rnr7hJpRs4XHqLFWHiySMPoPz6WE6hUkxw",
         "rpeDvLA3xPhjZdWhNXxXwL9FjGuRT1Ckc9",
-        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR"
+        "r9k51cJFVaYRST5vMUsdokiYcwdpQdUJGR",
+        "rNorWa18oAwkSBkSsNAGhC2EUd2bHMqNi1",
+        "rNo9Bv8UnrsY3rxb6mATwPDRd8yQmUP3cB",
+        "r36aSFpVv6uJxDULR3xTJUbH3k5TpH3ccF",
+        "r93JxHNjKUJdG93MruZkCvK9t9CfXH3ATn",
+        "rNDeav5bc7DVDNXX3tpCk6Qqkxgedt5Mpp",
+        "rE4DPFdVsFfSx4oFKfahfYEisamUzDCn9s",
+        "rHFd9HgQXaegmSj5oudYEtxspC23xKuJ5z"
       ],
       "txTypeDistribution": {
-        "Payment": 198,
-        "NFTokenMint": 19,
-        "NFTokenBurn": 12
+        "Payment": 2722,
+        "NFTokenMint": 352,
+        "NFTokenBurn": 460
       },
       "hourlyTxCounts": [
-        229,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        413,
+        368,
+        371,
+        437,
+        389,
+        428,
+        414,
+        438,
+        276,
         0,
         0,
         0,
@@ -8416,7 +8423,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 70,
       "validatorCount": 66,
-      "lastSeq": 8112961
+      "lastSeq": 8122571
     }
   },
   "firstSeen": {
@@ -12837,6 +12844,12 @@
     "rEwZ7qJ9jL6imaGzazEJgnzF9EKnd84ZRc": "2026-11-17",
     "rw62FSfUTGrbKPtL4E7FPimYpACs17H4of": "2026-11-17",
     "rMLNSAjduiCCPoCGQemBit7WdthiwAAuxd": "2026-11-17",
-    "rwFDUFeKsARHnN6JSXVeq1ytqV5NwBUWMS": "2026-11-17"
+    "rwFDUFeKsARHnN6JSXVeq1ytqV5NwBUWMS": "2026-11-17",
+    "rNorWa18oAwkSBkSsNAGhC2EUd2bHMqNi1": "2026-11-17",
+    "rNo9Bv8UnrsY3rxb6mATwPDRd8yQmUP3cB": "2026-11-17",
+    "r36aSFpVv6uJxDULR3xTJUbH3k5TpH3ccF": "2026-11-17",
+    "r93JxHNjKUJdG93MruZkCvK9t9CfXH3ATn": "2026-11-17",
+    "rNDeav5bc7DVDNXX3tpCk6Qqkxgedt5Mpp": "2026-11-17",
+    "rE4DPFdVsFfSx4oFKfahfYEisamUzDCn9s": "2026-11-17"
   }
 }
