@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T16:46:59.306Z",
+  "lastUpdated": "2026-11-18T23:12:09.775Z",
   "days": {
     "2026-08-20": {
       "txCount": 9733,
@@ -8362,8 +8362,8 @@
       "lastSeq": 8133657
     },
     "2026-11-18": {
-      "txCount": 6967,
-      "activeWallets": 44,
+      "txCount": 9612,
+      "activeWallets": 48,
       "walletAddresses": [
         "rwAESSNpiYnSwPhbunceoVuwmRuXSssRGx",
         "rNEr2UmVa1Ax2nfe44yWNreoGXj9CUt9cH",
@@ -8408,12 +8408,16 @@
         "r4CNrDtXGGikDfm3U8dMnbaheHZfaWV4ms",
         "r4RPpeS2kUE8BjY9LvKbptW8PQVHhVWghS",
         "rGz1nBASnG6sKevGA2H1WNR1Z5sngtWa5N",
-        "r3qFXyWmQfHYbZWChQuTrsRo2BmfiCmuL4"
+        "r3qFXyWmQfHYbZWChQuTrsRo2BmfiCmuL4",
+        "rKF7zToDECjwtYZAM3JLrdQDto9fvTbQSf",
+        "rDEhtemcoLpx8LDv9GGortXzKJ4ArKMURE",
+        "rJepEuCVxUdnCLGG42nLmZKNGQj4u81zPr",
+        "rLk9ZXMH4ZxtPJZyjgsmU2VwWfqLHr788h"
       ],
       "txTypeDistribution": {
-        "Payment": 5680,
-        "NFTokenBurn": 735,
-        "NFTokenMint": 552
+        "Payment": 7941,
+        "NFTokenBurn": 911,
+        "NFTokenMint": 760
       },
       "hourlyTxCounts": [
         455,
@@ -8432,20 +8436,20 @@
         405,
         410,
         401,
-        294,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        413,
+        373,
+        411,
+        425,
+        415,
+        426,
+        416,
+        60
       ],
       "tps": 0.09,
       "avgFee": "0.00001000",
       "nodeCount": 71,
       "validatorCount": 66,
-      "lastSeq": 8160789
+      "lastSeq": 8168427
     }
   },
   "firstSeen": {
@@ -12893,6 +12897,9 @@
     "rhgZNd2H2SXNwbeDiujdgttsmCrvQmuS2D": "2026-11-18",
     "r4CNrDtXGGikDfm3U8dMnbaheHZfaWV4ms": "2026-11-18",
     "rGz1nBASnG6sKevGA2H1WNR1Z5sngtWa5N": "2026-11-18",
-    "r3qFXyWmQfHYbZWChQuTrsRo2BmfiCmuL4": "2026-11-18"
+    "r3qFXyWmQfHYbZWChQuTrsRo2BmfiCmuL4": "2026-11-18",
+    "rDEhtemcoLpx8LDv9GGortXzKJ4ArKMURE": "2026-11-18",
+    "rJepEuCVxUdnCLGG42nLmZKNGQj4u81zPr": "2026-11-18",
+    "rLk9ZXMH4ZxtPJZyjgsmU2VwWfqLHr788h": "2026-11-18"
   }
 }
