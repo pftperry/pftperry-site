@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-23T01:52:04.351Z",
+  "lastUpdated": "2026-11-23T09:56:53.648Z",
   "days": {
     "2026-08-25": {
       "txCount": 9879,
@@ -8362,8 +8362,8 @@
       "lastSeq": 8280446
     },
     "2026-11-23": {
-      "txCount": 710,
-      "activeWallets": 32,
+      "txCount": 4026,
+      "activeWallets": 37,
       "walletAddresses": [
         "rKaDW4uxvSm46FeoxFGnK5NzF3VBz28YoK",
         "r3gxF5yf9dPZ4vQEn1UpFq4g6F8yiHiJZW",
@@ -8396,24 +8396,29 @@
         "r96PAxDem1MgdTc5KPnXads4LQzfSbq6SP",
         "rDEY6v4bgcCahSA1agvNB64Cx1NQYmNwqw",
         "rsNFnzbF9T3xhHB9cucn4Dpvb7QeNmGtzs",
-        "rwdm72S9YVKkZjeADKU2bbUMuY4vPnSfH7"
+        "rwdm72S9YVKkZjeADKU2bbUMuY4vPnSfH7",
+        "rwm4hgJ9b2MLUi5TJii1AhP8REPWpNEiX6",
+        "rPnqH9BMhZoy3qN1PZqVyfkL4fJB4WffmH",
+        "rDrL2oT5aCuS8H6epKJL4BfzfV7fwEnWkW",
+        "r4iGpwWhrfDkNYb1rJKuVPDUZPpASsuPQP",
+        "r4oHaLaHZFi44zbbc3wSCrQPucbANxsKex"
       ],
       "txTypeDistribution": {
-        "NFTokenMint": 77,
-        "Payment": 587,
-        "NFTokenBurn": 46
+        "NFTokenMint": 462,
+        "Payment": 3288,
+        "NFTokenBurn": 276
       },
       "hourlyTxCounts": [
         393,
-        317,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        374,
+        425,
+        404,
+        426,
+        382,
+        416,
+        396,
+        414,
+        396,
         0,
         0,
         0,
@@ -8433,7 +8438,7 @@
       "avgFee": "0.00001000",
       "nodeCount": 69,
       "validatorCount": 66,
-      "lastSeq": 8285800
+      "lastSeq": 8295406
     }
   },
   "firstSeen": {
@@ -12944,6 +12949,11 @@
     "rMzjVw1QDXVUaQdmqBaqVDbdSaRncJSjxr": "2026-11-22",
     "rpN7CGP5JdTJo6PFgk81Yem6G7yGFcWS8y": "2026-11-22",
     "rpkfNqTUWZkGsLdfpViyxPCUTfVFnFcoaK": "2026-11-22",
-    "rAsDKnVikXzCw1D3skVyxVs3o6T5gDyH5": "2026-11-23"
+    "rAsDKnVikXzCw1D3skVyxVs3o6T5gDyH5": "2026-11-23",
+    "rwm4hgJ9b2MLUi5TJii1AhP8REPWpNEiX6": "2026-11-23",
+    "rPnqH9BMhZoy3qN1PZqVyfkL4fJB4WffmH": "2026-11-23",
+    "rDrL2oT5aCuS8H6epKJL4BfzfV7fwEnWkW": "2026-11-23",
+    "r4iGpwWhrfDkNYb1rJKuVPDUZPpASsuPQP": "2026-11-23",
+    "r4oHaLaHZFi44zbbc3wSCrQPucbANxsKex": "2026-11-23"
   }
 }
